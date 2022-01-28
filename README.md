@@ -1,2 +1,2 @@
 # Python-Programming
-Python programming
+Python programming for Data Scientists
