@@ -16,7 +16,7 @@
 ## How to downgrade to an older version of python
 - If using conda: `conda create -n you_virtual_env_name python=3.8 anaconda`
 
-## How to manage python packages
+## How to manage python packages 
 - Update a to a specific module version: `scikit-learn==0.24.1 –upgrade`
 - How to revert to an older version: first `pip uninstall scikit-learn` then `pip install scikit-learn==0.18.2`
 
