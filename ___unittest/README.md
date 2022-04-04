@@ -1,4 +1,5 @@
-# unittesting your python code
+# How to unittest your python code
+***
 
 ## Why Unit Test your code?
 - **Safe refactoring** When you add more and more features to a software, you sometimes need to change old design and code. However, changing already-tested code is both risky and costly. If we have unit tests in place, then we can proceed for refactoring confidently.
@@ -8,7 +9,7 @@
 - **Provides Documentation** Unit testing provides documentation of the system. Developers looking to learn what functionality is provided by a unit and how to use it can look at the unit tests to gain a basic understanding of the unit’s interface (API).
 - **Debugging Process** Unit testing helps simplify the debugging process. If a test fails, then only the latest changes made in the code need to be debugged.
 - **Design** Writing the test first forces you to think through your design and what it must accomplish before you write the code. This not only keeps you focused; it makes you create better designs. Testing a piece of code forces you to define what that code is responsible for. If you can do this easily, that means the code’s responsibility is well-defined and therefore that it has high cohesion.
-- [Reference](https://dzone.com/articles/top-8-benefits-of-unit-testing)
+***
 
 ## General templates
 - This is just a template with all the necessary import and some comments plus some code blocks to refresh someone's knowledge on unittesting. 
@@ -53,7 +54,7 @@ if __name__ == "__main__":
     - **Option #2**: python -m unittest some_name_test
     - **Option #3**: python -m unittest -v some_name_test
     - **Option #4**: python -m unittest discover
-
+***
 
 ## Templates
 **assertEqual**
@@ -109,9 +110,9 @@ else:
 with self.assertRaises(SystemExit):
     your_method()
 ```
+***
 
 ## Special topic
-
 - Image comparison tests end up bring more trouble than they are worth.
 - This is especially the case if you want to run continuous integration across multiple systems (like TravisCI) that may have slightly different fonts or available drawing backends. It can be a lot of work to keep the tests passing even when the functions work perfectly correctly. Furthermore, testing this way requires keeping images in your git repository, which can quickly lead to repository bloat if you're changing the code often.
 - A better approach could be to (1) assume matplotlib is going to actually draw the figure correctly, and (2) run numerical tests against the data returned by the plotting functions.
@@ -141,4 +142,7 @@ def test_plot_square2():
     np.testing.assert_array_equal(y_plot, np.square(y))
 
 ```
+***
 
+## References
+- https://dzone.com/articles/top-8-benefits-of-unit-testing
