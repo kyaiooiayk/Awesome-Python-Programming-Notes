@@ -91,8 +91,8 @@ def test_split(self):
     with self.assertRaises(TypeError):
         s.split(2)
 ```
-- Exit from Python is implemented by raising the `SystemExit` exception
-- [Reference](https://stackoverflow.com/questions/15672151/is-it-possible-for-a-unit-test-to-assert-that-a-method-calls-sys-exit)
+
+- Exit from Python is implemented by raising the `SystemExit` exception [Reference](https://stackoverflow.com/questions/15672151/is-it-possible-for-a-unit-test-to-assert-that-a-method-calls-sys-exit)
 ```
 if framework.lower() in ["pytorch", "pt"]:
     self._build_PT()
@@ -145,4 +145,4 @@ def test_plot_square2():
 ***
 
 ## References
-- https://dzone.com/articles/top-8-benefits-of-unit-testing
+- [Unittesting benefits](https://dzone.com/articles/top-8-benefits-of-unit-testing)
