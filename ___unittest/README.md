@@ -13,7 +13,7 @@
 
 ## General templates
 - This is just a template with all the necessary imports, comments and some code to refresh someone's knowledge on unittesting. 
-- A testcase is created by subclassing `unittest.TestCase`. Essentialy the class `test_sum` inherits from the `TestCase` class.
+- A testcase is created by subclassing `unittest.TestCase`. Essentialy the class `TestSum` inherits from the `TestCase` class.
 - All the following methods start with a `test_`. This naming convention informs the test runner about which methods represent a test.
 - While unittesting it is acceptable to use long and descriptive names for testing function.
 
