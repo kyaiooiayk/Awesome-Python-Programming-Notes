@@ -35,14 +35,12 @@
 ***
 
 ## Functional programming 
-- Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. It typically plays a fairly small role in Python code. A more in-depth article can be found [here](https://realpython.com/python-functional-programming/). 
+- Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. A more in-depth article can be found [here](https://realpython.com/python-functional-programming/). 
 - In functional programming, a program consists entirely of evaluation of pure functions. A pure function is a function whose output value follows solely from its input values, without any observable side effects. 
 - The `map`, `filter` and `reduce` functions (which lives in Python's `functools` module) are fundamental components of the functional programming. 
-- Functional programming:
-    - This style, which, while not a dominant programming style in the Python world, has its outspoken proponents.
-    - A programming style in which functions are treated and manipulated as objects, i.e. functions can be assigned to variables, they can be passed as arguments, and they can be stored in containers along with other data. We can write parallel code that works by running lots of functions in parallel on large amounts of data.
-    - When you build your applications completely out of pure functions: Pure Function: Its return value is determined exclusively by it's arguments.
-
+- This style, which, while not a dominant programming style in the Python world, has its outspoken proponents.
+- A programming style in which functions are treated and manipulated as objects, i.e. functions can be assigned to variables, they can be passed as arguments, and they can be stored in containers along with other data. We can write parallel code that works by running lots of functions in parallel on large amounts of data.
+- When you build your applications completely out of pure functions. A pure function has its return value determined exclusively by it's arguments.
 ***
 
 ## Mutable and immutable types
