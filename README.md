@@ -82,6 +82,21 @@
 - To *freeze* the code means to create a standalone executable bundle you can distribute without having the end users to have Python installed in their system. Effectively, the distribution contains both the application code and the Python interpreter. As they say, `.py` files are for software engineer and system administrator.
 ***
 
+## Monkey patch
+A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program). 
+```
+>>> import math
+>>> math.pi
+3.141592653589793
+>>> math.pi = 3.2   # monkey-patch the value of Pi in the math module
+>>> math.pi
+3.2
+================================ RESTART ================================
+>>> import math
+>>> math.pi
+3.141592653589793
+```
+
 ## References
 - [The Hitchhiker's Guide to Python: Best Practices for Development ](https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca)
 - The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc. 
