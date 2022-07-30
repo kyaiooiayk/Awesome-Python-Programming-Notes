@@ -117,7 +117,20 @@ A monkey patch is a way for a program to extend or modify supporting system soft
 ```
 ***
 
+## Difference between .py and .pyc files?
+
+- Python compiles the .py files and saves it as .pyc files , so it can reference them in subsequent invocations. The .pyc contain the compiled bytecode of Python source files. The .pyc contain the compiled bytecode of Python source files, which is what the Python interpreter compiles the source to. This code is then executed by Python's virtual machine . There's no harm in deleting them (.pyc), but they will save compilation time if you're doing lots of processing.
+
+- Python is an interpreted language , as opposed to a compiled one, though the distinction can be blurry because of the presence of the bytecode compiler. Compiling usually means converting to machine code which is what runs the fastest. But interpreters take human readable text and execute it. They may do this with an intermediate stage .
+
+- For example, When you run myprog.py source file, the python interpreter first looks to see if any 'myprog.pyc' (which is the byte-code compiled version of 'myprog.py') exists, and if it is more recent than 'myprog.py'. If so, the interpreter runs it. If it does not exist, or 'myprog.py' is more recent than it (meaning you have changed the source file), the interpreter first compiles 'myprog.py' to 'myprog.pyc'.
+
+- There is one **exception** to the above example. If you put `#! /usr/bin/env python` on the first line of `myprog.py`, make it executable , and then run 'myprog.py' by itself.
+***
+
+
 ## References
 - [The Hitchhiker's Guide to Python: Best Practices for Development ](https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca)
 - The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc. 
 - [Differences btw modules, packages and libraries](https://learnpython.com/blog/python-modules-packages-libraries-frameworks/)
+- [Difference between .py and .pyc files?](http://net-informations.com/python/iq/pyc.htm)
