@@ -145,6 +145,29 @@ def square_root(x):
 - `flake8` is more than an auto-formatters and is technically speaking a linters. Linters are tools that analyse your code and help you find things like: stylistic issues, programming errors, some types of bugs etc. It can be installed as `pip install flake8` and use like this `flake8 <source_code.py>`; alternatively: `python -m flake8 <source_code.py>`
 ***
 
+## Naming conventions
+- **PascalCase** is used for classes. What this means is that your classes will look like:
+```
+class Shape: 
+    # ...
+class Circle(Shape): 
+    # ...
+```
+
+- **snake_case** is used for variables, functions, methods, arguments:
+```
+def cool_function(cool_argument, optional_info): 
+    # ...
+```
+
+- **CAPS_LOCK_WITH_UNDERSCORES** is used to represent global constants. Python doesn’t have support for variables that are truly constant, so we use this convention to help. Generally, you will find these “constants” in the beginning of a file:
+```
+IMG_BIN = "images"
+LOG_FILE = "logs/app.log"
+```
+***
+
+
 ## References
 - [The Hitchhiker's Guide to Python: Best Practices for Development ](https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca)
 - The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc. 
