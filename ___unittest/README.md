@@ -111,9 +111,10 @@ with self.assertRaises(SystemExit):
     your_method()
 ```
 
-**Checking two numpy array are equal**
+**Checking numpy array equality**
 - If you want an exact match: `assertTrue(numpy.testing.assert_array_equal(arr1, arr2))`
-- If you want a match up to acertain tolerance: `assertTrue(np.linalg.norm(arr1 - arr2) < 1e-6)`
+- If you want a match up to a certain tolerance: `assertTrue(np.linalg.norm(arr1 - arr2) < 1e-6)`
+- [Ref](https://stackoverflow.com/questions/3302949/best-way-to-assert-for-numpy-array-equality)
 
 ***
 
