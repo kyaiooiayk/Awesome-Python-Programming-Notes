@@ -50,10 +50,10 @@ if __name__ == "__main__":
 ```
 
 - You have 4 options to run the test:
-    - **Option #1**: python some_name_test.py
-    - **Option #2**: python -m unittest some_name_test
-    - **Option #3**: python -m unittest -v some_name_test
-    - **Option #4**: python -m unittest discover
+    - **Option #1**: `python some_name_test.py`
+    - **Option #2**: `python -m unittest some_name_test`
+    - **Option #3**: `python -m unittest -v some_name_test`
+    - **Option #4**: `python -m unittest discover`
 ***
 
 ## Templates
@@ -110,6 +110,11 @@ else:
 with self.assertRaises(SystemExit):
     your_method()
 ```
+
+**Checking two numpy array are equal**
+- If you want an exact match: `assertTrue(numpy.testing.assert_array_equal(arr1, arr2))`
+- If you want a match up to acertain tolerance: `assertTrue(np.linalg.norm(arr1 - arr2) < 1e-6)`
+
 ***
 
 ## Special topic
