@@ -118,6 +118,24 @@ with self.assertRaises(SystemExit):
 
 ***
 
+**Checking for `sys.exit()`**
+- Suppose the code throw an error like `sys.exit()`; this can be tested as:
+
+```
+with self.assertRaises(SystemExit):
+    your_method()
+```    
+- Suppose the code throw an error like `sys.exit("Error")`; this can be tested as:
+```
+with self.assertRaises(SystemExit) as cm:
+    your_method()
+
+self.assertEqual(cm.exception.code, "Error")
+```
+
+[Ref](https://stackoverflow.com/questions/15672151/is-it-possible-for-a-unit-test-to-assert-that-a-method-calls-sys-exit)
+***
+
 ## Special topic
 - Image comparison tests end up bring more trouble than they are worth.
 - This is especially the case if you want to run continuous integration across multiple systems (like TravisCI) that may have slightly different fonts or available drawing backends. It can be a lot of work to keep the tests passing even when the functions work perfectly correctly. Furthermore, testing this way requires keeping images in your git repository, which can quickly lead to repository bloat if you're changing the code often.
