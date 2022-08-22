@@ -119,13 +119,13 @@ with self.assertRaises(SystemExit):
 ***
 
 **Checking for `sys.exit()`**
-- Suppose the code throw an error like `sys.exit()`; this can be tested as:
+- Suppose the code is designed to exit like this: `sys.exit()`; this can be tested as:
 
 ```
 with self.assertRaises(SystemExit):
     your_method()
 ```    
-- Suppose the code throw an error like `sys.exit("Error")`; this can be tested as:
+- Suppose the code is designed to exit like this: `sys.exit("Error")`; this can be tested as:
 ```
 with self.assertRaises(SystemExit) as cm:
     your_method()
