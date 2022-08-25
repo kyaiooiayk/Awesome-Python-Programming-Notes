@@ -119,10 +119,11 @@ with self.assertRaises(SystemExit):
 ***
 
 **Checking numpy array equality with a tollerance**
+```
 a=np.array([1,2])
 a=np.array([1.0001,2.0001])
 np.testing.assert_array_almost_equal(a, b, decimal=9)
-
+```
 *** 
 
 
