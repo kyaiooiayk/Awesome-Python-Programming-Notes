@@ -9,6 +9,13 @@ PEP stands for Python Enhancement Proposals, and the two most known are the PEP8
 This usually means that some line of the code do not follow the guidelines and fail to express the intent in what is considered the most redable way.
 ***
 
+## Anti-patterns
+- Anti-patterns are certain patterns in software development that are considered bad programming practices.
+- As opposed to design patterns which are common approaches to common problems that have been formalized and are generally considered a good development practice, anti-patterns are the opposite and are undesirable.
+- Anti-patterns make code difficult to read, hard to maintain, slow, over-engineered, unstable, prone to errors and with potential security issues.
+
+***
+
 ## How to automatically check your code for PEP conformity?
 - This is the job of what are called linters: programs that check for conformity. Here are two of them.
 - Install pep8: `pip3 install pep8` and run it like this `pep8 my_script.py`
@@ -171,4 +178,5 @@ LOG_FILE = "logs/app.log"
 ## References
 - [The Hitchhiker's Guide to Python: Best Practices for Development ](https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca)
 - The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc. 
+- [18 common python antipatterns](https://towardsdatascience.com/18-common-python-anti-patterns-i-wish-i-had-known-before-44d983805f0f)
 ***
