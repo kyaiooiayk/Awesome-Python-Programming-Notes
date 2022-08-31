@@ -126,6 +126,13 @@ np.testing.assert_array_almost_equal(a, b, decimal=9)
 ```
 *** 
 
+**Checking list equality**
+```
+a = ["1","2"]
+b = ["1","2"]
+self.assertListEqual(a, b)
+```
+*** 
 
 **Checking for `sys.exit()`**
 - Suppose the code is designed to exit like this: `sys.exit()`; this can be tested as:
