@@ -11,13 +11,25 @@
 - [Algorithms](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Algorithms)
 - [`__all__`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/The%20__all__%20construct)
 - [`args` and `kwargs`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Args%20and%20kwargs.ipynb)
-- [Overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
+- [Assignment](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Assignment.ipynb)
+
+- [Broadcasting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Broadcasting.ipynb)
+- [Built-in iterators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Built-in%20iterators.ipynb)
+
+- [Class definition and syntax](http://localhost:8889/notebooks/Desktop/DataScienceFolder/GitHub/Python-Programming/tutorials/GitHub_MD_rendering/Class%20definition%20and%20syntax.ipynb)
+- [Code refactoring](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Code%20refactoring.ipynb)
 - [Code style](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Code_style.md)
 - [Coding interviews](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Coding_Interview_exercises)
+- [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Control%20flow%20statements.ipynb)
+
+- [Data structures: stacks, queues and linked list](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb) 
 - [Decoretors](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Decorators)
 - [`__init__.py` file](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Introduction%20to%20__init__.py)
 - [Installation](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Installation)
 - [Notable methods](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Notable_methods_in_python)
 - [Other useful things](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Other_useuful_things)
+
+- [Python overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
+
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittest)
 - [`__name__ == '__main__'`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/__name__%20%3D%3D%20'__main__')
