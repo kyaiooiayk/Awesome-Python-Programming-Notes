@@ -3,7 +3,7 @@
 - Two notebooks are available: 
     - One with coloured boxes and outside folder `GitHub_MD_rendering` 
     - One in black-and-white under folder `GitHub_MD_rendering`
-
+***
 
 ## Tabl of contents
 - [Abstract and vitual abtract class](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Abstract%20and%20virtual%20abstract%20class.ipynb)
@@ -12,24 +12,57 @@
 - [`__all__`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/The%20__all__%20construct)
 - [`args` and `kwargs`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Args%20and%20kwargs.ipynb)
 - [Assignment](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Assignment.ipynb)
-
 - [Broadcasting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Broadcasting.ipynb)
 - [Built-in iterators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Built-in%20iterators.ipynb)
-
+- [`__call__` method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/__call__%20method.ipynb)
 - [Class definition and syntax](http://localhost:8889/notebooks/Desktop/DataScienceFolder/GitHub/Python-Programming/tutorials/GitHub_MD_rendering/Class%20definition%20and%20syntax.ipynb)
 - [Code refactoring](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Code%20refactoring.ipynb)
 - [Code style](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Code_style.md)
 - [Coding interviews](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Coding_Interview_exercises)
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Control%20flow%20statements.ipynb)
-
 - [Data structures: stacks, queues and linked list](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb) 
+- [Declaring priate variables](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Declaring%20private%20variables.ipynb)
+- [Default dictionary](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/default_dictionary.ipynb)
 - [Decoretors](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Decorators)
+- [Docstrings](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Docstrings.ipynb)
+- [Dunder methods](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Dunder%20methods.ipynb)
+- [EAFP and LBYL coding styles](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/EAFP_and_LBYL_coding_styles.ipynb)
+- [Error and exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Errors%20and%20exceptions.ipynb)
+- [First class functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/First%20class%20functions.ipynb)
+- [Function annotations](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Function%20annotation.ipynb)
+- [`__future__` module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/The%20__future__%20module.ipynb)
+- [Generators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Generators.ipynb)
+- [hashable](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/hashable.ipynb)
+- [Inheritance in all its flavours](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Inheritance%20in%20all%20its%20flavours.ipynb)
 - [`__init__.py` file](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Introduction%20to%20__init__.py)
 - [Installation](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Installation)
+- [Iterables, iterators and generators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Iterables%2C%20Iterators%20and%20Generators.ipynb)
+- [`lambda`, `map` and `filter` functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lambda%2C%20map%20and%20filter%20functions.ipynb)
+- [List and set comprehensions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/List%20and%20set%20comprehensions.ipynb)
+- [Lists, sets, frozensets, dictionaries and tuples](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lists%2C%20sets%2C%20frozensets%2C%20dictionaries%20and%20tuples.ipynb)
+- [Logging module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Logging%20module.ipynb)
+- [Match case statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Match%20case%20statement.ipynb)
+- [namespaces, scope resolution, and the LEGB rule](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Namespaces%2C%20scope%20resolution%2C%20and%20the%20LEGB%20rule.ipynb)
 - [Notable methods](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Notable_methods_in_python)
 - [Other useful things](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Other_useuful_things)
-
+- [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
+- [Operators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Operators.ipynb)
+- [Overwriting, overloading and overriding](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Overwriting%20vs.%20Overloading%20vs.%20Overriding.ipynb)
+- [Partial functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Partial%20function.ipynb)
 - [Python overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
-
+- [Python 2.7.x vs. Python 3.x](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Python%202.7=.x%20and%20Python%203.x.ipynb)
+- [Public, private and protected](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Public%2C%20Private%2C%20Protected%20attributes.ipynb)
+- [`__repr__` vs, `__str__`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/__repr__%20vs.%20__str__.ipynb)
+- [`self` and `__init__`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/self%20and%20__init__.ipynb)
+- [Sequence slicing](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Sequence%20slicing.ipynb)
+- [Short-circuiting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Short-circuting.ipynb)
+- [String formatting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/String%20formatting.ipynb)
+- [String and regular expression](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Strings%20and%20regular%20expressions.ipynb)
+- [`super()` and `__init__` and `__new__`](http://localhost:8889/notebooks/Desktop/DataScienceFolder/GitHub/Python-Programming/tutorials/Super()%20__init__%20and%20__new__.ipynb)
+- [`super()`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Super().ipynb)
+- [`_` underscore](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Underscore%20(_).ipynb)
+- [Variables and objects](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Variables%20and%20Objects.ipynb)
+- [Walrus operator](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Walrus_operator.ipynb)
+- [`yield`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Yield.ipynb)
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittest)
 - [`__name__ == '__main__'`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/__name__%20%3D%3D%20'__main__')
