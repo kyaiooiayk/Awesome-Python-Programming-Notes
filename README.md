@@ -1,13 +1,16 @@
 # Python Programming
-*Tutorials on python programming explained (mostly) using Jupyter Notebooks*
-
+- Tutorials on python programming explained (mostly) using Jupyter Notebooks.
+- Two notebooks are available: 
+    - One with coloured boxes and outside folder `GitHub_MD_rendering` 
+    - One in black-and-white under folder `GitHub_MD_rendering`
 
 
 ## Tabl of contents
-- [Abstract and vitual class](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Abstract%20and%20virtual%20abstarct%20class.ipynb)
+- [Abstract and vitual abtract class](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Abstract%20and%20virtual%20abstract%20class.ipynb)
 - [A colleciton of not so obvious stuff](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/A%20collection%20of%20not-so-obvious%20Python%20stuff.ipynb)
 - [Algorithms](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Algorithms)
 - [`__all__`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/The%20__all__%20construct)
+- [`args` and `kwargs`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Args%20and%20kwargs.ipynb)
 - [Overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
 - [Code style](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Code_style.md)
 - [Coding interviews](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Coding_Interview_exercises)
