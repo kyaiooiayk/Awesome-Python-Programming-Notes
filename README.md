@@ -23,7 +23,7 @@
 - [Data structures: stacks, queues and linked list](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb) 
 - [Declaring priate variables](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Declaring%20private%20variables.ipynb)
 - [Default dictionary](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/default_dictionary.ipynb)
-- [Decoretors](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Decorators)
+- [Decorators](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Decorators)
 - [Docstrings](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Docstrings.ipynb)
 - [Dunder methods](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Dunder%20methods.ipynb)
 - [EAFP and LBYL coding styles](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/EAFP_and_LBYL_coding_styles.ipynb)
