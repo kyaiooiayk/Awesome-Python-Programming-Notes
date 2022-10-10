@@ -29,7 +29,7 @@
 - [Dunder methods](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Dunder%20methods.ipynb)
 - [EAFP and LBYL coding styles](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/EAFP_and_LBYL_coding_styles.ipynb)
 - [Error and exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Errors%20and%20exceptions.ipynb)
-- [Error and exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Exceptions/Exceptions.ipynb)
+- [Exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Exceptions/GitHub_MD_rendering/Exceptions.ipynb)
 - [First class functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/First%20class%20functions.ipynb)
 - [Function annotations](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Function%20annotation.ipynb)
 - [`__future__` module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/The%20__future__%20module.ipynb)
