@@ -116,6 +116,5 @@ A monkey patch is a way for a program to extend or modify supporting system soft
 ## References
 - [The Hitchhiker's Guide to Python: Best Practices for Development ](https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca)
 - The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc. 
-- [Differences btw modules, packages and libraries](https://learnpython.com/blog/python-modules-packages-libraries-frameworks/)
 - [Difference between .py and .pyc files?](http://net-informations.com/python/iq/pyc.htm)
 - https://realpython.com/python-walrus-operator/

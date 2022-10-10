@@ -28,3 +28,9 @@ Oftentimes, developers create Python libraries to share reusable code with the c
 - *Frameworks*: Similar to libraries, Python frameworks are a collection of modules and packages that help programmers to fast track the development process. However, frameworks are usually more complex than libraries. Also, while libraries contain packages that perform specific operations, frameworks contain the basic flow and architecture of the application. If you compare application development to house construction, Python frameworks provide all the essential building blocks like the foundation, walls, windows, and roof. Then, the developers build their application around this foundation by adding functionalities comparable to a house’s alarm system, furniture, appliances, etc. Examples are:
   - `Django` is a Python framework for building web applications with less coding. With all the necessary features included by default, developers can focus on their applications rather than dealing with routine processes.
   - `Flask` is a web development framework that is known for its lightweight and modular design. It has many out-of-the-box features and is easily adaptable to specific requirements.
+***
+
+## References
+- [Differences btw modules, packages and libraries](https://learnpython.com/blog/python-modules-packages-libraries-frameworks/)
+- [Packages](https://python-course.eu/python-tutorial/packages.php)
+- [Modules and modular programming](https://python-course.eu/python-tutorial/modules-and-modular-programming.php)
