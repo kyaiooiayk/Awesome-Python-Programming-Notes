@@ -31,7 +31,7 @@
 - [Error and exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Errors%20and%20exceptions.ipynb)
 - [Exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Exceptions/GitHub_MD_rendering/Exceptions.ipynb)
 - [First class functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/First%20class%20functions.ipynb)
-- [From%202.x%20to%203.x%20new%20class%20definition](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/From 2.x to 3.x new class definition.ipynb)
+- [From 2.x to 3.x new class definition](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/From%202.x%20to%203.x%20new%20class%20definition.ipynb)
 - [Function annotations](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Function%20annotation.ipynb)
 - [`__future__` module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/The%20__future__%20module.ipynb)
 - [Generators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Generators.ipynb)
