@@ -186,3 +186,4 @@ def test_plot_square2():
 
 ## References
 - [Unittesting benefits](https://dzone.com/articles/top-8-benefits-of-unit-testing)
+- [Tests, DocTests, UnitTests](https://python-course.eu/advanced-python/tests-doctest-unittest.php)
