@@ -55,6 +55,7 @@
 - [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
 - [Operators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Operators.ipynb)
 - [Overwriting, overloading and overriding](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Overwriting%20vs.%20Overloading%20vs.%20Overriding.ipynb)
+- [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/parametrised_testing)
 - [Partial functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Partial%20function.ipynb)
 - [Python overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
 - [Python 2.7.x vs. Python 3.x](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Python%202.7=.x%20and%20Python%203.x.ipynb)
