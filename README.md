@@ -19,7 +19,7 @@
 - [Code refactoring](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Code%20refactoring.ipynb)
 - [Code style](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Code_style.md)
 - [Coding interviews](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Coding_Interview_exercises)
-- [Composition vs. inheritance](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/GitHub_MD_rendering/Composition%20vs.%20inheritance.ipynb")
+- [Composition vs. inheritance](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Composition%20vs.%20inheritance.ipynb")
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Control%20flow%20statements.ipynb)
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Currying.ipynb)
 - [Currying](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb) 
