@@ -172,6 +172,10 @@ def cool_function(cool_argument, optional_info):
 IMG_BIN = "images"
 LOG_FILE = "logs/app.log"
 ```
+
+<img width="612" alt="image" src="https://user-images.githubusercontent.com/89139139/204856905-d1f923f4-475a-4922-8fcd-77ac5b152c65.png">
+
+
 ***
 
 
