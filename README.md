@@ -74,6 +74,7 @@
 - [`_` underscore](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Underscore%20(_).ipynb)
 - [Variables and objects](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Variables%20and%20Objects.ipynb)
 - [Walrus operator](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Walrus_operator.ipynb)
+- [Wheels](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/python_wheels)
 - [`yield`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Yield.ipynb)
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
 - [`__name__ == '__main__'`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/__name__%20%3D%3D%20'__main__')
