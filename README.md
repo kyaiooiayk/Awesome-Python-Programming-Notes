@@ -22,6 +22,7 @@
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Control%20flow%20statements.ipynb)
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Currying.ipynb)
 - [Currying](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb) 
+- [Data structures](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Data-Structures)
 - [Declaring priate variables](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Declaring%20private%20variables.ipynb)
 - [Default dictionary](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/default_dictionary.ipynb)
 - [Decorations](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Decorations/GitHub_MD_rendering)

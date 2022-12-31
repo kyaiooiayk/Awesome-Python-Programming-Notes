@@ -16,6 +16,7 @@
 ***
 
 ## Available tutorials
+- [Arrays](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Data-Structures/tutorials/GitHub_MD_rendering/Arrays.ipynb)
 - [Linked lists](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Data-Structures/tutorials/GitHub_MD_rendering/Linked%20lists.ipynb)
 - [Queues](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Data-Structures/tutorials/GitHub_MD_rendering/Queues.ipynb)
 - [Stacks](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Data-Structures/tutorials/GitHub_MD_rendering/Stacks.ipynb)
