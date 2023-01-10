@@ -6,7 +6,6 @@
 - [Dynamic programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Dynamic%20programming.ipynb)
 - [From O(1) to O(n!) time complexity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/From%20O(1)%20to%20O(n!)%20time%20complexity.ipynb)
 - [Greedy algorithm vs. dynamic programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Greedy%20algorithm%20vs.%20dynamic%20programming.ipynb)
-- [Hashing](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Hashing.ipynb)
 - [Introduction to Greedy Algorithms](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Introduction%20to%20Greedy%20Algorithms.ipynb)
 - [Linear and binary search](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Linear%20and%20binary%20search.ipynb)
 - [Recursion](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Recursion.ipynb)
