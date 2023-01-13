@@ -78,7 +78,7 @@
 - [Logging module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Logging%20module.ipynb)
 - [Other useful things](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Other_useuful_things)
 - [Python overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
-- [Resources to learn python]()
+- [Resources to learn python](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Learning_python.md)
 - [Test-driven Development (TDD)](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Test-driven%20Development%20(TDD))
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
 ***
