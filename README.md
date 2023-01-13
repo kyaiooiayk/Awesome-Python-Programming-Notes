@@ -1,14 +1,10 @@
 # Python Programming
 - Tutorials on python programming explained (mostly) using Jupyter Notebooks.
-- Two notebooks are available: 
-    - One with coloured boxes and outside folder `GitHub_MD_rendering` 
-    - One in black-and-white under folder `GitHub_MD_rendering`
 ***
 
-## Table of contents
+## Available tutorials
 - [Abstract and vitual abtract class](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Abstract%20and%20virtual%20abstract%20class.ipynb)
 - [A colleciton of not so obvious stuff](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/A%20collection%20of%20not-so-obvious%20Python%20stuff.ipynb)
-- [Algorithms](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Algorithms)
 - [`__all__`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/The%20__all__%20construct)
 - [`args` and `kwargs`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Args%20and%20kwargs.ipynb)
 - [Assignment](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Assignment.ipynb)
@@ -23,15 +19,11 @@
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Control%20flow%20statements.ipynb)
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Currying.ipynb)
 - [Currying](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb) 
-- [Data structures](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Data-Structures)
 - [Declaring priate variables](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Declaring%20private%20variables.ipynb)
 - [Default dictionary](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/default_dictionary.ipynb)
 - [Decorations](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Decorations/GitHub_MD_rendering)
 - [(Built-in) Decorators](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Built-in%20Decorators/GitHub_MD_rendering)
-- [Doctest](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Doctest)
-- [Docstrings](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Docstrings.ipynb)
 - [Dunder methods](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Dunder%20methods.ipynb)
-- [EAFP and LBYL coding styles](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/EAFP_and_LBYL_coding_styles.ipynb)
 - [Error and exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Errors%20and%20exceptions.ipynb)
 - [Exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Exceptions/GitHub_MD_rendering/Exceptions.ipynb)
 - [First class functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/First%20class%20functions.ipynb)
@@ -48,19 +40,16 @@
 - [`lambda`, `map` and `filter` functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lambda%2C%20map%20and%20filter%20functions.ipynb)
 - [List and set comprehensions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/List%20and%20set%20comprehensions.ipynb)
 - [Lists, sets, frozensets, dictionaries and tuples](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lists%2C%20sets%2C%20frozensets%2C%20dictionaries%20and%20tuples.ipynb)
-- [Logging module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Logging%20module.ipynb)
 - [Match case statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Match%20case%20statement.ipynb)
 - [Module vs. Package vs. Library vs. Framework](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/modules_packages_libraries_frameworks.md)
 - [Modules](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Modules)
 - [namespaces, scope resolution, and the LEGB rule](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Namespaces%2C%20scope%20resolution%2C%20and%20the%20LEGB%20rule.ipynb)
 - [Notable methods](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Notable_methods_in_python)
-- [Other useful things](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Other_useuful_things)
 - [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
 - [Operators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Operators.ipynb)
 - [Overwriting, overloading and overriding](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Overwriting%20vs.%20Overloading%20vs.%20Overriding.ipynb)
 - [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/parametrised_testing)
 - [Partial functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Partial%20function.ipynb)
-- [Python overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
 - [Python 2.7.x vs. Python 3.x](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Python%202.7=.x%20and%20Python%203.x.ipynb)
 - [Public, private and protected](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Public%2C%20Private%2C%20Protected%20attributes.ipynb)
 - [`__repr__` vs, `__str__`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/__repr__%20vs.%20__str__.ipynb)
@@ -71,12 +60,31 @@
 - [String and regular expression](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Strings%20and%20regular%20expressions.ipynb)
 - [`super()` and `__init__` and `__new__`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Super()%20__init__%20and%20__new__.ipynb)
 - [`super()`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Super().ipynb)
-- [Test-driven Development (TDD)](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Test-driven%20Development%20(TDD))
 - [`_` underscore](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Underscore%20(_).ipynb)
 - [Variables and objects](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Variables%20and%20Objects.ipynb)
 - [Walrus operator](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Walrus_operator.ipynb)
 - [Wheels](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/python_wheels)
 - [`yield`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Yield.ipynb)
-- [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
 - [`__name__ == '__main__'`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/__name__%20%3D%3D%20'__main__')
+***
+
+## Other tutorials
+- [Algorithms](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Algorithms)
+- [Data structures](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Data-Structures)
+
+- [Doctest](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Doctest)
+- [Docstrings](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Docstrings.ipynb)
+- [EAFP and LBYL coding styles](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/EAFP_and_LBYL_coding_styles.ipynb)
+- [Logging module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Logging%20module.ipynb)
+- [Other useful things](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Other_useuful_things)
+- [Python overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
+- [Resources to learn python]()
+- [Test-driven Development (TDD)](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Test-driven%20Development%20(TDD))
+- [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
+***
+
+## A small note on the notebook rendering
+- Two notebooks are available: 
+    - One with coloured boxes and outside folder `GitHub_MD_rendering` 
+    - One in black-and-white under folder `GitHub_MD_rendering`
 ***
