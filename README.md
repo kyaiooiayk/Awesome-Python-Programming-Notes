@@ -57,7 +57,7 @@
 - [Short-circuiting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Short-circuting.ipynb)
 - [String formatting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/String%20formatting.ipynb)
 - [String and regular expression](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Strings%20and%20regular%20expressions.ipynb)
-- [Type hinting and annotations]()
+- [Type hinting and annotations](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Type%20hinting%20and%20annotations.ipynb)
 - [`super()` and `__init__` and `__new__`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Super()%20__init__%20and%20__new__.ipynb)
 - [`super()`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Super().ipynb)
 - [`_` underscore](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Underscore%20(_).ipynb)

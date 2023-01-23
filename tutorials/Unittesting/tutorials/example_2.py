@@ -1,5 +1,5 @@
 """
-What? Simplep unittest
+What? Simple unittest
 
 unittest requires that:
     - You put your tests into classes as methods
