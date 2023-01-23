@@ -188,7 +188,8 @@ def test_plot_square2():
 - A mock object substitutes and imitates a real object within a testing environment. 
 - **It is used in this scenario**: if your code makes HTTP requests to external services, then your tests execute predictably only so far as the services are behaving as you expected. Sometimes, a temporary change in the behavior of these external services can cause intermittent failures within your test suite. But that would not be a problem of your code, yet the test fails!
 - Replacing the actual request with a mock object would allow you to simulate external service outages and successful responses in a predictable way. This is what mocking in python does.
-****
+- Beware of overusing mock objects! It’s easy to take advantage of the power of Python mock objects and mock so much that you actually decrease the value of your tests.
+***
 
 ## Available tutorials
 - [Unittesting a string method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/example_1.py)
