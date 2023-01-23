@@ -191,14 +191,14 @@ def test_plot_square2():
 ****
 
 ## Available tutorials
-- [Unittesting a string method]()
-- [Unittesting an addition method]()
-- [Unittesting an addition failing method]()
-- [How it is used in practice]()
-- [Mocking]()
+- [Unittesting a string method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/example_1.py)
+- [Unittesting an addition method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/Simple_unit_check.py)
+- [Unittesting an addition failing method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/Simple_unit_check_one_failed.py)
+- [How it is used in practice](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting/tutorials/How%20it%20is%20used%20in%20practice)
 ***
 
 ## References
 - [Unittesting benefits](https://dzone.com/articles/top-8-benefits-of-unit-testing)
 - [Tests, DocTests, UnitTests](https://python-course.eu/advanced-python/tests-doctest-unittest.php)
 - [Python mocking](https://realpython.com/python-mock-library/)
+***
