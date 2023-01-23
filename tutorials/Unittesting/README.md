@@ -191,6 +191,13 @@ def test_plot_square2():
 - Beware of overusing mock objects! It’s easy to take advantage of the power of Python mock objects and mock so much that you actually decrease the value of your tests.
 ***
 
+## Coverage
+- Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
+- Install it with: `pip install coverage`
+- Run your test as usual as: `python test.py` 
+- Find out how much of your code you tested with: `coverage test.py`
+***
+
 ## Available tutorials
 - [Unittesting a string method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/example_1.py)
 - [Unittesting an addition method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/Simple_unit_check.py)
@@ -202,4 +209,5 @@ def test_plot_square2():
 - [Unittesting benefits](https://dzone.com/articles/top-8-benefits-of-unit-testing)
 - [Tests, DocTests, UnitTests](https://python-course.eu/advanced-python/tests-doctest-unittest.php)
 - [Python mocking](https://realpython.com/python-mock-library/)
+- [Test coverage](https://coverage.readthedocs.io/en/7.0.5/)
 ***
