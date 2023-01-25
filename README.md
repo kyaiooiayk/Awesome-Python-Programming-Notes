@@ -36,7 +36,7 @@
 - [`__init__.py` file](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Introduction%20to%20__init__.py)
 - [Installation](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Installation.md)
 - [Iterables, iterators and generators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Iterables%2C%20Iterators%20and%20Generators.ipynb)
-- [`lambda`, `map`, `filter` and `reduce` functions]()
+- [`lambda`, `map`, `filter` and `reduce` functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lambda%2C%20map%2C%20filter%20and%20reduce%20functions.ipynb)
 - [List and set comprehensions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/List%20and%20set%20comprehensions.ipynb)
 - [Lists, sets, frozensets, dictionaries and tuples](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lists%2C%20sets%2C%20frozensets%2C%20dictionaries%20and%20tuples.ipynb)
 - [Match case statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Match%20case%20statement.ipynb)
