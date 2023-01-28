@@ -74,11 +74,11 @@
 
 ## Curiosities
 - [Equality vs. identity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Equality%20vs.%20identity.ipynb)
-- [Disassembling python bytecode]()
+- [Disassembling python bytecode](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Disassembling%20python%20bytecode.ipynb)
 ***
 
 ## Don'ts
-- [Don't use mutable object as default arguments]()
+- [Don't use mutable object as default arguments](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Don't%20use%20mutable%20objects%20as%20default%20arguments.ipynb)
 ***
 
 ## Other tutorials
