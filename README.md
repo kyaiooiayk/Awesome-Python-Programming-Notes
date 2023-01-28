@@ -72,7 +72,7 @@
 ***
 
 ## Curiosity
-- []()
+- [Equality vs. identity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Equality%20vs.%20identity.ipynb)
 ***
 
 ## Other tutorials
