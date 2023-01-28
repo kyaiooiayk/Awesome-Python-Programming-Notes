@@ -71,7 +71,7 @@
 - [`__name__ == '__main__'`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/__name__%20%3D%3D%20'__main__')
 ***
 
-## Curiosity
+## Curiosities
 - [Equality vs. identity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Equality%20vs.%20identity.ipynb)
 ***
 
