@@ -56,6 +56,7 @@
 - [Public, private and protected methods](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Public%2C%20Private%2C%20Protected%20methods.ipynb)
 - [`__repr__` vs, `__str__`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/__repr__%20vs.%20__str__.ipynb)
 - [`self` and `__init__`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/self%20and%20__init__.ipynb)
+- [Reference vs. Shallow and deep copy](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Reference%20vs.%20shallow%20and%20deep%20copy.ipynb)
 - [Sequence slicing](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Sequence%20slicing.ipynb)
 - [Short-circuiting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Short-circuting.ipynb)
 - [String formatting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/String%20formatting.ipynb)
@@ -73,6 +74,10 @@
 
 ## Curiosities
 - [Equality vs. identity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Equality%20vs.%20identity.ipynb)
+***
+
+## Don'ts
+- [Don't use mutable object as default arguments]()
 ***
 
 ## Other tutorials
