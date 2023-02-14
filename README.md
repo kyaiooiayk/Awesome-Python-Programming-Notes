@@ -43,7 +43,7 @@
 - [Lists, sets, frozensets, dictionaries and tuples](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lists%2C%20sets%2C%20frozensets%2C%20dictionaries%20and%20tuples.ipynb)
 - [Match case statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Match%20case%20statement.ipynb)
 - [Module vs. Package vs. Library vs. Framework](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/modules_packages_libraries_frameworks.md)
-- [Modules](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Modules)
+- [Modules](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/modules/GitHub_MD_rendering/Modules.ipynb)
 - [namespaces, scope resolution, and the LEGB rule](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Namespaces%2C%20scope%20resolution%2C%20and%20the%20LEGB%20rule.ipynb)
 - [Notable methods](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Notable_methods_in_python)
 - [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
