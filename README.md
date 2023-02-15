@@ -4,7 +4,6 @@
 
 ## Available tutorials
 - [Abstract and vitual abtract class](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Abstract%20and%20virtual%20abstract%20class.ipynb)
-- [A colleciton of not so obvious stuff](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/A%20collection%20of%20not-so-obvious%20Python%20stuff.ipynb)
 - [`__all__`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/The%20__all__%20construct)
 - [`args` and `kwargs`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Args%20and%20kwargs.ipynb)
 - [Assignment](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Assignment.ipynb)
@@ -15,8 +14,9 @@
 - [Class construction](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Class%20construction.ipynb)
 - [Code refactoring](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Code%20refactoring.ipynb)
 - [Code style](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Code_style.md)
-- [Conditional else vs. completion else](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/conditional%20else%20vs.%20completion%20else.ipynb)
+- [Collections]()
 - [Composition vs. inheritance](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Composition%20vs.%20inheritance.ipynb")
+- [Conditional else vs. completion else](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/conditional%20else%20vs.%20completion%20else.ipynb)
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Control%20flow%20statements.ipynb)
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Currying.ipynb)
 - [Currying](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb) 
