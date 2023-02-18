@@ -12,5 +12,5 @@
 - [Recursion](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Recursion.ipynb)
 - [Selection, bubble, insert, merge and quick sort and their complexity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Selection%2C%20bubble%2C%20insert%2C%20merge%20and%20quick%20sort%20and%20their%20complexity.ipynb)
 - [Time and space complexity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Time%20and%20space%20complexity.ipynb)
-- [Dijkstra’s algorithm for finding minimum distance path]()
+- [Dijkstra’s algorithm for finding minimum distance path](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Algorithms/tutorials/GitHub_MD_rendering/Dijkstra%E2%80%99s%20algorithm%20for%20finding%20minimum%20distance%20path.ipynb)
 ***
