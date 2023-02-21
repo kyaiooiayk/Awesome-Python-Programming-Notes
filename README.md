@@ -37,7 +37,6 @@
 - [Key differences between Python 2 and 3](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Key%20differences%20between%20Python%202%20and%203.ipynb)
 - [Inheritance in all its flavours](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Inheritance%20in%20all%20its%20flavours.ipynb)
 - [`__init__.py` file](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Introduction%20to%20__init__.py)
-- [Installation](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Installation.md)
 - [Iterables, iterators and generators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Iterables%2C%20Iterators%20and%20Generators.ipynb)
 - [`lambda`, `map`, `filter` and `reduce` functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lambda%2C%20map%2C%20filter%20and%20reduce%20functions.ipynb)
 - [List and set comprehensions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/List%20and%20set%20comprehensions.ipynb)
@@ -83,6 +82,7 @@
 ***
 
 ## Other tutorials
+- [Installation](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Installation.md)
 - [Algorithms](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Algorithms)
 - [Data structures](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Data-Structures)
 - [Doctest](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Doctest)
