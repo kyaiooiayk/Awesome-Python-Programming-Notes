@@ -94,7 +94,7 @@
 - [Resources to learn python](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Learning_python.md)
 - [Test-driven Development (TDD)](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Test-driven%20Development%20(TDD))
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
-- [How to create a `requirements.txt` file]()
+- [How to create a `requirements.txt` file](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/requirements.md)
 ***
 
 ## A small note on the notebook rendering
