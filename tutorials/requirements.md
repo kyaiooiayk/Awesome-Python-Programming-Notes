@@ -39,7 +39,6 @@
 ## Option #5
 - This approach seems to be more robust and more repetable, meaning that there is no chance the subpackages will become somehow incompatible.
 - Here is the issue: if your project uses `pandas==1.3.2` which in turns uses `numpy==1.21.2` among other packages. But pipreqs itself does not write the sub-packages in `requirments.txt`.
-
 - Install `pip-tools` with: `pip3 install pip-tools`
 - Then use this: `pipreqs --savepath=requirements.in && pip-compile --resolver=backtracking`
 - The new `requirements.txt` will have a structure similar to this:
