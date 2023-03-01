@@ -95,7 +95,7 @@
 - [Test-driven Development (TDD)](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Test-driven%20Development%20(TDD))
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
 - [How to create a `requirements.txt` file](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/requirements.md)
-- [Design patterns]()
+- [Design patterns](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Design_Patterns)
 ***
 
 ## A small note on the notebook rendering
