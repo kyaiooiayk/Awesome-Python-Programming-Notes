@@ -46,7 +46,6 @@
 - [Modules](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/modules/GitHub_MD_rendering/Modules.ipynb)
 - [namespaces, scope resolution, and the LEGB rule](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Namespaces%2C%20scope%20resolution%2C%20and%20the%20LEGB%20rule.ipynb)
 - [Notable methods](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Notable_methods_in_python)
-- [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
 - [Operators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Operators.ipynb)
 - [Overwriting, overloading and overriding](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Overwriting%20vs.%20Overloading%20vs.%20Overriding.ipynb)
 - [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/parametrised_testing)
@@ -96,6 +95,7 @@
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
 - [How to create a `requirements.txt` file](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/requirements.md)
 - [Design patterns](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Design_Patterns)
+- [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
 ***
 
 ## A small note on the notebook rendering
