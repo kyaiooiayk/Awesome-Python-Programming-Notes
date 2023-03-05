@@ -16,7 +16,7 @@
 
 ### Creational Design Patterns
 - [Factory Method](https://www.geeksforgeeks.org/factory-method-python-design-patterns/) | [Tutorial](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Design%20Patterns%20-%20Factory%20Method.ipynb)
-- [Abstract Factory Method](https://www.geeksforgeeks.org/abstract-factory-method-python-design-patterns/) | [Tutorial]()
+- [Abstract Factory Method](https://www.geeksforgeeks.org/abstract-factory-method-python-design-patterns/) | [Tutorial](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Design%20Patterns%20-%20Abstarct%20Factory%20Method.ipynb)
 - Builder Method
 - Prototype Method
 - Singleton Method
@@ -52,4 +52,5 @@
 - [Software architecture design patterns](https://stackoverflow.com/questions/4192887/software-architecture-design-patterns/46419722#46419722)
 - [10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
 - [Types of Software Architecture Patterns](https://www.geeksforgeeks.org/types-of-software-architecture-patterns/?ref=gcse)
+- [Design patterns in python](https://refactoring.guru/design-patterns/python)
 ***
