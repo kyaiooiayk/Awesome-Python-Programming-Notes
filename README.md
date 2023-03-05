@@ -1,8 +1,8 @@
-# Python Programming
-- Tutorials on python programming explained (mostly) using Jupyter Notebooks.
+# 🐍Awesome Python Programming Notes🐍
+*Tutorials & code snippets on python programming explained (mostly) using Jupyter Notebooks.*
 ***
 
-## Available tutorials
+## 📓Available tutorials📓
 - [Abstract and vitual abtract class](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Abstract%20and%20virtual%20abstract%20class.ipynb)
 - [`__all__`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/The%20__all__%20construct)
 - [`args` and `kwargs`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Args%20and%20kwargs.ipynb)
@@ -71,16 +71,16 @@
 - [`__name__ == '__main__'`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/__name__%20%3D%3D%20'__main__')
 ***
 
-## Curiosities
+## 🤔Curiosities🤔
 - [Equality vs. identity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Equality%20vs.%20identity.ipynb)
 - [Disassembling python bytecode](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Disassembling%20python%20bytecode.ipynb)
 ***
 
-## Don'ts
+## ⚠Don'ts⚠
 - [Don't use mutable object as default arguments](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Don't%20use%20mutable%20objects%20as%20default%20arguments.ipynb)
 ***
 
-## Other tutorials
+## 🔩Other tutorials🔩
 - [Installation](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Installation.md)
 - [Algorithms](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Algorithms)
 - [Data structures](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Data-Structures)
