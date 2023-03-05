@@ -15,8 +15,8 @@
 ***
 
 ### Creational Design Patterns
-- [Factory Method](https://www.geeksforgeeks.org/factory-method-python-design-patterns/) | [Tutorial]()
-- Abstract Factory Method
+- [Factory Method](https://www.geeksforgeeks.org/factory-method-python-design-patterns/) | [Tutorial](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Design%20Patterns%20-%20Factory%20Method.ipynb)
+- [Abstract Factory Method](https://www.geeksforgeeks.org/abstract-factory-method-python-design-patterns/) | [Tutorial]()
 - Builder Method
 - Prototype Method
 - Singleton Method
