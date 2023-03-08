@@ -18,7 +18,7 @@
 - Factory Method | [Tutorial](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Design%20Patterns%20-%20Factory%20Method.ipynb)
 - Abstract Factory Method | [Tutorial](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Design%20Patterns%20-%20Abstarct%20Factory%20Method.ipynb)
 - Builder Method | [Tutorial](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Creational%20Design%20Patterns%20-%20Builder%20Factory%20Method.ipynb)
-- Prototype Method | [Tutorial]()
+- Prototype Method | [Tutorial](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Creational%20Design%20Patterns%20-%20Prototype%20Factory%20Method.ipynb)
 - Singleton Method
 ***
 
