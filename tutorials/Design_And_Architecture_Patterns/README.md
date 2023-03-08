@@ -16,9 +16,9 @@
 
 ### Creational Design Patterns
 - Factory Method | [Tutorial](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Design%20Patterns%20-%20Factory%20Method.ipynb)
-- Abstract Factory Method| [Tutorial](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Design%20Patterns%20-%20Abstarct%20Factory%20Method.ipynb)
+- Abstract Factory Method | [Tutorial](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Design%20Patterns%20-%20Abstarct%20Factory%20Method.ipynb)
 - Builder Method | [Tutorial](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Creational%20Design%20Patterns%20-%20Builder%20Factory%20Method.ipynb)
-- Prototype Method
+- Prototype Method | [Tutorial]()
 - Singleton Method
 ***
 
@@ -46,7 +46,6 @@
 ***
 
 ## References
-- [Introduction to pattern design](https://www.geeksforgeeks.org/introduction-to-pattern-designing/)
 - [Python design patterns](https://www.geeksforgeeks.org/python-design-patterns/)
 - [What's the difference between design patterns and architectural patterns?](https://stackoverflow.com/questions/4243187/whats-the-difference-between-design-patterns-and-architectural-patterns)
 - [Software architecture design patterns](https://stackoverflow.com/questions/4192887/software-architecture-design-patterns/46419722#46419722)
