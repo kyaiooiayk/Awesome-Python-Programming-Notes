@@ -8,9 +8,21 @@
 - **The bottom line?** Architectural elements tend towards collections of classes or modules, generally represented as boxes. Diagrams about architecture represent the loftiest level looking down, whereas class diagrams are at the most atomic level.
 
 ## Three types of design patterns
-- **Creational Design Patterns** are about class instantiation or the object instantiation. 
-- **Structural Design Patterns** are about organising different classes and objects to form larger structures and provide new functionality while keeping these structures flexible and efficient.
-- **Behavioral Design Patterns** are all about identifying the common communication patterns between objects and realise these patterns.
+- **Creational Design Patterns**
+  - We use creational design patterns to build objects systematically.
+  - The main benefit of creational patterns is their flexibility.
+  - For example differnt types of objects from the same class can be created at runtime using creational patterns.
+  - In creational pattern, *Polymorphism* is often in use.
+- **Structural Design Patterns**
+  - We use structural patterns to eastablish relation between software components in particular settings.
+  - The goal is to satisfy functional and nonfunctional requirements.
+  - Functional requirements refer to what the software does.
+  - NonFunctional requiremnets refer to how well it does its job (like how fast or slow).
+  - Structual patterns take advantage of *inheritance*.
+- **Behavioral Design Patterns**
+  - It refers to how you make your objects interact with each other.
+  - The focus here is to defining protocols between these objects when working together to achieve a common goal.
+  - Beahavorial patterns mostly use *methods* and their *signatures*.
 ***
 
 ### Creational Design Patterns
@@ -51,4 +63,5 @@
 - [10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
 - [Types of Software Architecture Patterns](https://www.geeksforgeeks.org/types-of-software-architecture-patterns/?ref=gcse)
 - [Design patterns in python](https://refactoring.guru/design-patterns/python)
+- [Notes taken after the Linkedin "Python: Design Pattern" course](https://github.com/pyGuru123/Python-design-Patterns)
 ***
