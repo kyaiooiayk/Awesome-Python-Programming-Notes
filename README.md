@@ -42,6 +42,9 @@
 - [List and set comprehensions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/List%20and%20set%20comprehensions.ipynb)
 - [Lists, sets, frozensets, dictionaries and tuples](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Lists%2C%20sets%2C%20frozensets%2C%20dictionaries%20and%20tuples.ipynb)
 - [Match case statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Match%20case%20statement.ipynb)
+
+- [Method overloading vs. method overring]()
+
 - [Module vs. Package vs. Library vs. Framework](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/modules_packages_libraries_frameworks.md)
 - [Modules](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/modules/GitHub_MD_rendering/Modules.ipynb)
 - [namespaces, scope resolution, and the LEGB rule](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Namespaces%2C%20scope%20resolution%2C%20and%20the%20LEGB%20rule.ipynb)
@@ -51,9 +54,7 @@
 - [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/parametrised_testing)
 - [Partial functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Partial%20function.ipynb)
 - [Python 2.7.x vs. Python 3.x](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Python%202.7=.x%20and%20Python%203.x.ipynb)
-
-- [Polymorphims]()
-
+- [Polymorphims](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/GitHub_MD_rendering/Polymorphism.ipynb)
 - [Public, private and protected attributes](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Public%2C%20Private%2C%20Protected%20attributes.ipynb)
 - [Public, private and protected methods](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Public%2C%20Private%2C%20Protected%20methods.ipynb)
 - [`__repr__` vs, `__str__`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/__repr__%20vs.%20__str__.ipynb)
