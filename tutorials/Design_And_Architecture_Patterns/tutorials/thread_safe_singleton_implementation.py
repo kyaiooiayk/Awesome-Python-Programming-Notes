@@ -1,3 +1,5 @@
+# https://refactoring.guru/design-patterns/singleton/python/example#example-1
+
 from threading import Lock, Thread
 
 class SingletonMeta(type):
