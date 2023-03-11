@@ -5,12 +5,11 @@
 - **Patterns** are distilled commonality that you find in programs. It allows us to deconstruct a large complex structure and build using simple parts. It provides a general solution for a class of problems. Think of them as template which by their very nature are general and then need to be made specific depending on your case.
 - **Design patterns** are usually associated with code level commonalities. It provides various schemes for refining and building smaller subsystems. It is usually influenced by programming language. Some patterns pale into insignificance due to language paradigms. Design patterns are medium-scale tactics that flesh out some of the structure and behavior of entities and their relationships.
 - **Architectural patterns** are seen as commonality at higher level than design patterns. Architectural patterns are high-level strategies that concerns large-scale components, the global properties and mechanisms of a system. Application's architecture is the overall 'organization' of the code. The architecture typically needs to be decided up front and often is difficult to change once the application is built.
-- **The bottom line?** Architectural elements tend towards collections of classes or modules, generally represented as boxes. Diagrams about architecture represent the loftiest level looking down, whereas class diagrams are at the most atomic level. The purpose of architecture patterns is to understand how the major parts of the system fit together, how messages and data flow through the system, and other structural concerns. 
-***
+- **The bottom line?** Architectural elements tend towards collections of classes or modules, generally represented as boxes. Diagrams about architecture represent the loftiest level looking down, whereas class diagrams are at the most atomic level.
 
 ## Three types of design patterns
 - **Creational Design Patterns** are about class instantiation or the object instantiation. 
-- **Structural Design Patterns** are about organizing different classes and objects to form larger structures and provide new functionality while keeping these structures flexible and efficient.
+- **Structural Design Patterns** are about organising different classes and objects to form larger structures and provide new functionality while keeping these structures flexible and efficient.
 - **Behavioral Design Patterns** are all about identifying the common communication patterns between objects and realise these patterns.
 ***
 
