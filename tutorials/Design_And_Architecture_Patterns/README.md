@@ -7,6 +7,11 @@
 - **Architectural patterns** are seen as commonality at higher level than design patterns. Architectural patterns are high-level strategies that concerns large-scale components, the global properties and mechanisms of a system. Application's architecture is the overall 'organization' of the code. The architecture typically needs to be decided up front and often is difficult to change once the application is built.
 - **The bottom line?** Architectural elements tend towards collections of classes or modules, generally represented as boxes. Diagrams about architecture represent the loftiest level looking down, whereas class diagrams are at the most atomic level.
 
+## Desing patterns and OOP
+- Design patterns require the use of OOP.
+- thus, design patterns are almost irrelevant to non-OPP programming such as C.
+***
+
 ## Three types of design patterns
 - **Creational Design Patterns**
   - We use creational design patterns to build objects systematically.
