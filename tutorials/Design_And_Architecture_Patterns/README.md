@@ -19,7 +19,7 @@
   - For example differnt types of objects from the same class can be created at runtime using creational patterns.
   - In creational pattern, *Polymorphism* is often in use.
 - **Structural Design Patterns**
-  - We use structural patterns to eastablish relation between software components in particular settings.
+  - We use structural patterns to establish relation between software components in particular settings.
   - The goal is to satisfy functional and nonfunctional requirements.
   - Functional requirements refer to what the software does.
   - NonFunctional requiremnets refer to how well it does its job (like how fast or slow).
@@ -39,7 +39,7 @@
 ***
 
 ### Structural Design Patterns
-- Adapter Method
+- Adapter Method | [Tutorial]()
 - Bridge Method
 - Composite Method
 - Decorator Method
