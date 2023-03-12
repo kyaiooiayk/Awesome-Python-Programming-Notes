@@ -39,8 +39,8 @@
 ***
 
 ### Structural Design Patterns
-- Adapter Method | [Tutorial]()
-- Bridge Method
+- Adapter Method | [Tutorial](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Structural%20Design%20Patterns%20-%20Adapter%20Method.ipynb)
+- Bridge Method | [Tutorial](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Structural%20Design%20Patterns%20-%20Bridge%20Method.ipynb)
 - Composite Method
 - Decorator Method
 - Facade Method
