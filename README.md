@@ -100,7 +100,11 @@
 - [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
 ***
 
-## A small note on the notebook rendering
+## 🎓Online resources to learn python🎓
+- [Python Like You Mean It](https://www.pythonlikeyoumeanit.com)
+***
+
+##  📒A small note on the notebook rendering 📒
 - Two notebooks are available: 
     - One with coloured boxes and outside folder `GitHub_MD_rendering` 
     - One in black-and-white under folder `GitHub_MD_rendering`
