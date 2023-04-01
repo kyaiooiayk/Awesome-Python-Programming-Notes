@@ -103,6 +103,7 @@
 ## 🎓Online resources to learn python🎓
 - [Python Like You Mean It](https://www.pythonlikeyoumeanit.com)
 - [Learn python](https://www.learnpython.org/)
+- [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
 ***
 
 ##  📒A small note on the notebook rendering 📒
