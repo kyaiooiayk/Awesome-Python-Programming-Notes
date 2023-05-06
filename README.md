@@ -98,7 +98,8 @@
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
 - [How to create a `requirements.txt` file](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/requirements.md)
 - [Design and architecture patterns](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Design_And_Architecture_Patterns)
-- [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
+- [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
+- [Functional vs. OOP APIs]()
 ***
 
 ## 🎓Online resources to learn python🎓
