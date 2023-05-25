@@ -23,7 +23,7 @@
 
 ## Option #2
 - `pip3 freeze -> requirements.txt`
-- Sane story as per option #2.
+- Same story as per option #2.
 ***
 
 ## Option #3
