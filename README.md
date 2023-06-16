@@ -12,7 +12,6 @@
 - [`__call__` method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/__call__%20method.ipynb)
 - [Class Attributes vs Instance Attributes](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Class%20Attributes%20vs%20Instance%20Attributes.ipynb)
 - [Class construction](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Class%20construction.ipynb)
-- [Code refactoring](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Code%20refactoring.ipynb)
 - [Code style](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Code_style.md)
 - [Collections](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Collections.ipynb)
 - [Composition vs. inheritance](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Composition%20vs.%20inheritance.ipynb)
@@ -100,6 +99,7 @@
 - [Design and architecture patterns](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Design_And_Architecture_Patterns)
 - [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
 - [Functional vs. OOP APIs](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Functional%20vs.%20OOP%20APIs.ipynb)
+- [Production-like code]()
 ***
 
 ## 🎓Online resources to learn python🎓
