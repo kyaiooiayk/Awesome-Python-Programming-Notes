@@ -19,6 +19,11 @@
 - [Code refactoring](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Production-grade%20code/Code%20refactoring.ipynb)
 ***
 
+## Blogs
+***
+
 ## References
 - [What is code smell?](https://laszlo.substack.com/p/what-is-a-code-smell-and-what-can)
+- [Refactoring for Data Scientists: How to maintain readability in a single method?](https://laszlo.substack.com/p/refactoring-for-data-scientists-how)
+- [Simple trick to optimise code and maintain readability in a compute heavy application](https://laszlo.substack.com/p/simple-trick-to-optimise-code-and)
 ***
