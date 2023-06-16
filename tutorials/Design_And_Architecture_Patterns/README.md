@@ -65,7 +65,7 @@
 - For data scientists who just started to think about code quality, the two most relevant design patterns are: Factory Pattern and Strategy Pattern.
 - The two main components in any DS project are *data* and *algorithms*. The Factory pattern will help you decouple data IO, and the Strategy Pattern helps you decouple algorithms.
 - The main problem in data science projects is coupling. It means that you need to rewrite a large part of your code each time you want to try new options, hence your code is not generally and essentially hard-coded. This can happen both while managing data and  algorithms.
-- [Factory and Strategy Patters in DS]()
+- [Factory and Strategy Patters in DS](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Factory%20and%20Strategy%20Patterns%20in%20DS.ipynb)
 ***
 
 ## References
