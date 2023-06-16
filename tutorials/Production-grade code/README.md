@@ -15,6 +15,14 @@
 - **Couplers**: these are usually coupled classes for reasons that can be avoided. Two typical ones are Feature Envy and Inappropriate Intimacy. 
 ***
 
+## Documentations
+- Documentation should not be a chore.
+- Documentation should be a lightweight, high ROI activity, and a productivity tool.
+- Your code should document itself. 
+- Keep in mind that documentation cannot be tested and the same goes for comments!
+- You need to write readable code rather than readable documentation. 
+***
+
 ## Tutorials
 - [Code refactoring](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Production-grade%20code/Code%20refactoring.ipynb)
 ***
@@ -26,4 +34,5 @@
 - [What is code smell?](https://laszlo.substack.com/p/what-is-a-code-smell-and-what-can)
 - [Refactoring for Data Scientists: How to maintain readability in a single method?](https://laszlo.substack.com/p/refactoring-for-data-scientists-how)
 - [Simple trick to optimise code and maintain readability in a compute heavy application](https://laszlo.substack.com/p/simple-trick-to-optimise-code-and)
+- [Documentation vs Documentation in Data Science](https://laszlo.substack.com/p/documentation-vs-documentation-in)
 ***

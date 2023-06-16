@@ -68,6 +68,10 @@
 - [Factory and Strategy Patters in DS](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Factory%20and%20Strategy%20Patterns%20in%20DS.ipynb)
 ***
 
+## Others
+- [Dependency inversion]()
+***
+
 ## References
 - [Python design patterns](https://www.geeksforgeeks.org/python-design-patterns/)
 - [What's the difference between design patterns and architectural patterns?](https://stackoverflow.com/questions/4243187/whats-the-difference-between-design-patterns-and-architectural-patterns)
