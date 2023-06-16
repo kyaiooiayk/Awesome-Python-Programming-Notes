@@ -61,6 +61,13 @@
 - Visitor Method
 ***
 
+## Design patterns in Data Science
+- For data scientists who just started to think about code quality, the two most relevant design patterns are: Factory Pattern and Strategy Pattern.
+- The two main components in any DS project are *data* and *algorithms*. The Factory pattern will help you decouple data IO, and the Strategy Pattern helps you decouple algorithms.
+- The main problem in data science projects is coupling. It means that you need to rewrite a large part of your code each time you want to try new options, hence your code is not generally and essentially hard-coded. This can happen both while managing data and  algorithms.
+- [Factory and Strategy Patters in DS]()
+***
+
 ## References
 - [Python design patterns](https://www.geeksforgeeks.org/python-design-patterns/)
 - [What's the difference between design patterns and architectural patterns?](https://stackoverflow.com/questions/4243187/whats-the-difference-between-design-patterns-and-architectural-patterns)
@@ -69,4 +76,5 @@
 - [Types of Software Architecture Patterns](https://www.geeksforgeeks.org/types-of-software-architecture-patterns/?ref=gcse)
 - [Design patterns in python](https://refactoring.guru/design-patterns/python)
 - [Notes taken after the Linkedin "Python: Design Pattern" course](https://github.com/pyGuru123/Python-design-Patterns)
+- [You only need 2 design patterns to improve the quality of your code in a data science project](https://laszlo.substack.com/p/you-only-need-2-design-patterns-to)
 ***

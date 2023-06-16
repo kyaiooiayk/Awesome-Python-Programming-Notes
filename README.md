@@ -99,7 +99,7 @@
 - [Design and architecture patterns](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Design_And_Architecture_Patterns)
 - [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
 - [Functional vs. OOP APIs](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Functional%20vs.%20OOP%20APIs.ipynb)
-- [Production-like code]()
+- [Production-like code](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/Production-grade%20code)
 ***
 
 ## 🎓Online resources to learn python🎓
