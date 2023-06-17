@@ -62,14 +62,17 @@
 ***
 
 ## Design patterns in Data Science
-- For data scientists who just started to think about code quality, the two most relevant design patterns are: Factory Pattern and Strategy Pattern.
-- The two main components in any DS project are *data* and *algorithms*. The Factory pattern will help you decouple data IO, and the Strategy Pattern helps you decouple algorithms.
-- The main problem in data science projects is coupling. It means that you need to rewrite a large part of your code each time you want to try new options, hence your code is not generally and essentially hard-coded. This can happen both while managing data and  algorithms.
+- For data scientists thinking about code quality there are two main components in any DS project are *data* and *algorithms*.
+There are three most relevant design patterns (there are many more) are: 
+    - **Factory Pattern** is used to decouple data IO, or in other words the data sources (SQL, pandas etc ..)
+    - **Strategy Pattern** is used to decouple algorithms.
+    - **Adapter Pattern** is used to decouple external services.
+- All the above methods tackled the main problem in data science projects:coupling. It means that you need to rewrite a large part of your code each time you want to try new options, hence your code is not generally and essentially hard-coded. This can happen both while managing data and  algorithms.
 - [Factory and Strategy Patters in DS](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Factory%20and%20Strategy%20Patterns%20in%20DS.ipynb)
 ***
 
 ## Others
-- [Dependency inversion]()
+- [Dependency inversion](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Dependency%20Inversion.ipynb)
 ***
 
 ## References
@@ -81,4 +84,5 @@
 - [Design patterns in python](https://refactoring.guru/design-patterns/python)
 - [Notes taken after the Linkedin "Python: Design Pattern" course](https://github.com/pyGuru123/Python-design-Patterns)
 - [You only need 2 design patterns to improve the quality of your code in a data science project](https://laszlo.substack.com/p/you-only-need-2-design-patterns-to)
+- [Machine learning is the continuation of software enginerring by other mens: PyData 2022](file:///Users/gm_main/Downloads/2942283f-12f6-4548-80c2-071d3edb08f4.pdf.pdf)
 ***

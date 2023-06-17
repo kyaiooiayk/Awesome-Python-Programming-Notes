@@ -1,6 +1,10 @@
 # Production-like code
 ***
 
+## General advice
+- Wrap your hard decisions into a class.
+***
+
 ## Code smell
 - Code smell are certain structures in the code that indicate a violation of fundamental design principles and negatively impact design quality” and also.
 -  Code smells are an indicator of factors that contribute to technical debt.
@@ -23,11 +27,22 @@
 - You need to write readable code rather than readable documentation. 
 ***
 
+## Design patterns in Data Science
+- For data scientists thinking about code quality there are two main components in any DS project are *data* and *algorithms*.
+There are three most relevant design patterns (there are many more) are: 
+    - **Factory Pattern** is used to decouple data IO, or in other words the data sources (SQL, pandas etc ..)
+    - **Strategy Pattern** is used to decouple algorithms.
+    - **Adapter Pattern** is used to decouple external services.
+- All the above methods tackled the main problem in data science projects:coupling. It means that you need to rewrite a large part of your code each time you want to try new options, hence your code is not generally and essentially hard-coded. This can happen both while managing data and  algorithms.
+- [Factory and Strategy Patters in DS](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Factory%20and%20Strategy%20Patterns%20in%20DS.ipynb)
+***
+
 ## Tutorials
 - [Code refactoring](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Production-grade%20code/Code%20refactoring.ipynb)
 ***
 
 ## Blogs
+- [Deliberate Machine Learning](https://laszlo.substack.com)
 ***
 
 ## References
@@ -35,4 +50,5 @@
 - [Refactoring for Data Scientists: How to maintain readability in a single method?](https://laszlo.substack.com/p/refactoring-for-data-scientists-how)
 - [Simple trick to optimise code and maintain readability in a compute heavy application](https://laszlo.substack.com/p/simple-trick-to-optimise-code-and)
 - [Documentation vs Documentation in Data Science](https://laszlo.substack.com/p/documentation-vs-documentation-in)
+- [Can you version control Jupyter notebooks?](https://laszlo.substack.com/p/can-you-version-control-jupyter-notebooks)
 ***
