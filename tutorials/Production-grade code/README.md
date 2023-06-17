@@ -3,6 +3,7 @@
 
 ## General advice
 - Wrap your hard decisions into a class.
+- Keep the code (the class) separate from the calls (`main()`)
 ***
 
 ## Code smell
@@ -39,6 +40,7 @@ There are three most relevant design patterns (there are many more) are:
 
 ## Tutorials
 - [Code refactoring](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Production-grade%20code/Code%20refactoring.ipynb)
+- [Step-by-step tutorial on how to refactor your code for production](https://github.com/xLaszlo/CQ4DS-notebook-sklearn-refactoring-exercise/tree/master)
 ***
 
 ## Blogs
