@@ -13,7 +13,7 @@
 - Convert it to `.py` using the command line: `jupyter nbconvert --to=python`
 - Convert it to `.py` using the GUI: `File -> Download as -> Python (.py)`
 - Then you can use one of the folling options listed below.
-***
+*** 
 
 ## Option #1
 - `pip freeze -> requirements.txt`
