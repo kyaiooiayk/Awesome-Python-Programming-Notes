@@ -1,0 +1,8 @@
+typer
+scikit-learn
+jupyter
+pandas
+numpy
+sqlalchemy
+pydantic
+black

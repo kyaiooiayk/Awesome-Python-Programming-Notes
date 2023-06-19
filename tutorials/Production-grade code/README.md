@@ -4,6 +4,7 @@
 ## General advice
 - Wrap your hard decisions into a class.
 - Keep the code (the class) separate from the calls (`main()`)
+- It is very important to do refactoring incrementally. Any change should be small enough that if the tests fail the source can be found quickly. 
 ***
 
 ## Code smell
