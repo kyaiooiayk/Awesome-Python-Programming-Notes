@@ -39,7 +39,8 @@ There are three most relevant design patterns (there are many more) are:
 ***
 
 ## Thin slice (not thin-slicing!)
-- In software developement, for a given feature, we can come up with **multiple thin-slices** which can be incrementally (sequentially) built. Thin Slice is the simplest possible functional, usable, end to end slice of functionality.
+- In software developement, for a given feature, we can come up with **multiple thin-slices** which can be incrementally (sequentially) built. 
+- Thin Slice is the simplest possible functional, usable, end to end slice of functionality.
 ***
 
 ## Slow-changing dimensions
@@ -63,4 +64,5 @@ There are three most relevant design patterns (there are many more) are:
 - [Documentation vs Documentation in Data Science](https://laszlo.substack.com/p/documentation-vs-documentation-in)
 - [Can you version control Jupyter notebooks?](https://laszlo.substack.com/p/can-you-version-control-jupyter-notebooks)
 - [Slow-changing dimensions](https://en.wikipedia.org/wiki/Slowly_changing_dimension)
+- [Thin slice](https://blog.xnsio.com/2009/05/03/thin-slice/)
 ***
