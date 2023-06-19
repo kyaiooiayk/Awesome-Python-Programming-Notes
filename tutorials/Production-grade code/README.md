@@ -38,6 +38,15 @@ There are three most relevant design patterns (there are many more) are:
 - [Factory and Strategy Patters in DS](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Factory%20and%20Strategy%20Patterns%20in%20DS.ipynb)
 ***
 
+## Thin slice (not thin-slicing!)
+- In software developement, for a given feature, we can come up with **multiple thin-slices** which can be incrementally (sequentially) built. Thin Slice is the simplest possible functional, usable, end to end slice of functionality.
+***
+
+## Slow-changing dimensions
+- A slowly changing dimension (SCD) in data management and data warehousing is a dimension which contains relatively static data which can change slowly but unpredictably, rather than according to a regular schedule.
+- Some examples of typical slowly changing dimensions are entities such as names of geographical locations, customers, or products.
+***
+
 ## Tutorials
 - [Code refactoring](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Production-grade%20code/Code%20refactoring.ipynb)
 - [Step-by-step tutorial on how to refactor your code for production](https://github.com/xLaszlo/CQ4DS-notebook-sklearn-refactoring-exercise/tree/master)
@@ -53,4 +62,5 @@ There are three most relevant design patterns (there are many more) are:
 - [Simple trick to optimise code and maintain readability in a compute heavy application](https://laszlo.substack.com/p/simple-trick-to-optimise-code-and)
 - [Documentation vs Documentation in Data Science](https://laszlo.substack.com/p/documentation-vs-documentation-in)
 - [Can you version control Jupyter notebooks?](https://laszlo.substack.com/p/can-you-version-control-jupyter-notebooks)
+- [Slow-changing dimensions](https://en.wikipedia.org/wiki/Slowly_changing_dimension)
 ***
