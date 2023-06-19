@@ -3,7 +3,7 @@
 
 ## Why Unit Test your code?
 - **Safe refactoring** When you add more and more features to a software, you sometimes need to change old design and code. However, changing already-tested code is both risky and costly. If we have unit tests in place, then we can proceed for refactoring confidently.
-- **Better code quality** Writing tests before actual coding makes you think harder about the problem. It exposes the edge cases and makes you write better code. 
+- **Better code quality** Writing tests before actual coding makes you think harder about the problem. It exposes the edge cases and makes you write better code.
 - **Finds Software Bugs Early** Issues are found at an early stage. Since unit testing is carried out by developers who test individual code before integration, issues can be found very early and can be resolved then and there without impacting the other pieces of the code. This includes both bugs in the programmer’s implementation and flaws or missing parts of the specification for the unit.
 - **Facilitates Changes and Simplifies Integration** Unit testing allows the programmer to refactor code or upgrade system libraries at a later date and make sure the module still works correctly. Unit tests detect changes that may break a design contract. They help with maintaining and changing the code.
 - **Provides Documentation** Unit testing provides documentation of the system. Developers looking to learn what functionality is provided by a unit and how to use it can look at the unit tests to gain a basic understanding of the unit’s interface (API).
@@ -18,7 +18,7 @@
 ***
 
 ## General templates
-- This is just a template with all the necessary imports, comments and some code to refresh someone's knowledge on unittesting. 
+- This is just a template with all the necessary imports, comments and some code to refresh someone's knowledge on unittesting.
 - A testcase is created by subclassing `unittest.TestCase`. Essentialy the class `TestSum` inherits from the `TestCase` class.
 - All the following methods start with a `test_`. This naming convention informs the test runner about which methods represent a test.
 - While unittesting it is acceptable to use long and descriptive names for testing function.
@@ -130,7 +130,7 @@ a=np.array([1,2])
 a=np.array([1.0001,2.0001])
 np.testing.assert_array_almost_equal(a, b, decimal=9)
 ```
-*** 
+***
 
 **Checking list equality**
 ```
@@ -138,7 +138,7 @@ a = ["1","2"]
 b = ["1","2"]
 self.assertListEqual(a, b)
 ```
-*** 
+***
 
 **Checking for `sys.exit()`**
 - Suppose the code is designed to exit like this: `sys.exit()`; this can be tested as:
@@ -146,7 +146,7 @@ self.assertListEqual(a, b)
 ```
 with self.assertRaises(SystemExit):
     your_method()
-```    
+```
 - Suppose the code is designed to exit like this: `sys.exit("Error")`; this can be tested as:
 ```
 with self.assertRaises(SystemExit) as cm:
@@ -191,7 +191,7 @@ def test_plot_square2():
 ***
 
 ## Mocking
-- A mock object substitutes and imitates a real object within a testing environment. 
+- A mock object substitutes and imitates a real object within a testing environment.
 - **It is used in this scenario**: if your code makes HTTP requests to external services, then your tests execute predictably only so far as the services are behaving as you expected. Sometimes, a temporary change in the behavior of these external services can cause intermittent failures within your test suite. But that would not be a problem of your code, yet the test fails!
 - Replacing the actual request with a mock object would allow you to simulate external service outages and successful responses in a predictable way. This is what mocking in python does.
 - Beware of overusing mock objects! It’s easy to take advantage of the power of Python mock objects and mock so much that you actually decrease the value of your tests.
@@ -200,8 +200,9 @@ def test_plot_square2():
 ## Coverage
 - Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
 - Install it with: `pip install coverage`
-- Run your test as usual as: `python test.py` 
+- Run your test as usual as: `python test.py`
 - Find out how much of your code you tested with: `coverage test.py`
+- To generate the coverage report in HTML format: `python -m coverage html`
 ***
 
 ## Available tutorials
