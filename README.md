@@ -19,7 +19,7 @@
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Control%20flow%20statements.ipynb)
 - [Control flow statement](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Currying.ipynb)
 - [Context manager](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Context%20managers.ipynb)
-- [Currying](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb) 
+- [Currying](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Data%20structure%20stacks%2C%20queues%2C%20linked%20list.ipynb)
 - [Data class](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Data%20class.ipynb)
 - [Declaring priate variables](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Declaring%20private%20variables.ipynb)
 - [Default dictionary](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/default_dictionary.ipynb)
@@ -67,6 +67,7 @@
 - [`super()`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Super().ipynb)
 - [`_` underscore](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Underscore%20(_).ipynb)
 - [Variables and objects](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Variables%20and%20Objects.ipynb)
+- [`with` statement]()
 - [Walrus operator](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Walrus_operator.ipynb)
 - [Wheels](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/python_wheels)
 - [`yield`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Yield.ipynb)
@@ -109,7 +110,7 @@
 ***
 
 ##  📒A small note on the notebook rendering 📒
-- Two notebooks are available: 
-    - One with coloured boxes and outside folder `GitHub_MD_rendering` 
+- Two notebooks are available:
+    - One with coloured boxes and outside folder `GitHub_MD_rendering`
     - One in black-and-white under folder `GitHub_MD_rendering`
 ***
