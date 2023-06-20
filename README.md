@@ -4,7 +4,7 @@
 
 ## 📓Available tutorials📓
 - [Abstract class vs. virtual abstract class](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Abstract%20and%20virtual%20abstract%20class.ipynb)
-- [`__all__`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/__all__)
+- [`__all__`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/The%20__all__%20construct)
 - [`args` and `kwargs`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Args%20and%20kwargs.ipynb)
 - [Assignment](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Assignment.ipynb)
 - [Broadcasting](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Broadcasting.ipynb)
@@ -102,6 +102,7 @@
 - [Functional vs. OOP APIs](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Functional%20vs.%20OOP%20APIs.ipynb)
 - [Production-like code](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/Production-grade%20code)
 - [Makefiles](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/makefile.md)
+- [`setup.py`](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/setup.py)
 ***
 
 ## 🎓Online resources to learn python🎓
