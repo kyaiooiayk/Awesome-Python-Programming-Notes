@@ -67,7 +67,7 @@
 - [`super()`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Super().ipynb)
 - [`_` underscore](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Underscore%20(_).ipynb)
 - [Variables and objects](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Variables%20and%20Objects.ipynb)
-- [`with` statement]()
+- [`with` statement](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/with%20statement.ipynb)
 - [Walrus operator](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Walrus_operator.ipynb)
 - [Wheels](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/python_wheels)
 - [`yield`](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Yield.ipynb)
