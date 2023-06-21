@@ -25,22 +25,34 @@
 ***
 
 ## Static versus Dynamic Typing
-- **Statically typed** language if the computer figures out, at the time the code is compiled, what the type is of all the variables. 
-- **Dynamically typed** language if the types are not known until the code is run, meaning that there will be some additional boilerplate to keep track of what variables are integers, strings, lists, and so on. 
-- Python is a great example of a dynamically typed language. The interpreter is written in C, and under the hood, every variable is implemented as a C structure called a PyObject. One function of the PyObject structure is to keep track of what the type is of each variable. There is a lot of overhead in this approach. Most simply, you have to store more stuff in RAM: not just your actual data, but the type metadata. The other problem is that, before your code can perform some operation (such as “+”) on a variable, it must first check what data type that variable is and hence what the operation means in this context. Dynamic typing has many benefits in terms of flexibility, but **you pay a large performance cost**. In a statically typed language such as C, on the other hand, the compiler can just translate every operation into the appropriate byte‐level manipulations, without storing any explicit reference to the data types or any method lookups. 
+- **Statically typed** language if the computer figures out, at the time the code is compiled, what the type is of all the variables.
+- **Dynamically typed** language if the types are not known until the code is run, meaning that there will be some additional boilerplate to keep track of what variables are integers, strings, lists, and so on.
+- Python is a great example of a dynamically typed language. The interpreter is written in C, and under the hood, every variable is implemented as a C structure called a PyObject. One function of the PyObject structure is to keep track of what the type is of each variable. There is a lot of overhead in this approach. Most simply, you have to store more stuff in RAM: not just your actual data, but the type metadata. The other problem is that, before your code can perform some operation (such as “+”) on a variable, it must first check what data type that variable is and hence what the operation means in this context. Dynamic typing has many benefits in terms of flexibility, but **you pay a large performance cost**. In a statically typed language such as C, on the other hand, the compiler can just translate every operation into the appropriate byte‐level manipulations, without storing any explicit reference to the data types or any method lookups.
+- A simple example is the operator `+`. The operator `+` is **overloaded** which means its action depends on the type of the objects on which it acts. Python must check the type of the objects and then call the correct operation. This involves substantial overheads.
+```
+# sum btw two string
+a = "a"
+b = "b"
+a+b # requires string concatenation
+
+a = 1
+b = 2
+a+b # requires to sum the integers
+
+```
 ***
 
-## Functional programming 
-- Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. A more in-depth article can be found [here](https://realpython.com/python-functional-programming/). 
-- In functional programming, a program consists entirely of evaluation of pure functions. A pure function is a function whose output value follows solely from its input values, without any observable side effects. 
-- The `map`, `filter` and `reduce` functions (which lives in Python's `functools` module) are fundamental components of the functional programming. 
+## Functional programming
+- Functional programming is a programming paradigm in which the primary method of computation is evaluation of functions. A more in-depth article can be found [here](https://realpython.com/python-functional-programming/).
+- In functional programming, a program consists entirely of evaluation of pure functions. A pure function is a function whose output value follows solely from its input values, without any observable side effects.
+- The `map`, `filter` and `reduce` functions (which lives in Python's `functools` module) are fundamental components of the functional programming.
 - This style, which, while not a dominant programming style in the Python world, has its outspoken proponents.
 - A programming style in which functions are treated and manipulated as objects, i.e. functions can be assigned to variables, they can be passed as arguments, and they can be stored in containers along with other data. We can write parallel code that works by running lots of functions in parallel on large amounts of data.
 - When you build your applications completely out of pure functions. A pure function has its return value determined exclusively by it's arguments.
 ***
 
 ## Mutable and immutable types
-- First of all, why do we need this distinction? If used properly, and if you remember about it, making the diffence between mutable and immutable clarifies the intent of your code. 
+- First of all, why do we need this distinction? If used properly, and if you remember about it, making the diffence between mutable and immutable clarifies the intent of your code.
 - **Mutable types** allows inplace modifications of the object's content. Examples are lists and dictionaries which both have mutating methods such as `list.append()` or `dict.pop()`.
 - **Immutable types** provide no methods to allow inplace inplace modifications. Examples are tuple, integer and string. Because of this, mutable types cannot be used as dictionaty keys because if the value changes, it will not hash back to the same value!
 ***
@@ -79,7 +91,7 @@
 ***
 
 ## Monkey patch
-A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program). 
+A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program).
 ```
 >>> import math
 >>> math.pi
@@ -115,6 +127,6 @@ A monkey patch is a way for a program to extend or modify supporting system soft
 
 ## References
 - [The Hitchhiker's Guide to Python: Best Practices for Development ](https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca)
-- The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc. 
+- The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc.
 - [Difference between .py and .pyc files?](http://net-informations.com/python/iq/pyc.htm)
 - https://realpython.com/python-walrus-operator/

@@ -80,7 +80,7 @@
 ***
 
 ## ⚠Don'ts⚠
-- [Don't use mutable object as default arguments](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Don't%20use%20mutable%20objects%20as%20default%20arguments.ipynb)
+- [Don't use mutable object as default arguments](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Don't%20use%20mutable%20objects%20as%20default%20arguments.ipynb)
 ***
 
 ## 🔩Other tutorials🔩
