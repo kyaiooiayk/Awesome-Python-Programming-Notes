@@ -4,7 +4,17 @@
 ## General advice
 - Wrap your hard decisions into a class.
 - Keep the code (the class) separate from the calls (`main()`)
-- It is very important to do refactoring incrementally. Any change should be small enough that if the tests fail the source can be found quickly. 
+- It is very important to do refactoring incrementally. Any change should be small enough that if the tests fail the source can be found quickly.
+***
+
+## DRY vs. WET
+- Don’t repeat yourself (DRY).
+- WET stands for “we enjoy typing” and is the opposite of DRY.
+***
+
+## Minimise global variables
+- Global variables are values outside of any function or class.
+- But global variables are dangerous, especially in medium to large size programs, since they can affect what happens in any part of your program or they can be changed by any function.
 ***
 
 ## Code smell
@@ -18,20 +28,20 @@
 - **Object-Orientation Abusers**:
 - **Change Preventers**: a single change triggers changes in multiple places. This is a sign of coupling.
 - **Dispensables**: are something that add no value to the solution: Duplicate Code, Dead Code, Comments. *Comments are probably the most controversial one here*. The strongest argument for removing comment is the fact they are not tested therefoe they can diverge from actual behaviour and cause more problems than benefits.
-- **Couplers**: these are usually coupled classes for reasons that can be avoided. Two typical ones are Feature Envy and Inappropriate Intimacy. 
+- **Couplers**: these are usually coupled classes for reasons that can be avoided. Two typical ones are Feature Envy and Inappropriate Intimacy.
 ***
 
 ## Documentations
 - Documentation should not be a chore.
 - Documentation should be a lightweight, high ROI activity, and a productivity tool.
-- Your code should document itself. 
+- Your code should document itself.
 - Keep in mind that documentation cannot be tested and the same goes for comments!
-- You need to write readable code rather than readable documentation. 
+- You need to write readable code rather than readable documentation.
 ***
 
 ## Design patterns in Data Science
 - For data scientists thinking about code quality there are two main components in any DS project are *data* and *algorithms*.
-There are three most relevant design patterns (there are many more) are: 
+There are three most relevant design patterns (there are many more) are:
     - **Factory Pattern** is used to decouple data IO, or in other words the data sources (SQL, pandas etc ..)
     - **Strategy Pattern** is used to decouple algorithms.
     - **Adapter Pattern** is used to decouple external services.
@@ -40,7 +50,7 @@ There are three most relevant design patterns (there are many more) are:
 ***
 
 ## Thin slice (not thin-slicing!)
-- In software developement, for a given feature, we can come up with **multiple thin-slices** which can be incrementally (sequentially) built. 
+- In software developement, for a given feature, we can come up with **multiple thin-slices** which can be incrementally (sequentially) built.
 - Thin Slice is the simplest possible functional, usable, end to end slice of functionality.
 ***
 
@@ -66,4 +76,5 @@ There are three most relevant design patterns (there are many more) are:
 - [Can you version control Jupyter notebooks?](https://laszlo.substack.com/p/can-you-version-control-jupyter-notebooks)
 - [Slow-changing dimensions](https://en.wikipedia.org/wiki/Slowly_changing_dimension)
 - [Thin slice](https://blog.xnsio.com/2009/05/03/thin-slice/)
+- [Writing good code](https://github.com/QuantEcon/lecture-python-programming.notebooks/blob/master/writing_good_code.ipynb)
 ***
