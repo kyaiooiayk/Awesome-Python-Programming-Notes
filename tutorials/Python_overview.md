@@ -29,7 +29,7 @@
 - **Dynamically typed** language if the types are not known until the code is run, meaning that there will be some additional boilerplate to keep track of what variables are integers, strings, lists, and so on.
 - Python is a great example of a dynamically typed language. The interpreter is written in C, and under the hood, every variable is implemented as a C structure called a PyObject. One function of the PyObject structure is to keep track of what the type is of each variable. There is a lot of overhead in this approach. Most simply, you have to store more stuff in RAM: not just your actual data, but the type metadata. The other problem is that, before your code can perform some operation (such as “+”) on a variable, it must first check what data type that variable is and hence what the operation means in this context. Dynamic typing has many benefits in terms of flexibility, but **you pay a large performance cost**. In a statically typed language such as C, on the other hand, the compiler can just translate every operation into the appropriate byte‐level manipulations, without storing any explicit reference to the data types or any method lookups.
 - A simple example is the operator `+`. The operator `+` is **overloaded** which means its action depends on the type of the objects on which it acts. Python must check the type of the objects and then call the correct operation. This involves substantial overheads.
-```
+```python
 # sum btw two string
 a = "a"
 b = "b"
