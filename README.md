@@ -23,7 +23,7 @@
 - [Data class](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Data%20class.ipynb)
 - [Declaring priate variables](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Declaring%20private%20variables.ipynb)
 - [Default dictionary](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/default_dictionary.ipynb)
-- [Decorations](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Decorations/GitHub_MD_rendering)
+- [Decorations](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Decorations/Function%20decorators.ipynb)
 - [(Built-in) Decorators | `@classmethod` | `@property` | `@staticmethod`](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Built-in%20Decorators/GitHub_MD_rendering)
 - [Dunder methods](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Dunder%20methods.ipynb)
 - [Error and exceptions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Errors%20and%20exceptions.ipynb)
