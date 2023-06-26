@@ -23,7 +23,7 @@
 - All the following methods start with a `test_`. This naming convention informs the test runner about which methods represent a test.
 - While unittesting it is acceptable to use long and descriptive names for testing function.
 
-```
+```python
 # some_name_test.py
 import unittest
 
@@ -38,7 +38,7 @@ class TestSum(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 ```
-```
+```python
 # This an alternative way of testing the same
 def test_sum_list():
     assert sum([1, 2, 3]) == 6, "Should be 6"
@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
 ## Templates
 **assertEqual**
-```
+```python
 def test_upper(self):
     """
     Test if method upper() works correctly.
@@ -73,7 +73,7 @@ def test_upper(self):
 ```
 
 **assertTrue** & **assertFalse**
-```
+```python
 def test_isupper(self):
     """
     Test if a string has all letters in capital
@@ -84,7 +84,7 @@ def test_isupper(self):
 
 **assertRaises**
 - `assertRaises()` to verify that a specific exception gets raised.
-```
+```python
 def test_split(self):
     """
     Check if the split method fails when the separator
@@ -99,7 +99,7 @@ def test_split(self):
 ```
 
 - Exit from Python is implemented by raising the `SystemExit` exception [Reference](https://stackoverflow.com/questions/15672151/is-it-possible-for-a-unit-test-to-assert-that-a-method-calls-sys-exit)
-```
+```python
 if framework.lower() in ["pytorch", "pt"]:
     self._build_PT()
 elif framework.lower() in ["keras", "k"]:
@@ -125,7 +125,7 @@ with self.assertRaises(SystemExit):
 ***
 
 **Checking numpy array equality with a tollerance**
-```
+```python
 a=np.array([1,2])
 a=np.array([1.0001,2.0001])
 np.testing.assert_array_almost_equal(a, b, decimal=9)
@@ -133,7 +133,7 @@ np.testing.assert_array_almost_equal(a, b, decimal=9)
 ***
 
 **Checking list equality**
-```
+```python
 a = ["1","2"]
 b = ["1","2"]
 self.assertListEqual(a, b)
@@ -143,12 +143,12 @@ self.assertListEqual(a, b)
 **Checking for `sys.exit()`**
 - Suppose the code is designed to exit like this: `sys.exit()`; this can be tested as:
 
-```
+```python
 with self.assertRaises(SystemExit):
     your_method()
 ```
 - Suppose the code is designed to exit like this: `sys.exit("Error")`; this can be tested as:
-```
+```python
 with self.assertRaises(SystemExit) as cm:
     your_method()
 
@@ -164,7 +164,7 @@ self.assertEqual(cm.exception.code, "Error")
 - A better approach could be to (1) assume matplotlib is going to actually draw the figure correctly, and (2) run numerical tests against the data returned by the plotting functions.
 - [Reference](https://stackoverflow.com/questions/27948126/how-can-i-write-unit-tests-against-code-that-uses-matplotlib)
 
-```
+```python
 # Say you want to test a simple function like this:
 import numpy as np
 import matplotlib.pyplot as plt
@@ -198,11 +198,12 @@ def test_plot_square2():
 ***
 
 ## Coverage
-- Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
+- Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not. Test coverage is a ratio between the number of lines executed by at least one test case and the total number of lines of the code base.
 - Install it with: `pip install coverage`
-- Run your test as usual as: `python test.py`
-- Find out how much of your code you tested with: `coverage test.py`
-- To generate the coverage report in HTML format: `python -m coverage html`
+- Navigate to your test folder and run: `python -m coverage run -m unittest`
+- To generate the coverage report: `python -m coverage report`
+- To generate the coverage report in HTML format: `python -m coverage report`
+- The test coverage is often used to assess the quality of a test suite. If the test coverage is low e.g., 5%, it is an indicator that you’re not testing enough. However, the reverse may not be true. For example, 100% test coverage is not a guarantee that you have a good test suite. In other words, a test suite with high coverage can still be of poor quality.
 ***
 
 ## Available tutorials
