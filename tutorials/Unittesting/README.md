@@ -202,7 +202,7 @@ def test_plot_square2():
 - Install it with: `pip install coverage`
 - Navigate to your test folder and run: `python -m coverage run -m unittest`
 - To generate the coverage report: `python -m coverage report`
-- To generate the coverage report in HTML format: `python -m coverage report`
+- To generate the coverage report in HTML format: `python -m coverage html` Use this file to check what you are missing.
 - The test coverage is often used to assess the quality of a test suite. If the test coverage is low e.g., 5%, it is an indicator that you’re not testing enough. However, the reverse may not be true. For example, 100% test coverage is not a guarantee that you have a good test suite. In other words, a test suite with high coverage can still be of poor quality.
 ***
 
