@@ -30,6 +30,7 @@ if twine check dist/* ; then
   fi
 fi
 ```
+- See [this](https://pypistats.org/search/pyde) if you want to see some statistics about your package.
 ***
 
 ## References
