@@ -200,12 +200,6 @@ def test_plot_square2():
 - The test coverage is often used to assess the quality of a test suite. If the test coverage is low e.g., 5%, it is an indicator that you’re not testing enough. However, the reverse may not be true. For example, 100% test coverage is not a guarantee that you have a good test suite. In other words, a test suite with high coverage can still be of poor quality.
 ***
 
-## Available tutorials
-- [Unittesting a string method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/example_1.py)
-- [Unittesting an addition method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/Simple_unit_check.py)
-- [Unittesting an addition failing method](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Unittesting/tutorials/Simple_unit_check_one_failed.py)
-- [How it is used in practice](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting/tutorials/How%20it%20is%20used%20in%20practice)
-***
 
 ## References
 - [Unittesting benefits](https://dzone.com/articles/top-8-benefits-of-unit-testing)
