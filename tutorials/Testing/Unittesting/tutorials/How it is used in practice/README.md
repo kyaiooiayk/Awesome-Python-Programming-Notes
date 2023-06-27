@@ -6,9 +6,9 @@ project/
 │
 └── my_sum/
     └── __init__.py
-```    
+```
 - How to run the script?
-  - Option #1) python test.py 
+  - Option #1) python test.py
   - Option #2) python -m unittest test
   - Option #3) python -m unittest -v test
   - Option #4) python -m unittest discover

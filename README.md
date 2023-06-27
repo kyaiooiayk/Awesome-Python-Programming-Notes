@@ -51,7 +51,6 @@
 - [Overwriting, overloading and overriding](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Overwriting%20vs.%20Overloading%20vs.%20Overriding.ipynb)
 - [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/parametrised_testing)
 - [Partial functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Partial%20function.ipynb)
-- [Python 2.7.x vs. Python 3.x](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Python%202.7=.x%20and%20Python%203.x.ipynb)
 - [Polymorphims](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/GitHub_MD_rendering/Polymorphism.ipynb)
 - [Public, private and protected attributes](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Public%2C%20Private%2C%20Protected%20attributes.ipynb)
 - [Public, private and protected methods](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Public%2C%20Private%2C%20Protected%20methods.ipynb)
@@ -78,6 +77,7 @@
 ## 🤔Curiosities🤔
 - [Equality vs. identity](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Equality%20vs.%20identity.ipynb)
 - [Disassembling python bytecode](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Disassembling%20python%20bytecode.ipynb)
+- [Python 2.7.x vs. Python 3.x](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Python%202.7=.x%20and%20Python%203.x.ipynb)
 ***
 
 ## ⚠Don'ts⚠
@@ -94,9 +94,6 @@
 - [Logging module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Logging%20module.ipynb)
 - [Other useful things](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Other_useuful_things)
 - [Python overview](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Python_overview.md)
-- [Resources to learn python](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Learning_python.md)
-- [Test-driven Development (TDD)](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Test-driven%20Development%20(TDD))
-- [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Unittesting)
 - [How to create a `requirements.txt` file](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/requirements.md)
 - [Design and architecture patterns](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Design_And_Architecture_Patterns)
 - [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
@@ -104,6 +101,7 @@
 - [Production-like code](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/Production-grade%20code)
 - [Makefiles](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/makefile.md)
 - [`setup.py`](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/setup.py)
+- [Testing]()
 ***
 
 ## 🎓Online resources to learn python🎓
