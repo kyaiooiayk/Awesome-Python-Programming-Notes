@@ -13,12 +13,12 @@
 - Convert it to `.py` using the command line: `jupyter nbconvert --to=python`
 - Convert it to `.py` using the GUI: `File -> Download as -> Python (.py)`
 - Then you can use one of the folling options listed below.
-*** 
+***
 
 ## Option #1
 - `pip freeze -> requirements.txt`
-- This will dump the current versions of **all** the installed modules on that system irrespective of there usage in the current project. That is likely to be a long list of you have not installed a single manually and you have a freshly created virtual environment. 
-- Further consider that this will only list modules that have been installed via `pip`, if you have installed a packaged via `conda` this may not be there. 
+- This will dump the current versions of **all** the installed modules on that system irrespective of there usage in the current project. That is likely to be a long list of you have not installed a single manually and you have a freshly created virtual environment.
+- Further consider that this will only list modules that have been installed via `pip`, if you have installed a packaged via `conda` this may not be there.
 ***
 
 ## Option #2

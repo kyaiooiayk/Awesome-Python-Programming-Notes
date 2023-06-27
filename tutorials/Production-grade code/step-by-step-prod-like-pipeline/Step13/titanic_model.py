@@ -31,13 +31,13 @@ class Passenger(BaseModel):
 
 def do_test(filename, data):
     if not os.path.isfile(filename):
-        pickle.dump(data, open(filename, 'wb'))
-    truth = pickle.load(open(filename, 'rb'))
+        pickle.dump(data, open(filename, "wb"))
+    truth = pickle.load(open(filename, "rb"))
     try:
         np.testing.assert_almost_equal(data, truth)
-        print(f'{filename} test passed')
+        print(f"{filename} test passed")
     except AssertionError as ex:
-        print(f'{filename} test failed {ex}')
+        print(f"{filename} test failed {ex}")
 
 
 def do_pandas_test(filename, data):
@@ -46,9 +46,9 @@ def do_pandas_test(filename, data):
     truth = pd.read_pickle(filename)
     try:
         pd.testing.assert_frame_equal(data, truth)
-        print(f'{filename} pandas test passed')
+        print(f"{filename} pandas test passed")
     except AssertionError as ex:
-        print(f'{filename} pandas test failed {ex}')
+        print(f"{filename} pandas test failed {ex}")
 
 
 class SqlLoader:
@@ -57,7 +57,8 @@ class SqlLoader:
         self.connection = engine.connect()
 
     def get_passengers(self):
-        query = text("""
+        query = text(
+            """
             SELECT
                 tbl_passengers.pid,
                 tbl_passengers.pclass,
@@ -75,7 +76,8 @@ class SqlLoader:
                 tbl_targets
             ON
                 tbl_passengers.pid=tbl_targets.pid
-        """)
+        """
+        )
         return pd.read_sql(query, con=self.connection)
 
 
@@ -102,7 +104,7 @@ class PassengerLoader:
             # parch = Parents/Children, sibsp = Siblings/Spouses
             family_size = int(data.parch + data.sibsp)
             # Allen, Miss. Elisabeth Walton
-            title = data.name.split(',')[1].split('.')[0].strip()
+            title = data.name.split(",")[1].split(".")[0].strip()
             passenger = Passenger(
                 pid=int(data.pid),
                 pclass=int(data.pclass),
@@ -112,7 +114,7 @@ class PassengerLoader:
                 fare=float(data.fare),
                 embarked=str(data.embarked),
                 is_alone=1 if family_size == 1 else 0,
-                title='rare' if title in self.rare_titles else title,
+                title="rare" if title in self.rare_titles else title,
                 is_survived=int(data.is_survived),
             )
             passengers.append(passenger)
@@ -128,28 +130,28 @@ class TitanicModelCreator:
         df = self.loader.get_passengers()
 
         # parch = Parents/Children, sibsp = Siblings/Spouses
-        df['family_size'] = df['parch'] + df['sibsp']
-        df['is_alone'] = [
-            1 if family_size == 1 else 0 for family_size in df['family_size']
+        df["family_size"] = df["parch"] + df["sibsp"]
+        df["is_alone"] = [
+            1 if family_size == 1 else 0 for family_size in df["family_size"]
         ]
 
-        df['title'] = [name.split(',')[1].split('.')[0].strip() for name in df['name']]
-        rare_titles = {k for k, v in Counter(df['title']).items() if v < 10}
-        df['title'] = [
-            'rare' if title in rare_titles else title for title in df['title']
+        df["title"] = [name.split(",")[1].split(".")[0].strip() for name in df["name"]]
+        rare_titles = {k for k, v in Counter(df["title"]).items() if v < 10}
+        df["title"] = [
+            "rare" if title in rare_titles else title for title in df["title"]
         ]
 
-        targets = [int(v) for v in df['is_survived']]
+        targets = [int(v) for v in df["is_survived"]]
         df = df[
             [
-                'pclass',
-                'sex',
-                'age',
-                'family_size',
-                'fare',
-                'embarked',
-                'is_alone',
-                'title',
+                "pclass",
+                "sex",
+                "age",
+                "family_size",
+                "fare",
+                "embarked",
+                "is_alone",
+                "title",
             ]
         ]
 
@@ -158,18 +160,18 @@ class TitanicModelCreator:
         )
 
         X_train_categorical = X_train[
-            ['embarked', 'sex', 'pclass', 'title', 'is_alone']
+            ["embarked", "sex", "pclass", "title", "is_alone"]
         ]
-        X_test_categorical = X_test[['embarked', 'sex', 'pclass', 'title', 'is_alone']]
+        X_test_categorical = X_test[["embarked", "sex", "pclass", "title", "is_alone"]]
 
-        one_hot_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False).fit(
+        one_hot_encoder = OneHotEncoder(handle_unknown="ignore", sparse=False).fit(
             X_train_categorical
         )
         X_train_categorical_one_hot = one_hot_encoder.transform(X_train_categorical)
         X_test_categorical_one_hot = one_hot_encoder.transform(X_test_categorical)
 
-        X_train_numerical = X_train[['age', 'fare', 'family_size']]
-        X_test_numerical = X_test[['age', 'fare', 'family_size']]
+        X_train_numerical = X_train[["age", "fare", "family_size"]]
+        X_test_numerical = X_test[["age", "fare", "family_size"]]
         knn_imputer = KNNImputer(n_neighbors=5).fit(X_train_numerical)
         X_train_numerical_imputed = knn_imputer.transform(X_train_numerical)
         X_test_numerical_imputed = knn_imputer.transform(X_test_numerical)
@@ -197,29 +199,29 @@ class TitanicModelCreator:
 
         cm_test = confusion_matrix(y_test, y_test_estimation)
 
-        print('cm_train', cm_train)
-        print('cm_test', cm_test)
+        print("cm_train", cm_train)
+        print("cm_test", cm_test)
 
-        do_test('../data/cm_test.pkl', cm_test)
-        do_test('../data/cm_train.pkl', cm_train)
-        do_test('../data/X_train_processed.pkl', X_train_processed)
-        do_test('../data/X_test_processed.pkl', X_test_processed)
+        do_test("../data/cm_test.pkl", cm_test)
+        do_test("../data/cm_train.pkl", cm_train)
+        do_test("../data/X_train_processed.pkl", X_train_processed)
+        do_test("../data/X_test_processed.pkl", X_test_processed)
 
-        do_pandas_test('../data/df.pkl', df)
+        do_pandas_test("../data/df.pkl", df)
 
 
-def main(param: str = 'pass'):
+def main(param: str = "pass"):
     titanic_model_creator = TitanicModelCreator(
-        loader=SqlLoader(connection_string='sqlite:///../data/titanic.db')
+        loader=SqlLoader(connection_string="sqlite:///../data/titanic.db")
     )
     titanic_model_creator.run()
 
 
-def test_main(param: str = 'pass'):
+def test_main(param: str = "pass"):
     titanic_model_creator = TitanicModelCreator(
         loader=TestLoader(
-            passengers_filename='../data/passengers_with_is_survived.pkl',
-            real_loader=SqlLoader(connection_string='sqlite:///../data/titanic.db'),
+            passengers_filename="../data/passengers_with_is_survived.pkl",
+            real_loader=SqlLoader(connection_string="sqlite:///../data/titanic.db"),
         )
     )
     titanic_model_creator.run()

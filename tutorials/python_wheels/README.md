@@ -3,7 +3,7 @@
 
 ## Wheels vs. eggs
 - Python’s first mainstream packaging format was the .egg file.
-- Now there’s a new format in town called the wheel (.whl). According to the Python Packaging Index’s description, a wheel *is designed to contain all the files for a PEP 376 compatible install in a way that is very close to the on-disk format. 
+- Now there’s a new format in town called the wheel (.whl). According to the Python Packaging Index’s description, a wheel *is designed to contain all the files for a PEP 376 compatible install in a way that is very close to the on-disk format.
 ***
 
 ## Advantages of wheels
@@ -32,17 +32,17 @@
 - A source distribution contains source code. That includes not only Python code but also the source code of any extension modules (usually in C or C++) bundled with the package. With source distributions, extension modules are compiled on the user’s side rather than the developer’s.
 - Source distributions also contain a bundle of metadata sitting in a directory called `<package-name>.egg-info`. This metadata helps with building and installing the package, but user’s don’t really need to do anything with it.
 - A source distribution is what gets created when you run the following command: `python setup.py sdist`
-*** 
+***
 
 ## When to create a wheel
-- They are a nice way to create a local repository of dependencies for your project(s) that you can install quickly. You could create several different wheel repositories to easily switch between different version sets for testing purposes. 
+- They are a nice way to create a local repository of dependencies for your project(s) that you can install quickly. You could create several different wheel repositories to easily switch between different version sets for testing purposes.
 - When combined with virtualenv, you have a really easy way to see how newer versions of dependencies could affect your project without needing to download them multiple times.
 - What’s more important from the user’s perspective is that **there’s no build stage** when pip finds a compatible wheel on PyPI.
 ***
 
 ## Wheel and a source distribution
 - Each python package on PPI will come with:
-    - Only source distribution - the installation fetches a sdist. 
+    - Only source distribution - the installation fetches a sdist.
     - Only a wheel - the installation fetches a prebuilt wheel
     - Both source and or even both at the same time. In this case, just if you are wondeing how, you cann force pip to install from source with: `pip install --no-cache-dir --force-reinstall --no-binary=:all: <package_name>`
 - You can see the reason why a developer has chosen one of the above option by taking a look at each project’s page on PyPI and navigating to the Download files area. This section will show you what pip actually sees on the PyPI index server.

@@ -2,6 +2,7 @@
 
 from threading import Lock, Thread
 
+
 class SingletonMeta(type):
     """
     The Singleton class can be implemented in different ways in Python. Some
@@ -30,7 +31,7 @@ class Singleton(metaclass=SingletonMeta):
         """
 
         # ...
-        
+
 
 if __name__ == "__main__":
     # The client code.

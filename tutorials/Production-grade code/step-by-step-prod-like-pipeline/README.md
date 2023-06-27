@@ -1,6 +1,6 @@
 # CQ4DS Notebook Sklearn Refactoring Exercise
 
-This step-by-step programme demonstrates how to refactor a Data Science project from notebooks to well-formed classes and scripts.  
+This step-by-step programme demonstrates how to refactor a Data Science project from notebooks to well-formed classes and scripts.
 
 ### The project:
 
@@ -12,9 +12,9 @@ The notebook demonstrates a typical setup of a data science project:
 - Fits a model to estimate survival (sklearn's LogisticRegression).
 - Evaluates the model.
 
-### Context, vision, 
+### Context, vision,
 
-I wrote a detailed post on the concepts, strategy and big picture thinking. I recommend reading it parallel with the instructions and the steps in the pull request while you are doing the exercises: 
+I wrote a detailed post on the concepts, strategy and big picture thinking. I recommend reading it parallel with the instructions and the steps in the pull request while you are doing the exercises:
 
 [https://laszlo.substack.com/p/refactoring-the-titanic](https://laszlo.substack.com/p/refactoring-the-titanic)
 

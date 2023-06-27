@@ -1,4 +1,4 @@
-2021/10/29 | 13:29:27 | DEBUG 
+2021/10/29 | 13:29:27 | DEBUG
 
 2021/10/29 | 13:29:27 | DEBUG Enter method
 2021/10/29 | 13:29:27 | DEBUG Method's name: sum
@@ -6,5 +6,4 @@
 2021/10/29 | 13:29:27 | DEBUG Method's kwargs: {'first': 2, 'second': 3}
 2021/10/29 | 13:29:27 | INFO Results is: 5
 2021/10/29 | 13:29:27 | DEBUG Exit method
-2021/10/29 | 13:29:27 | DEBUG 
-
+2021/10/29 | 13:29:27 | DEBUG

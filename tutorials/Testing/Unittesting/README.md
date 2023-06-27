@@ -11,12 +11,6 @@
 - **Design** Writing the test first forces you to think through your design and what it must accomplish before you write the code. This not only keeps you focused; it makes you create better designs. Testing a piece of code forces you to define what that code is responsible for. If you can do this easily, that means the code’s responsibility is well-defined and therefore that it has high cohesion.
 ***
 
-## Unit Testing vs. Functional Testing
-- Unit tests isolate and test individual code units to verify they function as intended. You use unit testing to verify that specific system behaviors produce the intended results.
-- You use functional testing to check the functionalities of the entire system and ensure different components work together as intended. Its purpose is to check an entire application, including its hardware, networking infrastructure, front-end UI, and the back-end database.
-- Unit tests point to a specific issue that requires fixing. Since functional testing checks the entire application, it mainly indicates a general issue without pointing out a specific problem.
-***
-
 ## General templates
 - This is just a template with all the necessary imports, comments and some code to refresh someone's knowledge on unittesting.
 - A testcase is created by subclassing `unittest.TestCase`. Essentialy the class `TestSum` inherits from the `TestCase` class.

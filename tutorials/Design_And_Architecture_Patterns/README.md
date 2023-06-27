@@ -63,7 +63,7 @@
 
 ## Design patterns in Data Science
 - For data scientists thinking about code quality there are two main components in any DS project are *data* and *algorithms*.
-There are three most relevant design patterns (there are many more) are: 
+There are three most relevant design patterns (there are many more) are:
     - **Factory Pattern** is used to decouple data IO, or in other words the data sources (SQL, pandas etc ..)
     - **Strategy Pattern** is used to decouple algorithms.
     - **Adapter Pattern** is used to decouple external services.

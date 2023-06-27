@@ -31,7 +31,7 @@ def make_dict(*args):
 ```
 - This is an example of good coding:
 ```
-def make_dict(x, y):  
+def make_dict(x, y):
   return {'x':x, 'y':y}
 ```
 - In the good code snippet, x and y are explicitly reveived for the caller, and an explicit dictionary is returned.
@@ -53,7 +53,7 @@ if x == 1: print("one")
 print("hello")
 print("hi")
 # Second example
-if x == 1: 
+if x == 1:
   print("one")
 ```
 ***
@@ -155,15 +155,15 @@ def square_root(x):
 ## Naming conventions
 - **PascalCase** is used for classes. What this means is that your classes will look like:
 ```
-class Shape: 
+class Shape:
     # ...
-class Circle(Shape): 
+class Circle(Shape):
     # ...
 ```
 
 - **snake_case** is used for variables, functions, methods, arguments:
 ```
-def cool_function(cool_argument, optional_info): 
+def cool_function(cool_argument, optional_info):
     # ...
 ```
 
@@ -181,7 +181,7 @@ LOG_FILE = "logs/app.log"
 
 ## References
 - [The Hitchhiker's Guide to Python: Best Practices for Development ](https://www.amazon.com/Hitchhikers-Guide-Python-Practices-Development/dp/1491933178/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=bookforkind-20&linkId=804806ebdacaf3b56567347f3afbdbca)
-- The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc. 
+- The Data Science Handbook, First Edition. Field Cady. © 2017 John Wiley & Sons, Inc. Published 2017 by John Wiley & Sons, Inc.
 - [18 common python antipatterns](https://towardsdatascience.com/18-common-python-anti-patterns-i-wish-i-had-known-before-44d983805f0f)
 - [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 ***

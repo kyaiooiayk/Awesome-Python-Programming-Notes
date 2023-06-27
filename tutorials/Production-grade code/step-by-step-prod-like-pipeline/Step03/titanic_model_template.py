@@ -6,10 +6,10 @@ class TitanicModelCreator:
         pass
 
     def run(self):
-        print('Hello World!')
+        print("Hello World!")
 
 
-def main(param: str = 'pass'):
+def main(param: str = "pass"):
     titanic_model_creator = TitanicModelCreator()
     titanic_model_creator.run()
 

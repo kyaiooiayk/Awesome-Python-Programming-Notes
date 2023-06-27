@@ -2,6 +2,7 @@
 
 from threading import Lock, Thread
 
+
 class SingletonMeta(type):
     """
     This is a thread-safe implementation of Singleton.
@@ -35,7 +36,8 @@ class SingletonMeta(type):
                 instance = super().__call__(*args, **kwargs)
                 cls._instances[cls] = instance
         return cls._instances[cls]
-    
+
+
 class Singleton(metaclass=SingletonMeta):
     value: str = None
     """
@@ -60,10 +62,12 @@ def test_singleton(value: str) -> None:
 if __name__ == "__main__":
     # The client code.
 
-    print("If you see the same value, then singleton was reused (yay!)\n"
-          "If you see different values, "
-          "then 2 singletons were created (booo!!)\n\n"
-          "RESULT:\n")
+    print(
+        "If you see the same value, then singleton was reused (yay!)\n"
+        "If you see different values, "
+        "then 2 singletons were created (booo!!)\n\n"
+        "RESULT:\n"
+    )
 
     process1 = Thread(target=test_singleton, args=("FOO",))
     process2 = Thread(target=test_singleton, args=("BAR",))
