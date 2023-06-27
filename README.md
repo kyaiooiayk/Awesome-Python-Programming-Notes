@@ -88,7 +88,6 @@
 - [Installation](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Installation.md)
 - [Algorithms](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Algorithms)
 - [Data structures](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Data-Structures)
-- [Doctest](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Doctest)
 - [Docstrings](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Docstrings.ipynb)
 - [EAFP and LBYL coding styles](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/EAFP_and_LBYL_coding_styles.ipynb)
 - [Logging module](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Logging%20module.ipynb)
