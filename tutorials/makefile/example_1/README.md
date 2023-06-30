@@ -6,7 +6,7 @@ VENV = venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
 
-.PHONY: clean run
+.PHONY: clean run all
 
 run: $(VENV)/bin/activate
 	@echo "Running the app"
