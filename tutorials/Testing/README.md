@@ -20,6 +20,14 @@ doctest
 - [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) enables developers to create unit tests that are simpler to write and are powerful when run. Since the framework is built to support data science projects, it helps to find edge cases that aren’t so apparent while you’re creating your tests by generating examples of inputs that align with specific properties you define.
 ***
 
+
+## What is the Arrange, Act and Assert Pattern?
+- The Arrange, Act and Assert Pattern is a way of structuring unit tests so that they are easy to read and understand. This pattern is also known as the Given, When, Then pattern.
+    - **Arrange**: Set up the conditions for your test. This might involve creating objects, setting up variables or anything else that’s required for your test.
+    - **Act**: This is where you actually execute the code that you are testing.
+    - **Assert**: Verify that the code you’re testing behaves as expected. This might involve checking the value of a variable, or verifying that a certain method was called.
+***
+
 ## Available tutorials
 - [Test-driven Development (TDD)](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/Test-driven%20Development%20(TDD))
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/Unittesting)
