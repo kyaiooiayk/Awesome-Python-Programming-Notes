@@ -36,6 +36,10 @@ target: pre-req1 pre-req2 ...
 - The *target** represents a goal that you want to achieve, usually this is a file that needs to be created in your build. The **prerequisites** list tells make which files are this target dependent on. The prerequisites can be a file or another target. The **recipes** are a list of shell commands that will be executed by make as part of building the target.
 ***
 
+## Makefile example
+- [Yelp `data_pipeline` Makefile](https://github.com/Yelp/data_pipeline/blob/master/Makefile)
+***
+
 ## References
 - [Creating a Python Makefile](https://earthly.dev/blog/python-makefile/)
 - [Makefiles for Python and beyond](https://medium.com/aigent/makefiles-for-python-and-beyond-5cf28349bf05)

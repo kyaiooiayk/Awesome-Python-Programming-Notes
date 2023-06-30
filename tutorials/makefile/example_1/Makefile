@@ -2,7 +2,7 @@ VENV = venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
 
-.PHONY: clean run
+.PHONY: clean run all
 
 run: $(VENV)/bin/activate
 	@echo "Running the app"
@@ -24,3 +24,5 @@ clean:
 	@echo "Cleaning directory"
 	rm -rf __pycache__
 	rm -rf $(VENV)
+
+all: run clean

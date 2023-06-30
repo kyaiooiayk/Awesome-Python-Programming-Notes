@@ -28,6 +28,8 @@ clean:
 	@echo "Cleaning directory"
 	rm -rf __pycache__
 	rm -rf $(VENV)
+
+all: run clean
 ```
 - Check there is a tab before each recepie with: `cat -e -t -v  Makefile`. You should be able to see the following:
 ```shell
