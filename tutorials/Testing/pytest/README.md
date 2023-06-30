@@ -12,7 +12,7 @@
 
 ### Pytest parametrize
 - Consider the scenario where we have 4 different but very similar test. There is quite a lot of boiler plate going on.
-```
+```python
 def test_eval_addition():
     assert eval("2 + 2") == 4
 
@@ -26,7 +26,7 @@ def test_eval_division():
     assert eval("2 / 2") == 1.0
 ```
 - Pytest offers a solution here called `pytest.mark.parametrize()`
-```
+```python
 import pytest
 
 @pytest.mark.parametrize("test_input, expected_output", [("2+2", 4), ("2-2", 0), ("2*2", 4), ("2/2", 1.0)])
