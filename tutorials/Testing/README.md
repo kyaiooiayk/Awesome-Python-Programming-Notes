@@ -26,4 +26,5 @@ doctest
 - [The Differences Between Unit Testing, Integration Testing and Functional Testing](https://www.softwaretestinghelp.com/the-difference-between-unit-integration-and-functional-testing/)
 - [Doctest](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/Doctest)
 - [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/parametrised_testing)
+- [How to Use Pytest for Unit Testing](https://www.datacamp.com/tutorial/pytest-tutorial-a-hands-on-guide-to-unit-testing)
 ***
