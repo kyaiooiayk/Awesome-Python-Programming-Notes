@@ -49,7 +49,6 @@
 - [Notable methods](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Notable_methods_in_python)
 - [Operators](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Operators.ipynb)
 - [Overwriting, overloading and overriding](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Overwriting%20vs.%20Overloading%20vs.%20Overriding.ipynb)
-- [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/parametrised_testing)
 - [Partial functions](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Partial%20function.ipynb)
 - [Polymorphims](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/GitHub_MD_rendering/Polymorphism.ipynb)
 - [Public, private and protected attributes](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/GitHub_MD_rendering/Public%2C%20Private%2C%20Protected%20attributes.ipynb)

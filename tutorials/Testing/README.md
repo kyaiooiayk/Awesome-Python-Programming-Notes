@@ -12,4 +12,5 @@
 - [Unittesting](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/Unittesting)
 - [The Differences Between Unit Testing, Integration Testing and Functional Testing](https://www.softwaretestinghelp.com/the-difference-between-unit-integration-and-functional-testing/)
 - [Doctest](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/Doctest)
+- [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/parametrised_testing)
 ***
