@@ -21,10 +21,13 @@
 - It can automate the process of building software by tracking its dependencies and compiling the program only when the dependencies change.
 ***
 
-## Motivation
+## Make file vs. shell script
+- `make` supports (reasonably) minimal rebuilds -- i.e., you tell it what parts of your program depend on what other parts. When you update some part of the program, it only rebuilds the parts that depend on that.
+- While you could do this with a shell script, it would be a lot more work (explicitly checking the last-modified dates on all the files, etc.) The only obvious alternative with a shell script is to rebuild everything every time. For tiny projects this is a perfectly reasonable approach, but for a big project a complete rebuild could easily take an hour or more
 ***
 
 ## References
 - [Creating a Python Makefile](https://earthly.dev/blog/python-makefile/)
 - [Makefiles for Python and beyond](https://medium.com/aigent/makefiles-for-python-and-beyond-5cf28349bf05)
+- [Why use make over a shell script?](https://stackoverflow.com/questions/3798562/why-use-make-over-a-shell-script)
 ***
