@@ -27,5 +27,5 @@ doctest
 - [Doctest](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/Doctest)
 - [Parametrised testing](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/parametrised_testing)
 - [How to Use Pytest for Unit Testing](https://www.datacamp.com/tutorial/pytest-tutorial-a-hands-on-guide-to-unit-testing)
-- [Pytest](https://www.datacamp.com/tutorial/pytest)
+- [Pytest](https://github.com/kyaiooiayk/Python-Programming/tree/main/tutorials/Testing/pytest)
 ***
