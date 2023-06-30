@@ -98,7 +98,7 @@
 - [OOP - Object Oriented Programming](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Object-Oriented%20Programming%20(OOP)%20in%20Python.ipynb)
 - [Functional vs. OOP APIs](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Functional%20vs.%20OOP%20APIs.ipynb)
 - [Production-like code](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/Production-grade%20code)
-- [Makefile](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/makefile/makefile.md)
+- [Makefile](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/makefile)
 - [`setup.py`](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/setup.py)
 - [Testing](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/Testing)
 ***
