@@ -44,9 +44,9 @@ clean:$
 ^Irm -rf __pycache__$
 ^Irm -rf $(VENV)$
 ```
-- The file above show the link btw target and pre-requirements. For instace when we type `make run` this is what is going to happen:
-    - The target is read but it depends on $(VENV)/bin/activate.
-    - `$(VENV)/bin/activate` is itself a target which depends on two pre-requirements: `requirements.txt` a file and `update_pip` which itself is another target.
+- The file above shows the link btw target and pre-requirements. For instace when we type `make run` this is what is going to happen:
+    - The target is `run` but this depends on `$(VENV)/bin/activate`.
+    - `$(VENV)/bin/activate` is itself a target which depends on two pre-requirements: `requirements.txt` (a file) and `update_pip` (another target).
     - When the environment is created, pip is then updated and the requirements installed.
-- The advantaged of make is that when this is run the second time, make would not call the recepies which install the environment, update pip and install the requirements because these were already generated. This may save you some time.
-- When you are done you can clean the working directory with: `make clean`.
+- The advantaged of `make` is that when this is run the second time, make would not call the recepies which install the environment, update pip and install the requirements because these were already generated. This may save you some a considerable amount of time if the project is big.
+- When you are done, you can clean the working directory with: `make clean`.
