@@ -21,9 +21,19 @@
 - It can automate the process of building software by tracking its dependencies and compiling the program only when the dependencies change.
 ***
 
-## Make file vs. shell script
+## Makefile vs. shell script
 - `make` supports (reasonably) minimal rebuilds -- i.e., you tell it what parts of your program depend on what other parts. When you update some part of the program, it only rebuilds the parts that depend on that.
 - While you could do this with a shell script, it would be a lot more work (explicitly checking the last-modified dates on all the files, etc.) The only obvious alternative with a shell script is to rebuild everything every time. For tiny projects this is a perfectly reasonable approach, but for a big project a complete rebuild could easily take an hour or more
+***
+
+## Makefile syntax
+- A `Makefile` file at the root of your project has a set of rules. Each rule has 3 parts: a target, a list of prerequisites, and a recipe.
+- There is tab before receips, anything else will result in an error. See [this](https://stackoverflow.com/questions/23927212/makefile2-missing-separator-stop) discussion if you are having an issue with tabs. If you are working in VS use the option `Tab Size:4`. I quick way to check is by: `cat -e -t -v  Makefile`. It's show line starting by `^I` if TAB is given to that line and it end the line by `$`.
+```shell
+target: pre-req1 pre-req2 ...
+    recepies
+```
+- The *target** represents a goal that you want to achieve, usually this is a file that needs to be created in your build. The **prerequisites** list tells make which files are this target dependent on. The prerequisites can be a file or another target. The **recipes** are a list of shell commands that will be executed by make as part of building the target.
 ***
 
 ## References
