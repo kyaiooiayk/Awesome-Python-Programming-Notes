@@ -8,9 +8,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** `__repr__` vs. `__str__` methods
-#
+# 
 # </font>
 # </div>
 
@@ -18,12 +18,12 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - They both represent the object but the `__repr__` method tells you more.
-# - So much more that you can also reconstruct the object based on that information.
-# - Also Python interpreter sessions use `__repr__` to inspect objects.
+# 
+# - They both represent the object but the `__repr__` method tells you more. 
+# - So much more that you can also reconstruct the object based on that information. 
+# - Also Python interpreter sessions use `__repr__` to inspect objects. 
 # - `__str__` should have a readable output.
-#
+# 
 # </font>
 # </div>
 
@@ -36,6 +36,7 @@ import numpy as np
 
 
 class Tensor(object):
+
     def __init__(self, data):
         """__init__ method
         Given a list, tunrs it into an array
@@ -43,7 +44,7 @@ class Tensor(object):
         self.data = np.array(data)
 
     def __add__(self, other):
-        """__add__ method
+        """__add__ method        
         Add two tensor together
         """
         return Tensor(self.data + other.data)
@@ -61,7 +62,7 @@ class Tensor(object):
         print("calling __str__")
         """
         Returns the string representation of the object. This method is called
-        when print() or str() function is invoked on an object. Retunrs a
+        when print() or str() function is invoked on an object. Retunrs a 
         human-redeable string format.
         """
         return str(self.data.__str__())
@@ -70,7 +71,7 @@ class Tensor(object):
 # In[28]:
 
 
-x = Tensor([1, 2, 3, 4, 5])
+x = Tensor([1,2,3,4,5])
 
 
 # In[29]:
@@ -101,10 +102,14 @@ print(x)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.journaldev.com/22460/python-str-repr-functions
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

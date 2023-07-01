@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Dunder (double underscore) methods
-#
+# 
 # </font>
 # </div>
 
@@ -27,7 +27,7 @@
 
 # - Let us create a dummy function which takes no arguments and returns nothing.
 # - We'll then apply the method `dir` and explore what methods are available.
-# - The **common pattern** here is that the magic method is there to customise the result of python built-in funciton. So for instance, - `__subclasscheck__` is one of the methods to customise the result of `issubclass()` built-in function.
+# - The **common pattern** here is that the magic method is there to customise the result of python built-in funciton. So for instance, - `__subclasscheck__` is one of the methods to customise the result of `issubclass()` built-in function. 
 
 # In[1]:
 
@@ -49,7 +49,7 @@ dir(func)
 # In[3]:
 
 
-class A:
+class A():
     pass
 
 
@@ -97,18 +97,15 @@ func_1.__annotations__
 
 
 # Annotations is a dictionary
-"{:,} {}".format(func_1(2), func_1.__annotations__["return"])
+'{:,} {}'.format(func_1(2),
+                 func_1.__annotations__['return'])
 
 
 # In[10]:
 
 
-rd = {
-    "type": float,
-    "units": "Joules",
-    "docstring": "Given mass and velocity returns kinetic energy in Joules",
-}
-
+rd = {'type': float, 'units': 'Joules',
+      'docstring': 'Given mass and velocity returns kinetic energy in Joules'}
 
 def func_2() -> rd:
     pass
@@ -117,8 +114,8 @@ def func_2() -> rd:
 # In[11]:
 
 
-for i in ["type", "units", "docstring"]:
-    print(func_2.__annotations__["return"][i])
+for i in ['type', "units", "docstring"]:
+    print(func_2.__annotations__['return'][i])
 
 
 # # `__call__`
@@ -132,14 +129,14 @@ for i in ["type", "units", "docstring"]:
 # In[12]:
 
 
-class Product:
+class Product():
     def __init__(self):
         print("Instance created")
 
     # Defining __call__ method
     def __call__(self, a, b):
         print("Instance is called via special method __call__")
-        print(a * b)
+        print(a*b)
 
 
 # In[13]:
@@ -159,14 +156,14 @@ p.__init__()
 
 
 # Since Product has  a __call_ method, p can be called like a function
-p(2, 3)
+p(2,3)
 
 
 # In[16]:
 
 
 # The cell above is equivalent to this call
-p.__call__(2, 3)
+p.__call__(2,3)
 
 
 # # `__class__`
@@ -195,10 +192,10 @@ simple_function.__class__
 
 # # `__closure__`
 
-# - A closure is a function object **that remembers values** in enclosing scopes **even if** they are not present in memory.
-# - The `__closure__` attribute of a closure function returns a tuple of cell objects.
+# - A closure is a function object **that remembers values** in enclosing scopes **even if** they are not present in memory. 
+# - The `__closure__` attribute of a closure function returns a tuple of cell objects. 
 # - This cell object also has an attribute called cell_contents, which returns returns the contents of the cell.
-# - In the above example, the nested function power has `__closure__` attribute associated with it and it returns a tuple of cell objects.
+# - In the above example, the nested function power has `__closure__` attribute associated with it and it returns a tuple of cell objects. 
 # - The cell_contents attribute returns the value 3 as it was closed inside the cell object.
 
 # In[20]:
@@ -206,9 +203,9 @@ simple_function.__class__
 
 # this is a nested function
 def gfg(raise_power_to):
-    def power(number):
-        return number**raise_power_to
 
+    def power(number):
+        return number ** raise_power_to
     return power
 
 
@@ -234,7 +231,7 @@ print(raise_power_to_3.__closure__[0].cell_contents)
 
 # - Every function in Python has a __code__ attribute that holds its code object.
 # - When called, we get back some representation of the code object, which is almost useless to us. What's a lot more useful is to inspect further attributes on this code object:
-#
+#     
 #     - `co_nlocals` — is the number of local variables used by the function (including arguments).
 #     - `co_argcount` — is the total number of positional arguments (including positional-only arguments and arguments with default values).
 #     - `co_varnames` — is a tuple containing the names of the local variables (starting with the argument names).
@@ -337,13 +334,13 @@ foobar.__defaults__
 # # `__delattr__`
 
 # - Called when an attribute deletion is attempted.
-# - Like `__setattr__()` but for attribute deletion instead of assignment.
+# - Like `__setattr__()` but for attribute deletion instead of assignment. 
 # - This should only be implemented if del `obj.name` is meaningful for the object.
 
 # In[36]:
 
 
-class Frob:
+class Frob():
     def __delattr__(self, name):
         print("deleting `{}`".format(str(name)))
         del self.__dict__[name]
@@ -392,7 +389,6 @@ del f.dummy
 def func_1():
     pass
 
-
 func_1.temp = 1
 
 print(func_1.__dict__)
@@ -403,7 +399,6 @@ print(func_1.__dict__)
 
 def func_2():
     pass
-
 
 print(func_2.__dict__)
 
@@ -428,7 +423,6 @@ print(TempClass.__dict__)
 
 
 import math
-
 vars(math).items()
 
 
@@ -441,17 +435,17 @@ dir(math)
 # # `__dir__`
 
 # - `dir([object])`¶ Without arguments, return the list of names in the current local scope. With an argument, attempt to return a list of valid attributes for that object.
-#
+# 
 # - If the object has a method named `__dir__()`, this method will be called and must return the list of attributes. This allows objects that implement a custom `__getattr__()` or `__getattribute__()` function to customize the way `dir()` reports their attributes.
-#
+# 
 # - If the object does not provide `__dir__()`, the function tries its best to gather information from the object’s `__dict__`attribute, if defined, and from its type object. The resulting list is not necessarily complete, and may be inaccurate when the object has a custom `__getattr__()`.
-#
+# 
 # - `dir` calls `__dir__` internally.
 
 # In[45]:
 
 
-class Hello:
+class Hello():
     def __dir__(self):
         print("calling __dir__")
         return [1, 2, 3]
@@ -477,8 +471,8 @@ hello.__dir__()
 
 # # `__doc__`
 
-# - Python objects have an attribute called __doc__ that provides a documentation of the object.
-# - For example, you simply call Dog.__doc__ on your class Dog to retrieve its documentation as a string.
+# - Python objects have an attribute called __doc__ that provides a documentation of the object. 
+# - For example, you simply call Dog.__doc__ on your class Dog to retrieve its documentation as a string. 
 
 # In[49]:
 
@@ -508,15 +502,15 @@ dog.__doc__
 
 # - Implement the Python `__eq__` method to define the equality logic for comparing two objects using the equal operator `==`.
 # - Python automatically calls the `__eq__` method of a class when you use the `==` operator to compare the instances of the class. By default, Python uses the is operator if you don’t provide a specific implementation for the `__eq__` method.
-# -
+# - 
 
 # In[52]:
 
 
 class Person:
     """
-    The following shows how to implement the __eq__ method
-    in the Person class that returns True if two person
+    The following shows how to implement the __eq__ method 
+    in the Person class that returns True if two person 
     objects have the same age:
     """
 
@@ -533,17 +527,17 @@ class Person:
 # In[53]:
 
 
-john = Person("John", "Doe", 25)
-jane = Person("Jane", "Doe", 25)
+john = Person('John', 'Doe', 25)
+jane = Person('Jane', 'Doe', 25)
 print(john == jane)
 
 
 # # `__format__`
 
-# - Each Python type can control formatting of its instances by defining a __format__ method.
-#
+# - Each Python type can control formatting of its instances by defining a __format__ method. 
+# 
 # - The `__format__` method is responsible for interpreting the format specifier, formatting the value, and returning the resulting string.
-#
+# 
 # - The new, global built-in function `format` simply calls this special method, similar to how `len()` and `str()` simply call their respective special methods.
 
 # In[54]:
@@ -552,9 +546,9 @@ print(john == jane)
 # custom __format__() method
 class Person:
     def __format__(self, format):
-        if format == "age":
-            return "23"
-        return "None"
+        if(format == 'age'):
+            return '23'
+        return 'None'
 
 
 # In[55]:
@@ -605,9 +599,9 @@ print(bob >= alice)
 
 
 # This is our descriptor object
-class Bar:
+class Bar():
     def __init__(self):
-        self.value = ""
+        self.value = ''
 
     def __get__(self, instance, owner):
         print("returned from descriptor object")
@@ -653,7 +647,7 @@ del f.bar
 # # `__getattribute__`
 
 # - `__getattr__` called when an attribute lookup **has not found** the attribute in the usual places.
-# - Note that if the attribute is found through the normal mechanism, `__getattr__()` is not called.
+# - Note that if the attribute is found through the normal mechanism, `__getattr__()` is not called. 
 # - This is done both for efficiency reasons and because otherwise `__getattr__()` would have no way to access other attributes of the instance.
 # - Note that at least for instance variables, you can fake total control by not inserting any values in the instance attribute dictionary (but instead inserting them in another object). See the `__getattribute__()` method below for a way to actually get total control in new-style classes.
 
@@ -666,20 +660,20 @@ class Yeah(object):
         self.name = name
 
     def __getattribute__(self, item):
-        print("__getattribute__ ", item)
+        print('__getattribute__ ', item)
         # Calling the super class to avoid recursion
         # Gets called when the item is not found via __getattribute__
         return super(Yeah, self).__getattribute__(item)
 
     def __getattr__(self, item):
-        print("__getattr__ ", item)
-        return super(Yeah, self).__setattr__(item, "orphan")
+        print('__getattr__ ', item)
+        return super(Yeah, self).__setattr__(item, 'orphan')
 
 
 # In[65]:
 
 
-y1 = Yeah("yes")
+y1 = Yeah('yes')
 y1.name
 
 
@@ -712,26 +706,24 @@ y1.__dict__
 # - Python functions keep a reference to the non-local variables used in the following attributes
 #     - `__globals__` This is a reference to the module globals dict.
 #     - `__closure__` Variables used in the function closure.
-#
+# 
 
 # In[70]:
 
 
 def one():
-    return "one"
-
+    return 'one'
 
 def three(param):
     def two():
         print(one(), param)
-
     return two
 
 
 # In[71]:
 
 
-inst = three("hello")
+inst = three('hello')
 
 
 # In[72]:
@@ -794,7 +786,7 @@ print(bob > alice)
 # # `__hash__`
 
 # - An object hash is an integer number representing the value of the object and can be obtained using the `hash()` function if the object is hashable.
-# - To make a class hashable, it has to implement both the `__hash__(self)` method and the aforementioned `__eq__(self, other)` method.
+# - To make a class hashable, it has to implement both the `__hash__(self)` method and the aforementioned `__eq__(self, other)` method. 
 # - As with equality, the inherited `object.__hash__` method works by identity only: barring the unlikely event of a hash collision, two instances of the same class will always have different hashes, no matter what data they carry.
 # - So hashes are important because sets and dictionaries use them for their lookup tables to quickly find their keys. To do that effectively, they make an important assumption that leads to our first gotcha:
 # - The hash of an object must never change during its lifetime.
@@ -813,7 +805,10 @@ class C:
         return hash(self.x)
 
     def __eq__(self, other):
-        return self.__class__ == other.__class__ and self.x == other.x
+        return (
+            self.__class__ == other.__class__ and
+            self.x == other.x
+        )
 
 
 # In[80]:
@@ -847,14 +842,14 @@ c.x = 2
 # In[84]:
 
 
-c in s or c in d  # c is in neither!?
+c in s or c in d   # c is in neither!?
 
 
 # In[85]:
 
 
 d, s
-# ({C(2): 42}, {C(2)})   # but...it's right there!
+#({C(2): 42}, {C(2)})   # but...it's right there!
 
 
 # # `__init__`
@@ -867,44 +862,44 @@ d, s
 
 class Customer(object):
     """A customer of ABC bank with a checking. account.
-
+    
     Customer have the following propperties:
-
+    
     Atributes:
         name: a string representing the custome name
         balance: a float. tracking the current balance of the customer's account
     """
-
-    def __init__(self, name, balance=0.0):
+    
+    def __init__(self, name, balance = 0.0):
         """Object initialisation.
-
+        
         Returns a customers objkect whose name is name and stating
         balance is balance.
         """
-
+        
         self.name = name
         self.balance = balance
-
+        
     def withdraw(self, amount):
         """Withdraw.
-
+        
         Returns the balance remaininga fter withdrawing ana mount.
         """
-
+        
         if amount > self.balance:
             raise RuntimeError("Amount requested is greater than the current balance")
         self.balance -= amount
-
+        
         return self.balance
-
+    
     def deposit(self, amount):
         """Deposit.
-
+        
         Returns the balance remaining after depositing some monies.
         """
-
+        
         self.balance += amount
-
+        
         return sel.balance
 
 
@@ -940,7 +935,7 @@ customerNull.__dict__
 
 # # `__init_subclass__`
 
-# - It offers a simpler form of customization for classes.
+# - It offers a simpler form of customization for classes. 
 # - This is like a shortcut to extend the functionalities of base classes without having to handle with metaclasses.
 
 # In[121]:
@@ -978,7 +973,7 @@ print(Mistery.default_name)
 # In[123]:
 
 
-def func(a, b="Default value"):
+def func(a, b='Default value'):
     pass
 
 
@@ -1001,8 +996,8 @@ print(func.__kwdefaults__)
 
 class Person:
     """
-    The following shows how to implement the __eq__ method
-    in the Person class that returns True if two person
+    The following shows how to implement the __eq__ method 
+    in the Person class that returns True if two person 
     objects have the same age:
     """
 
@@ -1019,8 +1014,8 @@ class Person:
 # In[127]:
 
 
-john = Person("John", "Doe", 25)
-jane = Person("Jane", "Doe", 26)
+john = Person('John', 'Doe', 25)
+jane = Person('Jane', 'Doe', 26)
 print(john <= jane)
 
 
@@ -1031,8 +1026,8 @@ print(john <= jane)
 
 class Person:
     """
-    The following shows how to implement the __eq__ method
-    in the Person class that returns True if two person
+    The following shows how to implement the __eq__ method 
+    in the Person class that returns True if two person 
     objects have the same age:
     """
 
@@ -1049,8 +1044,8 @@ class Person:
 # In[129]:
 
 
-john = Person("John", "Doe", 25)
-jane = Person("Jane", "Doe", 26)
+john = Person('John', 'Doe', 25)
+jane = Person('Jane', 'Doe', 26)
 print(john < jane)
 
 
@@ -1059,20 +1054,20 @@ print(john < jane)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+#     
 # - `__name__` is a variable defined for each script that defines whether the script is being run as the main module or it is being run as an imported module.
-#
+# 
 # - `__name__` variable points to the namespace wherever the Python interpreter happens to be at the moment.
-#
+# 
 # - The global variable, name, in the module that is the entry point to your program, is __main__.
-#
+# 
 # - So, the code under the if block runs if the module is the entry point to your program.
-#
+# 
 # - **In practice?** It allows the code in the module to be importable by other modules, without executing the code block beneath on import.
-#
+#     
 # - In other words, the statement `if__name__=="__main__"` is a very Pythonic way of making sure some code only
 # runs if the program is ran directly.
-#
+# 
 # </font>
 # </div>
 
@@ -1080,9 +1075,9 @@ print(john < jane)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **If you are not** using the construct `__name__ == "__main__"` the name` is assigned to the name you import the module by.
-#
+# 
 # </font>
 # </div>
 
@@ -1101,16 +1096,15 @@ func_3.__name__
 
 # # `__module__`
 
-# - Every Python class has a built-in class attribute __module__ which is the name of the module in which the class is defined.
-# - A module in Python is a file (ending in .py) that contains a set of definitions (variables and functions) that you can use when they are imported.
-# - Modules are considered as objects, just as everything else is in Python.
+# - Every Python class has a built-in class attribute __module__ which is the name of the module in which the class is defined. 
+# - A module in Python is a file (ending in .py) that contains a set of definitions (variables and functions) that you can use when they are imported. 
+# - Modules are considered as objects, just as everything else is in Python. 
 # - Many methods can operate on modules.
 
 # In[132]:
 
 
 from math import sin
-
 # Function sin() came from the math module.
 sin.__module__
 
@@ -1119,7 +1113,7 @@ sin.__module__
 
 
 # Define a dummy class
-class A:
+class A:    
     pass
 
 
@@ -1130,16 +1124,19 @@ a.__module__
 # In[ ]:
 
 
+
+
+
 # # `__ne__`
 
-# - Equality in Python is more complicated than most people realize but at its core you have to implement a `__eq__` (self, other) method.
-#
-# - It should return either a boolean value if your class knows how to compare itself to other or `NotImplemented` if it doesn’t.
-#
+# - Equality in Python is more complicated than most people realize but at its core you have to implement a `__eq__` (self, other) method. 
+# 
+# - It should return either a boolean value if your class knows how to compare itself to other or `NotImplemented` if it doesn’t. 
+# 
 # - For inequality checks using `!=`, the corresponding method is `__ne__(self, other)`.
-#
+# 
 # - By default, those methods are inherited from the object class that compares two instances by their identity – therefore instances are only equal to themselves.
-#
+# 
 # - A common mistake in Python 2 was to override only `__eq__()` and forget about `__ne__()`. Python 3 is friendly enough to implement an obvious `__ne__()` for you, if you don’t yourself.
 
 # In[134]:
@@ -1147,8 +1144,8 @@ a.__module__
 
 class Person:
     """
-    The following shows how to implement the __eq__ method
-    in the Person class that returns True if two person
+    The following shows how to implement the __eq__ method 
+    in the Person class that returns True if two person 
     objects have the same age:
     """
 
@@ -1165,8 +1162,8 @@ class Person:
 # In[135]:
 
 
-john = Person("John", "Doe", 25)
-jane = Person("Jane", "Doe", 26)
+john = Person('John', 'Doe', 25)
+jane = Person('Jane', 'Doe', 26)
 print(john != jane)
 
 
@@ -1219,7 +1216,7 @@ class TextFile(File):
 
 """
 Here, we are instantiating the TextFile, ImageFile and File classes using the File (parent)
-class depending on content of file (file_type).
+class depending on content of file (file_type). 
 """
 text_file = File(file_name="testfile.txt", height=100, width=100)
 image_file = File(file_name="imagefile.png", file_size=500)
@@ -1242,7 +1239,7 @@ print(other_file)
 # In[15]:
 
 
-a = [1, 2, 3, 4]
+a = [1,2,3,4]
 
 
 # In[16]:
@@ -1262,7 +1259,7 @@ while True:
 
 # # `__qualname__`
 
-# - The `__qualname__` attribute means qualified name in Python.
+# - The `__qualname__` attribute means qualified name in Python. 
 # - It gives you a **dotted path** to the name of the target object.
 # - Using `__qualname__` is useful with nested structures, such as when you have a method inside a class
 # - **Difference?** With nested structures:
@@ -1290,13 +1287,11 @@ print(Example.something_level_1.__qualname__)
 class Example:
     def something():
         pass
-
-
 print(Example.something.__name__)
 print(Example.something.__qualname__)
 
 
-# - Using `__qualname__` is useful if you have a function and a method with the same names.
+# - Using `__qualname__` is useful if you have a function and a method with the same names. 
 # - Using `__qualname__` you are able to see the difference between the method and the function based on the path it returns.
 
 # In[142]:
@@ -1329,7 +1324,7 @@ print(Example.something.__qualname__)
 
 # # `__reduce__`
 
-# - When you try to pickle an object, there might be some properties that don't serialize well.
+# - When you try to pickle an object, there might be some properties that don't serialize well. 
 # - One example of this is an open file handle. Pickle won't know how to handle the object and will throw an error.
 # - You can tell the pickle module how to handle these types of objects natively within a class directly.
 
@@ -1342,7 +1337,7 @@ import pickle
 class Test(object):
     def __init__(self, file_path="test1234567890.txt"):
         # An open file in write mode
-        self.some_file_i_have_opened = open(file_path, "wb")
+        self.some_file_i_have_opened = open(file_path, 'wb')
 
 
 my_test = Test()
@@ -1361,12 +1356,12 @@ class Test(object):
         # Used later in __reduce__
         self._file_name_we_opened = file_path
         # An open file in write mode
-        self.some_file_i_have_opened = open(self._file_name_we_opened, "wb")
+        self.some_file_i_have_opened = open(self._file_name_we_opened, 'wb')
 
     def __reduce__(self):
         # we return a tuple of class_name to call,
         # and optional parameters to pass when re-creating
-        return (self.__class__, (self._file_name_we_opened,))
+        return (self.__class__, (self._file_name_we_opened, ))
 
 
 my_test = Test()
@@ -1379,23 +1374,23 @@ print(repr(saved_object))
 # In[147]:
 
 
-get_ipython().system("ls")
+get_ipython().system('ls')
 
 
 # In[148]:
 
 
 # Getting rid of the save file
-get_ipython().system("rm  ./test1234567890.txt")
+get_ipython().system('rm  ./test1234567890.txt')
 
 
 # # `__reduce_ex__`
 
-# - `__reduce_ex__` is what `__reduce__` should have been but never became.
+# - `__reduce_ex__` is what `__reduce__` should have been but never became. 
 # - `__reduce_ex__` works like `__reduce__` but the pickle protocol is passed.
 # - At pickling time `__reduce__()` will be called with no arguments, and it must return either a string or a tuple.
 # - It is sometimes useful to know the protocol version and this can be done by implementing a method named `__reduce_ex__`.
-# - `__reduce_ex__` is preferred over over `__reduce__` (you may still provide `__reduce__` for backwards compatibility).
+# - `__reduce_ex__` is preferred over over `__reduce__` (you may still provide `__reduce__` for backwards compatibility). 
 # - The `__reduce_ex__` method will be called with a single integer argument, the protocol version.
 
 # # `__repr__` & `__str__`
@@ -1410,20 +1405,20 @@ get_ipython().system("rm  ./test1234567890.txt")
 
 import numpy as np
 
-
 class Tensor(object):
+    
     def __init__(self, data):
         """__init__ method
         Given a list, tunrs it into an array
-        """
+        """        
         self.data = np.array(data)
-
+    
     def __add__(self, other):
-        """__add__ method
+        """__add__ method        
         Add two tensor together
         """
         return Tensor(self.data + other.data)
-
+    
     def __repr__(self):
         print("calling __repr__")
         """__repr__ method
@@ -1432,12 +1427,12 @@ class Tensor(object):
         which can be ised to construt the object again.
         """
         return str(self.data.__repr__())
-
+    
     def __str__(self):
         print("calling __str__")
         """
         Returns the string representation of the object. This method is called
-        when print() or str() function is invoked on an object. Retunrs a
+        when print() or str() function is invoked on an object. Retunrs a 
         human-redeable string format.
         """
         return str(self.data.__str__())
@@ -1446,7 +1441,7 @@ class Tensor(object):
 # In[150]:
 
 
-x = Tensor([1, 2, 3, 4, 5])
+x = Tensor([1,2,3,4,5])
 x
 
 
@@ -1477,16 +1472,16 @@ print(x)
 # In[1]:
 
 
-x = ["a", "b"]
-x[0] = "aa"  # Item assignment using square bracket notation
+x = ['a', 'b']
+x[0] = 'aa'  # Item assignment using square bracket notation
 x
 
 
 # In[2]:
 
 
-x = ["a", "b"]
-x.__setitem__(0, "aa")  # Equivalent to x[0] = 'aa'
+x = ['a', 'b']
+x.__setitem__(0, 'aa')  # Equivalent to x[0] = 'aa'
 x
 
 
@@ -1508,11 +1503,11 @@ class Person:
 
 
 alice = Person()
-setattr(alice, "age", 32)
+setattr(alice, 'age', 32)
 # age 32
 
 
-# - If we did not  overridden the `__setattr__()` magic method, Python would’ve created a new attribute for the alice instance, so when calling `alice.age`, you’d have obtained the value 32.
+# - If we did not  overridden the `__setattr__()` magic method, Python would’ve created a new attribute for the alice instance, so when calling `alice.age`, you’d have obtained the value 32. 
 
 # In[156]:
 
@@ -1525,7 +1520,7 @@ class Person_diff:
 
 
 alice_diff = Person_diff()
-setattr(alice_diff, "age", 32)
+setattr(alice_diff, 'age', 32)
 
 
 # In[158]:
@@ -1536,14 +1531,13 @@ alice_diff.__dict__
 
 # # `__sizeof__`
 
-# - So let us look at the two ways of getting the size of a particular object in Python. These are `getsizeof()` method and `__sizeof()` method.
+# - So let us look at the two ways of getting the size of a particular object in Python. These are `getsizeof()` method and `__sizeof()` method. 
 # - The `getsizeof()` is a system-specific method and hence we have to import the sys module to use it. A sample code is as shown below for calculating the size of a list.
 
 # In[159]:
 
 
 import sys
-
 a = [1, 2]
 b = [1, 2, 3, 4]
 c = [1, 2, 3, 4]
@@ -1554,8 +1548,8 @@ print(sys.getsizeof(c))
 print(sys.getsizeof(d))
 
 
-# - `getsizeof()` method calls the `__sizeof__()` method o the object with an additional garbage collector overhead.
-# - Hence the size returned by the `getsize()` method will be more than that returned by the `__sizeof()__` method.
+# - `getsizeof()` method calls the `__sizeof__()` method o the object with an additional garbage collector overhead. 
+# - Hence the size returned by the `getsize()` method will be more than that returned by the `__sizeof()__` method. 
 
 # In[160]:
 
@@ -1572,9 +1566,9 @@ print(z.__sizeof__())
 
 # # `__subclasshook__`
 
-# - `__subclasscheck__` is one of the methods to customize the result of `issubclass()` built-in function.
-# - It is a method to check whether a class is a subclass or not and returns True if the class is considered as a subclass(direct or indirect) of another class, otherwise, returns False.
-# - It cannot be defined as a class method in the actual/real class. It is implemented in the metaclass, as it is not for ordinary classes.
+# - `__subclasscheck__` is one of the methods to customize the result of `issubclass()` built-in function. 
+# - It is a method to check whether a class is a subclass or not and returns True if the class is considered as a subclass(direct or indirect) of another class, otherwise, returns False. 
+# - It cannot be defined as a class method in the actual/real class. It is implemented in the metaclass, as it is not for ordinary classes. 
 # - **Example** consider a situation where you want to check if a certain value is present as an attribute inside a class using the `issubclass()` method.
 
 # In[161]:
@@ -1587,7 +1581,7 @@ class A(type):
 
         # Getting the L attribute of
         # subclass
-        attr = getattr(cls, "L", [])
+        attr = getattr(cls, 'L', [])
 
         # Checking if the subclass
         # is present in the L attribute
@@ -1645,7 +1639,7 @@ check_in_a_loop.__dict__
 
 for i in dir(check_in_a_loop):
     print(i)
-    print(eval("check_in_a_loop." + str(i)))
+    print(eval("check_in_a_loop."+str(i)))
 
 
 # # References
@@ -1653,7 +1647,7 @@ for i in dir(check_in_a_loop):
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.honeybadger.io/blog/python-instantiation-metaclass/
 # - [`__closure__`](https://www.geeksforgeeks.org/__closure__-magic-function-in-python/)
 # - [`__code__`](https://www.codeguage.com/courses/python/functions-code-objects)
@@ -1680,8 +1674,12 @@ for i in dir(check_in_a_loop):
 # - [`__setattr__`](https://blog.finxter.com/python-__setattr__-magic-method/)
 # - [`__sizeof__`](https://www.geeksforgeeks.org/difference-between-__sizeof__-and-getsizeof-method-python/)
 # - [`__subclasshook__`](https://www.geeksforgeeks.org/__subclasscheck__-and-__subclasshook__-in-python/)
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

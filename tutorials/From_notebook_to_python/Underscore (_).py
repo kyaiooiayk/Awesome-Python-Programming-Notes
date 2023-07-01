@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Underscore (_)
-#
+# 
 # </font>
 # </div>
 
@@ -20,14 +20,14 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - There are 5 cases:
 #     - For storing the value of last expression in interpreter.
 #     - For ignoring the specific values. (so-called “I don’t care”)
 #     - To give special meanings and functions to name of vartiables or functions.
 #     - To use as ‘Internationalization(i18n)’ or ‘Localization(l10n)’ functions.
 #     - To separate the digits of number literal value.
-#
+# 
 # </font>
 # </div>
 
@@ -36,10 +36,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - For storing the value of last expression in interpreter.
 # - Useful if have just computed a huge result and you forgot to assign it to a variable.
-#
+# 
 # </font>
 # </div>
 
@@ -58,7 +58,7 @@ _
 # In[3]:
 
 
-a = _
+a=_
 a
 
 
@@ -67,10 +67,10 @@ a
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - The underscore is also used for ignoring the specific values.
+# 
+# - The underscore is also used for ignoring the specific values. 
 # - If you don’t need the specific values or the values are not used, just assign the values to underscore.
-#
+# 
 # </font>
 # </div>
 
@@ -78,7 +78,7 @@ a
 
 
 # Ignore a value when unpacking
-x, _, y = (1, 2, 3)
+x, _, y = (1, 2, 3) 
 x
 
 
@@ -86,7 +86,7 @@ x
 
 
 # Ignore the multiple values. It is called "Extended Unpacking" which is available in only Python 3.
-x, *_, y = (1, 2, 3, 4, 5)  # x = 1, y = 5
+x, *_, y = (1, 2, 3, 4, 5) # x = 1, y = 5
 
 
 # In[9]:
@@ -105,9 +105,9 @@ y
 
 
 # Ignore the index
-a = 0
+a=0
 for _ in range(10):
-    a += 1
+    a+=1
 print(a)
 
 
@@ -116,11 +116,11 @@ print(a)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - This convention is used for declaring private variables, functions, methods and classes in a module. Anything with this convention are ignored in from module import *.
-#
+# 
+# - This convention is used for declaring private variables, functions, methods and classes in a module. Anything with this convention are ignored in from module import *. 
+# 
 # - However, of course, Python does not supports truly private, so we can not force somethings private ones and also can call it directly from other modules. So sometimes we say it **weak internal use indicator**.
-#
+# 
 # </font>
 # </div>
 
@@ -129,7 +129,6 @@ print(a)
 
 class _Base:  # private
     _hidden_factor = 2  # private variable
-
     def __init__(self, price):
         self._price = price
 
@@ -170,9 +169,9 @@ obj.get_double_price()
 # In[ ]:
 
 
-Tkinter.Toplevel(master, class_="ClassName")  # Avoid conflict with 'class' keyword
+Tkinter.Toplevel(master, class_='ClassName') # Avoid conflict with 'class' keyword
 
-list_ = List.objects.get(1)  # Avoid conflict with 'list' built-in type
+list_ = List.objects.get(1) # Avoid conflict with 'list' built-in type
 
 
 # # `__` double_leading_underscore
@@ -180,13 +179,13 @@ list_ = List.objects.get(1)  # Avoid conflict with 'list' built-in type
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - This is about syntax rather than a convention. double underscore will mangle the attribute names of a class to avoid conflicts of attribute names between classes.
-#
+# 
+# - This is about syntax rather than a convention. double underscore will mangle the attribute names of a class to avoid conflicts of attribute names between classes. 
+# 
 # - This is the so-called **mangling** that means that the compiler or interpreter modify the variables or function names with some rules, not use as it is.
-#
+# 
 # - The mangling rule of Python is adding the `_ClassName` to front of attribute names are declared with double underscore. That is, if you write method named `__method` in a class, the name will be mangled in `_ClassName__method` form.
-#
+# 
 # </font>
 # </div>
 
@@ -215,11 +214,11 @@ dir(a)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-#
-# - Because of the attributes named with double underscore will be mangled like above, we can not access it with `ClassName.__method`.
+# 
+# 
+# - Because of the attributes named with double underscore will be mangled like above, we can not access it with `ClassName.__method`. 
 # - Sometimes, some people use it as like real private ones using these features, but it is not for private and not recommended for that.
-#
+#     
 # </font>
 # </div>
 
@@ -228,14 +227,14 @@ dir(a)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - This convention is used for special variables or methods (so-called “magic method”) such as `__init__`, `__len__`. These methods provides special syntactic features or does special things.
-#
-# - For example, `__file__` indicates the location of Python file, `__eq__` is executed when `a == b` expression is excuted.
-#
-# - A user of course can make custom special method, it is very rare case, but often might modify the some built-in special methods.
-#
-#
+# 
+# - This convention is used for special variables or methods (so-called “magic method”) such as `__init__`, `__len__`. These methods provides special syntactic features or does special things. 
+#     
+# - For example, `__file__` indicates the location of Python file, `__eq__` is executed when `a == b` expression is excuted. 
+#     
+# - A user of course can make custom special method, it is very rare case, but often might modify the some built-in special methods. 
+# 
+# 
 # </font>
 # </div>
 
@@ -244,13 +243,13 @@ dir(a)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - It is just convention, does not have any syntactic functions. That is, the underscore does not means i18n/l10n, and it is just a convention that binds the i18n/l10n to underscore variable has been from C convention.
-#
+#     
 # - The built-in library gettext which is for i18n/l10n uses this convention, and Django which is Python web framework supports i18n/l10n also introduces and uses this convention.
-#
+# 
 # - **Localise your program**. Localising a program means making it suitable for different regions/countries. When you do that, one of the things that you have to do is translate the strings in your program, so that they can be read in many different languages.
-#
+# 
 # </font>
 # </div>
 
@@ -262,13 +261,13 @@ dir(a)
 
 dec_base = 1_000_000
 bin_base = 0b_1111_0000
-hex_base = 0x_1234_ABCD
+hex_base = 0x_1234_abcd
 
 
 # In[43]:
 
 
-print(dec_base)
+print(dec_base) 
 
 
 # In[44]:
@@ -288,10 +287,14 @@ print(hex_base)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

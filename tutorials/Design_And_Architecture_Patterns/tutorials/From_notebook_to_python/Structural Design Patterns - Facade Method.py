@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Structural Design Patterns - Facade Method
-#
+# 
 # </font>
 # </div>
 
@@ -20,7 +20,7 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - **Structural Design Patterns** are used to establish relation between software components in particular settings.
 #     - [ ] Adapter Method
 #     - [ ] Bridge Method
@@ -29,7 +29,7 @@
 #     - [x] Facade Method
 #     - [ ] Proxy Method
 #     - [ ] FlyWeight Method
-#
+# 
 # </font>
 # </div>
 
@@ -38,10 +38,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - **Provides a simplified interface to a library, a framework, or any other complex set of classes.**
 # - **Real-world analogy** When you call a shop to place a phone order, an operator is your facade to all services and departments of the shop. The operator provides you with a simple voice interface to the ordering system, payment gateways, and various delivery services.
-#
+#     
 # </font>
 # </div>
 
@@ -137,7 +137,7 @@ def client_code(facade: Facade) -> None:
 # In[4]:
 
 
-# if __name__ == "__main__":
+#if __name__ == "__main__":
 # The client code may have some of the subsystem's objects already created.
 # In this case, it might be worthwhile to initialize the Facade with these
 # objects instead of letting the Facade create new instances.
@@ -152,12 +152,12 @@ client_code(facade)
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-#
+# 
 # - **Advantages**:
 #     -  You can isolate your code from the complexity of a subsystem.
 # - **Disadvantages**:
 #     - A facade can become a god object coupled to all classes of an app.
-#
+# 
 # </font>
 # </div>
 
@@ -166,10 +166,10 @@ client_code(facade)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [Facade method](https://www.geeksforgeeks.org/facade-method-python-design-patterns/)
 # - [Facade in Python](https://refactoring.guru/design-patterns/facade)
-#
+#     
 # </font>
 # </div>
 
@@ -179,8 +179,12 @@ client_code(facade)
 # In[5]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv -m")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv -m')
 
 
 # In[ ]:
+
+
+
+

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** itertools
-#
+# 
 # </font>
 # </div>
 
@@ -29,11 +29,11 @@ from itertools import product, chain, combinations
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - `itertools ` is a module implements a number of iterator building blocks inspired by constructs from APL, Haskell, and SML. Each has been recast in a form suitable for Python.
-#
+# 
 # - The module standardizes a core set of fast, memory efficient tools that are useful by themselves or in combination. Together, they form an “iterator algebra” making it possible to construct specialized tools succinctly and efficiently in pure Python.
-#
+# 
 # </font>
 # </div>
 
@@ -42,13 +42,13 @@ from itertools import product, chain, combinations
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Implement the IceCreamMachine's scoops method so that it returns all combinations of one ingredient and one topping.
-#
+# 
+# - Implement the IceCreamMachine's scoops method so that it returns all combinations of one ingredient and one topping. 
+# 
 # - If there are no ingredients or toppings, the method should return an empty list.
 # For example: `IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"]).scoops()` should return `[['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]`
-#
-#
+# 
+# 
 # </font>
 # </div>
 
@@ -56,6 +56,7 @@ from itertools import product, chain, combinations
 
 
 class IceCreamMachine:
+
     def __init__(self, ingredients, toppings):
         self.ingredients = ingredients
         self.toppings = toppings
@@ -77,11 +78,11 @@ print(machine.scoops())
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Implement the unique_names method. When passed two arrays of names, it will return an array containing the names that appear in either or both arrays.
 # - The returned array should have no duplicates.
 # - For example, `calling unique_names(['Ava', 'Emma', 'Olivia'], ['Olivia', 'Sophia', 'Emma'])` should return an array containing Ava, Emma, Olivia, and Sophia in any order.
-#
+# 
 # </font>
 # </div>
 
@@ -90,7 +91,6 @@ print(machine.scoops())
 
 def unique_names(names1, names2):
     return list(set(chain(names1, names2)))
-
 
 names1 = ["Ava", "Emma", "Olivia"]
 names2 = ["Olivia", "Sophia", "Emma"]
@@ -102,21 +102,21 @@ print(unique_names(names1, names2))  # should print Ava, Emma, Olivia, Sophia
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - To be completed in **30 min**
-#
-# - Write a function that, when passed a list and a target sum, returns, efficiently with respect to time used, two distinct zero-based indices of any two of the numbers, whose sum is equal to the target sum.
-#
+# 
+# - Write a function that, when passed a list and a target sum, returns, efficiently with respect to time used, two distinct zero-based indices of any two of the numbers, whose sum is equal to the target sum. 
+# 
 # - If there are no two numbers, the function should return None.
-#
+# 
 # - For example, find_two_sum([3, 1, 5, 7, 5, 9], 10) should return a single tuple containing any of the following pairs of indices:
-#
+# 
 # ```
 # * 0 and 3 (or 3 and 0) as 3 + 7 = 10
 # * 1 and 5 (or 5 and 1) as 1 + 9 = 10
 # * 2 and 4 (or 4 and 2) as 5 + 5 = 10
 # ```
-#
+# 
 # </font>
 # </div>
 
@@ -127,11 +127,12 @@ def find_two_sum(numbers, target_sum):
     # :param numbers: (list of ints) The list of numbers.
     # :param target_sum: (int) The required target sum.
     # :returns: (a tuple of 2 ints) The indices of the two elements whose sum is equal to target_sum
-
-    # print(list(combinations(numbers,2)))
-    for duo in list(combinations(numbers, 2)):
+    
+    
+    #print(list(combinations(numbers,2)))
+    for duo in list(combinations(numbers,2)):
         if sum(duo) == target_sum:
-            # print(duo, duo[0], duo[1], numbers.index(duo[0]), numbers.index(duo[1]))
+            #print(duo, duo[0], duo[1], numbers.index(duo[0]), numbers.index(duo[1]))
             # the task said any, so I will return the first one I find!
             return (numbers.index(duo[0]), numbers.index(duo[1]))
 
@@ -144,12 +145,16 @@ print(find_two_sum([3, 1, 5, 7, 5, 9], 10))
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - [TestDome home page](https://www.testdome.com/tests/python-online-test/45)
 # - [elegant solution](https://github.com/jozo/testdome-python-solutions/blob/master/02_ice_cream_machine.py)
 # - [`itertools`](https://docs.python.org/3/library/itertools.html)
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

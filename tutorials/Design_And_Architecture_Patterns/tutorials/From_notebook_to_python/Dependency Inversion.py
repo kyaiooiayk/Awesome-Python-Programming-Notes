@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Dependency Inversion
-#
+# 
 # </font>
 # </div>
 
@@ -20,11 +20,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Instead of directly calling a function, you get an adapter, and you call that adapter’s interface.
+# 
+# - Instead of directly calling a function, you get an adapter, and you call that adapter’s interface. 
 # - Instead of fixing the behaviour of your program, you allow it to be modified as needed without any change.
-# - Different behaviours can be constructed to fit the caller’s intentions.
-#
+# - Different behaviours can be constructed to fit the caller’s intentions. 
+#     
 # </font>
 # </div>
 
@@ -36,15 +36,18 @@
 # In[ ]:
 
 
+
+
+
 # # References
 # <hr style = "border:2px solid black" ></hr>
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [Dependency Inversion](https://laszlo.substack.com/p/clean-architecture-in-data-science)
 # - [Wikipedia article](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
-#
+#     
 # </font>
 # </div>
 
@@ -54,8 +57,12 @@
 # In[1]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv -m")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv -m')
 
 
 # In[ ]:
+
+
+
+

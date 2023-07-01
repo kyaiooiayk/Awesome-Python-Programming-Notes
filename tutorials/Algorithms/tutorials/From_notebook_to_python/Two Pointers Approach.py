@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
-# **What?** Two Pointers Approach
-#
+# 
+# **What?** Two Pointers Approach 
+# 
 # </font>
 # </div>
 
@@ -20,11 +20,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - This approach optimizes the runtime by utilizing some order (not necessarily sorting) of the data. It is generally applied on lists (arrays) and linked lists.
+# 
+# - This approach optimizes the runtime by utilizing some order (not necessarily sorting) of the data. It is generally applied on lists (arrays) and linked lists. 
 # - This is generally used to search pairs in a sorted array.
 # - This approach works in constant space.
-#
+# 
 # </font>
 # </div>
 
@@ -33,13 +33,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **Pointer Initialization** — Starting points. Pointers can be at any place depending upon what we are trying to achieve. In the left part of the pic, we have both pointers starting at the same position i.e. start of the linked list. In the right part of the pic, we have pointers at extreme ends one at starting index and another one at the last index.
-#
+# 
 # - **Pointer movement** — This will decide how we converge towards the solution. Pointer can move in the same direction (left in above pic) or they can move in the opposite direction (right in the above pic). Also in the left part of the pic, we have different increments for the pointers(top (slow) with 1 unit bottom (fast) with 2 units).
-#
+# 
 # - **Stop condition** — This decides when do we stop. In the left part, we continue till we reach a node whose next element is None. In the right one, we continue till our start is less than the end (i <j).
-#
+# 
 # </font>
 # </div>
 
@@ -50,9 +50,9 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Sliding window is another variant of two pointer approach.
-#
+# 
 # </font>
 # </div>
 
@@ -61,10 +61,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Reverse an array in place.
+# 
+# - Reverse an array in place. 
 # - In place means you are not allowed to make a copy or create an empty array; you should use the initial array.
-#
+# 
 # </font>
 # </div>
 
@@ -102,10 +102,10 @@ array[::-1]
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Given an integer array sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 # - Look that if there are negative number, you cannot simply squared and leave in the same position!
-#
+# 
 # </font>
 # </div>
 
@@ -151,10 +151,10 @@ sorted(np.array([-4,-3,0,1,10])**2)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Finding cycle in Linked list.
 # - Note that we are not sorting of nodes.
-#
+# 
 # </font>
 # </div>
 
@@ -169,7 +169,7 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
-
+    
     def __repr__(self):
         return str(self.val)
 
@@ -219,7 +219,7 @@ head.next = lt[1]
 lt[1].next= lt[2]
 lt[2].next = lt[3]
 lt[3].next = lt[1]
-
+    
 print(hasCycle(head))
 
 
@@ -228,9 +228,9 @@ print(hasCycle(head))
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Given a string `s`, find the length of the longest substring without repeating characters.
-#
+# 
 # </font>
 # </div>
 
@@ -266,10 +266,10 @@ print(lengthOfLongestSubstring("abcabcbb"))
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Given three sorted arrays A, B, and C of not necessarily the same sizes.
 # - Calculate the minimum absolute difference between the maximum and minimum number of any triplet A[i], B[j], C[k] such that they belong to arrays A, B and C respectively, i.e., minimize (max(A[i], B[j], C[k]) — min(A[i], B[j], C[k]))
-#
+# 
 # </font>
 # </div>
 
@@ -310,11 +310,11 @@ print(solve(A, B, C))
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0).
 # - Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
 # - This technique can be extended to more than two pointers.
-#
+# 
 # </font>
 # </div>
 
@@ -344,10 +344,10 @@ def maxArea(height):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Given three integer arrays arr1, arr2 and arr3 sorted in strictly increasing order, return a sorted array of only the integers that appeared in all three arrays.
 # - We start with three-pointers and increase the ones that are smaller than max of three elements.
-#
+# 
 # </font>
 # </div>
 
@@ -384,11 +384,15 @@ def arraysIntersection(arr1, arr2, arr3):
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - [Two Pointers Approach — Python Code](https://towardsdatascience.com/two-pointer-approach-python-code-f3986b602640)
 # - [Linked list](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/Data-Structures/tutorials/Linked%20lists.ipynb)
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

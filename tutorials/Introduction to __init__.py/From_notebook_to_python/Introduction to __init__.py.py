@@ -9,22 +9,22 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Introduction to `__init__.py`
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
 
 
-get_ipython().system("ls")
+get_ipython().system('ls')
 
 
 # In[ ]:
 
 
-get_ipython().system("ls my_sum")
+get_ipython().system('ls my_sum')
 
 
 # # Option #1 - turn your folder into a package
@@ -32,12 +32,12 @@ get_ipython().system("ls my_sum")
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - By adding the `__init__.py` we are turning our folder into a package.
 # - This means we are able to use the syntax from import something
 # - Inside the `__init__.py` file there is a sum function.
 # - We'll now import it and give it a spin!
-#
+# 
 # </font>
 # </div>
 
@@ -50,7 +50,7 @@ from my_sum import sum
 # In[ ]:
 
 
-sum([1, 2])
+sum([1,2])
 
 
 # # Option #2 - use directly `__import__`
@@ -58,12 +58,12 @@ sum([1, 2])
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - What if you do not want to make a folder a package?
 # - Python offer an alternative using the built-in `__import__()` function.
-# - This is also useful if your filename **collides** with any standard library packages.
+# - This is also useful if your filename **collides** with any standard library packages. 
 # - For example, math.py would collide with the math module.
-#
+# 
 # </font>
 # </div>
 
@@ -77,7 +77,7 @@ sum1 = target.sum
 # In[ ]:
 
 
-sum1([1, 2])
+sum1([1,2])
 
 
 # # Some style rules
@@ -85,10 +85,10 @@ sum1([1, 2])
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - Do not put too much code in `__init__.py`. When projects grow in size, there may be subpackages all nested in a deep directory. In this case, calling `__init__.py` will cause calling all `__init__.py`files met while traversing the tree.
 # - Thus, it is good practice to leave the `__init__.py` as empty as possible when there is no need to share the code.
-#
+# 
 # </font>
 # </div>
 
@@ -97,11 +97,11 @@ sum1([1, 2])
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - You can use `__init__.py` to shorten your API.
+# 
+# - You can use `__init__.py` to shorten your API. 
 # - Let’s say that the most important method of your code, `foo`, is found in the `Foo_package` module.
 # - You can allow the users to import it as from your_package `from Foo_package import foo` instead of `from Foo_packaged import foo`, by simply adding: `from .Foo import foo`
-#
+# 
 # </font>
 # </div>
 
@@ -134,10 +134,14 @@ foo1
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [How to build your first python package](https://towardsdatascience.com/how-to-build-your-first-python-package-6a00b02635c9)
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

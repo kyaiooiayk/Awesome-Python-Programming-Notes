@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Code refactoring
-#
+# 
 # </font>
 # </div>
 
@@ -20,17 +20,17 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **Short definition of refactoring**: changing the code without changing its behaviour
-#
+#     
 # - Refactoring the source code of an application or piece of software aims to improve operation without altering functionality.
-#
+#     
 # - Making your code better might mean different things:
 #     - Easier to maintain
 #     - Easier to explain
-#     - Faster
+#     - Faster 
 #     - etc ...
-#
+#     
 # </font>
 # </div>
 
@@ -39,11 +39,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Write a function that changes the casing of its letters:
 #     - letters in even positions should become uppercase
 #     - letters in odd positions should become lowercase
-#
+# 
 # </font>
 # </div>
 
@@ -51,11 +51,11 @@
 
 
 def myfunc(a): empty=[]
-    for i in range(len(a)):
+    for i in range(len(a)): 
         if i%2==0:
-            empty.append(a[i].upper())
+            empty.append(a[i].upper()) 
         else:
-            empty.append(a[i].lower())
+            empty.append(a[i].lower()) 
     return "".join(empty)
 
 
@@ -64,14 +64,14 @@ def myfunc(a): empty=[]
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The very first step you can take towards writing code that is as elegant as possible is running an auto formatter. If you use `black`, for example, you can fix many style issues and inconsistencies right from the get-go.
-#
+# 
 # - Also, one could use `flake8` which does a little more than what `black` does. It will also suggest changes to your code.
-#
+# 
 # - In this particula case the only changes made was adding spaces around `=` and `==` which gives your code rooom to breath.
-#
-#
+# 
+# 
 # </font>
 # </div>
 
@@ -94,17 +94,17 @@ def myfunc(a):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Names should reflect the intent, or a very important property, of the thing they refer to.
-#
+# 
+# - Names should reflect the intent, or a very important property, of the thing they refer to. 
+# 
 # - Here are the changes one could use:
 #     - myfunc -> alternate_casing
 #     - a -> text
 #     - empty -> letters
 #     - i -> idx (because of my personal preference).
-#
+# 
 # - **On the index `i`**: a notable exception is the usage of i in for loops. Generally it is left to the coder whether to keep using the bare letter or to use something more verbose as in `idx` instead of `i`.
-#
+#     
 # </font>
 # </div>
 
@@ -126,11 +126,11 @@ def alternate_casing(text):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - In our function we need the indices and the data, because we need the index to determine the operation to do, and then we need the data (the actual letter) to change its casing. `enumerate` is the way to go here.
-#
+# 
 # - Not only we were able to remove the explicit indexing, therefore cutting down on one operation, but we also express our intent more clearly: when someone finds an enumerate, they should immediately understand that to mean “in this loop I need both the indices and the data I’m traversing”.
-#
+#     
 # </font>
 # </div>
 
@@ -153,11 +153,11 @@ return "".join(letters)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **Nesting code** means we need to keep track of many contexts in our head while we read the code, and even though you might not notice it, that’s exhausting. Going in and out of all those indented structures, making all those context switches, consumes brain power. Flatter code places less strain on our brains and makes it easier to keep up with the code.
-#
+# 
 # - Notice that we are doing a `letters.append` regardless of the branch we are in, which makes it less clear that the thing that is changing from one branch to the other is the choice of method that we call on `letter`.
-#
+#     
 # </font>
 # </div>
 
@@ -181,11 +181,11 @@ return "".join(letters)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Having factored out the `.append()` to outside of the if makes it blatantly clear that the if statement is only there to decide on what to assign to capitalised. This opens the door for another simplification, that will come in the form of a conditional expression.
-#
+# 
 # - Conditional expressions are like condensed `if-else` blocks that are great for conditional assignment.
-#
+# 
 # </font>
 # </div>
 
@@ -205,9 +205,9 @@ return "".join(letters)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The next step concerns itself with simplifying the condition of the if statement. In Python, we have this won- derful thing which allows us to interpret many objects as Booleans, even if they are not Booleans themselves. This is often referred to as the Truthy/Falsy value of an object in Python,
-#
+# 
 # - For our case, what matters is that the number 0 is treated as `False` and any other integer is treated as `True`.
 # </font>
 # </div>
@@ -227,11 +227,11 @@ def alternate_casing(text):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - One thing that you can also learn to spot is when you are building a list by calling `.append()` on it successively. When that is the case, look for an opportunity to use a list comprehension.
-#
+# 
+# - One thing that you can also learn to spot is when you are building a list by calling `.append()` on it successively. When that is the case, look for an opportunity to use a list comprehension. 
+# 
 # - List comprehensions are very Pythonic when used well, and they allow you to initialise a variable with the correct contents right from the start, instead of having to initialise a variable to change it right away.
-#
+# 
 # </font>
 # </div>
 
@@ -248,11 +248,11 @@ def alternate_casing(text):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **Horizontal scrolling** in code is to be avoided at all costs, and that means lines shouldn’t get too long.
-#
+# 
 # - The names inside the list comprehension only live inside the list comprehension, so they are very short-lived and have a very specific role.
-#
+# 
 # </font>
 # </div>
 
@@ -260,16 +260,16 @@ def alternate_casing(text):
 
 
 def alternate_casing(text):
-    letters = [l.lower() if i % 2 else l.upper() for i, l in enumerate(text)]
+    letters = [l.lower() if i % 2 else l.upper() for i, l in enumerate(text)] 
     return "".join(letters)
 
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Another option could've been to split the list comprehension instead.
-#
-#
+# 
+# 
 # </font>
 # </div>
 
@@ -289,9 +289,9 @@ return "".join(letters)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Once again, auxiliary variables aren’t always needed. Whether you have the broken up list comprehension or the one with the short names, you can just get rid of the auxiliary variable and call `.join()` on those letters directly.
-#
+#     
 # </font>
 # </div>
 
@@ -317,11 +317,11 @@ def alternate_casing(text):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - We have come so far, but there is one final thing we can do, and that is related to how we can get rid of the `[]` of the list comprehension. I mean we can literally delete them.
-#
+# 
 # - Now, instead of a list comprehension, we have a generator expression. Generator expressions are amazing, in my opinion, and they come with memory and speed benefits, so try to use them when you can. In practice, when you are calling a function with a list comprehension, you can often omit the [] altogether to switch to a **generator** expression.
-#
+#     
 # </font>
 # </div>
 
@@ -347,11 +347,15 @@ def alternate_casing(text):
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://mathspp.com/blog/pydonts
 # - Martin Fowler: Refactoring, Improving the Design of Existing Code
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

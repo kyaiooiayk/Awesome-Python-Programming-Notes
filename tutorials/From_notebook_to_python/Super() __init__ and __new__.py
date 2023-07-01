@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** `Super()` `__init__` and `__new__`
-#
+# 
 # </font>
 # </div>
 
@@ -20,13 +20,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Transforming from class to an object is called instantiation.
+# 
+# - Transforming from class to an object is called instantiation. 
 # - `__init__` is used to objects initialization and provide a class with a contructor.
-#  - During object creation `__init__` method doesn’t get executed first, the method which gets executed first is `__new__`
+#  - During object creation `__init__` method doesn’t get executed first, the method which gets executed first is `__new__` 
 #  - `__new__()` method gets most of the same arguments at `__init__` and it is responsible for actually creating the new object (prior to initializing object).
 # - We can use `__new__` when we need to control the creation of a new instance.
-#
+# 
 # </font>
 # </div>
 
@@ -35,11 +35,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Let's say we have a 3 classes, File ,TextFile(File) and ImageFile(File). We need instantiate TextFile for Text files, ImageFile for image file, and File for other type of files. We can obtain this by instantiating them directly.
-#
-# - But what if we could instantiate them only using the parent class (File) depending the file content? Yes, we want to instantiate child classes using parent class!
-#
+# 
+# - But what if we could instantiate them only using the parent class (File) depending the file content? Yes, we want to instantiate child classes using parent class! 
+# 
 # </font>
 # </div>
 
@@ -81,7 +81,7 @@ class TextFile(File):
 
 """
 Here, we are instantiating the TextFile, ImageFile and File classes using the File (parent)
-class depending on content of file (file_type).
+class depending on content of file (file_type). 
 """
 text_file = File(file_name="testfile.txt", height=100, width=100)
 image_file = File(file_name="imagefile.png", file_size=500)
@@ -101,12 +101,16 @@ print(other_file)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - https://medium.com/@taohidulii/playing-with-inheritance-in-python-73ea4f3b669e
 # - https://www.python.org/download/releases/2.2/descrintro/#__new__
 # - https://nbviewer.org/github/rasbt/python_reference/blob/master/tutorials/not_so_obvious_python_stuff.ipynb?create=1
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Function decorators
-#
+# 
 # </font>
 # </div>
 
@@ -30,10 +30,10 @@ from functools import wraps
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A decorator takes in a function, adds some functionality and **RETURNS** it.
 # - A **decorator** is basically a function that takes another function as an argument, adds some kind of functionality and then returns another function. So why would we want to do something like this? Well, it's because this allows us to easily add or alter the functionality to our existing function method or class without having to directly use its subclasses. In short, **decorators** are simply wrappers to existing functions.
-#
+# 
 # </font>
 # </div>
 
@@ -42,11 +42,11 @@ from functools import wraps
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Our decorator does nothing more than adding an extra print functions.
-# - If you're wondering why there is a ` @functools.wraps ` here while other examples do not have it, it is because it is **good practice**.
+# - If you're wondering why there is a ` @functools.wraps ` here while other examples do not have it, it is because it is **good practice**. 
 # - This automatically adds a `__wrapped__` attribute that let you retrieve the original, undecorated function
-#
+# 
 # </font>
 # </div>
 
@@ -57,8 +57,7 @@ def ourDecorator(func: callable):
     @functools.wraps(func)
     def functionWrapper(x):
         print("Decorating the function")
-        func(x)
-
+        func(x)        
     return functionWrapper
 
 
@@ -81,7 +80,7 @@ foo("Hi")
 
 
 # This can be also re-written as (keep in mind that @function is just a syntaz sugar)
-ourDecorator(foo("Hi"))
+ourDecorator(foo("Hi"));
 
 
 # ## `ourDecorators()` vs. `ourDecorators`
@@ -96,10 +95,10 @@ def foo(x):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - `@decorator def func` gets replaced by `func = decorator(func)`.
 # - `@decorator() def func` gets replaced by `func = decorator()(func)`. So in the latter case, decorator() is run, and it needs to return a function which accepts a function as as an argument, and returns a function.
-#
+# 
 # </font>
 # </div>
 
@@ -107,11 +106,11 @@ def foo(x):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - You should always use wraps, when implementing decorators.
-# - It will fix the function metadata (for example: copy the __name__, the docstring, etc).
+# - It will fix the function metadata (for example: copy the __name__, the docstring, etc). 
 # - An example is provided below to showcase what will happen if you dont'.
-#
+# 
 # </font>
 # </div>
 
@@ -120,20 +119,16 @@ def foo(x):
 
 def ourDecorator(func: callable):
     """With wraps"""
-
     @functools.wraps(func)
     def functionWrapper(x):
         print("Decorating the function")
-        func(x)
-
+        func(x)        
     return functionWrapper
-
 
 @ourDecorator
 def foo(x):
     print("Hi, foo has been called with: " + str(x))
-
-
+    
 foo("Hi")
 
 
@@ -156,19 +151,15 @@ foo.__wrapped__
 
 def ourDecorator(func: callable):
     """With no wraps"""
-
     def functionWrapper(x):
         print("Decorating the function")
-        func(x)
-
+        func(x)        
     return functionWrapper
-
 
 @ourDecorator
 def foo(x):
     print("Hi, foo has been called with: " + str(x))
-
-
+    
 foo("Hi")
 
 
@@ -191,18 +182,18 @@ foo.__wrapped__
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - How do we go back to the undecorated function?
-# - One solution would be to use @include_original
+# - One solution would be to use @include_original 
 # - https://stackoverflow.com/questions/1166118/how-to-strip-decorators-from-a-function-in-python
-#
+# 
 # </font>
 # </div>
 
 # In[6]:
 
 
-# This is equivalent to
+# This is equivalent to 
 ourDecorator(foo("Hi"))
 
 
@@ -225,7 +216,6 @@ IT IS NOT WORKING!
 
 
 import inspect
-
 inspect.unwrap(foo)
 
 
@@ -245,7 +235,6 @@ def make_pretty(func):
     def inner():
         print("I got decorated")
         func()
-
     return inner
 
 
@@ -283,10 +272,10 @@ ordinary()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - This is a common construct and for this reason, Python has a syntax to simplify this.
-# - We can use the `@` symbol along with the name of the decorator function and place it above the definition of the function to be decorated. Essentially this is a syntactuc sugar
-#
+# - We can use the `@` symbol along with the name of the decorator function and place it above the definition of the function to be decorated. Essentially this is a syntactuc sugar 
+# 
 # </font>
 # </div>
 
@@ -310,8 +299,6 @@ ordinary()
 # This is equivalent to
 def ordinary():
     print("I am ordinary")
-
-
 ordinary = make_pretty(ordinary)
 ordinary()
 
@@ -323,20 +310,20 @@ ordinary()
 
 
 def divide(a, b):
-    return a / b
+    return a/b
 
 
 # In[20]:
 
 
-divide(4, 2)
+divide(4,2)
 
 
 # In[21]:
 
 
 # This call will spit out an error. We'll show how to create a decorator to check for this
-divide(4, 0)
+divide(4,0)
 
 
 # In[ ]:
@@ -350,7 +337,6 @@ def smart_divide(func):
             return
 
         return func(a, b)
-
     return inner
 
 
@@ -359,13 +345,13 @@ def smart_divide(func):
 
 @smart_divide
 def divide(a, b):
-    print(a / b)
+    print(a/b)
 
 
 # In[ ]:
 
 
-divide(4, 0)
+divide(4,0)
 
 
 # In[ ]:
@@ -386,7 +372,6 @@ def smart_divide(func):
             return
 
         return func(a, b)
-
     return inner
 
 
@@ -395,20 +380,20 @@ def smart_divide(func):
 
 @smart_divide
 def divide(a, b):
-    print(a / b)
+    print(a/b)
 
 
 # In[ ]:
 
 
 # Again, if I want to use the old undecoreated function I can do
-divide.__wrapped__(4, 0)
+divide.__wrapped__(4,0)
 
 
 # In[ ]:
 
 
-divide(4, 0)
+divide(4,0)
 
 
 # # Chaining Decorators in Python
@@ -416,11 +401,11 @@ divide(4, 0)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Multiple decorators can be chained in Python.
-# - This is to say, a function can be decorated multiple times with different (or same) decorators.
+# - This is to say, a function can be decorated multiple times with different (or same) decorators. 
 # - We simply place the decorators above the desired function.
-#
+# 
 # </font>
 # </div>
 
@@ -432,7 +417,6 @@ def star(func):
         print("*" * 30)
         func(*args, **kwargs)
         print("*" * 30)
-
     return inner
 
 
@@ -441,7 +425,6 @@ def percent(func):
         print("%" * 30)
         func(*args, **kwargs)
         print("%" * 30)
-
     return inner
 
 
@@ -460,11 +443,9 @@ printer("Hello")
 # In[ ]:
 
 
-# For comlpeteness the above syntax is equivalent to
+# For comlpeteness the above syntax is equivalent to 
 def printer(msg):
     print(msg)
-
-
 printer = star(percent(printer))
 
 
@@ -473,41 +454,42 @@ printer = star(percent(printer))
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - When decorating a method inside a class we need to hanfle `self` explicitly.
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
 
 
-class A:
+class A():
+        
     def __init__(self, data):
         self.data = data
 
     def myPrintDecorator(func):
-        """My print decorator
-
+        """My print decorator        
+        
         Print the name of the method when it is called.
         """
-
-        def printCallNameMethod(self, *args, **kwargs):
+        
+        def printCallNameMethod(self, *args, **kwargs):        
             print("Using method", func.__name__)
-            instance = func(self, *args, **kwargs)
-            return instance
-
+            instance = func(self, *args, **kwargs)            
+            return instance 
+        
         return printCallNameMethod
-
+    
     @myPrintDecorator
     def double(self):
-        return self.data * 2
+        return self.data*2
 
 
 # In[ ]:
 
 
-instance = A([1, 1])
+instance = A([1,1])
 a = instance.double()
 print(a)
 
@@ -521,7 +503,8 @@ print(a)
 
 
 def get_time(t_start: float, t_end: float, unit: str):
-    """Get elapsed time given the unit."""
+    """Get elapsed time given the unit.
+    """
     if unit.lower() == "sec":
         return np.around(t_end - t_start, 3)
 
@@ -544,6 +527,7 @@ def time_it(
     func_: None = None,
     unit: str = "sec",
 ):
+
     def _decorator(func):
         @wraps(func)
         def wrapper(self, *args, **kwargs):
@@ -551,7 +535,8 @@ def time_it(
             output = func(self, *args, **kwargs)
             t2 = time.time()
 
-            print(f"Executed in: {str(get_time(t1, t2, unit))} {unit}")
+            print(
+                f"Executed in: {str(get_time(t1, t2, unit))} {unit}")
 
             return output
 
@@ -569,37 +554,37 @@ def time_it(
 
 
 @time_it(unit="sec")
-def sum_two_numbers(a, b):
+def sum_two_numbers(a,b):
     time.sleep(2)
-    return a + b
+    return a+b
 
 
 # In[39]:
 
 
-sum_two_numbers(1, 2)
+sum_two_numbers(1,2)
 
 
 # In[40]:
 
 
 @time_it(unit="min")
-def sum_two_numbers(a, b):
+def sum_two_numbers(a,b):
     time.sleep(2)
-    return a + b
+    return a+b
 
 
 # In[41]:
 
 
-sum_two_numbers(1, 2)
+sum_two_numbers(1,2)
 
 
 # In[42]:
 
 
 # Alternative syntax
-time_it(unit="sec")(sum_two_numbers(1, 2))
+time_it(unit="sec")(sum_two_numbers(1,2));
 
 
 # ## Example #2
@@ -612,18 +597,14 @@ def repeat(n: int = 1):
         def inner(*args, **kwargs):
             for _ in range(n):
                 func(*args, **kwargs)
-
         return inner
-
     return decorator
-
 
 @repeat(n=3)
 def hello(name: str):
-    print(f"Hello {name}!")
+    print(f'Hello {name}!')
 
-
-hello("world")
+hello('world')
 
 
 # # How to make the decorator callable
@@ -631,11 +612,11 @@ hello("world")
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-#
-#
+# 
+# 
+# 
 # - This is a template for a function decorator that does not require `()` if no parameters are to be given and supports both positional and keyword parameters (but requires cheching on `locals()` to find out if the first parameter is the function to be decorated or not):
-#
+# 
 # </font>
 # </div>
 
@@ -654,18 +635,12 @@ def multiplying(factor_or_func=None):
     def _decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
-            if (
-                "factor_or_func" not in locals()
-                or callable(factor_or_func)
-                or factor_or_func is None
-            ):
+            if 'factor_or_func' not in locals()                     or callable(factor_or_func)                     or factor_or_func is None:
                 factor = 1
             else:
                 factor = factor_or_func
             return factor * func(*args, **kwargs)
-
         return wrapper
-
     return _decorator(factor_or_func) if callable(factor_or_func) else _decorator
 
 
@@ -673,33 +648,24 @@ def multiplying(factor_or_func=None):
 
 
 @multiplying
-def summing(x):
-    return sum(x)
-
-
-summing([3, 2])
+def summing(x): return sum(x)
+summing([3,2])
 
 
 # In[ ]:
 
 
 @multiplying()
-def summing(x):
-    return sum(x)
-
-
-summing([3, 2])
+def summing(x): return sum(x)
+summing([3,2])
 
 
 # In[ ]:
 
 
 @multiplying(2)
-def summing(x):
-    return sum(x)
-
-
-summing([3, 2])
+def summing(x): return sum(x)
+summing([3,2])
 
 
 # ## With kargs only
@@ -712,7 +678,6 @@ def multiplying(func_=None, factor=1):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
             return factor * func(*args, **kwargs)
-
         return wrapper
 
     if callable(func_):
@@ -727,33 +692,24 @@ def multiplying(func_=None, factor=1):
 
 
 @multiplying
-def summing(x):
-    return sum(x)
-
-
-summing([3, 2])
+def summing(x): return sum(x)
+summing([3,2])
 
 
 # In[ ]:
 
 
 @multiplying()
-def summing(x):
-    return sum(x)
-
-
-summing([3, 2])
+def summing(x): return sum(x)
+summing([3,2])
 
 
 # In[ ]:
 
 
 @multiplying(factor=2)
-def summing(x):
-    return sum(x)
-
-
-summing([3, 2])
+def summing(x): return sum(x)
+summing([3,2])
 
 
 # # Practical Use Cases
@@ -761,13 +717,13 @@ summing([3, 2])
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - While writing a large code there two things we want to do as basics.
 #     - How fast it runs and generally we time it
 #     - What is doing and generally we use some print statements
-#
+# 
 # - Now consider the situation where you have to do it over and over. A nice way to save you space and time is to create two decorator that do just this for you.
-#
+# 
 # </font>
 # </div>
 
@@ -778,18 +734,16 @@ import time
 import logging
 import functools
 
-
 def timer(func):
     """time the running time of the passed in function"""
-
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         t1 = time.time()
         result = func(*args, **kwargs)
         t2 = time.time() - t1
-        print("{} ran in: {} sec".format(func.__name__, t2))
+        print('{} ran in: {} sec'.format(func.__name__, t2))
         return result
-
+    
     return wrapper
 
 
@@ -799,10 +753,9 @@ def timer(func):
 @timer
 def display_info(name, age):
     time.sleep(1)  # manually add a second to the timing
-    print("display info ran with arguments ({}, {})".format(name, age))
+    print('display info ran with arguments ({}, {})'.format(name, age))
 
-
-display_info("John", 25)
+display_info('John', 25)
 
 
 # In[ ]:
@@ -813,18 +766,16 @@ def logger(func):
     create logging for the function,
     re-define the format to add specific logging time
     """
-
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         logging.basicConfig(
-            filename="./logging_example",
-            format="%(asctime)s -- %(levelname)s:%(name)s: %(message)s",
-            datefmt="%Y/%m/%d-%H:%M:%S",
-            level=logging.INFO,
-        )
-
+            filename = './logging_example',
+            format = '%(asctime)s -- %(levelname)s:%(name)s: %(message)s',
+            datefmt = '%Y/%m/%d-%H:%M:%S',
+            level = logging.INFO)
+        
         # custom the logging information
-        logging.info("Ran with args: {} and kwargs: {}".format(args, kwargs))
+        logging.info('Ran with args: {} and kwargs: {}'.format(args, kwargs))
         return func(*args, **kwargs)
 
     return wrapper
@@ -837,16 +788,13 @@ def logger(func):
 # ipython notebook already call basicConfig somewhere, thus reload the logging
 import logging
 from importlib import reload
-
 reload(logging)
-
 
 @logger
 def display_info(name, age):
-    print("display info ran with arguments ({}, {})".format(name, age))
-
-
-display_info("John", 25)
+    print('display info ran with arguments ({}, {})'.format(name, age))
+    
+display_info('John', 25)
 
 
 # In[ ]:
@@ -855,11 +803,10 @@ display_info("John", 25)
 @logger
 @timer
 def display_info(name, age):
-    time.sleep(1)  # manually add a second to the timing
-    print("display info ran with arguments ({}, {})".format(name, age))
-
-
-display_info("Tom", 22)
+    time.sleep(1) # manually add a second to the timing
+    print('display info ran with arguments ({}, {})'.format(name, age))
+    
+display_info('Tom', 22)
 
 
 # In[ ]:
@@ -873,11 +820,11 @@ dir(logging)
 
 import logging
 
-logging.basicConfig(filename="./example.log", encoding="utf-8", level=logging.DEBUG)
-logging.debug("This message should go to the log file")
-logging.info("So should this")
-logging.warning("And this, too")
-logging.error("And non-ASCII stuff, too, like Øresund and Malmö")
+logging.basicConfig(filename='./example.log', encoding='utf-8', level=logging.DEBUG)
+logging.debug('This message should go to the log file')
+logging.info('So should this')
+logging.warning('And this, too')
+logging.error('And non-ASCII stuff, too, like Øresund and Malmö')
 
 
 # # Advance logging
@@ -885,10 +832,10 @@ logging.error("And non-ASCII stuff, too, like Øresund and Malmö")
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Please refer to this folder `Decorators_Advanced_Example` for a more advanced used of the decorators.
+# 
+# - Please refer to this folder `Decorators_Advanced_Example` for a more advanced used of the decorators. 
 # - In particular, one of th example shows how to keep track of two diffrent handlers: one that is written on a `.log` file where you print all the info and another one that keep track of the message printed on the console.
-#
+# 
 # </font>
 # </div>
 
@@ -896,13 +843,13 @@ logging.error("And non-ASCII stuff, too, like Øresund and Malmö")
 
 
 # List only directories
-get_ipython().system("ls -d */")
+get_ipython().system('ls -d */')
 
 
 # In[ ]:
 
 
-get_ipython().system("ls")
+get_ipython().system('ls')
 
 
 # # References
@@ -910,7 +857,7 @@ get_ipython().system("ls")
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.programiz.com/python-programming/decorator
 # - [How to handle function decorator inside a class](https://stackoverflow.com/questions/38524332/declaring-decorator-inside-a-class)
 # - [Blog: Guide to python function decorators](http://thecodeship.com/patterns/guide-to-python-function-decorators/)
@@ -920,8 +867,12 @@ get_ipython().system("ls")
 # - https://machinelearningmastery.com/a-gentle-introduction-to-decorators-in-python/
 # - [Decorators with parameters?](https://stackoverflow.com/questions/5929107/decorators-with-parameters)
 # - [python decorator patterns](https://bytepawn.com/python-decorator-patterns.html)
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

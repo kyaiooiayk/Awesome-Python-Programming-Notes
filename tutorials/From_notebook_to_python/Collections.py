@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Collections
-#
+# 
 # </font>
 # </div>
 
@@ -20,9 +20,9 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Collections provide different types of containers.
-# - A Container is an object that is used to store different objects and provide a way to access the contained objects and iterate over them.
+# - A Container is an object that is used to store different objects and provide a way to access the contained objects and iterate over them. 
 # - Some of the most known built-in containers are Tuple, List, Dictionary, but there are more and they reside inside the `collections` module:
 #     - `Counters`
 #     - `OrderedDict`
@@ -33,7 +33,7 @@
 #     - `UserDict`
 #     - `UserList`
 #     - `UserString`
-#
+#     
 # </font>
 # </div>
 
@@ -42,11 +42,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - A counter is a sub-class of the dictionary.
+# 
+# - A counter is a sub-class of the dictionary. 
 # - It is used to keep the count of the elements in an iterable in the form of an unordered dictionary where the key represents the element in the iterable and value represents the count of that element in the iterable.
-# - Syntax: `class collections.Counter([iterable-or-mapping])`
-#
+# - Syntax: `class collections.Counter([iterable-or-mapping])` 
+# 
 # </font>
 # </div>
 
@@ -82,10 +82,10 @@ print(Counter(A=3, B=5, C=2))
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - An OrderedDict is also a sub-class of dictionary but unlike dictionary, it **remembers** the order in which the keys were inserted.
+#     
+# - An OrderedDict is also a sub-class of dictionary but unlike dictionary, it **remembers** the order in which the keys were inserted. 
 # - While deleting and re-inserting the same key will push the key to the last to maintain the order of insertion of the key.
-#
+# 
 # </font>
 # </div>
 
@@ -107,15 +107,15 @@ d['d'] = 4
 
 for key, value in d.items():
     print(key, value)
-
+    
 # deleting element
 od.pop('a')
-
+  
 # Re-inserting the same
 od['a'] = 1
-
+  
 print('\nAfter re-inserting')
-for key, value in od.items():
+for key, value in od.items(): 
     print(key, value)
 
 
@@ -134,12 +134,12 @@ for key, value in od.items():
 
 # deleting element
 od.pop('a')
-
+  
 # Re-inserting the same
 od['a'] = 1
-
+  
 print('\nAfter re-inserting')
-for key, value in od.items():
+for key, value in od.items(): 
     print(key, value)
 
 
@@ -148,10 +148,10 @@ for key, value in od.items():
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - A `DefaultDict` is also a sub-class to dictionary.
+# 
+# - A `DefaultDict` is also a sub-class to dictionary. 
 # - It is used to provide some default values for the key that does not exist and never raises a KeyError.
-#
+# 
 # </font>
 # </div>
 
@@ -194,10 +194,10 @@ print(d)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A `ChainMap` encapsulates many dictionaries into a single unit and returns a list of dictionaries.
 # - Syntax: `class collections.ChainMap(dict1, dict2)`
-#
+#     
 # </font>
 # </div>
 
@@ -247,12 +247,12 @@ print(chain1)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A `NamedTuple` returns a tuple object with names for each position which the ordinary tuples lack. For example, consider a tuple names student where the first element represents name, second represents name and the third element represents the DOB.
 # - Suppose for calling name instead of remembering the index position you can actually call the element by using the name argument, then it will be really easy for accessing tuples element. This functionality is provided by the NamedTuple.
-#
+# 
 # - `Syntax: class collections.namedtuple(typename, field_names)`
-#
+#     
 # </font>
 # </div>
 
@@ -305,12 +305,12 @@ print(S._asdict())
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - `Deque` (Doubly Ended Queue) is the optimised list for quicker append and pop operations from both sides of the container. It provides O(1) time complexity for append and pop operations as compared to list with O(n) time complexity.
 # - Elements in deque can be inserted from both ends. To insert the elements from right `append()` method is used and to insert the elements from the left `appendleft()` method is used.
 # - Elements can also be removed from the deque from both the ends. To remove elements from right use `pop()` method and to remove elements from the left use `popleft()` method.
 # - Syntax: `class collections.deque(list)`
-#
+#     
 # </font>
 # </div>
 
@@ -376,11 +376,11 @@ print(de)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+#     
 # - `UserDict` is a dictionary-like container that acts as a wrapper around the dictionary objects.
-# - This container is used when someone wants to create their own dictionary with some modified or new functionality.
+# - This container is used when someone wants to create their own dictionary with some modified or new functionality. 
 # - `Syntax: class collections.UserDict([initialdata])`
-#
+#     
 # </font>
 # </div>
 
@@ -426,10 +426,10 @@ d.pop(1)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+#     
 # - `UserList` is a list like container that acts as a wrapper around the list objects. This is useful when someone wants to create their own list with some modified or additional functionality.
 # - Syntax: `class collections.UserList([list])`
-#
+#     
 # </font>
 # </div>
 
@@ -476,10 +476,10 @@ L.remove()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - `UserString` is a string like container and just like UserDict and UserList it acts as a wrapper around string objects. It is used when someone wants to create their own strings with some modified or additional functionality.
+#     
+# - `UserString` is a string like container and just like UserDict and UserList it acts as a wrapper around string objects. It is used when someone wants to create their own strings with some modified or additional functionality. 
 # - `Syntax: class collections.UserString(seq)`
-#
+# 
 # </font>
 # </div>
 
@@ -523,14 +523,14 @@ print("String after Removing:", s1.data)
 
 # <div class="alert alert-danger">
 # <font color=black>
-#
+# 
 # - Write readable and explicit code using `namedtuple`
 # - Build efficient queues and stacks using `deque`
 # - Count objects efficiently using `Counter`
 # - Handle missing dictionary keys with `defaultdict`
 # - Remember the insertion order of keys with `OrderedDict`
 # - Chain multiple dictionaries in a single view with `ChainMap`
-#
+# 
 # </font>
 # </div>
 
@@ -539,11 +539,15 @@ print("String after Removing:", s1.data)
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://realpython.com/python-collections-module/
 # - https://www.geeksforgeeks.org/python-collections-module/
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Creational Design Patterns - Builder Method
-#
+# 
 # </font>
 # </div>
 
@@ -20,14 +20,14 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - **Creational Design Patterns** are about class instantiation or the object instantiation.
+# 
+# - **Creational Design Patterns** are about class instantiation or the object instantiation. 
 #     - [ ] Factory Method
 #     - [ ] Abstract Factory Method
 #     - [x] Builder Method
 #     - [ ] Prototype Method
 #     - [ ] Singleton Method
-#
+# 
 # </font>
 # </div>
 
@@ -36,12 +36,12 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - **Builder is a creational design pattern that lets you construct complex objects step by step.**
 # - Builder Method is a Creation Design Pattern which aims to “Separate the construction of a complex object from its representation so that the same construction process can create different representations.”
 # - It allows you to construct complex objects step by step. Here using the same construction code, we can produce different types and representations of the object easily.
 # - It is basically designed to provide flexibility to the solutions to various object creation problems in object-oriented programming.
-#
+#     
 # </font>
 # </div>
 
@@ -50,11 +50,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - Imagine you want to join one of the elite batches of GeeksforGeeks.
 # - So, you will go there and ask about the Fee structure, timings available, and batches about the course you want to join.
 # - After looking at the system, they will tell you about the courses, their Fee structures, timings available and batches.
-#
+#     
 # </font>
 # </div>
 
@@ -63,11 +63,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - Unexperienced developers will create a separate and unique class for each and every course.
-# - Then they will create separate object instantiation for each and every class although which is not required every time.
+# - Then they will create separate object instantiation for each and every class although which is not required every time. 
 # - The main problem will arise when new courses will be added and developers have to add new classes as well because their code is not much flexible.
-#
+# 
 # </font>
 # </div>
 
@@ -140,10 +140,10 @@ print(f'Name of Course: {dsa} and its Fee: {dsa.Fee}')
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - Our final end product should be able to build any course.
-# - We have to go through many steps before choosing a particular course such as finding details about the courses, syllabus, fee structure, timings, and batches.
-#
+# - We have to go through many steps before choosing a particular course such as finding details about the courses, syllabus, fee structure, timings, and batches. 
+# 
 # </font>
 # </div>
 
@@ -214,7 +214,7 @@ print(complex_course)
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - A builder is a solution to an antipattern called as telescoping constructor. An antipattern is the opposite of best practice that we want to avoid. It occurs when a dev tries to create a complex object using a excessive number of constructors.
 # - The Builder design pattern tries to solve this problem by dividing the process in 4 roles (divide & conquer strategy):
 #     - **Director**: in charge of actually building the product
@@ -222,7 +222,7 @@ print(complex_course)
 #     - **Concrete Builder**: inherits from abstract builder and implements the details of the interface
 #     - **Product**: represents the object being built.
 # - Builder pattern does not rely on polymorphism unlike factory and abstract factory.
-#
+# 
 # </font>
 # </div>
 
@@ -304,14 +304,14 @@ print(car)
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-#
+# 
 # - **Advantages**:
 #     - You can construct objects step-by-step, defer construction steps or run steps recursively.
 #     - You can reuse the same construction code when building various representations of products.
 #     - Single Responsibility Principle. You can isolate complex construction code from the business logic of the product.
 # - **Disadvantages**:
 #     - The overall complexity of the code increases since the pattern requires creating multiple new classes.
-#
+# 
 # </font>
 # </div>
 
@@ -320,11 +320,11 @@ print(car)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [Builder Method](https://refactoring.guru/design-patterns/builder)
 # - [Builder in Python](https://refactoring.guru/design-patterns/builder/python/example#lang-features)
 # - https://github.com/pyGuru123/Python-design-Patterns/tree/main/Creational%20Pattern
-#
+#     
 # </font>
 # </div>
 
@@ -339,3 +339,7 @@ get_ipython().run_line_magic('watermark', '-v -iv -m')
 
 
 # In[ ]:
+
+
+
+

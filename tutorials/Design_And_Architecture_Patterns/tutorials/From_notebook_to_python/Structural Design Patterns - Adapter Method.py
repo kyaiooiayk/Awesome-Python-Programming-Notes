@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Structural Design Patterns - Adapter Method
-#
+# 
 # </font>
 # </div>
 
@@ -20,7 +20,7 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - **Structural Design Patterns** are used to establish relation between software components in particular settings.
 #     - [x] Adapter Method
 #     - [ ] Bridge Method
@@ -29,7 +29,7 @@
 #     - [ ] Facade Method
 #     - [ ] Proxy Method
 #     - [ ] FlyWeight Method
-#
+# 
 # </font>
 # </div>
 
@@ -38,11 +38,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - **Allows objects with incompatible interfaces to collaborate.**
 # - The Adapter pattern converts interface of a class to another the client is expecting.
 # - The problem  we are trying to solve here is when that interfaces are incompatible between the client and the server.
-#
+#     
 # </font>
 # </div>
 
@@ -51,10 +51,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - The scenario here is that we have two methods speak_korean() for korean and speak_english() for english. The client expects to use a single method speak() for both.
 # - The solution is to use the Adapter pattern which translates between the two methods for the client.
-#
+#     
 # </font>
 # </div>
 
@@ -124,13 +124,13 @@ for obj in objects:
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-#
+# 
 # - **Advantages**:
 #     - Single Responsibility Principle. You can separate the interface or data conversion code from the primary business logic of the program.
 #     - Open/Closed Principle. You can introduce new types of adapters into the program without breaking the existing client code, as long as they work with the adapters through the client interface.
 # - **Disadvantages**:
 #     - The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it’s simpler just to change the service class so that it matches the rest of your code.
-#
+# 
 # </font>
 # </div>
 
@@ -139,11 +139,11 @@ for obj in objects:
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [Adapter method](https://www.geeksforgeeks.org/adapter-method-python-design-patterns/)
 # - [Adapter in Python](https://refactoring.guru/design-patterns/adapter/python/example#example-1)
 # - https://github.com/pyGuru123/Python-design-Patterns/tree/main/Structural%20Pattern
-#
+#     
 # </font>
 # </div>
 
@@ -153,8 +153,12 @@ for obj in objects:
 # In[1]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv -m")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv -m')
 
 
 # In[ ]:
+
+
+
+

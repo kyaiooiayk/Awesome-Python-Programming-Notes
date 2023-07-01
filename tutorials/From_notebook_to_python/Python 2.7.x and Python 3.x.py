@@ -5,15 +5,15 @@
 
 # <br>
 # Many beginning Python users are wondering with which version of Python they should start. My answer to this question is usually something along the lines "just go with the version your favorite tutorial was written in, and check out the differences later on."
-#
+# 
 # But what if you are starting a new project and have the choice to pick? I would say there is currently no "right" or "wrong" as long as both Python 2.7.x and Python 3.x support the libraries that you are planning to use. However, it is worthwhile to have a look at the major differences between those two most popular versions of Python to avoid common pitfalls when writing the code for either one of them, or if you are planning to port your project.
 
 # ### The `__future__` module
 
 # Python 3.x introduced some Python 2-incompatible keywords and features that can be imported via the in-built `__future__` module in Python 2. It is recommended to use `__future__` imports it if you are planning Python 3.x support for your code. For example, if we want Python 3.x's integer division behavior in Python 2, we can import it via
-#
+# 
 #     from __future__ import division
-#
+#     
 # More features that can be imported from the `__future__` module are listed in the table below:
 
 # <table>
@@ -22,7 +22,7 @@
 # <th class="head">mandatory in</th>
 # <th class="head">effect</th>
 # </tr>
-#
+# 
 # <tr><td>nested_scopes</td>
 # <td>2.1.0b1</td>
 # <td>2.2</td>
@@ -79,10 +79,10 @@ from platform import python_version
 
 # [[back to the section-overview](#Sections)]
 
-# Very trivial, and the change in the print-syntax is probably the most widely known change, but still it is worth mentioning: Python 2's print statement has been replaced by the `print()` function, meaning that we have to wrap the object that we want to print in parantheses.
-#
-# Python 2 doesn't have a problem with additional parantheses, but in contrast, Python 3 would raise a `SyntaxError` if we called the print function the Python 2-way without the parentheses.
-#
+# Very trivial, and the change in the print-syntax is probably the most widely known change, but still it is worth mentioning: Python 2's print statement has been replaced by the `print()` function, meaning that we have to wrap the object that we want to print in parantheses. 
+# 
+# Python 2 doesn't have a problem with additional parantheses, but in contrast, Python 3 would raise a `SyntaxError` if we called the print function the Python 2-way without the parentheses.  
+# 
 
 # #### Python 2
 
@@ -105,7 +105,7 @@ print "text", ; print 'print more text on the same line'
 print('Python', python_version())
 print('Hello, World!')
 
-print("some text,", end="")
+print("some text,", end="") 
 print(' print more text on the same line')
 
 
@@ -116,7 +116,7 @@ print 'Hello, World!'
 
 
 # **Note:**
-#
+# 
 # Printing "Hello, World" above  via Python 2 looked quite "normal". However, if we have multiple objects inside the parantheses, we will create a tuple, since `print` is a "statement" in Python 2, not a function call.
 
 # In[2]:
@@ -134,7 +134,7 @@ print 'a', 'b'
 
 # [[back to the section-overview](#Sections)]
 
-# This change is particularly dangerous if you are porting code, or if you are executing Python 3 code in Python 2, since the change in integer-division behavior can often go unnoticed (it doesn't raise a `SyntaxError`).
+# This change is particularly dangerous if you are porting code, or if you are executing Python 3 code in Python 2, since the change in integer-division behavior can often go unnoticed (it doesn't raise a `SyntaxError`).  
 # So, I still tend to use a `float(3)/2` or `3/2.0` instead of a `3/2` in my Python 3 scripts to save the Python 2 guys some trouble (and vice versa, I recommend a `from __future__ import division` in your Python 2 scripts).
 
 # #### Python 2
@@ -170,8 +170,8 @@ print('3 // 2.0 =', 3 // 2.0)
 
 # [[back to the section-overview](#Sections)]
 
-# Python 2 has ASCII `str()` types, separate `unicode()`, but no `byte` type.
-#
+# Python 2 has ASCII `str()` types, separate `unicode()`, but no `byte` type.  
+# 
 # Now, in Python 3, we finally have Unicode (utf-8) `str`ings, and 2 byte classes: `byte` and `bytearray`s.
 
 # #### Python 2
@@ -244,13 +244,13 @@ print(' also has', type(bytearray(b'bytearrays')))
 
 # [[back to the section-overview](#Sections)]
 
-#
-# The usage of `xrange()` is very popular in Python 2.x for creating an iterable object, e.g., in a for-loop or list/set-dictionary-comprehension.
-# The behavior was quite similar to a generator (i.e., "lazy evaluation"), but here the xrange-iterable is not exhaustible - meaning, you could iterate over it infinitely.
-#
-#
-# Thanks to its "lazy-evaluation", the advantage of the regular `range()` is that `xrange()` is generally faster if you have to iterate over it only once (e.g., in a for-loop). However, in contrast to 1-time iterations, it is not recommended if you repeat the iteration multiple times, since the generation happens every time from scratch!
-#
+#  
+# The usage of `xrange()` is very popular in Python 2.x for creating an iterable object, e.g., in a for-loop or list/set-dictionary-comprehension.  
+# The behavior was quite similar to a generator (i.e., "lazy evaluation"), but here the xrange-iterable is not exhaustible - meaning, you could iterate over it infinitely.  
+# 
+# 
+# Thanks to its "lazy-evaluation", the advantage of the regular `range()` is that `xrange()` is generally faster if you have to iterate over it only once (e.g., in a for-loop). However, in contrast to 1-time iterations, it is not recommended if you repeat the iteration multiple times, since the generation happens every time from scratch!  
+# 
 # In Python 3, the `range()` was implemented like the `xrange()` function so that a dedicated `xrange()` function does not exist anymore (`xrange()` raises a `NameError` in Python 3).
 
 # In[5]:
@@ -262,10 +262,10 @@ n = 10000
 def test_range(n):
     return for i in range(n):
         pass
-
+    
 def test_xrange(n):
     for i in xrange(n):
-        pass
+        pass    
 
 
 # <br>
@@ -306,12 +306,12 @@ print(xrange(10))
 # <a id='contains'></a>
 # <br>
 # <br>
-#
+# 
 
 # ### The `__contains__` method for `range` objects in Python 3
 
 # Another thing worth mentioning is that `range` got a "new" `__contains__` method in Python 3.x (thanks to [Yuchen Ying](https://github.com/yegle), who pointed this out).  The `__contains__` method can speedup "look-ups" in Python 3.x `range` significantly for integer and Boolean types.
-#
+# 
 
 # In[3]:
 
@@ -391,7 +391,7 @@ xrange.__contains__
 
 # #### Note about the speed differences in Python 2 and 3
 
-# Some people pointed out the speed difference between Python 3's `range()` and Python2's `xrange()`. Since they are implemented the same way one would expect the same speed. However the difference here just comes from the fact that Python 3 generally tends to run slower than Python 2.
+# Some people pointed out the speed difference between Python 3's `range()` and Python2's `xrange()`. Since they are implemented the same way one would expect the same speed. However the difference here just comes from the fact that Python 3 generally tends to run slower than Python 2. 
 
 # In[3]:
 
@@ -424,8 +424,8 @@ get_ipython().run_line_magic('timeit', 'test_while()')
 
 # [[back to the section-overview](#Sections)]
 
-#
-#
+# 
+# 
 # Where Python 2 accepts both notations, the 'old' and the 'new' syntax, Python 3 chokes (and raises a `SyntaxError` in turn) if we don't enclose the exception argument in parentheses:
 
 # #### Python 2
@@ -560,9 +560,9 @@ my_generator.next()
 # [[back to the section-overview](#Sections)]
 
 # Good news is: In Python 3.x for-loop variables don't leak into the global namespace anymore!
-#
+# 
 # This goes back to a change that was made in Python 3.x and is described in [What’s New In Python 3.0](https://docs.python.org/3/whatsnew/3.0.html) as follows:
-#
+# 
 # "List comprehensions no longer support the syntactic form `[... for var in item1, item2, ...]`. Use `[... for var in (item1, item2, ...)]` instead. Also note that list comprehensions have different semantics: they are closer to syntactic sugar for a generator expression inside a `list()` constructor, and in particular the loop control variables are no longer leaked into the surrounding scope."
 
 # #### Python 2
@@ -643,42 +643,42 @@ print("[1, 2] > (1, 2) = ", [1, 2] > (1, 2))
 
 # #### Python 2
 
-# <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Python <span style="color: #6600EE; font-weight: bold">2.7</span><span style="color: #333333">.</span><span style="color: #0000DD; font-weight: bold">6</span>
+# <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Python <span style="color: #6600EE; font-weight: bold">2.7</span><span style="color: #333333">.</span><span style="color: #0000DD; font-weight: bold">6</span> 
 # [GCC <span style="color: #6600EE; font-weight: bold">4.0</span><span style="color: #333333">.</span><span style="color: #0000DD; font-weight: bold">1</span> (Apple Inc<span style="color: #333333">.</span> build <span style="color: #0000DD; font-weight: bold">5493</span>)] on darwin
 # Type <span style="background-color: #fff0f0">&quot;help&quot;</span>, <span style="background-color: #fff0f0">&quot;copyright&quot;</span>, <span style="background-color: #fff0f0">&quot;credits&quot;</span> <span style="color: #000000; font-weight: bold">or</span> <span style="background-color: #fff0f0">&quot;license&quot;</span> <span style="color: #008800; font-weight: bold">for</span> more information<span style="color: #333333">.</span>
-#
+# 
 # <span style="color: #333333">&gt;&gt;&gt;</span> my_input <span style="color: #333333">=</span> <span style="color: #007020">input</span>(<span style="background-color: #fff0f0">&#39;enter a number: &#39;</span>)
-#
+# 
 # enter a number: <span style="color: #0000DD; font-weight: bold">123</span>
-#
+# 
 # <span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #007020">type</span>(my_input)
 # <span style="color: #333333">&lt;</span><span style="color: #007020">type</span> <span style="background-color: #fff0f0">&#39;int&#39;</span><span style="color: #333333">&gt;</span>
-#
+# 
 # <span style="color: #333333">&gt;&gt;&gt;</span> my_input <span style="color: #333333">=</span> raw_input(<span style="background-color: #fff0f0">&#39;enter a number: &#39;</span>)
-#
+# 
 # enter a number: <span style="color: #0000DD; font-weight: bold">123</span>
-#
+# 
 # <span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #007020">type</span>(my_input)
 # <span style="color: #333333">&lt;</span><span style="color: #007020">type</span> <span style="background-color: #fff0f0">&#39;str&#39;</span><span style="color: #333333">&gt;</span>
 # </pre></div>
-#
+# 
 
 # <br>
 
 # #### Python 3
 
-# <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Python <span style="color: #6600EE; font-weight: bold">3.4</span><span style="color: #333333">.</span><span style="color: #0000DD; font-weight: bold">1</span>
+# <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Python <span style="color: #6600EE; font-weight: bold">3.4</span><span style="color: #333333">.</span><span style="color: #0000DD; font-weight: bold">1</span> 
 # [GCC <span style="color: #6600EE; font-weight: bold">4.2</span><span style="color: #333333">.</span><span style="color: #0000DD; font-weight: bold">1</span> (Apple Inc<span style="color: #333333">.</span> build <span style="color: #0000DD; font-weight: bold">5577</span>)] on darwin
 # Type <span style="background-color: #fff0f0">&quot;help&quot;</span>, <span style="background-color: #fff0f0">&quot;copyright&quot;</span>, <span style="background-color: #fff0f0">&quot;credits&quot;</span> <span style="color: #000000; font-weight: bold">or</span> <span style="background-color: #fff0f0">&quot;license&quot;</span> <span style="color: #008800; font-weight: bold">for</span> more information<span style="color: #333333">.</span>
-#
+# 
 # <span style="color: #333333">&gt;&gt;&gt;</span> my_input <span style="color: #333333">=</span> <span style="color: #007020">input</span>(<span style="background-color: #fff0f0">&#39;enter a number: &#39;</span>)
-#
+# 
 # enter a number: <span style="color: #0000DD; font-weight: bold">123</span>
-#
+# 
 # <span style="color: #333333">&gt;&gt;&gt;</span> <span style="color: #007020">type</span>(my_input)
 # <span style="color: #333333">&lt;</span><span style="color: #008800; font-weight: bold">class</span> <span style="color: #FF0000; background-color: #FFAAAA">&#39;</span><span style="color: #BB0066; font-weight: bold">str</span><span style="background-color: #fff0f0">&#39;&gt;</span>
 # </pre></div>
-#
+# 
 
 # <br>
 # <br>
@@ -687,10 +687,10 @@ print("[1, 2] > (1, 2) = ", [1, 2] > (1, 2))
 
 # [[back to the section-overview](#Sections)]
 
-# As we have already seen in the [`xrange`](#xrange) section, some functions and methods return iterable objects in Python 3 now  - instead of lists in Python 2.
-#
+# As we have already seen in the [`xrange`](#xrange) section, some functions and methods return iterable objects in Python 3 now  - instead of lists in Python 2.  
+# 
 # Since we usually iterate over those only once anyway, I think this change makes a lot of sense to save memory. However, it is also possible - in contrast to generators - to iterate over those multiple times if needed, it is aonly not so efficient.
-#
+# 
 # And for those cases where we really need the `list`-objects, we can simply convert the iterable object into a `list` via the `list()` function.
 
 # #### Python 2
@@ -698,9 +698,9 @@ print("[1, 2] > (1, 2) = ", [1, 2] > (1, 2))
 # In[2]:
 
 
-print 'Python', python_version()
+print 'Python', python_version() 
 
-print range(3)
+print range(3) 
 print type(range(3))
 
 
@@ -719,19 +719,19 @@ print(list(range(3)))
 # <br>
 
 # **Some more commonly used functions and methods that don't return lists anymore in Python 3:**
-#
+# 
 # - `zip()`
-#
+# 
 # - `map()`
-#
+# 
 # - `filter()`
-#
+# 
 # - dictionary's `.keys()` method
-#
+# 
 # - dictionary's `.values()` method
-#
+# 
 # - dictionary's `.items()` method
-#
+# 
 
 # <br>
 # <br>
@@ -788,3 +788,7 @@ round(16.5)
 # - https://nbviewer.org/github/rasbt/python_reference/blob/master/tutorials/key_differences_between_python_2_and_3.ipynb?create=1
 
 # In[ ]:
+
+
+
+

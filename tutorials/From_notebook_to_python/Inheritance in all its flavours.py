@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Inheritance in all its flavours
-#
+# 
 # </font>
 # </div>
 
@@ -20,15 +20,15 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - [ ] **Abstraction**: the use of attributes and methods allows building abstract, flexible models of objects, with a focus on what is relevant and neglecting what is not needed.
-# - [ ] **Modularity** implies the possibility of breaking code down into multiple modules which are then linked to form the complete codebase.
+# - [ ] **Modularity** implies the possibility of breaking code down into multiple modules which are then linked to form the complete codebase. 
 # - [x] **Inheritance** refers to the concept that one class can inherit attributes and meth‐ ods from another class.
-# - [ ] **Aggregation** refers to the case in which an object is at least partly made up of multiple other objects that might exist independently.
+# - [ ] **Aggregation** refers to the case in which an object is at least partly made up of multiple other objects that might exist independently.  
 # - [ ] **Composition** is similar to aggregation, but here the single objects cannot exist independently of each other.
 # - [ ] **Polymorphism** can take on multiple forms. Of particular importance in a Python context is what is called duck typing. This refers to the fact that standard operations can be implemented on many different classes and their instances without knowing exactly what object one is dealing with.
 # - [ ] **Encapsulation** refers to the approach of making data within a class accessible only via public methods. This approach might avoid unintended effects by sim‐ ply working with and possibly changing attribute values.
-#
+#     
 # </font>
 # </div>
 
@@ -37,11 +37,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Inheritance was invented in 1969 for Simula.
 # - Inheritance allows programmers to create classes that are built upon existing classes, and this enables a class created through inheritance to inherit the attributes and methods of the parent class. This means that inheritance supports code reusability. The methods or generally speaking the software inherited by a subclass is considered to be reused in the subclass. The relationships of objects or classes through inheritance give rise to a **directed graph**.
 # - The class from which a class inherits is called the parent or **superclass**. A class which inherits from a superclass is called a **subclass** or **child class**.
-#
+#     
 # </font>
 # </div>
 
@@ -50,21 +50,21 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **First tool**: everything descent from `object`
-# - **Second rule**: Python computes a method resolution order (MRO) based on your class inheritance tree.
+# - **Second rule**: Python computes a method resolution order (MRO) based on your class inheritance tree. 
 # - The MRO satisfies 3 properties:
 #     - Children of a class come before their parents
 #     - Left parents come before right parents
 #     - A class only appears once in the MRO
 # <br><br>
-# - When a method is called, the first occurrence of that method in the MRO is the one that is called.
-# - Any class that doesn't implement that method is skipped. Any call to super within that method will call the next occurrence of that method in the MRO.
+# - When a method is called, the first occurrence of that method in the MRO is the one that is called. 
+# - Any class that doesn't implement that method is skipped. Any call to super within that method will call the next occurrence of that method in the MRO. 
 # - Consequently, it matters both what order you place classes in inheritance, **AND** where you put the calls to super in the methods.
 # <br><br>
 # - **Cons**: It can be argued that using `super` here makes the code less explicit. Making code less explicit violates The Zen of Python, which states, "Explicit is better than implicit."
 # - **Pros**: There is a maintainability argument that can be made for `super` even in single inheritance. If for whatever reason your child class changes its inheritance pattern (i.e., parent class changes or there's a shift to multiple inheritance) then there's no need find and replace all the lingering references to `ParentClass.method_name()`; the use of `super` will allow all the changes to flow through with the change in the class statement.
-#
+# 
 # </font>
 # </div>
 
@@ -73,30 +73,29 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - If we are dealing with multiple inheritance, according to the C3 class resolution algorithm, the following applies.
 # - **Aassuming that child class C inherits from two parent classes A and B, "class A should be checked before class B"**.
 # - Method Resolution Order (MRO) is a order in which methods should be inherited in the case of multiple iheritance. C3 linearization algorithm is how MRO works under the hood.
-#
+#     
 # </font>
 # </div>
 
 # In[2]:
 
 
-class A:
+class A():
     def foo(self):
         print("class A")
 
 
-class B:
+class B():
     def foo(self):
         print("class B")
 
 
 class C(A, B):
     pass
-
 
 # Will print what? A or B?
 C().foo()
@@ -132,13 +131,13 @@ D().foo()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - In its simplest form inheritance establishes a relationship btw two classes: a parent and a child.
 # - A child class:
 #     - keeps the attributes and methods of its parent
 #     - Add new attributes or methods of its own
 #     - Overrides the existig methods of its parent
-#
+# 
 # </font>
 # </div>
 
@@ -149,19 +148,18 @@ D().foo()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Accessing parent class object attribues from child class.
-#
+# 
 # </font>
 # </div>
 
 # In[1]:
 
 
-class Parent:
+class Parent():
     def __init__(self):
         self.ParentObjectAttribute = 1
-
 
 class Child(Parent):
     def __init__(self):
@@ -183,10 +181,9 @@ print(child.ParentObjectAttribute)
 # In[3]:
 
 
-class Parent:
+class Parent():
     def __init__(self):
         self.ParentObjectAttribute = 1
-
 
 class Child(Parent):
     def __init__(self):
@@ -195,7 +192,6 @@ class Child(Parent):
 
         # here you can access myvar like below.
         print("Calling from inside __init__", self.ParentObjectAttribute)
-
 
 child = Child()
 print(child.ChildObjectAttribute)
@@ -207,25 +203,23 @@ print(child.ParentObjectAttribute)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - There is also a way to directly call each inherited class.
-#
+# 
 # </font>
 # </div>
 
 # In[4]:
 
 
-class Parent1:
+class Parent1():
     def __init__(self):
         self.Parent1ObjectAttribute = 1
 
-
-class Parent2:
+class Parent2():
     def __init__(self):
         self.Parent2ObjectAttribute = 2
-
-
+        
 class Child(Parent1, Parent2):
     def __init__(self):
         self.ChildObjectAttribute = 3
@@ -236,7 +230,6 @@ class Child(Parent1, Parent2):
         print(self.ChildObjectAttribute)
         print(self.Parent1ObjectAttribute)
         print(self.Parent2ObjectAttribute)
-
 
 child = Child()
 print("Calling from object")
@@ -259,12 +252,12 @@ child.__dict__
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Super is **about** following the chain of inheritance, not getting to a specific class's method.
-# - Multiple inheritance is the **ONLY** case where super() is of any use.
-# - I would not recommend using it with classes using linear inheritance, where it's just **useless** overhead.
+# - Multiple inheritance is the **ONLY** case where super() is of any use. 
+# - I would not recommend using it with classes using linear inheritance, where it's just **useless** overhead. 
 # - But this argument can be challenged and you'll find many developer not using it.s
-#
+# 
 # </font>
 # </div>
 
@@ -274,32 +267,27 @@ child.__dict__
 """
 Can we achieve the same with super()?
 """
-
-
-class Parent1:
+class Parent1():
     def __init__(self):
         print("calling Parent1")
         super(Parent1, self).__init__()
         self.Parent1ObjectAttribute = 1
 
-
-class Parent2:
+class Parent2():
     def __init__(self):
         print("calling Parent2")
         super(Parent2, self).__init__()
         self.Parent2ObjectAttribute = 2
-
-
+        
 class Child(Parent1, Parent2):
     def __init__(self):
         super(Child, self).__init__()
-        self.ChildObjectAttribute = 3
+        self.ChildObjectAttribute = 3        
 
         print("Calling from __init__")
         print(self.ChildObjectAttribute)
         print(self.Parent1ObjectAttribute)
         print(self.Parent2ObjectAttribute)
-
 
 child = Child()
 print("Calling from object")
@@ -326,23 +314,20 @@ Child.__mro__
 # In[10]:
 
 
-class Parent:
+class Parent():
     def __init__(self):
         super(Parent, self).__init__()
         print("parent")
-
 
 class Left(Parent):
     def __init__(self):
         super(Left, self).__init__()
         print("left")
 
-
 class Right(Parent):
     def __init__(self):
         super(Right, self).__init__()
         print("right")
-
 
 class Child(Left, Right):
     def __init__(self):
@@ -361,28 +346,23 @@ Child()
 
 """
 With super last in each method.
-So it impportant where this is placed under
+So it impportant where this is placed under 
 __init__
 """
-
-
-class Parent:
+class Parent():
     def __init__(self):
         print("parent")
         super(Parent, self).__init__()
-
 
 class Left(Parent):
     def __init__(self):
         print("left")
         super(Left, self).__init__()
 
-
 class Right(Parent):
     def __init__(self):
         print("right")
         super(Right, self).__init__()
-
 
 class Child(Left, Right):
     def __init__(self):
@@ -405,21 +385,18 @@ Child.__mro__
 # In[15]:
 
 
-class Parent:
+class Parent():
     def __init__(self):
         super(Parent, self).__init__()
-
 
 class Left(Parent):
     def __init__(self):
         super(Left, self).__init__()
 
-
 class Right(Parent):
     def __init__(self):
         super(Right, self).__init__()
         print("rigt")
-
 
 class Child(Left, Right):
     def __init__(self):
@@ -438,11 +415,10 @@ Child.__mro__
 # In[17]:
 
 
-class Person:
+class Person:  
     """
     Base class or parent class
     """
-
     def __init__(self, name):
         """
         Constructor
@@ -458,7 +434,6 @@ class Employee(Person):
     Derived class or subclass
     that uses the base class constructor
     """
-
     def is_employee_pythonist(self):
         if any([i.lower() == "pythonista" for i in self.name.split(" ")]):
             return True
@@ -473,7 +448,7 @@ class Employee(Person):
 Let's start with object creation/instantiation
 for the base clas
 """
-person = Person("Pythonista")
+person = Person("Pythonista")  
 print(person.get_name())
 
 
@@ -495,10 +470,10 @@ print(employee.is_employee_pythonist())
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Inheritance is **transitive** in nature.
 # - This means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.
-#
+# 
 # </font>
 # </div>
 
@@ -562,9 +537,9 @@ c.scream()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - For a class hierarchy, Python needs to determine which class to use when attempting to access an attribute by name. To do this, Python considers the ordering of base classes.
-#
+# 
+# - For a class hierarchy, Python needs to determine which class to use when attempting to access an attribute by name. To do this, Python considers the ordering of base classes. 
+# 
 # </font>
 # </div>
 
@@ -583,7 +558,6 @@ class B:
 
 class C(A, B):
     pass
-
 
 c = C()
 c.speak()
@@ -605,7 +579,6 @@ class B:
 class C(B, A):
     pass
 
-
 c = C()
 c.speak()
 
@@ -625,12 +598,10 @@ class B:
 
 class C(B, A):
     """
-    Speak method of class C will override previous speak methods.
+    Speak method of class C will override previous speak methods. 
     """
-
     def speak(self):
         print("class C speaking")
-
 
 c = C()
 c.speak()
@@ -641,10 +612,10 @@ c.speak()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Sometimes we need to call methods of parent class to a overridden method of child class.
-# - We can achieve this using super function.We can directly use methods of super class or modify them(this is very common).
-#
+# 
+# - Sometimes we need to call methods of parent class to a overridden method of child class. 
+# - We can achieve this using super function.We can directly use methods of super class or modify them(this is very common). 
+# 
 # </font>
 # </div>
 
@@ -653,14 +624,14 @@ c.speak()
 
 class A:
     def test(self):
-        return "A"
+        return 'A'
 
 
 class B(A):
     # override test method
-    def test(self):
+    def test(self):  
         # access method of parent class to overridden child class
-        return "B" + super().test()
+        return "B" + super().test()  
 
 
 print(B().test())
@@ -668,11 +639,11 @@ print(B().test())
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - There is another **equivalent way** of achieving what we did above
-# - Python 3 encourages using `super()`, instead of using `super(className, self)`, both have the same effect.
+# 
+# - There is another **equivalent way** of achieving what we did above 
+# - Python 3 encourages using `super()`, instead of using `super(className, self)`, both have the same effect. 
 # - Python 2, only supports the super(className,self) syntax. Since, Python 2 is widely used so Python 3 also has support for this type of super calling.
-#
+# 
 # </font>
 # </div>
 
@@ -681,8 +652,8 @@ print(B().test())
 
 class B(A):
     def test(self):
-        return "B" + super(B, self).test()
-        # super(className,object)
+        return "B" + super(B, self).test() 
+        #super(className,object)
 
 
 # In[29]:
@@ -696,10 +667,10 @@ print(B().test())
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Python supports different types of inheritance so sometimes it needs to be introspected cleanly.
-# - `isinstance()` takes two arguments: an object and a class and returns `True` if the given class is anywhere in the inheritance chain of the object’s class.
-#
+# - `isinstance()` takes two arguments: an object and a class and returns `True` if the given class is anywhere in the inheritance chain of the object’s class. 
+# 
 # </font>
 # </div>
 
@@ -708,7 +679,7 @@ print(B().test())
 
 class A:
     def test(self):
-        return "A"
+        return 'A'
 
 
 class B(A):
@@ -731,10 +702,10 @@ print(issubclass(B, B))
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Is there anything that can help us sout in understanding this?
 # - `__bases__()` provides a tuple of immediate base classes of a class.
-#
+# 
 # </font>
 # </div>
 
@@ -747,12 +718,12 @@ print(B.__bases__)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **By default**, every Python class is the subclass of built-in object class.
 # - `__subclasses__()`returns a list of all
-#     the subclasses a class.
-# - As per the case where we ued `__bases__()`, `__subclasses__` only goes **one level deep** from the class we’re working on.
-#
+#     the subclasses a class. 
+# - As per the case where we ued `__bases__()`, `__subclasses__` only goes **one level deep** from the class we’re working on. 
+# 
 # </font>
 # </div>
 
@@ -771,20 +742,18 @@ print(B.__subclasses__())
 
 class Parent:
     def __init__(self):
-        self.parent_attribute = "I am a parent"
+        self.parent_attribute = 'I am a parent'
 
     def parent_method(self):
-        print("Back in my day...")
-
+        print('Back in my day...')
 
 class Child(Parent):
     """
     A child class that inherits from Parent
     """
-
     def __init__(self):
         Parent.__init__(self)
-        self.child_attribute = "I am a child"
+        self.child_attribute = 'I am a child'
 
 
 # Create an instance of child
@@ -822,10 +791,8 @@ class Dog_v2:
 class JackRussellTerrier(Dog_v2):
     pass
 
-
 class Dachshund(Dog_v2):
     pass
-
 
 class Bulldog(Dog_v2):
     pass
@@ -848,9 +815,9 @@ jim.speak("Woof")
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - To determine which class a given object belongs to, you can use the built-in `type()`
-#
+# 
 # </font>
 # </div>
 
@@ -862,10 +829,10 @@ type(jim)
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - What if you want to determine if jim is an instance of the Dog_v2 class? You can do this with the built-in isinstance()?
-# - `isinstance()` takes two arguments, an object and a class.
-#
+# - `isinstance()` takes two arguments, an object and a class. 
+# 
 # </font>
 # </div>
 
@@ -883,9 +850,9 @@ isinstance(jim, Bulldog)
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - To override a method defined on the parent class, you define a method with the same name on the child class.
-#
+# 
 # </font>
 # </div>
 
@@ -917,13 +884,13 @@ jim.speak()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Let say we want to do multiple base class inheritance.
 # - Each base class has methods and object attributes (not clas attributes). Object attributes are those related to the object, in shorts those inside the `__init__` construct.
 # - We'd like to use the `.` dot notation and have access to the base classes object attributes.
 # - To achieve this you need have `super.__init__()` in each base class otherwise the second base class object attributes would not be inheritated.
-# - ** This is becase** calling `super().__init__()` calls `__init__` calls only the first base `__init__` method.
-#
+# - ** This is becase** calling `super().__init__()` calls `__init__` calls only the first base `__init__` method. 
+# 
 # </font>
 # </div>
 
@@ -932,9 +899,8 @@ jim.speak()
 
 class BASEA:
     def __init__(self, a=1):
-        self.a = a
+        self.a=a
         super().__init__(self.a)
-
     def return_a(self, a):
         return a
 
@@ -944,8 +910,7 @@ class BASEA:
 
 class BASEB:
     def __init__(self, b=1):
-        self.b = b
-
+        self.b=b
     def return_b(self, b):
         return b
 
@@ -984,10 +949,10 @@ c.__dict__
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - If you forget to ass `super.__init__()` under the first base class `__init__` you will nto inheritate the second base class object attributes.
 # - Here is an example.
-#
+# 
 # </font>
 # </div>
 
@@ -996,9 +961,8 @@ c.__dict__
 
 class BASEA:
     def __init__(self, a=1):
-        self.a = a
-        # super().__init__()
-
+        self.a=a
+        #super().__init__()
     def return_a(self, a):
         return a
 
@@ -1008,8 +972,7 @@ class BASEA:
 
 class BASEB:
     def __init__(self, b=1):
-        self.b = b
-
+        self.b=b
     def return_b(self, b):
         return b
 
@@ -1017,11 +980,10 @@ class BASEB:
 # In[43]:
 
 
-class C(BASEA, BASEB):
+class C(BASEA,BASEB):
     def __init__(self, c=1):
-        self.c = c
+        self.c=c
         super().__init__()
-
     def return_c(self, c):
         return c
 
@@ -1029,13 +991,13 @@ class C(BASEA, BASEB):
 # In[44]:
 
 
-b = BASEB(b=1)
+b=BASEB(b=1)
 
 
 # In[45]:
 
 
-c = C(1)
+c=C(1)
 
 
 # In[46]:
@@ -1050,10 +1012,10 @@ c.__dict__.keys()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The case is similar to the case above, but an error is thrown if we try to instatiate one of the base class.
 # - We'll first replicate the problem and then, we'll suggestion a solution.
-#
+# 
 # </font>
 # </div>
 
@@ -1062,9 +1024,8 @@ c.__dict__.keys()
 
 class BASEA:
     def __init__(self, a=1):
-        self.a = a
+        self.a=a
         super(self).__init__(self.a)
-
     def return_a(self, a):
         return a
 
@@ -1074,8 +1035,7 @@ class BASEA:
 
 class BASEB:
     def __init__(self, b=1):
-        self.b = b
-
+        self.b=b
     def return_b(self, b):
         return b
 
@@ -1096,7 +1056,7 @@ class C(BASEA, BASEB):
 
 
 # Replicating the error
-A = BASEA(1)
+A=BASEA(1)
 
 
 # In[51]:
@@ -1104,9 +1064,8 @@ A = BASEA(1)
 
 class BASEA:
     def __init__(self, a=1):
-        self.a = a
-        # super(self).__init__(self.a)
-
+        self.a=a
+        #super(self).__init__(self.a)
     def return_a(self, a):
         return a
 
@@ -1137,20 +1096,24 @@ A = BASEA(1)
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://stackoverflow.com/questions/10909032/access-parent-class-instance-attribute-from-child-class-instance
 # - https://stackoverflow.com/questions/3277367/how-does-pythons-super-work-with-multiple-inheritance
 # - https://www.datacamp.com/community/tutorials/super-multiple-inheritance-diamond-problem
 # - https://medium.com/@taohidulii/playing-with-inheritance-in-python-73ea4f3b669e
 # - https://stackoverflow.com/questions/52959041/multiple-inheritance-the-derived-class-gets-attributes-from-one-base-class-only
 # - https://stackoverflow.com/questions/9575409/calling-parent-class-init-with-multiple-inheritance-whats-the-right-way
-# - https://www.python-course.eu/python3_inheritance.php
+# - https://www.python-course.eu/python3_inheritance.php 
 # - http://python-history.blogspot.ru/2010/06/method-resolution-order.html
 # - http://gistroll.com/rolls/21/horizontal_assessments/new](http://gistroll.com/rolls/21/horizontal_assessments/new
 # - https://nbviewer.org/github/rasbt/python_reference/blob/master/tutorials/not_so_obvious_python_stuff.ipynb?create=1
 # - https://blog.pilosus.org/posts/2019/05/02/python-mro/
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

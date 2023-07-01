@@ -9,9 +9,9 @@
 
 # <div class="alert k alert-warning">
 # <font color=black>
-#
+# 
 # **What?** * unpacking
-#
+# 
 # </font>
 # </div>
 
@@ -20,17 +20,17 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - When we operate on a list of parameters, we often need to extract the content of the list **as individual arguments instead of** a collection when passing them into functions.
-# - Luckily, the * operator can help us to unpack lists and tuples
-#
+# - Luckily, the * operator can help us to unpack lists and tuples 
+# 
 # </font>
 # </div>
 
 # In[1]:
 
 
-a = [1, 3, 3]
+a = [1,3,3]
 
 
 # In[2]:
@@ -74,10 +74,14 @@ print(len([*a]))
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://github.com/QuantEcon/lecture-python-programming.notebooks/blob/master/python_advanced_features.ipynb
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

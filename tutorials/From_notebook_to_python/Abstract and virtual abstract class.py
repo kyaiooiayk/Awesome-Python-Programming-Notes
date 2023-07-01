@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Abstract and virtual abstarct class
-#
+# 
 # </font>
 # </div>
 
@@ -20,12 +20,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A class is called an **abstract class** if it contains some abstract methods.
-# - An **abstract method** is a method that is declared, but contains no implementation.
+# - An **abstract method** is a method that is declared, but contains no implementation. 
 # - Abstract classes may not be instantiated, and its abstract methods must be implemented by its subclasses.
 # - **When are they used?** Abstract base classes provide a way to define **interfaces** when other techniques like `hasattr()` would be clumsy or subtly wrong
-#
+# 
 # </font>
 # </div>
 
@@ -34,9 +34,9 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - It is everything that a normal abstract class is but it contains at least one virtual method.
-#
+# 
+# - It is everything that a normal abstract class is but it contains at least one virtual method. 
+# 
 # </font>
 # </div>
 
@@ -45,11 +45,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - The abc module defines ABCMeta class which is a metaclass for defining abstract base class. Following example defines Shape class as an abstract base class using ABCMeta.
+# 
+# - The abc module defines ABCMeta class which is a metaclass for defining abstract base class. Following example defines Shape class as an abstract base class using ABCMeta. 
 # - The shape class has `area()` method decorated by abstractmethod.
-# - A Rectangle class now uses above Shape class as its parent and implementing the abstract `area()` method. Since it is a concrete class, it can be instantiated and an implemented `area()` method can be called.
-#
+# - A Rectangle class now uses above Shape class as its parent and implementing the abstract `area()` method. Since it is a concrete class, it can be instantiated and an implemented `area()` method can be called. 
+# 
 # </font>
 # </div>
 
@@ -74,14 +74,14 @@ class Rectangle(Shape):
         self.b = y
 
     def area(self):
-        return self.l * self.b
+        return self.l*self.b
 
 
 # In[3]:
 
 
-r = Rectangle(10, 20)
-print("area: ", r.area())
+r = Rectangle(10,20)
+print ('area: ', r.area())
 
 
 # # Example #2
@@ -89,12 +89,12 @@ print("area: ", r.area())
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Let us say we run a dealeship and trade car, truck and motorcycles. If we want to create a sale system how would it look like?
 # - We'll create the final model in following these steps:
 #     - Create separate classes.
 #     - Simplify them via inheritance using an abstarct class.
-#
+# 
 # </font>
 # </div>
 
@@ -102,6 +102,7 @@ print("area: ", r.area())
 
 
 class Car(object):
+
     def __init__(self, wheels, miles, make, model, year):
         self.wheels = wheels
         self.make = make
@@ -119,13 +120,14 @@ class Car(object):
         """
         We buy back according to the miles the car has
         """
-        return 8000.0 - (0.1 * self.miles)
+        return 8000.0 - (.1 * self.miles)
 
 
 # In[5]:
 
 
 class Truck(object):
+
     def __init__(self, wheels, miles, make, model, year):
         self.wheels = wheels
         self.make = make
@@ -143,16 +145,16 @@ class Truck(object):
         """
         We buy back according to the miles the car has
         """
-        return 10000.0 - (0.1 * self.miles)
+        return 10000.0 - (.1 * self.miles)
 
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - We create two class, but we ended up repeating a lot of code?
 # - **How can we improve it?** First of all we can look for abstraction material! This means to look for something that is in common and try ti abstarct this away.
 # -  This can be done by noticing that cars and trucks can be considerd as a vehicles. All vechicles have something in common and this can be used to create a more abstract class.
-#
+# 
 # </font>
 # </div>
 
@@ -180,15 +182,15 @@ class Vehicle(object):
         """
         We buy back according to the miles the car has
         """
-        return self.base_sale_price - (0.1 * self.miles)
+        return self.base_sale_price - (.1 * self.miles)
 
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Look how we have created a class attribute `base_sale_price` to help us distinguish a car from a truck.
 # - Writing `Car(Vehicle)` mean we are creating a class that inherits from the inherited class `Vehicle`.
-#
+# 
 # </font>
 # </div>
 
@@ -217,12 +219,12 @@ class Car(Vehicle):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - We've cleaned up a bit the code but there are still two things that are not as polished as we'd like them to be.
 # - **Frist** There is still some repeated code.
 # - **Secondly** You can still create an obkect fromfrom the `Vehicle` class. A vechicle should not have a `base_sale_price`, only Car or Truck do.
 # - `Vehicle` should really be an abstarct class.
-#
+# 
 # </font>
 # </div>
 
@@ -237,11 +239,11 @@ v.purchaise_price()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - It makes sense to disallow `Vehicle(4, 0, "Honda", "Accord", 2014)` as we only wanted to abstract away some common data and behaviour.
 # - A class that contains at list one **virtual method** is called metaclass.
 # - A virtual method is one that the abstract class says must exhist in child classes, but does not necessarily implement something.
-#
+# 
 # </font>
 # </div>
 
@@ -274,7 +276,7 @@ class Vehicle(metaclass=abc.ABCMeta):
         """
         We buy back according to the miles the car has
         """
-        return self.base_sale_price - (0.1 * self.miles)
+        return self.base_sale_price - (.1 * self.miles)
 
     @abc.abstractmethod
     def vehicle_type():
@@ -336,11 +338,11 @@ class Motorcycle(Vehicle):
 
 # <div class="alert alert-danger">
 # <font color=black>
-#
+# 
 # - Remember that getting rid of duplicates is a side effect of inheritance.
-# - When using inheritance, what we are really doing is providing the proper level of **abstraction**.
+# - When using inheritance, what we are really doing is providing the proper level of **abstraction**. 
 # - Abstract class is **different** from virtual abstract class.
-#
+# 
 # </font>
 # </div>
 
@@ -349,11 +351,15 @@ class Motorcycle(Vehicle):
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.tutorialspoint.com/abstract-base-classes-in-python-abc
 # - Jeff Knupp, Everything I know about Python. No longer available online.
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

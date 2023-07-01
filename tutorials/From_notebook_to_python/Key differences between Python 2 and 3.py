@@ -9,31 +9,31 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Key differences between Python 2 and 3
-#
+#     
 # </font>
 # </div>
 
-#
+# 
 # ## Key differences between Python 2 and 3
-#
-#
+# 
+# 
 
-# There are some good articles already that are summarizing the differences between Python 2 and 3, e.g.,
+# There are some good articles already that are summarizing the differences between Python 2 and 3, e.g.,  
 # - [https://wiki.python.org/moin/Python2orPython3](https://wiki.python.org/moin/Python2orPython3)
 # - [https://docs.python.org/3.0/whatsnew/3.0.html](https://docs.python.org/3.0/whatsnew/3.0.html)
 # - [http://python3porting.com/differences.html](http://python3porting.com/differences.html)
-# - [https://docs.python.org/3/howto/pyporting.html](https://docs.python.org/3/howto/pyporting.html)
+# - [https://docs.python.org/3/howto/pyporting.html](https://docs.python.org/3/howto/pyporting.html)  
 # etc.
-#
+# 
 # But it might be still worthwhile, especially for Python newcomers, to take a look at some of those!
 # (Note: the the code was executed in Python 3.4.0 and Python 2.7.5 and copied from interactive shell sessions.)
 
 # ### Overview - Key differences between Python 2 and 3
 
-#
-#
+# 
+# 
 # - [Unicode](#unicode)
 # - [The print statement](#print)
 # - [Integer division](#integer_div)
@@ -46,10 +46,10 @@
 
 # ### Unicode...
 
-#
-# #### Python 2:
+# 
+# #### Python 2: 
 # We have ASCII `str()` types, separate `unicode()`, but no `byte` type
-# #### Python 3:
+# #### Python 3: 
 # Now, we finally have Unicode (utf-8) `str`ings, and 2 byte classes: `byte` and `bytearray`s
 
 # In[ ]:
@@ -130,7 +130,7 @@ line 1 same line
 
 # ### Integer division
 
-# This is a pretty dangerous thing if you are porting code, or executing Python 3 code in Python 2 since the change in integer-division behavior can often go unnoticed.
+# This is a pretty dangerous thing if you are porting code, or executing Python 3 code in Python 2 since the change in integer-division behavior can often go unnoticed.  
 # So, I still tend to use a `float(3)/2` or `3/2.0` instead of a `3/2` in my Python 3 scripts to save the Python 2 guys some trouble ... (PS: and vice versa, you can `from __future__ import division` in your Python 2 scripts).
 
 # In[ ]:
@@ -159,8 +159,8 @@ line 1 same line
 
 # ### `xrange()`
 
-#
-# `xrange()` was pretty popular in Python 2.x if you wanted to create an iterable object. The behavior was quite similar to a generator ('lazy evaluation'), but you could iterate over it infinitely. The advantage was that it was generally faster than `range()` (e.g., in a for-loop) - not if you had to iterate over the list multiple times, since the generation happens every time from scratch!
+#  
+# `xrange()` was pretty popular in Python 2.x if you wanted to create an iterable object. The behavior was quite similar to a generator ('lazy evaluation'), but you could iterate over it infinitely. The advantage was that it was generally faster than `range()` (e.g., in a for-loop) - not if you had to iterate over the list multiple times, since the generation happens every time from scratch!  
 # In Python 3, the `range()` was implemented like the `xrange()` function so that a dedicated `xrange()` function does not exist anymore.
 
 # In[ ]:
@@ -190,8 +190,8 @@ NameError: name 'xrange' is not defined
 
 # ### Raising exceptions
 
-#
-#
+# 
+# 
 # Where Python 2 accepts both notations, the 'old' and the 'new' way, Python 3 chokes (and raises a `SyntaxError` in turn) if we don't enclose the exception argument in parentheses:
 
 # In[ ]:
@@ -207,8 +207,8 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IOError: file error
 
-
-# Python 3
+    
+# Python 3    
 raise IOError, "file error"
   File "<stdin>", line 1
     raise IOError, "file error"
@@ -222,8 +222,8 @@ OSError: file error
 
 # ### Handling exceptions
 
-#
-#
+# 
+# 
 # Also the handling of exceptions has slightly changed in Python 3. Now, we have to use the `as` keyword!
 
 # In[ ]:
@@ -248,8 +248,8 @@ name 'blabla' is not defined --> our error msg
 
 # ### The `next()` function and `.next()` method
 
-#
-#
+# 
+# 
 # Where you can use both function and method in Python 2.7.5, the `next()` function is all that remains in Python 3!
 
 # In[ ]:
@@ -275,7 +275,7 @@ AttributeError: 'generator' object has no attribute 'next'
 # ### In Python 3.x for-loop variables don't leak into the global namespace anymore
 
 # This goes back to a change that was made in Python 3.x and is described in [What’s New In Python 3.0](https://docs.python.org/3/whatsnew/3.0.html) as follows:
-#
+# 
 # *"List comprehensions no longer support the syntactic form `[... for var in item1, item2, ...]`. Use `[... for var in (item1, item2, ...)]` instead. Also note that list comprehensions have different semantics: they are closer to syntactic sugar for a generator expression inside a `list()` constructor, and in particular the loop control variables are no longer leaked into the surrounding scope."*
 
 # In[ ]:
@@ -329,8 +329,8 @@ print([1, 2] > (1, 2))
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://nbviewer.org/github/rasbt/python_reference/blob/master/tutorials/not_so_obvious_python_stuff.ipynb?create=1
-#
+# 
 # </font>
 # </div>

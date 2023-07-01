@@ -8,9 +8,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Super()
-#
+# 
 # </font>
 # </div>
 
@@ -18,10 +18,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - While Python isn’t purely an object-oriented language, it’s flexible enough and powerful enough to allow you to build your applications using the object-oriented paradigm.
-# - One of the ways in which Python achieves this is by supporting inheritance, which it does with `super()`.
-#
+# 
+# - While Python isn’t purely an object-oriented language, it’s flexible enough and powerful enough to allow you to build your applications using the object-oriented paradigm. 
+# - One of the ways in which Python achieves this is by supporting inheritance, which it does with `super()`. 
+# 
 # </font>
 # </div>
 
@@ -29,10 +29,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - We are going to create a base class.
 # - Its methods will be inherited by a derived class.
-#
+# 
 # </font>
 # </div>
 
@@ -71,10 +71,10 @@ class Square:
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - We are jsut adding a `_m` to distinguish the classes from the previous case.
 # - The `_m_v2` is to account for the Python 3, the `super(Square, self)` call is EQUIVALENT to the parameterless `super()` call. The first parameter refers to the subclass Square, while the second parameter refers to a Square object which, in this case, is self
-#
+# 
 # </font>
 # </div>
 
@@ -101,16 +101,16 @@ class Square_m_v2(Rectangle):
 # In[18]:
 
 
-rectangle = Rectangle(2, 4)
+rectangle = Rectangle(2,4)
 print("Rectangle area", rectangle.area())
 
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Nothing special in this call, but the code, however, doesn’t reflect that relationship and thus has code that is essentially **repeated**.
-# - What if we can reuse the code written in the `Rectangle` class in the `Square` class.
-#
+# 
+# - Nothing special in this call, but the code, however, doesn’t reflect that relationship and thus has code that is essentially **repeated**. 
+# - What if we can reuse the code written in the `Rectangle` class in the `Square` class. 
+# 
 # </font>
 # </div>
 
@@ -123,10 +123,10 @@ print("Square area (withouth super)", square.area())
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Here, you’ve used `super()` to call the `__init__()` of the Rectangle class, allowing you to use it in the Square class without repeating code.
+# 
+# - Here, you’ve used `super()` to call the `__init__()` of the Rectangle class, allowing you to use it in the Square class without repeating code. 
 # - The Square class inherited the `.area()` method from the Rectangle class.
-#
+# 
 # </font>
 # </div>
 
@@ -144,13 +144,13 @@ square_m = Square_m_v2(4)
 print("Square area (with super but how we used to do in python 2.x)", square_m.area())
 
 
-# # Multiple Inheritance Overview
+# # Multiple Inheritance Overview 
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - In addition to single inheritance, Python supports multiple inheritance, in which a subclass can inherit from multiple superclasses that don’t necessarily inherit from each other (also known as sibling classes).
-#
+# 
+# - In addition to single inheritance, Python supports multiple inheritance, in which a subclass can inherit from multiple superclasses that don’t necessarily inherit from each other (also known as sibling classes). 
+# 
 # </font>
 # </div>
 
@@ -163,7 +163,6 @@ class Triangle_SC1:
     """
     Superclass No1
     """
-
     def __init__(self, base, height):
         self.base = base
         self.height = height
@@ -180,12 +179,11 @@ class Square_SC2:
     """
     Superclass No2
     """
-
     def __init__(self, length):
         self.length = length
 
     def area(self):
-        print("Using area from square_C2")
+        print("Using area from square_C2")        
         return self.length * self.length
 
     def perimeter(self):
@@ -194,11 +192,11 @@ class Square_SC2:
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - The problem, though, is that both superclasses (Triangle and Square) define a .area().
-# - The **method resolution order (or MRO)** tells Python how to search for inherited methods.
+# 
+# - The problem, though, is that both superclasses (Triangle and Square) define a .area(). 
+# - The **method resolution order (or MRO)** tells Python how to search for inherited methods. 
 # - This comes in handy when you’re using super() because the MRO tells you exactly where Python will look for a method you’re calling with super() and in what order.
-#
+#  
 # </font>
 # </div>
 
@@ -210,7 +208,6 @@ class RightPyramid(Square_SC2, Triangle_SC1):
     The signature of the class is important.
     Writing (Square, Triangle) is not the same as (Triangle, Square)
     """
-
     def __init__(self, base, slant_height):
         self.base = base
         self.slant_height = slant_height
@@ -239,10 +236,14 @@ pyramid.area()
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
-# - https://realpython.com/python-super/
-#
+# 
+# - https://realpython.com/python-super/ 
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

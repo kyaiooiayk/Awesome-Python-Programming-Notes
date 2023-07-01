@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Structural Design Patterns - Composite Method
-#
+# 
 # </font>
 # </div>
 
@@ -20,7 +20,7 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - **Structural Design Patterns** are used to establish relation between software components in particular settings.
 #     - [ ] Adapter Method
 #     - [ ] Bridge Method
@@ -29,7 +29,7 @@
 #     - [ ] Facade Method
 #     - [ ] Proxy Method
 #     - [ ] FlyWeight Method
-#
+# 
 # </font>
 # </div>
 
@@ -38,11 +38,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - **Lets you compose objects into tree structures and then work with these structures as if they were individual objects.**
 # - A composite design pattern maintains a tree data structure.
 # - The problem here is to build a recursive tree data structure so that an element of the tree can have subelements.
-#
+#     
 # </font>
 # </div>
 
@@ -51,13 +51,13 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - Here the scenerio is creating menu and submenu items, which can have further submenu items.
 # - The solution consists of 3 major elements
 # - `Component`: An abstract class
 # - `Child`: A concrete class inherits from the component
 # - `Composite`: A concrete class which also inherits from component. The composite class maintains child objects by ading and removing them to a tree data structure.
-#
+#     
 # </font>
 # </div>
 
@@ -88,7 +88,7 @@ class Child(Component):
 
     def component_function(self):
         # Print the name of the child item here
-        print("{}".format(self.name))
+        print('{}'.format(self.name))
 
 
 # In[3]:
@@ -116,7 +116,7 @@ class Composite(Component):
 
     def component_function(self):
         # Print the name of the composite object
-        print("{}".format(self.name))
+        print('{}'.format(self.name))
 
         # Iterate through the child objects and initiate their component
         for child in self.children:
@@ -167,13 +167,13 @@ top.component_function()
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-#
+# 
 # - **Advantages**:
 #     - You can work with complex tree structures more conveniently: use polymorphism and recursion to your advantage.
 #     - Open/Closed Principle. You can introduce new element types into the app without breaking the existing code, which now works with the object tree.
 # - **Disadvantages**:
 #     - It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you’d need to overgeneralize the component interface, making it harder to comprehend.
-#
+#     
 # </font>
 # </div>
 
@@ -182,11 +182,11 @@ top.component_function()
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [Composite method](https://www.geeksforgeeks.org/composite-method-python-design-patterns/)
 # - [Composite in Python](https://refactoring.guru/design-patterns/composite)
 # - https://github.com/pyGuru123/Python-design-Patterns/blob/main/Structural%20Pattern/composite.py
-#
+#     
 # </font>
 # </div>
 
@@ -196,8 +196,12 @@ top.component_function()
 # In[7]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv -m")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv -m')
 
 
 # In[ ]:
+
+
+
+

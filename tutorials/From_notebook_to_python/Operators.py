@@ -5,9 +5,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Operators
-#
+# 
 # </font>
 # </div>
 
@@ -19,7 +19,7 @@
 # ## Arithmetic Operations
 # Python implements seven basic binary arithmetic operators, two of which can double as unary operators.
 # They are summarized in the following table:
-#
+# 
 # | Operator     | Name           | Description                                            |
 # |--------------|----------------|--------------------------------------------------------|
 # | ``a + b``    | Addition       | Sum of ``a`` and ``b``                                 |
@@ -31,7 +31,7 @@
 # | ``a ** b``   | Exponentiation | ``a`` raised to the power of ``b``                     |
 # | ``-a``       | Negation       | The negative of ``a``                                  |
 # | ``+a``       | Unary plus     | ``a`` unchanged (rarely used)                          |
-#
+# 
 # These operators can be used and combined in intuitive ways, using standard parentheses to group operations.
 # For example:
 
@@ -59,14 +59,14 @@ print(11 // 2)
 
 
 # The floor division operator was added in Python 3; you should be aware if working in Python 2 that the standard division operator (``/``) acts like floor division for integers and like true division for floating-point numbers.
-#
+# 
 # Finally, I'll mention an eighth arithmetic operator that was added in Python 3.5: the ``a @ b`` operator, which is meant to indicate the *matrix product* of ``a`` and ``b``, for use in various linear algebra packages.
 
 # ## Bitwise Operations
 # In addition to the standard numerical operations, Python includes operators to perform bitwise logical operations on integers.
 # These are much less commonly used than the standard arithmetic operations, but it's useful to know that they exist.
 # The six bitwise operators are summarized in the following table:
-#
+# 
 # | Operator     | Name            | Description                                 |
 # |--------------|-----------------|---------------------------------------------|
 # | ``a & b``    | Bitwise AND     | Bits defined in both ``a`` and ``b``        |
@@ -75,7 +75,7 @@ print(11 // 2)
 # | ``a << b``   | Bit shift left  | Shift bits of ``a`` left by ``b`` units     |
 # | ``a >> b``   | Bit shift right | Shift bits of ``a`` right by ``b`` units    |
 # | ``~a``       | Bitwise NOT     | Bitwise negation of ``a``                          |
-#
+# 
 # These bitwise operators only make sense in terms of the binary representation of numbers, which you can see using the built-in ``bin`` function:
 
 # In[4]:
@@ -141,28 +141,28 @@ print(a)
 
 
 # There is an augmented assignment operator corresponding to each of the binary operators listed earlier; in brief, they are:
-#
+# 
 # |||||
 # |-|-|
 # |``a += b``| ``a -= b``|``a *= b``| ``a /= b``|
 # |``a //= b``| ``a %= b``|``a **= b``|``a &= b``|
 # |<code>a &#124;= b</code>| ``a ^= b``|``a <<= b``| ``a >>= b``|
-#
+# 
 # Each one is equivalent to the corresponding operation followed by assignment: that is, for any operator "``■``", the expression ``a ■= b`` is equivalent to ``a = a ■ b``, with a slight catch.
 # For mutable objects like lists, arrays, or DataFrames, these augmented assignment operations are actually subtly different than their more verbose counterparts: they modify the contents of the original object rather than creating a new object to store the result.
 
 # ## Comparison Operations
-#
+# 
 # Another type of operation which can be very useful is comparison of different values.
 # For this, Python implements standard comparison operators, which return Boolean values ``True`` and ``False``.
 # The comparison operations are listed in the following table:
-#
+# 
 # | Operation     | Description                       || Operation     | Description                          |
 # |---------------|-----------------------------------||---------------|--------------------------------------|
 # | ``a == b``    | ``a`` equal to ``b``              || ``a != b``    | ``a`` not equal to ``b``             |
 # | ``a < b``     | ``a`` less than ``b``             || ``a > b``     | ``a`` greater than ``b``             |
 # | ``a <= b``    | ``a`` less than or equal to ``b`` || ``a >= b``    | ``a`` greater than or equal to ``b`` |
-#
+# 
 # These comparison operators can be combined with the arithmetic and bitwise operators to express a virtually limitless range of tests for the numbers.
 # For example, we can check if a number is odd by checking that the modulus with 2 returns 1:
 
@@ -235,16 +235,16 @@ not (x < 6)
 
 
 # These sorts of Boolean operations will become extremely useful when we begin discussing *control flow statements* such as conditionals and loops.
-#
+# 
 # One sometimes confusing thing about the language is when to use Boolean operators (``and``, ``or``, ``not``), and when to use bitwise operations (``&``, ``|``, ``~``).
 # The answer lies in their names: Boolean operators should be used when you want to compute *Boolean values (i.e., truth or falsehood) of entire statements*.
 # Bitwise operations should be used when you want to *operate on individual bits or components of the objects in question*.
 
 # ## Identity and Membership Operators
-#
+# 
 # Like ``and``, ``or``, and ``not``, Python also contains prose-like operators  to check for identity and membership.
 # They are the following:
-#
+# 
 # | Operator      | Description                                       |
 # |---------------|---------------------------------------------------|
 # | ``a is b``    | True if ``a`` and ``b`` are identical objects     |
@@ -253,7 +253,7 @@ not (x < 6)
 # | ``a not in b``| True if ``a`` is not a member of ``b``            |
 
 # ### Identity Operators: "``is``" and "``is not``"
-#
+# 
 # The identity operators, "``is``" and "``is not``" check for *object identity*.
 # Object identity is different than equality, as we can see here:
 
@@ -316,10 +316,14 @@ a is b
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [Whirlwind Tour of Python](http://www.oreilly.com/programming/free/a-whirlwind-tour-of-python.csp)
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+
