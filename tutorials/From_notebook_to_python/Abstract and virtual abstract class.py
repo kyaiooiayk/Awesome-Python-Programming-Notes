@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#What-an-abstract-class-is?" data-toc-modified-id="What-an-abstract-class-is?-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>What an abstract class is?</a></span></li><li><span><a href="#What-is-a-virtual-abstarct-class?" data-toc-modified-id="What-is-a-virtual-abstarct-class?-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>What is a virtual abstarct class?</a></span></li><li><span><a href="#Example-#1" data-toc-modified-id="Example-#1-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Example #1</a></span></li><li><span><a href="#Example-#2" data-toc-modified-id="Example-#2-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Example #2</a></span></li><li><span><a href="#Conclusions" data-toc-modified-id="Conclusions-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Conclusions</a></span></li><li><span><a href="#References" data-toc-modified-id="References-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>References</a></span></li></ul></div>
+# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#What-an-abstract-class-is?" data-toc-modified-id="What-an-abstract-class-is?-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>What an abstract class is?</a></span></li><li><span><a href="#What-is-a-virtual-abstarct-class?" data-toc-modified-id="What-is-a-virtual-abstarct-class?-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>What is a virtual abstarct class?</a></span></li><li><span><a href="#Example-#1" data-toc-modified-id="Example-#1-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Example #1</a></span></li><li><span><a href="#Example-#2" data-toc-modified-id="Example-#2-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Example #2</a></span></li><li><span><a href="#Conclusions" data-toc-modified-id="Conclusions-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Conclusions</a></span></li><li><span><a href="#References" data-toc-modified-id="References-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>References</a></span></li><li><span><a href="#Requirements" data-toc-modified-id="Requirements-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Requirements</a></span></li></ul></div>
 
 # # Introduction
 # <hr style = "border:2px solid black" ></hr>
@@ -61,7 +61,7 @@ import abc
 
 class Shape(metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def area(self):
+    def area(self):        
         pass
 
 
@@ -71,7 +71,7 @@ class Shape(metaclass=abc.ABCMeta):
 class Rectangle(Shape):
     def __init__(self, x, y):
         self.l = x
-        self.b = y
+        self.b = y        
 
     def area(self):
         return self.l*self.b
@@ -81,6 +81,32 @@ class Rectangle(Shape):
 
 
 r = Rectangle(10,20)
+print ('area: ', r.area())
+
+
+# <div class="alert alert-info">
+# <font color=black>
+# 
+# - Using this decorator requires that the class’s metaclass is ABCMeta or is derived from it. 
+# - A class that has a metaclass derived from ABCMeta cannot be instantiated unless all of its abstract methods and properties are overridden.
+# - The following example shows this error with a concrete example.
+# 
+# </font>
+# </div>
+
+# In[4]:
+
+
+class Rectangle_error(Shape):
+    def __init__(self, x, y):
+        self.l = x
+        self.b = y        
+
+
+# In[5]:
+
+
+r = Rectangle_error(10,20)
 print ('area: ', r.area())
 
 
@@ -98,10 +124,10 @@ print ('area: ', r.area())
 # </font>
 # </div>
 
-# In[4]:
+# In[6]:
 
 
-class Car(object):
+class Car():
 
     def __init__(self, wheels, miles, make, model, year):
         self.wheels = wheels
@@ -123,10 +149,10 @@ class Car(object):
         return 8000.0 - (.1 * self.miles)
 
 
-# In[5]:
+# In[7]:
 
 
-class Truck(object):
+class Truck():
 
     def __init__(self, wheels, miles, make, model, year):
         self.wheels = wheels
@@ -158,10 +184,10 @@ class Truck(object):
 # </font>
 # </div>
 
-# In[6]:
+# In[50]:
 
 
-class Vehicle(object):
+class Vehicle():
 
     base_sale_price = 0.0
 
@@ -194,7 +220,7 @@ class Vehicle(object):
 # </font>
 # </div>
 
-# In[7]:
+# In[53]:
 
 
 class Car(Vehicle):
@@ -207,7 +233,7 @@ class Car(Vehicle):
         self.based_sale_price = 8000
 
 
-class Car(Vehicle):
+class Truck(Vehicle):
     def __init(self, wheels, miles, make, model, year):
         self.wheels = wheels
         self.make = make
@@ -222,13 +248,13 @@ class Car(Vehicle):
 # 
 # - We've cleaned up a bit the code but there are still two things that are not as polished as we'd like them to be.
 # - **Frist** There is still some repeated code.
-# - **Secondly** You can still create an obkect fromfrom the `Vehicle` class. A vechicle should not have a `base_sale_price`, only Car or Truck do.
-# - `Vehicle` should really be an abstarct class.
+# - **Secondly** You can still create an object from the `Vehicle` class. A vehicle should not have a `base_sale_price`, only Car or Truck do.
+# - `Vehicle` should really be an abstract class.
 # 
 # </font>
 # </div>
 
-# In[8]:
+# In[54]:
 
 
 # You can still do this
@@ -240,14 +266,15 @@ v.purchaise_price()
 # <div class="alert alert-info">
 # <font color=black>
 # 
-# - It makes sense to disallow `Vehicle(4, 0, "Honda", "Accord", 2014)` as we only wanted to abstract away some common data and behaviour.
+# - It makes sense to disallow `Vehicle(4, 0, "Honda", "Accord", 2014)` as we only wanted to abstract away some common data and behaviour, as we never meant for vehicles to be used directly. 
+#     
 # - A class that contains at list one **virtual method** is called metaclass.
-# - A virtual method is one that the abstract class says must exhist in child classes, but does not necessarily implement something.
+# - A virtual method is one that the abstract class says **must exhist** in child classes, but does not necessarily implement something.
 # 
 # </font>
 # </div>
 
-# In[11]:
+# In[118]:
 
 
 import abc
@@ -266,7 +293,7 @@ class Vehicle(metaclass=abc.ABCMeta):
         self.miles = miles
         self.year = year
 
-    def sale_price():
+    def sale_price(self):
         """
         We charge a flat rate of 5k per wheels
         """
@@ -279,7 +306,7 @@ class Vehicle(metaclass=abc.ABCMeta):
         return self.base_sale_price - (.1 * self.miles)
 
     @abc.abstractmethod
-    def vehicle_type():
+    def vehicle_type(self):
         """
         Returns a string representing the type of vehicle this is.
         This will be defined in the derived class
@@ -287,22 +314,22 @@ class Vehicle(metaclass=abc.ABCMeta):
         pass
 
 
-# In[12]:
+# In[119]:
 
 
 # Now you can see how this will throw an error. This ie exactely what we wanted
 v = Vehicle(4, 0, "Honda", "Accord", 2014)
 
 
-# In[13]:
+# In[120]:
 
 
 class Car(Vehicle):
-    def __init__(self):
-        wheels = 4
-        based_sale_price = 8000
 
-    def vehicle_type():
+    wheels = 4
+    based_sale_price = 8000
+
+    def vehicle_type(self):
         """
         Returns a string representing the type of vehicle this is.
         """
@@ -310,11 +337,10 @@ class Car(Vehicle):
 
 
 class Truck(Vehicle):
-    def __init__(self, wheels, miles, make, model, year):
-        wheels = 6
-        based_sale_price = 10000
+    wheels = 6
+    based_sale_price = 10000
 
-    def vehicle_type():
+    def vehicle_type(self):
         """
         Returns a string representing the type of vehicle this is.
         """
@@ -322,15 +348,62 @@ class Truck(Vehicle):
 
 
 class Motorcycle(Vehicle):
-    def __init__(self, wheels, miles, make, model, year):
-        wheels = 2
-        based_sale_price = 4000
+    wheels = 2
+    based_sale_price = 4000
 
-    def vehicle_type():
+    def vehicle_type(self):
         """
         Returns a string representing the type of vehicle this is.
         """
         return "motorcycle"
+
+
+# In[130]:
+
+
+v = Car(4, 1000, "Honda", "Accord", 2014)
+
+
+# In[131]:
+
+
+v.wheels
+
+
+# In[132]:
+
+
+v.based_sale_price
+
+
+# In[133]:
+
+
+v.make
+
+
+# In[134]:
+
+
+v.model
+
+
+# In[135]:
+
+
+v.vehicle_type()
+
+
+# In[136]:
+
+
+v.miles
+
+
+# In[137]:
+
+
+v.purchaise_price()
 
 
 # # Conclusions
@@ -353,10 +426,20 @@ class Motorcycle(Vehicle):
 # <font color=black>
 # 
 # - https://www.tutorialspoint.com/abstract-base-classes-in-python-abc
-# - Jeff Knupp, Everything I know about Python. No longer available online.
+# - [Jeff Knupp, Everything I know about Python](https://jeffknupp.com/blog/2017/03/27/improve-your-python-python-classes-and-object-oriented-programming/)
 # 
 # </font>
 # </div>
+
+# # Requirements
+# <hr style = "border:2px solid black" ></hr>
+
+# In[ ]:
+
+
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv -m')
+
 
 # In[ ]:
 
