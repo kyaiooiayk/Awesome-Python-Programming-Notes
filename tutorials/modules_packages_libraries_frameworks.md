@@ -16,7 +16,6 @@ To be considered a package (or subpackage), a directory must contain a file name
   - `pytest` provides a variety of modules to test new code, including small unit tests or complex functional tests.
 ***
 
-
 ## Libraries
 - *Libraries*: A library is an umbrella term referring to a reusable chunk of code. Usually, a Python library contains a collection of related modules and packages. Actually, this term is often used interchangeably with “Python package” because packages can also contain modules and other packages (subpackages). However, it is often assumed that while a package is a collection of modules, a library is a collection of packages.
 Oftentimes, developers create Python libraries to share reusable code with the community. To eliminate the need for writing code from scratch, they create a set of useful functions related to the same area. Examples are:
@@ -34,3 +33,4 @@ Oftentimes, developers create Python libraries to share reusable code with the c
 - [Differences btw modules, packages and libraries](https://learnpython.com/blog/python-modules-packages-libraries-frameworks/)
 - [Packages](https://python-course.eu/python-tutorial/packages.php)
 - [Modules and modular programming](https://python-course.eu/python-tutorial/modules-and-modular-programming.php)
+***
