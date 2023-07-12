@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** `zip`
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
-# - Return a zip object whose .next() method returns a tuple where the i-th element comes from the i-th iterable argument. 
+#
+# - Return a zip object whose .next() method returns a tuple where the i-th element comes from the i-th iterable argument.
 # - The `.next()` method continues until the shortest iterable in the argument sequence is exhausted and then it raises StopIteration.
-# 
+#
 # </font>
 # </div>
 
@@ -58,9 +58,7 @@ for t in zip(a_couple_of_letters, some_numbers):
 # In[5]:
 
 
-location = ["Helgoland", "Kiel",
-            "Berlin-Tegel", "Konstanz",
-            "Hohenpeißenberg"]
+location = ["Helgoland", "Kiel", "Berlin-Tegel", "Konstanz", "Hohenpeißenberg"]
 air_pressure = [1021.2, 1019.9, 1023.7, 1023.1, 1027.7]
 temperatures = [6.0, 4.3, 2.7, -1.4, -4.4]
 altitude = [4, 27, 37, 443, 977]
@@ -109,12 +107,14 @@ for car, color in zip(cars, colors):
 # In[10]:
 
 
-cities_and_population = [("Zurich", 415367),
-                         ("Geneva", 201818),
-                         ("Basel", 177654),
-                         ("Lausanne", 139111),
-                         ("Bern", 133883),
-                         ("Winterthur", 111851)]
+cities_and_population = [
+    ("Zurich", 415367),
+    ("Geneva", 201818),
+    ("Basel", 177654),
+    ("Lausanne", 139111),
+    ("Bern", 133883),
+    ("Winterthur", 111851),
+]
 
 
 # In[11]:
@@ -142,14 +142,10 @@ print(text2morse)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - https://python-course.eu/advanced-python/zip-tutorial.php
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

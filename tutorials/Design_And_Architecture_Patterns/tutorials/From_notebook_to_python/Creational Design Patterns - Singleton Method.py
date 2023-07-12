@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Creational Design Patterns - Singleton Method
-# 
+#
 # </font>
 # </div>
 
@@ -20,14 +20,14 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
-# - **Creational Design Patterns** are about class instantiation or the object instantiation. 
+#
+# - **Creational Design Patterns** are about class instantiation or the object instantiation.
 #     - [ ] Factory Method
 #     - [ ] Abstract Factory Method
 #     - [ ] Builder Method
 #     - [ ] Prototype Method
 #     - [x] Singleton Method
-# 
+#
 # </font>
 # </div>
 
@@ -36,11 +36,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - **Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.**
 # - The singleton pattern is a design pattern that restricts the instantiation of a class to one object.
 # - A lot of developers consider the Singleton pattern an **antipattern**. That’s why its usage is on the decline in Python code.
-#     
+#
 # </font>
 # </div>
 
@@ -49,18 +49,18 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - It’s pretty easy to implement a sloppy Singleton. You just need to hide the constructor and implement a static creation method.
 # - The same class behaves incorrectly in a multithreaded environment. Multiple threads can call the creation method simultaneously and get several instances of Singleton class.
 # - See file named `singleton_naive.py`
-#     
+#
 # </font>
 # </div>
 
 # In[17]:
 
 
-get_ipython().system('python singleton_naive_implementation.py')
+get_ipython().system("python singleton_naive_implementation.py")
 
 
 # # Thread-safe implementation
@@ -68,17 +68,17 @@ get_ipython().system('python singleton_naive_implementation.py')
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - To fix the problem, you have to synchronize threads during the first creation of the Singleton object.
 # - See file named `thread_safe_singleton_implementation.py`
-# 
+#
 # </font>
 # </div>
 
 # In[19]:
 
 
-get_ipython().system('python thread_safe_singleton_implementation.py')
+get_ipython().system("python thread_safe_singleton_implementation.py")
 
 
 # # Another simple example
@@ -86,11 +86,11 @@ get_ipython().system('python thread_safe_singleton_implementation.py')
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Singleton is used when you want to allow *only one object* to be created from a class. Its an object oriented way of providing global variables.
 # - In python community, a **borg** is a term which allows creation of multiple instances but they all share same state, unlike singleton.
 # - Lets say there's a need of keeping cache of information shared by multiple objects, it can be done either keeping the information in a singleton or sharing it under borg object.
-# 
+#
 # </font>
 # </div>
 
@@ -137,7 +137,7 @@ print(s2)
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-# 
+#
 # - **Advantages**:
 #     - Initializations: An object created by the Singleton method is initialized only when it is requested for the first time.
 #     - Access to the object: We got global access to the instance of the object.
@@ -146,7 +146,7 @@ print(s2)
 #     - Multithread Environment: It’s not easy to use the singleton method in a multithread environment, because we have to take care that the multithread wouldn’t create a singleton object several times.
 #     - Single responsibility principle: As the Singleton method is solving two problems at a single time, it doesn’t follow the single responsibility principle.
 #     - Unit testing process: As they introduce the global state to the application, it makes the unit testing very hard.
-#     
+#
 # </font>
 # </div>
 
@@ -155,11 +155,11 @@ print(s2)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - [Singleton Method](https://www.geeksforgeeks.org/singleton-method-python-design-patterns/)
 # - [Singleton in Python](https://refactoring.guru/design-patterns/singleton/python/example#example-1)
 # - https://github.com/pyGuru123/Python-design-Patterns/tree/main/Creational%20Pattern
-#     
+#
 # </font>
 # </div>
 
@@ -169,12 +169,8 @@ print(s2)
 # In[1]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv -m')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv -m")
 
 
 # In[ ]:
-
-
-
-

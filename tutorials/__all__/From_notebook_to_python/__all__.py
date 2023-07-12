@@ -7,31 +7,31 @@
 # # Introduction
 # <hr style="border:2px solid black"> </hr>
 
-# 
+#
 # **What?** `__all__`
-# 
-# 
+#
+#
 
 # # Definition
 # <hr style="border:2px solid black"> </hr>
 
-# 
+#
 # - `__all__ = [string#1, sreing#2, ...]` allows to explictly tell python what variables get exported from a module when this syntax `from <module> import *` is used.
 # - It declares the semantically "public" names from a module. If there is a name in `__all__`, users are expected to use it, and they can have the expectation that it will not change.
-# 
-# 
+#
+#
 
 # In[1]:
 
 
-get_ipython().system('ls')
+get_ipython().system("ls")
 
 
 # In[5]:
 
 
 # Let is print on screen what inside foo.py
-get_ipython().system('cat foo.py')
+get_ipython().system("cat foo.py")
 
 
 # In[2]:
@@ -57,12 +57,12 @@ print(waz)
 # # What if _ _all_ _ is not used?
 # <hr style="border:2px solid black"> </hr>
 
-# 
+#
 # - If `__all__` is not used then the default behaviour is recovered.
 # - The **dafault** behaviour of `import *` is to import all symbols that do not begin with an underscore, from the given namespace.
 # - `__all__` affects the `from <module> import *` behavior **only**!
-# 
-# 
+#
+#
 
 # In[7]:
 
@@ -73,7 +73,7 @@ from foo_1 import *
 # In[2]:
 
 
-get_ipython().system('cat foo_1.py')
+get_ipython().system("cat foo_1.py")
 
 
 # In[ ]:
@@ -103,15 +103,15 @@ print(baz)
 # # What to do if you do not want to use _ _all_ _?
 # <hr style="border:2px solid black"> </hr>
 
-# 
+#
 # -  Members that are not mentioned in `__all__` are still accessible from outside the module and can be imported with from `<module> import <member>`.
-# 
-# 
+#
+#
 
 # In[1]:
 
 
-from foo_1 import waz,bar,baz
+from foo_1 import waz, bar, baz
 
 
 # In[2]:
@@ -135,30 +135,30 @@ print(baz)
 # # _ _init_ _ and _ _all_ _?
 # <hr style="border:2px solid black"> </hr>
 
-# 
+#
 # -  The `__init__.py` files are required to make Python treat the directories as containing packages; this is done to prevent directories with a common name, such as string, from unintentionally hiding valid modules that occur later on the module search path.
-# 
+#
 # - `__init__.py` can be left empty, but it can also execute initialization code for the package or set the `__all__` variable.
-# 
-# 
+#
+#
 
 # # Conclusions
 # <hr style="border:2px solid black"> </hr>
 
-# 
+#
 # - Remember that `__all__` affects only the `from <module> import *` syntax only.
 # - The syntax `import *` is not recommended anyway so it is up to you to decide how to use it.
 # - **This sounds a bit confusion! ?** The confusion comes from the fact that are modules designed to be used with `import *`. A good hint if this is the case is the presence of `__all__` or names starting with underscore in the module’s code.
-#     
-# 
+#
+#
 
 # # References
 # <hr style="border:2px solid black"> </hr>
 
-# 
+#
 # - https://stackoverflow.com/questions/44834/can-someone-explain-all-in-python
-# 
-# 
+#
+#
 
 # # Requirements
 # <hr style = "border:2px solid black" ></hr>
@@ -166,12 +166,8 @@ print(baz)
 # In[1]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")
 
 
 # In[ ]:
-
-
-
-

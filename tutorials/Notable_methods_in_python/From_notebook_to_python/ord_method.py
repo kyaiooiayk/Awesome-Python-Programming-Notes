@@ -8,9 +8,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** `ord` method
-# 
+#
 # </font>
 # </div>
 
@@ -18,14 +18,14 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - The Python `ord()` method converts a character into its Unicode code.
-# - This method returns an integer that represents that character in Unicode. 
-# 
-# 
+# - This method returns an integer that represents that character in Unicode.
+#
+#
 # - **An example?** For example, you may be creating a profile update form in Python that needs to check each string for emojis and other special characters. These characters are not allowed to be used in the form.
-# 
-# 
+#
+#
 # </font>
 # </div>
 
@@ -33,10 +33,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Letters that appear on computers are stored by computers as a list of numbers.
 # - This all changed In 1991. In this year, an organization called the Unicode Consortium published a standardized specification for how characters could be represented with computers.
-# 
+#
 # </font>
 # </div>
 
@@ -54,9 +54,9 @@ for i in string:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - `ord()` is the opposite of the `chr()` method. Whereas `chr()` returns the character correlated with a Unicode value, `ord()` returns the Unicode value of a particular character. 
-# 
+#
+# - `ord()` is the opposite of the `chr()` method. Whereas `chr()` returns the character correlated with a Unicode value, `ord()` returns the Unicode value of a particular character.
+#
 # </font>
 # </div>
 
@@ -64,21 +64,24 @@ for i in string:
 
 
 for i in string:
-    print("Unicode representation for ", i, "is", ord(i), ", checking the reverse conversion: ", chr(ord(i)))
+    print(
+        "Unicode representation for ",
+        i,
+        "is",
+        ord(i),
+        ", checking the reverse conversion: ",
+        chr(ord(i)),
+    )
 
 
 # # References
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://careerkarma.com/blog/python-ord/
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

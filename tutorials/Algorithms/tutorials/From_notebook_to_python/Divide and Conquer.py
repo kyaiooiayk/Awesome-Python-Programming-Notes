@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Divide and Conquer
-# 
+#
 # </font>
 # </div>
 
@@ -20,14 +20,14 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Divide and Conquer is an algorithmic paradigm in which the problem is solved using the following 3 steps:
 #     1. Divide: This involves dividing the problem into smaller sub-problems.
 #     2. Conquer: Solve sub-problems by calling recursively until solved.
 #     3. Combine: Combine the sub-problems to get the final solution of the whole problem.
-#     
+#
 # The following are some standard algorithms that follow Divide and Conquer algorithm: Quicksort and Merge Sort.
-#     
+#
 # </font>
 # </div>
 
@@ -36,11 +36,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
-# - Both paradigm divide the given problem into subproblems and solve subproblems. 
-# - Divide and Conquer should be used when the same subproblems are not evaluated many times. Otherwise Dynamic Programming or Memoization should be used. 
+#
+# - Both paradigm divide the given problem into subproblems and solve subproblems.
+# - Divide and Conquer should be used when the same subproblems are not evaluated many times. Otherwise Dynamic Programming or Memoization should be used.
 # - For example, Quicksort is a Divide and Conquer algorithm, we never evaluate the same subproblems again. On the other hand, for calculating the nth Fibonacci number, Dynamic Programming should be preferred (See this for details).
-#     
+#
 # </font>
 # </div>
 
@@ -49,9 +49,9 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#     
-# - To find the maximum and minimum element from a given array is an application for divide and conquer. 
-# 
+#
+# - To find the maximum and minimum element from a given array is an application for divide and conquer.
+#
 # </font>
 # </div>
 
@@ -61,13 +61,13 @@
 def DAC_Max(a, index, l):
     """
     Function to find the maximum no in a given array.
-    Demonstrate Divide and Conquer Algorithm     
+    Demonstrate Divide and Conquer Algorithm
     """
     max = -1
-    if(l - 1 == 0):
+    if l - 1 == 0:
         return arr[index]
-    if (index >= l - 2):
-        if (a[index] > a[index + 1]):
+    if index >= l - 2:
+        if a[index] > a[index + 1]:
             return a[index]
         else:
             return a[index + 1]
@@ -76,7 +76,7 @@ def DAC_Max(a, index, l):
     # in the given array.
     max = DAC_Max(a, index + 1, l)
 
-    if (a[index] > max):
+    if a[index] > max:
         return a[index]
     else:
         return max
@@ -88,13 +88,13 @@ def DAC_Max(a, index, l):
 def DAC_Min(a, index, l):
     """
     Function to find the minimum no in a given array.
-    Demonstrate Divide and Conquer Algorithm     
+    Demonstrate Divide and Conquer Algorithm
     """
     min = 0
-    if(l - 1 == 0):
+    if l - 1 == 0:
         return arr[index]
-    if (index >= l - 2):
-        if (a[index] < a[index + 1]):
+    if index >= l - 2:
+        if a[index] < a[index + 1]:
             return a[index]
         else:
             return a[index + 1]
@@ -103,7 +103,7 @@ def DAC_Min(a, index, l):
     # in the given array.
     min = DAC_Min(a, index + 1, l)
 
-    if (a[index] < min):
+    if a[index] < min:
         return a[index]
     else:
         return min
@@ -132,18 +132,18 @@ print("The maximum number in a given array is : ", max)
 
 # <div class="alert alert-danger">
 # <font color=black>
-# 
+#
 # - **Advantages** of Divide and Conquer Algorithm:
 #     - The difficult problem can be solved easily.
 #     - It divides the entire problem into subproblems thus it can be solved parallelly ensuring multiprocessing
 #     - Efficiently uses cache memory without occupying much space
 #     - Reduces time complexity of the problem
-# 
+#
 # - **Disadvantages** of Divide and Conquer Algorithm:
 #     - It involves recursion which is sometimes slow
 #     - Efficiency depends on the implementation of logic
 #     - It may crash the system if the recursion is performed rigorously
-# 
+#
 # </font>
 # </div>
 
@@ -152,14 +152,10 @@ print("The maximum number in a given array is : ", max)
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://www.geeksforgeeks.org/introduction-to-divide-and-conquer-algorithm-data-structure-and-algorithm-tutorials/
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

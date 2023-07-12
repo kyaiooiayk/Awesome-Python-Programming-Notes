@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Structural Design Patterns - Bridge Method
-# 
+#
 # </font>
 # </div>
 
@@ -20,7 +20,7 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - **Structural Design Patterns** are used to establish relation between software components in particular settings.
 #     - [ ] Adapter Method
 #     - [x] Bridge Method
@@ -29,7 +29,7 @@
 #     - [ ] Facade Method
 #     - [ ] Proxy Method
 #     - [ ] FlyWeight Method
-# 
+#
 # </font>
 # </div>
 
@@ -38,11 +38,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - **Lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.**
 # - Bridge patten helps untangle a complicated class hierarchy
 # - The problem here is that there are two unrelated, parallel abstractions. One is implementation specific and other is implementation independent.
-#     
+#
 # </font>
 # </div>
 
@@ -51,11 +51,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - The scenario involves implementation-independent circle abstraction and implementation-dependent circle abstraction.
 # - The second abstraction involves how to draw a circle, while the first one involves defining the properties of the circle and scaling it.
 # - The solution tries to separate the abstraction into two different class hierarchies.
-#     
+#
 # </font>
 # </div>
 
@@ -113,7 +113,7 @@ circle2.draw()
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-# 
+#
 # - **Advantages**:
 #     - You can create platform-independent classes and apps.
 #     - The client code works with high-level abstractions. It isn’t exposed to the platform details.
@@ -121,7 +121,7 @@ circle2.draw()
 #     - Single Responsibility Principle. You can focus on high-level logic in the abstraction and on platform details in the implementation.
 # - **Disadvantages**:
 #     - You might make the code more complicated by applying the pattern to a highly cohesive class.
-#     
+#
 # </font>
 # </div>
 
@@ -130,11 +130,11 @@ circle2.draw()
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - [Bridge method](https://www.geeksforgeeks.org/bridge-method-python-design-patterns/)
 # - [Bridge in Python](https://refactoring.guru/design-patterns/bridge)
 # - https://github.com/pyGuru123/Python-design-Patterns/tree/main/Structural%20Pattern
-#     
+#
 # </font>
 # </div>
 
@@ -144,12 +144,8 @@ circle2.draw()
 # In[1]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv -m')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv -m")
 
 
 # In[ ]:
-
-
-
-

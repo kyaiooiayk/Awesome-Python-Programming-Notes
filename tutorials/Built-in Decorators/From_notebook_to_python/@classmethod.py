@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** @classmethod
-# 
+#
 # </font>
 # </div>
 
@@ -20,11 +20,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - `@property` is the pythonic way to introduce attributes is to make them public, and not introduce getters and setters to retrieve or change them.
 # - `@classmethod` is used to add an additional constructor to the class.
 # - `@staticmethod` is used to attach functions to classes so people won't misuse them in wrong places.
-# 
+#
 # </font>
 # </div>
 
@@ -33,10 +33,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - `@classmethod` is bound to a class rather than an object.
-# - Class methods can be called with a class **or** with an object. 
-# 
+# - Class methods can be called with a class **or** with an object.
+#
 # </font>
 # </div>
 
@@ -70,6 +70,7 @@ class Person:
     """
     This will create the object by name and year
     """
+
     @classmethod
     def fromBirthYear(cls, name, year):
         print("class method is called")
@@ -85,7 +86,7 @@ class Person:
 # In[15]:
 
 
-person = Person('mayank', 21)
+person = Person("mayank", 21)
 person.display()
 
 
@@ -95,7 +96,7 @@ person.display()
 
 
 #
-person1 = Person.fromBirthYear('mayank', 2000)
+person1 = Person.fromBirthYear("mayank", 2000)
 person1.display()
 
 # The result is the same
@@ -107,7 +108,7 @@ person1.display()
 
 
 # called by the class
-person1 = Person('just something', 1000)
+person1 = Person("just something", 1000)
 person1.display()
 
 
@@ -115,7 +116,7 @@ person1.display()
 
 
 # called by the object
-person2 = person1.fromBirthYear('mayank', 2000)
+person2 = person1.fromBirthYear("mayank", 2000)
 person2.display()
 
 
@@ -124,14 +125,10 @@ person2.display()
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - https://www.geeksforgeeks.org/classmethod-in-python/
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

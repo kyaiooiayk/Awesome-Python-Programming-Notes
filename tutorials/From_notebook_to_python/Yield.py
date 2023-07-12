@@ -8,9 +8,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Yield
-# 
+#
 # </font>
 # </div>
 
@@ -18,11 +18,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - The `yield` keyword can turn any function into a generator object. 
+#
+# - The `yield` keyword can turn any function into a generator object.
 # - Yields work like a standard `return` keyword.
-# - When done so, the function instead of returning the output, it returns a generator that can be **iterated upon**. 
-# 
+# - When done so, the function instead of returning the output, it returns a generator that can be **iterated upon**.
+#
 # </font>
 # </div>
 
@@ -32,7 +32,7 @@
 
 
 def testgen_baseline(index):
-    weekdays = ['sun','mon','tue','wed','thu','fri','sat']
+    weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
     return weekdays[index]
 
 
@@ -59,9 +59,9 @@ print(day)
 
 
 def testgen_with_yield(index):
-    weekdays = ['sun','mon','tue','wed','thu','fri','sat']
+    weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
     yield weekdays[index]
-    yield weekdays[index+1]
+    yield weekdays[index + 1]
 
 
 # In[5]:
@@ -74,10 +74,10 @@ print(type(day))
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - You can then iterate through the generator to extract items. 
+#
+# - You can then iterate through the generator to extract items.
 # - Iterating is done using a `for loop` or simply using the `next()` function.
-# 
+#
 # </font>
 # </div>
 
@@ -105,13 +105,13 @@ for i in day:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - **How do we explain the error below?**
-# - Each time you iterate, Python runs the code **until** it encounters a yield statement inside the function. 
-# - Then, it sends the yielded value and pauses the function in that state without exiting. 
+# - Each time you iterate, Python runs the code **until** it encounters a yield statement inside the function.
+# - Then, it sends the yielded value and pauses the function in that state without exiting.
 # - When the function is invoked the next time, the **state** at which it was last paused is remembered and execution is continued from that point onwards. It means, any local variable you may have created inside the function before yield was called will be available the next time you invoke the function.
 # - This continues until the generator is exhausted.
-# 
+#
 # </font>
 # </div>
 
@@ -129,9 +129,9 @@ for i in day:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Since the yield enables the function to remember its 'state', this function can be used to generate values in a logic defined by you. So, it function becomes a **generator**. 
-# 
+#
+# - Since the yield enables the function to remember its 'state', this function can be used to generate values in a logic defined by you. So, it function becomes a **generator**.
+#
 # </font>
 # </div>
 
@@ -141,7 +141,7 @@ for i in day:
 def simple_generator():
     """
     We have defined a logic which goes like this:
-    
+
     call me once and I will return 1
     cam me twice and I will return 2
     call me three times and I will return 3
@@ -180,11 +180,11 @@ for i in generator_object:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# -  To overcome generator exhaustion, you can:    
+#
+# -  To overcome generator exhaustion, you can:
 #     - **Approach 1**: Iterate by calling the function that created the generator in the first place
 #     - **Approach 2** (best): Convert it to a class that implements a `__iter__()` method. This creates an iterator every time, so you don't have to worry about the generator getting exhausted.
-# 
+#
 # </font>
 # </div>
 
@@ -198,7 +198,7 @@ for i in generator_object:
     print(i)
 generator_object = simple_generator()
 for i in generator_object:
-    print(i)    
+    print(i)
 
 
 # **Approach No2**
@@ -208,9 +208,10 @@ for i in generator_object:
 
 class Iterable(object):
     """
-    Creates an iterator object every time, 
+    Creates an iterator object every time,
     so you don't have to keep recreating the generator.
     """
+
     def __iter__(self):
         x = 1
         yield x
@@ -231,23 +232,23 @@ iterable = Iterable()
 for i in iterable:  # iterator created here
     print(i)
 for i in iterable:  # iterator created here
-    print(i)    
+    print(i)
 
 
 # # Generator are memory efficient
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Let's we want to iterate through al  list. If you do so, the content of the list occupies tangible memory as soon as you materialise it (you run the code and everythign get sent into the RAM). The larger the list gets, it occupies more memory resource. Generators are memory efficient because the values are not materialized **until called**. 
-# 
+#
+# - Let's we want to iterate through al  list. If you do so, the content of the list occupies tangible memory as soon as you materialise it (you run the code and everythign get sent into the RAM). The larger the list gets, it occupies more memory resource. Generators are memory efficient because the values are not materialized **until called**.
+#
 # - But if there is a certain logic behind producing the items that you want, you **don't have** to store in a list. But rather, simply write a generator that will produce the items whenever you want them.
-# 
-# 
+#
+#
 # - Let's say, you want to iterate through squares of numbers from 1 to 10. There are two ways:
-#     - Create the list 
-#     - Create a generator 
-# 
+#     - Create the list
+#     - Create a generator
+#
 # </font>
 # </div>
 
@@ -257,6 +258,7 @@ for i in iterable:  # iterator created here
 
 
 import sys
+
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print("Size of a list", sys.getsizeof(my_list))
 for i in my_list:
@@ -269,11 +271,11 @@ for i in my_list:
 
 
 def squares(x=0):
-    
-    while x < 10:        
+    while x < 10:
         x = x + 1
-        yield x*x
+        yield x * x
         print("size of x", sys.getsizeof(x))
+
 
 for i in squares():
     print(i)
@@ -283,9 +285,9 @@ for i in squares():
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://codingcompiler.com/python-coding-interview-questions-answers/
 # - https://www.machinelearningplus.com/python/what-does-yield-keyword-do/
-# 
+#
 # </font>
 # </div>

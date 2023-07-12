@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Currying
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - In mathematics and computer science, currying is the technique of breaking down the evaluation of a function that takes multiple arguments into evaluating a sequence of single-argument functions. 
+#
+# - In mathematics and computer science, currying is the technique of breaking down the evaluation of a function that takes multiple arguments into evaluating a sequence of single-argument functions.
 # - Currying is also used in theoretical computer science, because it is often easier to transform multiple argument models into single argument models.
-# 
+#
 # </font>
 # </div>
 
@@ -32,7 +32,7 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - The composition of two functions is a chaining process in which the output of the inner function becomes the input of the outer function.
 # - We will use our compose function in the next example. Let's assume, we have a thermometer, which is not working accurately. The correct temperature can be calculated by applying the function readjust to the temperature values. Let us further assume that we have to convert our temperature values from Celsius to Fahrenheit. We can do this by applying compose to both functions:
 # - The composition of two functions **is generally not commutative**, i.e. `compose(celsius2fahrenheit, readjust)` is different from `compose(readjust, celsius2fahrenheit)`.
@@ -45,6 +45,7 @@
 def compose(g, f):
     def h(x):
         return g(f(x))
+
     return h
 
 
@@ -53,8 +54,12 @@ def compose(g, f):
 
 def celsius2fahrenheit(t):
     return 1.8 * t + 32
+
+
 def readjust(t):
     return 0.9 * t - 0.5
+
+
 convert = compose(readjust, celsius2fahrenheit)
 print(convert(10), celsius2fahrenheit(10))
 
@@ -76,6 +81,7 @@ print(convert2(10), celsius2fahrenheit(10))
 def compose(g, f):
     def h(*args, **kwargs):
         return g(f(*args, **kwargs))
+
     return h
 
 
@@ -84,6 +90,8 @@ def compose(g, f):
 
 def BMI(weight, height):
     return weight / height**2
+
+
 def evaluate_BMI(bmi):
     if bmi < 15:
         return "Very severely underweight"
@@ -101,6 +109,8 @@ def evaluate_BMI(bmi):
         return "Obese Class II (Severely obese)"
     else:
         return "Obese Class III (Very severely obese)"
+
+
 f = compose(evaluate_BMI, BMI)
 again = "y"
 while again == "y":
@@ -115,14 +125,10 @@ while again == "y":
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://python-course.eu/advanced-python/currying-in-python.php
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

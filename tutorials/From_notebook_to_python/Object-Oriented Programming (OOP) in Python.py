@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Object-Oriented Programming (OOP) in Python
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - The first programming language to use objects was Simula 67. As the name implies, **Simula 67** was introduced in the year 1967. 
+#
+# - The first programming language to use objects was Simula 67. As the name implies, **Simula 67** was introduced in the year 1967.
 # - A major breakthrough for object-oriented programming came with the programming language **Smalltalk** in the 1970s.
-# 
+#
 # </font>
 # </div>
 
@@ -32,12 +32,12 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - OOP stands for Object-oriented programming.
 # - It is a **programming paradigm** that provides means of structuring a program by bundling related data, properties and behaviors into individual objects.
 # - This is in constrast with another common programming paradigm: **procedural programming**. This structures a program like a recipe in that it provides a set of steps, in the form of functions and code blocks, that flow sequentially in order to complete a task.
 # - Object Oriented Programming (OOP) is a programming paradigm based on the concept of "objects" that can contain data and code. The data is often implemented as attributes. Functions implement the associated code for the data and are usually referred to in object oriented jargon as **methods**. In OOP, computer programs are designed by being made up of objects that interact with each other via the methods.
-#     
+#
 # </font>
 # </div>
 
@@ -48,12 +48,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - **Classes** are templates to create objects to avoid recreating them from scratch.
 # - Classes define objects in terms of attributes and behaviors.
 # - **Attributes** represents properties of an entity. It captures the current state of the entity.
 # - **Methods** represents the behavior of the entity.
-# 
+#
 # </font>
 # </div>
 
@@ -62,11 +62,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - OOPs has many technical aspects but from a way very high level, many of these aspects can be summarized by two generals goals in software engineering:
 #     - **Reusability**: concepts like inheritance and polymorphism improve code reusability and increase the efficiency and productivity of the programmer. They also simplify code maintenance.
 #     - **Nonredundancy**: avoiding double implementation effort and reducing debugging and testing
-# 
+#
 # </font>
 # </div>
 
@@ -75,15 +75,15 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - **Abstraction**: the use of attributes and methods allows building abstract, flexible models of objects, with a focus on what is relevant and neglecting what is not needed.
-# - **Modularity** implies the possibility of breaking code down into multiple modules which are then linked to form the complete codebase. 
+# - **Modularity** implies the possibility of breaking code down into multiple modules which are then linked to form the complete codebase.
 # - **Inheritance** refers to the concept that one class can inherit attributes and meth‐ ods from another class.
-# - **Aggregation** refers to the case in which an object is at least partly made up of multiple other objects that might exist independently.  
+# - **Aggregation** refers to the case in which an object is at least partly made up of multiple other objects that might exist independently.
 # - **Composition** is similar to aggregation, but here the single objects cannot exist independently of each other.
 # - **Polymorphism** can take on multiple forms. Of particular importance in a Python context is what is called duck typing. This refers to the fact that standard operations can be implemented on many different classes and their instances without knowing exactly what object one is dealing with.
 # - **Encapsulation** refers to the approach of making data within a class accessible only via public methods. This approach might avoid unintended effects by sim‐ ply working with and possibly changing attribute values.
-#     
+#
 # </font>
 # </div>
 
@@ -92,13 +92,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# 
+#
+#
 # - Encapsulation
 # - Data Abstraction
 # - Polymorphism
 # - Inheritance
-# 
+#
 # </font>
 # </div>
 
@@ -106,13 +106,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Data Abstraction, Data Encapsulation and Information Hiding are often confused while talking about OOP.
 # - However, there is a difference and here is the relationship: **abstraction = encapsulation + hiding**.
 # - Essentially abstraction is present, iff hiding and encapsulation is used.
-# - Encapsulation is seen as the bundling of data with the methods that operate on that data. Information hiding on the other hand is the principle that some internal information or data is "hidden", so that it can't be accidentally changed. Data encapsulation via methods doesn't necessarily mean that the data is hidden. You might be capable of accessing and seeing the data anyway, but using the methods is recommended. 
+# - Encapsulation is seen as the bundling of data with the methods that operate on that data. Information hiding on the other hand is the principle that some internal information or data is "hidden", so that it can't be accidentally changed. Data encapsulation via methods doesn't necessarily mean that the data is hidden. You might be capable of accessing and seeing the data anyway, but using the methods is recommended.
 # - Encapsulation is often accomplished by providing two kinds of methods for attributes: The methods for retrieving or accessing the values of attributes are called getter methods. Getter methods do not change the values of attributes, they just return the values. The methods used for changing the values of attributes are called setter methods. **Attention**: there is a more pythonic way to achieve the same with `@property`.
-# 
+#
 # </font>
 # </div>
 
@@ -190,7 +190,6 @@ class Robot:
         else:
             raise Exception("Please enter a name not a number! Robots are also human!")
 
-
     @name.deleter
     def name(self):
         print("deleter")
@@ -220,7 +219,7 @@ x.name
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - https://realpython.com/python3-object-oriented-programming/
 # - https://github.com/yhilpisch/py4fi2nd/blob/master/code/ch06/06_object_orientation.ipynb
 # - Hilpisch, Yves. Python for finance: mastering data-driven finance. O'Reilly Media, 2018.
@@ -228,7 +227,7 @@ x.name
 # - https://python-course.eu/oop/
 # - [Back to the Machine Learning fundamentals: How to write Pipeline for Model deployment (Part 2/3)](https://ivannardini.medium.com/back-to-the-machine-learning-fundamentals-how-to-write-code-for-model-deployment-part-2-3-9632d5a43f98)
 # - https://github.com/pyGuru123/Python-design-Patterns
-#     
+#
 # </font>
 # </div>
 
@@ -238,6 +237,5 @@ x.name
 # In[20]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
-
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** `with` statement
-# 
+#
 # </font>
 # </div>
 
@@ -20,11 +20,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - In Python, with statement is used in exception handling to make the code cleaner and much more readable.
-# - It simplifies the management of common resources like file streams. 
+# - It simplifies the management of common resources like file streams.
 # - The with statement is popularly used with file streams, as shown above and with Locks, sockets, subprocesses and telnets etc.
-#     
+#
 # </font>
 # </div>
 
@@ -33,9 +33,9 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
+#
 # - An exception during the file.write() call in the first implementation can prevent the file from closing properly which may introduce several bugs in the code, i.e. many changes in files do not go into effect until the file is properly closed.
-# 
+#
 # </font>
 # </div>
 
@@ -43,16 +43,16 @@
 
 
 # Without using with statement
-file = open('file_1.txt', 'w')
-file.write('hello world !')
+file = open("file_1.txt", "w")
+file.write("hello world !")
 file.close()
 
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
+#
 # - The second approach in the above example takes care of all the exceptions but the code seems to be too cluttered.
-#     
+#
 # </font>
 # </div>
 
@@ -60,20 +60,20 @@ file.close()
 
 
 # Without using with statement
-file = open('file_2.txt', 'w')
+file = open("file_2.txt", "w")
 try:
-    file.write('hello world')
+    file.write("hello world")
 finally:
     file.close()
 
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
+#
 # - Notice that unlike the first two implementations, there is no need to call `file.close()` when using with statement.
-# - Using the with statement makes the code compact and much more readable. 
-# - Thus, with statement helps avoiding bugs and leaks by ensuring that a resource is properly released when the code using the resource is completely executed. 
-# 
+# - Using the with statement makes the code compact and much more readable.
+# - Thus, with statement helps avoiding bugs and leaks by ensuring that a resource is properly released when the code using the resource is completely executed.
+#
 # </font>
 # </div>
 
@@ -81,8 +81,8 @@ finally:
 
 
 # Using with statement
-with open('file_3.txt', 'w') as file:
-    file.write('hello world !')
+with open("file_3.txt", "w") as file:
+    file.write("hello world !")
 
 
 # # How it works
@@ -90,9 +90,9 @@ with open('file_3.txt', 'w') as file:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - To use with statement in user defined objects you only need to add the dunder methods `__enter__()` and `__exit__()` in the object methods.
-# 
+#
 # </font>
 # </div>
 
@@ -104,7 +104,7 @@ class MessageWriter(object):
         self.file_name = file_name
 
     def __enter__(self):
-        self.file = open(self.file_name, 'w')
+        self.file = open(self.file_name, "w")
         return self.file
 
     def __exit__(self, *args):
@@ -115,16 +115,16 @@ class MessageWriter(object):
 
 
 # Using with statement with MessageWriter
-with MessageWriter('file_4.txt') as xfile:
-    xfile.write('hello world')
+with MessageWriter("file_4.txt") as xfile:
+    xfile.write("hello world")
 
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - A class based context manager as shown above is not the only way to support the with statement in user defined objects.
 # - The `contextlib` module provides a few more abstractions built upon the basic context manager interface.
-# 
+#
 # </font>
 # </div>
 
@@ -141,7 +141,7 @@ class MessageWriter(object):
     @contextmanager
     def open_file(self):
         try:
-            file = open(self.file_name, 'w')
+            file = open(self.file_name, "w")
             yield file
         finally:
             file.close()
@@ -151,9 +151,9 @@ class MessageWriter(object):
 
 
 # usage
-message_writer = MessageWriter('file_5.txt')
+message_writer = MessageWriter("file_5.txt")
 with message_writer.open_file() as my_file:
-    my_file.write('hello world')
+    my_file.write("hello world")
 
 
 # # Clean-up folder
@@ -162,11 +162,11 @@ with message_writer.open_file() as my_file:
 # In[8]:
 
 
-get_ipython().system('rm file_1.txt')
-get_ipython().system('rm file_2.txt')
-get_ipython().system('rm file_3.txt')
-get_ipython().system('rm file_4.txt')
-get_ipython().system('rm file_5.txt')
+get_ipython().system("rm file_1.txt")
+get_ipython().system("rm file_2.txt")
+get_ipython().system("rm file_3.txt")
+get_ipython().system("rm file_4.txt")
+get_ipython().system("rm file_5.txt")
 
 
 # # References
@@ -174,14 +174,10 @@ get_ipython().system('rm file_5.txt')
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [`with` statement in Python](https://www.geeksforgeeks.org/with-statement-in-python/)
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

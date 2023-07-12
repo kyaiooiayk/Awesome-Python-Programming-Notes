@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Conditional else and completion else
-#     
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - It is **either** the code under the `if` clause that is executed, **or** the code under the `else` block, but not both.  
-# - If the condition of the `if` clause evaluates to `True`, the `if`-block is exectured, and if it evaluated to `False`, it is the `else` block.  
-# 
+#
+# - It is **either** the code under the `if` clause that is executed, **or** the code under the `else` block, but not both.
+# - If the condition of the `if` clause evaluates to `True`, the `if`-block is exectured, and if it evaluated to `False`, it is the `else` block.
+#
 # </font>
 # </div>
 
@@ -31,22 +31,22 @@
 
 
 # conditional else
-a_list = [1,2]
+a_list = [1, 2]
 if a_list[0] == 1:
-    print('Hello, World!')
+    print("Hello, World!")
 else:
-    print('Bye, World!')
+    print("Bye, World!")
 
 
 # In[3]:
 
 
 # conditional else
-a_list = [1,2]
+a_list = [1, 2]
 if a_list[0] == 2:
-    print('Hello, World!')
+    print("Hello, World!")
 else:
-    print('Bye, World!')
+    print("Bye, World!")
 
 
 # # Completion else
@@ -54,11 +54,11 @@ else:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - **In contrast** to the **either...or*** situation that we know from the conditional `else`, the completion `else` is executed if a code block id finished.  
-# - In the code above, we can see that the code under the **`else`-clause is only executed if the `try-block` was executed without encountering an error, i.e., if the `try`-block is "complete".**  
+#
+# - **In contrast** to the **either...or*** situation that we know from the conditional `else`, the completion `else` is executed if a code block id finished.
+# - In the code above, we can see that the code under the **`else`-clause is only executed if the `try-block` was executed without encountering an error, i.e., if the `try`-block is "complete".**
 # - The same rule applies to the "completion" `else` in `while`- and `for`-loops, which you can confirm in the following samples below.
-#     
+#
 # </font>
 # </div>
 
@@ -67,25 +67,25 @@ else:
 # In[4]:
 
 
-a_list = [1,2]
+a_list = [1, 2]
 
 try:
-    print('first element:', a_list[0])
+    print("first element:", a_list[0])
 except IndexError:
-    print('raised IndexError')
+    print("raised IndexError")
 else:
-    print('no error in try-block')
+    print("no error in try-block")
 
 
 # In[5]:
 
 
 try:
-    print('third element:', a_list[2])
+    print("third element:", a_list[2])
 except IndexError:
-    print('raised IndexError')
+    print("raised IndexError")
 else:
-    print('no error in try-block')
+    print("no error in try-block")
 
 
 # ## `while-loop`
@@ -98,7 +98,7 @@ while i < 2:
     print(i)
     i += 1
 else:
-    print('in else')
+    print("in else")
 
 
 # In[7]:
@@ -110,7 +110,7 @@ while i < 2:
     i += 1
     break
 else:
-    print('completed while-loop')
+    print("completed while-loop")
 
 
 # ## `for-loop`
@@ -121,7 +121,7 @@ else:
 for i in range(2):
     print(i)
 else:
-    print('completed for-loop')
+    print("completed for-loop")
 
 
 # In[9]:
@@ -131,7 +131,7 @@ for i in range(2):
     print(i)
     break
 else:
-    print('completed for-loop')
+    print("completed for-loop")
 
 
 # # References
@@ -139,14 +139,10 @@ else:
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://nbviewer.org/github/rasbt/python_reference/blob/master/tutorials/not_so_obvious_python_stuff.ipynb?create=1
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

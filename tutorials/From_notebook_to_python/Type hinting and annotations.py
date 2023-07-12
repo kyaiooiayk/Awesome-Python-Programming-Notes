@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Function annotation
-# 
+#
 # </font>
 # </div>
 
@@ -20,7 +20,7 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Before we start keep in mind that:
 #     - **Static typed** — performs type checking at compile-time and requires datatype declarations.
 #     - **Dynamic typed** — performs type checking at runtime and does not require datatype declarations.
@@ -28,7 +28,7 @@
 # - They are generally used to attach metadata to functions describing their parameters and return values.
 # - The symbol `->` marks the return function annotation.
 # - The main way to add type hints is using annotations.
-#     
+#
 # </font>
 # </div>
 
@@ -37,11 +37,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - In Python, type hinting and annotations are similar concepts that are used to indicate the types of variables or the return types of functions. However, there is a **subtle difference** between the two.
 #     - **Type hinting** refers to the practice of indicating the type of a variable or the return type of a function using the `->` syntax
-#     - **Annotations**, on the other hand, refer to the use of the `:` symbol. 
-# 
+#     - **Annotations**, on the other hand, refer to the use of the `:` symbol.
+#
 # </font>
 # </div>
 
@@ -51,8 +51,8 @@
 # In[2]:
 
 
-def kinetic_energy(m: 'in KG', v: 'in M/S') -> 'Joules':
-    return 1/2*m*v**2
+def kinetic_energy(m: "in KG", v: "in M/S") -> "Joules":
+    return 1 / 2 * m * v**2
 
 
 # In[3]:
@@ -75,17 +75,16 @@ kinetic_energy.__annotations__
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Annotations are dictionaries, so you can do this 
-# 
+#
+# - Annotations are dictionaries, so you can do this
+#
 # </font>
 # </div>
 
 # In[3]:
 
 
-'{:,} {}'.format(kinetic_energy(12, 30),
-                 kinetic_energy.__annotations__['return'])
+"{:,} {}".format(kinetic_energy(12, 30), kinetic_energy.__annotations__["return"])
 
 
 # # Example #2
@@ -93,17 +92,20 @@ kinetic_energy.__annotations__
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - You can also have a python data structure rather than just a string:
-# 
+#
 # </font>
 # </div>
 
 # In[4]:
 
 
-rd = {'type': float, 'units': 'Joules',
-      'docstring': 'Given mass and velocity returns kinetic energy in Joules'}
+rd = {
+    "type": float,
+    "units": "Joules",
+    "docstring": "Given mass and velocity returns kinetic energy in Joules",
+}
 
 
 def f() -> rd:
@@ -113,19 +115,19 @@ def f() -> rd:
 # In[5]:
 
 
-f.__annotations__['return']['type']
+f.__annotations__["return"]["type"]
 
 
 # In[6]:
 
 
-f.__annotations__['return']['units']
+f.__annotations__["return"]["units"]
 
 
 # In[7]:
 
 
-f.__annotations__['return']['docstring']
+f.__annotations__["return"]["docstring"]
 
 
 # # Example #3
@@ -133,9 +135,9 @@ f.__annotations__['return']['docstring']
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - You can use function attributes to validate called values:
-# 
+#
 # </font>
 # </div>
 
@@ -146,17 +148,18 @@ def validate(func, locals):
     for var, test in func.__annotations__.items():
         value = locals[var]
         try:
-            pr = test.__name__+': '+test.__docstring__
+            pr = test.__name__ + ": " + test.__docstring__
         except AttributeError:
             pr = test.__name__
-        msg = '{}=={}; Test: {}'.format(var, value, pr)
+        msg = "{}=={}; Test: {}".format(var, value, pr)
         assert test(value), msg
 
 
 def between(lo, hi):
     def _between(x):
         return lo <= x <= hi
-    _between.__docstring__ = 'must be between {} and {}'.format(lo, hi)
+
+    _between.__docstring__ = "must be between {} and {}".format(lo, hi)
     return _between
 
 
@@ -168,13 +171,13 @@ def f(x: between(3, 10), y: lambda _y: isinstance(_y, int)):
 # In[2]:
 
 
-f(2,2)
+f(2, 2)
 
 
 # In[3]:
 
 
-f(3,2.1)
+f(3, 2.1)
 
 
 # # Example #4
@@ -184,6 +187,7 @@ f(3,2.1)
 
 
 import math
+
 
 def circumference(radius: float) -> float:
     return 2 * math.pi * radius
@@ -200,11 +204,11 @@ circumference.__annotations__
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Now, if we were to enter an incorrect arguments, what would happen?
 # - In reality, nothing of significance — remember, Python does not enforce our type annotations.
 # - Instead, they are used by third-party IDEs and linters. So, an erroneous annotation will be highlighted by our third-party tool — acting as an early warning system that our logic isn’t quite right.
-# 
+#
 # </font>
 # </div>
 
@@ -240,6 +244,8 @@ add("7", "4")
 
 
 from typing import Union
+
+
 def add(x: Union[int, float], y: Union[int, float]) -> Union[int, float]:
     return x + y
 
@@ -254,18 +260,18 @@ def add(x: int | float, y: int | float) -> int | float:
 
 # ## `Optional`
 
-# - When we define a function with optional parameters, we can specify this using the Optional type. 
+# - When we define a function with optional parameters, we can specify this using the Optional type.
 
 # # List vs. `list` in type hinting
 # <hr style = "border:2px solid black" ></hr>
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - In Python, List and list both refer to the built-in list class, but there is a difference in how they are used.
 # - `List` is used as a type hint to indicate that the function returns a list. Type hints were introduced in Python 3.5 and are used to indicate the type of a variable or the return type of a function. They are optional and do not affect the execution of the code. It is used to make the code more readable and also for the tools like IDEs, linters, type checkers etc to provide better suggestions, error messages etc.
 # - `list` is used as a return type of the function, it means that the function should return an object of the built-in list class.
-#     
+#
 # </font>
 # </div>
 
@@ -273,8 +279,12 @@ def add(x: int | float, y: int | float) -> int | float:
 
 
 from typing import List
+
+
 def a() -> List:
     return [1, 2, 3]
+
+
 a
 
 
@@ -283,6 +293,8 @@ a
 
 def a() -> list:
     return [1, 2, 3]
+
+
 a
 
 
@@ -291,14 +303,14 @@ a
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://stackoverflow.com/questions/14379753/what-does-mean-in-python-function-definitions
 # - https://www.python.org/dev/peps/pep-3107/
 # - https://realpython.com/lessons/annotations/
 # - https://towardsdatascience.com/type-annotations-in-python-d90990b172dc
 # - [Type hints cheatsheet 1](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
 # - [type hints cheatsheet 2](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
-#     
+#
 # </font>
 # </div>
 
@@ -308,12 +320,8 @@ a
 # In[2]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv -m')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv -m")
 
 
 # In[ ]:
-
-
-
-

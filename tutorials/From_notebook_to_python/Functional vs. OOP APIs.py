@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Functional vs. OOP APIs
-# 
+#
 # </font>
 # </div>
 
@@ -20,13 +20,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - One is not superior to the other when comparing functional to object-oriented programming in Python. 
+#
+# - One is not superior to the other when comparing functional to object-oriented programming in Python.
 # - This is because the two are not comparable since they are used for different purposes.
 # - They are not pitted against each other when discussing programming and are not the only approaches that could serve you.
 # - Your choice of a programming approach will depend on what you are trying to do within your application.
 # - **Python supports both.**
-#     
+#
 # </font>
 # </div>
 
@@ -35,30 +35,30 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - **Functional programming** is a technique that emphasizes the evaluation of functions. It gets its name from writing functions that provide the main source of logic in a program. The concept behind functional programming is for the functions to be stateless and rely only on the given inputs to produce an output. Functional programming is a paradigm that treats computation as the evaluation of mathematical functions and avoids changing states and mutable data. It is based on different concepts, including pure functions, recursion, high order functions, type systems, and referential transparency.
-# 
+#
 # - **OOP** is a paradigm based on the concept of objects which contain data structures in the fields known as attributes and codes in the form of procedures, also known as methods. The most popular object-oriented programming language is class-based, which means objects are presented as instances of classes. The main features of object-oriented programming are an abstraction, inheritance, polymorphism, and encapsulation.
-# 
+#
 # </font>
 # </div>
 
-# 
+#
 
 # # Functional vs. OOP
 # <hr style = "border:2px solid black" ></hr>
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - FP emphasizes the evaluation of functions, while OOP is based on the concept of objects.
 # - Secondly, FP follows the declarative model compared to the imperative programming model of OOP.
 # - FP uses immutable data, compared to OOP that uses mutable data.
 # - FP states that data and behavior are distinctively different and should be kept separate for clarity. In contrast, OOP says that bringing together data and behavior in a single location makes it easier to understand how a program works.
-# - FP is considered declarative programming because it is done with expressions rather than states. 
+# - FP is considered declarative programming because it is done with expressions rather than states.
 # - FP focuses on what we are doing, while the OOP focus on how we are doing it.
 # - FP provides high performance in the processing of large data for applications, the OOP cannot be used for big data processing.
-# 
+#
 # </font>
 # </div>
 
@@ -97,6 +97,7 @@ class LargestOddNumber:
                 largest_odd = num
         return largest_odd
 
+
 numbers = [2, 4, 6, 7, 9, 10, 13]
 solver = LargestOddNumber(numbers)
 
@@ -108,11 +109,11 @@ print(solver.find_largest_odd())
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Is this used anywhere? Yes, and the best example out there are: FastAPI and Pydantic. FastAPI is a lightweight API framework for Python, and Pydantic is a data validation and settings management library.
 # - **Pydantic** allows you to define data structures using Python classes, and then validate incoming data and access it via object attributes.
 # - **FastAPI** allows you to define your API routes as functions, wrapping each one with a decorator (which is a very FP-like concept) to encapsulate your logic.
-#     
+#
 # </font>
 # </div>
 
@@ -121,12 +122,12 @@ print(solver.find_largest_odd())
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - [Functional Vs. Object-Oriented Programming in Python](https://beapython.dev/2020/01/21/functional-vs-object-oriented-programming-in-python/)
 # - [Python: To OOP or to FP?](https://towardsdatascience.com/python-to-oop-or-to-fp-13ac79a43b16)
 # - [Compare Functional Programming, Imperative Programming and Object Oriented Programming](https://www.digitalocean.com/community/tutorials/functional-imperative-object-oriented-programming-comparison)
 # - [Functional vs. OO: The Debate that Imprecise Language Destroyed](https://chelseatroy.com/2021/02/22/functional-vs-oo-the-debate-that-imprecise-language-destroyed/)
-#     
+#
 # </font>
 # </div>
 
@@ -136,12 +137,8 @@ print(solver.find_largest_odd())
 # In[1]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")
 
 
 # In[ ]:
-
-
-
-

@@ -6,9 +6,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Sequence slicing
-# 
+#
 # </font>
 # </div>
 
@@ -18,7 +18,7 @@
 # In[1]:
 
 
-s = 'Slicing is easy!'
+s = "Slicing is easy!"
 
 
 # In[2]:
@@ -32,9 +32,9 @@ s
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - The default value of the step parameter is `Z`
-# 
+#
 # </font>
 # </div>
 
@@ -65,9 +65,9 @@ s[::2]
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - The syntax `[start:stop:step]` is just syntactic sugar for `slice(start, stop, step)`.
-# 
+#
 # </font>
 # </div>
 
@@ -106,7 +106,7 @@ s[1:15:2]
 
 
 # but we could also do this
-sl=slice(1,15,2)
+sl = slice(1, 15, 2)
 s[sl]
 
 
@@ -115,14 +115,10 @@ s[sl]
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://mathspp.com/blog/pydonts
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

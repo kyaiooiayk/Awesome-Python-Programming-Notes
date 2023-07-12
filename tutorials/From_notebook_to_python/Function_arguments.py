@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Function arguments and all the available options
-# 
+#
 # </font>
 # </div>
 
@@ -20,13 +20,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Default arguments shoudl follow non-default arguments.
 # - Keyword arguments should follow positional arguments.
 # - All the keyword arguments passed must match one of the argumetns accepted by the function and their order is not important.
 # - No argument should receive a value more than once.
 # - Default arguments are optional arguments.
-#     
+#
 # </font>
 # </div>
 
@@ -47,7 +47,7 @@
 
 
 def fun_1(x, y, z):
-    print(x+y+z)
+    print(x + y + z)
 
 
 fun_1(1, 2, 3)
@@ -65,7 +65,7 @@ fun_1(1, 2, 3)
 
 
 def fun_1(x, y, z=3):
-    print(x+y+z)
+    print(x + y + z)
 
 
 fun_1(1, 2, 3)
@@ -82,7 +82,7 @@ fun_1(1, 2)
 
 
 def fun_1(x, y, z=3):
-    print(x+y+z)
+    print(x + y + z)
 
 
 fun_1(1, y=2)
@@ -93,7 +93,7 @@ fun_1(1, y=2)
 # In[4]:
 
 
-(lambda *args: sum(args))(1,2,3)
+(lambda *args: sum(args))(1, 2, 3)
 
 
 # In[25]:
@@ -101,7 +101,7 @@ fun_1(1, y=2)
 
 def fun_1(*args):
     x, y, z = args
-    print(x+y+z)
+    print(x + y + z)
 
 
 fun_1(1, 2, 3)
@@ -120,14 +120,15 @@ fun_1(1, 2, 3)
 
 def fun_1(*kwarg):
     x, y, z = kwarg
-    print(x+y+z)
+    print(x + y + z)
 
 
 fun_1(1, 2, 3)
 
+
 def fun_1(*dummy):
     x, y, z = dummy
-    print(x+y+z)
+    print(x + y + z)
 
 
 fun_1(1, 2, 3)
@@ -138,14 +139,14 @@ fun_1(1, 2, 3)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - By default, arguments may be passed to a Python function either by position or explicitly by keyword. For **readability** and performance, it makes sense to restrict the way arguments can be passed so that a developer need only look at the function definition to determine if items are passed by position, by position or keyword, or by keyword.
-#     
-# - To do so python allows you to use `/` and `*` which are optional. If used, these symbols indicate the kind of parameter by how the arguments may be passed to the function: 
+#
+# - To do so python allows you to use `/` and `*` which are optional. If used, these symbols indicate the kind of parameter by how the arguments may be passed to the function:
 #     - positional-only
 #     - positional-or-keyword
 #     - keyword-only
-# 
+#
 # </font>
 # </div>
 
@@ -153,94 +154,94 @@ fun_1(1, 2, 3)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Positional-only parameters are placed before a `/` (forward-slash) in the function definition. 
-# - The `/` is used to logically separate the positional-only parameters from the rest of the parameters. 
+#
+# - Positional-only parameters are placed before a `/` (forward-slash) in the function definition.
+# - The `/` is used to logically separate the positional-only parameters from the rest of the parameters.
 # - Parameters following the `/` may be positional-or-keyword or keyword-only.
-# 
+#
 # </font>
 # </div>
 
 # In[3]:
 
 
-def add(a,b,/,c,d):
-    return a+b+c+d
+def add(a, b, /, c, d):
+    return a + b + c + d
 
 
 # In[4]:
 
 
-print (add(3,4,5,6))
+print(add(3, 4, 5, 6))
 
 
 # In[5]:
 
 
-print (add(3,4,c=1,d=2))
+print(add(3, 4, c=1, d=2))
 
 
 # In[6]:
 
 
 # This will throw you an eror!
-print (add(3,b=4,c=1,d=2))
+print(add(3, b=4, c=1, d=2))
 
 
 # ## Keyword only arguments
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - To mark parameters as keyword-only, place an `*` in the arguments list just before the first keyword-only parameter.
-# 
+#
 # </font>
 # </div>
 
 # In[7]:
 
 
-def add(a,b,*,c,d):
-    return a+b+c+d
+def add(a, b, *, c, d):
+    return a + b + c + d
 
 
 # In[8]:
 
 
-print (add(3,4,c=1,d=2))
+print(add(3, 4, c=1, d=2))
 
 
 # In[10]:
 
 
 # This will throw you an eror!
-print (add(3,4,1,d=2))
+print(add(3, 4, 1, d=2))
 
 
 # ## Mix
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - In the below-given example, the function add has all three arguments
 #     - `a,b` positional only arguments
 #     - `c` positional or keyword arguments
 #     - `d` keyword-only arguments
-# 
+#
 # </font>
 # </div>
 
 # In[11]:
 
 
-def add(a,b,/,c,*,d):
-    return a+b+c+d
+def add(a, b, /, c, *, d):
+    return a + b + c + d
 
 
 # In[12]:
 
 
-print (add(3,4,1,d=2))
+print(add(3, 4, 1, d=2))
 
 
 # # Conclusions
@@ -248,30 +249,26 @@ print (add(3,4,1,d=2))
 
 # <div class="alert alert-danger">
 # <font color=black>
-# 
+#
 # - Use **positional-only** if you want the name of the parameters to not be available to the user. This is useful when parameter names have no real meaning.
 # - Use **positional-only** if you want to enforce the order of the arguments when the function is called.
 # - Use **keyword-only** when names have meaning and the function definition is more understandable by being explicit with names.
 # - Use **keyword-only** when you want to prevent users from relying on the position of the argument being passed.
-# 
+#
 # </font>
-# </div>    
+# </div>
 
 # # References
 # <hr style = "border:2px solid black" ></hr>
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [*args and **kwargs in Python](https://www.geeksforgeeks.org/args-kwargs-python/)
 # - [`*` and `/` in between function arguments](https://levelup.gitconnected.com/5-types-of-arguments-in-python-function-definition-e0e2a2cafd29)
 # - [5 Types of Arguments in Python Function Definitions](https://levelup.gitconnected.com/5-types-of-arguments-in-python-function-definition-e0e2a2cafd29)
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-
