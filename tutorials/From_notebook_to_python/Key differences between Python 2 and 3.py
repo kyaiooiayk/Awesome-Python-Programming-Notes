@@ -294,7 +294,7 @@ print i, '-> i in global'
 # In[61]:
 
 
-get_ipython().run_cell_magic('python3', '', "from platform import python_version\nprint('This code cell was executed in Python', python_version())\n\ni = 1\nprint([i for i in range(5)])\nprint(i, '-> i in global')")
+get_ipython().run_cell_magic('python3', '', "from platform import python_version\nprint('This code cell was executed in Python', python_version())\n\ni = 1\nprint([i for i in range(5)])\nprint(i, '-> i in global')\n")
 
 
 # ### Python 3.x prevents us from comparing unorderable types

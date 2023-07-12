@@ -8,9 +8,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** How to show status bar
-# 
+#
 # </font>
 # </div>
 
@@ -29,7 +29,8 @@ from tqdm import tqdm
 
 a = []
 import numpy as np
-b = np.linspace(0,10,int(1.e2))
+
+b = np.linspace(0, 10, int(1.0e2))
 
 for dummy in b:
     a.append(dummy)
@@ -43,9 +44,10 @@ print(a)
 
 a = []
 import numpy as np
-b = np.linspace(0,10,int(1.e7))
 
-for dummy in tqdm(b, desc = "Reading and appending"):
+b = np.linspace(0, 10, int(1.0e7))
+
+for dummy in tqdm(b, desc="Reading and appending"):
     a.append(dummy)
 print(a[:10])
 
@@ -54,14 +56,10 @@ print(a[:10])
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - https://www.kdnuggets.com/2021/08/data-scientist-guide-efficient-coding-python.html
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

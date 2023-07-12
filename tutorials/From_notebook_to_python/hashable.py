@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Hashable
-# 
+#
 # </font>
 # </div>
 
@@ -20,13 +20,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - A hash function takes a group of characters (called a key) and maps it to a value of a certain length (called a hash value or hash). 
+#
+# - A hash function takes a group of characters (called a key) and maps it to a value of a certain length (called a hash value or hash).
 # - The hash value is representative of the original string of characters, but is normally smaller than the original.
 # - **Motivation?** Hashing is done for indexing and locating items in databases because it is easier to find the shorter hash value than the longer string.
 # - **Essentially**: Hashing is used with a database to enable items to be retrieved more quickly.
 # - Hash tables or hash maps in Python are implemented through the built-in dictionary data type.
-#     
+#
 # </font>
 # </div>
 
@@ -35,18 +35,18 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # -  Python also has several built-in compound types
-# 
-# 
+#
+#
 # | Type Name | Example                   |Description                            |
 # |-----------|---------------------------|---------------------------------------|
 # | ``list``  | ``[1, 2, 3]``             | Ordered collection                    |
 # | ``tuple`` | ``(1, 2, 3)``             | Immutable ordered collection          |
 # | ``dict``  | ``{'a':1, 'b':2, 'c':3}`` | Unordered (key,value) mapping         |
 # | ``set``   | ``{1, 2, 3}``             | Unordered collection of unique values |
-# 
-# 
+#
+#
 # </font>
 # </div>
 
@@ -55,17 +55,17 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Where does the confusion come from? In normal programming jargon, a hash map and a hash table are the same thing. However in Java's collection types hashmaps are synchronised so they can only be operated on by one task/function at a time while hashtables can be operated on by multiple threads at once.
-# 
+#
 # | Hash table | Hash map   |
 # |-----------|---------------------------|
 # | synchronised | non-synchronised |
 # | fast | slow |
 # |Allows one null key and more than one null values | Does not allows null keys or values |
-# 
+#
 # - Python's dict type is more analogous (if we really want to forcely them against Java collections) to HashMap (in that it doesn't inherently provide any synchronization guarantees). If you want synchronization, you need to handle it yourself (threading.Lock with a with statement makes this pretty easy).
-#     
+#
 # </font>
 # </div>
 
@@ -74,15 +74,15 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - An object that is hashable is an object for which a hash can be computed, hence, hash-able.
-# 
+#
 # - A hash is an integer that the built-in function hash computes to help with fast operations with dictionaries,
 # e.g. key lookups.
-# 
+#
 # - The built-in function knows how to work with some types of objects, and not with others. The built-in function
 # hash dictates what can and cannot be a dictionary key: if it is hashable, it can be a dictionary key; if it isn’t hashable, it cannot be a dictionary key.
-#     
+#
 # </font>
 # </div>
 
@@ -91,12 +91,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - `lists` are mutable and **unhashable**, and hence they cannot be dictionary keys. 
-# 
+#
+# - `lists` are mutable and **unhashable**, and hence they cannot be dictionary keys.
+#
 # - Attempting to use a list as a dictionary key raises an error.
-# 
-#     
+#
+#
 # </font>
 # </div>
 
@@ -112,11 +112,11 @@ d[[1, 2, 3]] = 73
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - `tuples` is immutable, and immutable objects can generally be made **hashable**. 
-# 
+#
+# - `tuples` is immutable, and immutable objects can generally be made **hashable**.
+#
 # - A tuple can be used as a dictionary key.
-#     
+#
 # </font>
 # </div>
 
@@ -133,10 +133,10 @@ d
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - `sets` are mutable so they are  **unhashable**. 
+#
+# - `sets` are mutable so they are  **unhashable**.
 # - A set cannot be a dictionary key.
-#     
+#
 # </font>
 # </div>
 
@@ -144,8 +144,8 @@ d
 
 
 d = {}
-groceries = {'cheese', 'milk', 'chocolate'}
-d[groceries] = 73       
+groceries = {"cheese", "milk", "chocolate"}
+d[groceries] = 73
 
 
 # # Frozensets
@@ -153,16 +153,16 @@ d[groceries] = 73
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - `frozensets` are not mutable so they are **hashable**.
-# 
+#
 # </font>
 # </div>
 
 # In[7]:
 
 
-groceries = {'cheese', 'milk', 'chocolate'}
+groceries = {"cheese", "milk", "chocolate"}
 d[frozenset(groceries)] = 73
 d
 
@@ -172,16 +172,12 @@ d
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - https://mathspp.com/blog/pydonts
-# - https://www.techopedia.com/definition/19744/hash-function 
+# - https://www.techopedia.com/definition/19744/hash-function
 # - https://stackoverflow.com/questions/63910315/whats-the-difference-between-a-hashmap-and-a-hashtable-in-python
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

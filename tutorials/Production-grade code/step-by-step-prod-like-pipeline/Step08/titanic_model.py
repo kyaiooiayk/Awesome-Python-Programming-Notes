@@ -79,7 +79,6 @@ class TitanicModelCreator:
         np.random.seed(42)
 
     def run(self):
-
         df = self.loader.get_passengers()
         targets = self.loader.get_targets()
 

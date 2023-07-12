@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Disassembling python bytecode
-# 
+#
 # </font>
 # </div>
 
@@ -20,11 +20,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
-# - In Python, the dis module allows disassembly of Python code into the individual instructions executed by the Python interpreter (usually cPython as this is the most popular implementation) for each line. 
-# 
+#
+# - In Python, the dis module allows disassembly of Python code into the individual instructions executed by the Python interpreter (usually cPython as this is the most popular implementation) for each line.
+#
 # - This is useful for analysing and fine-tuning your code.
-# 
+#
 # </font>
 # </div>
 
@@ -39,8 +39,8 @@ dir(dis)
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
-# - The main method will use is `dis.dis`. 
+#
+# - The main method will use is `dis.dis`.
 # - It takes either a function, method, class, module, code string, generator or byte sequence of raw bytecode and prints the disassembly of that code object to stdout.
 # - In the case of a class, it will disassemble each method (also static and class methods).
 # - For a module, it disassembles all functions in that module.
@@ -49,8 +49,8 @@ dir(dis)
 #     - The address of the bytecode instruction.
 #     - The name of the instruction.
 #     - The index of the argument in the code block’s name and constant table.
-#     - The human-friendly mapping from the argument index (4) to the actual value or name being referenced    
-# 
+#     - The human-friendly mapping from the argument index (4) to the actual value or name being referenced
+#
 # </font>
 # </div>
 
@@ -60,6 +60,7 @@ dir(dis)
 
 
 import dis, numpy
+
 dis.dis(numpy)
 
 
@@ -73,6 +74,7 @@ def bar():
     y = 7
     z = x + y
     return z
+
 
 dis.dis(bar)
 
@@ -89,6 +91,7 @@ class Foo(object):
     def foo(self, x):
         return x + 1
 
+
 dis.dis(Foo)
 
 
@@ -97,15 +100,11 @@ dis.dis(Foo)
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://nbviewer.org/github/rasbt/python_reference/blob/master/tutorials/not_so_obvious_python_stuff.ipynb?create=1
 # - http://www.goldsborough.me/python/low-level/2016/10/04/00-31-30-disassembling_python_bytecode/
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

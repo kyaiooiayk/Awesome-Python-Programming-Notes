@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?**  What does `__all__`: do?
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - In its simplest case, the `__init__.py` file is an empty file. However, it is also used to set up imports and this can be controlled by the variable `__all__`.
 # - Essentially `__all__` will the interpreter what to import when the wild card `import *` is used.
-# 
+#
 # </font>
 # </div>
 
@@ -56,7 +56,7 @@ from Foo_no_all import foo
 foo.a
 
 
-# # `__all__` in the `__init_all.py` 
+# # `__all__` in the `__init_all.py`
 # <hr style="border:2px solid black"> </hr>
 
 # In[7]:
@@ -88,15 +88,11 @@ foo2.a
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [What is __init__.py? : A guide](https://careerkarma.com/blog/what-is-init-py/)
 # - [Why can I import successfully without __init__.py?](https://stackoverflow.com/questions/37974843/why-can-i-import-successfully-without-init-py)
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

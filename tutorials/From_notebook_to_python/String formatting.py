@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** String formatting
-# 
+#
 # </font>
 # </div>
 
@@ -20,14 +20,14 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - This string formatting, borrowed from the similar C syntax.
-# 
+#
 # - The C-style formatting, which is the one that has been around the longer, is characterised by a series of percent signs ("%") that show up in the template strings. (By “template strings”, I mean the strings in which we want to fill in the gaps.)
-# 
+#
 # - These percent signs indicate the places where the bits of information should go, and the character that
 # comes next (above, we’ve seen "%s" and "%d") determine how the information being passed in is treated.
-# 
+#
 # </font>
 # </div>
 
@@ -35,9 +35,10 @@
 
 
 def language_info_cstyle(language, users_estimate):
-    return (
-        "%s rocks! Did you know that %s has around %d users?!" %
-        (language, language, users_estimate)
+    return "%s rocks! Did you know that %s has around %d users?!" % (
+        language,
+        language,
+        users_estimate,
     )
 
 
@@ -49,13 +50,13 @@ language_info_cstyle("Python", 10)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - This string formatting was introduced in PEP 3101.
-# 
+#
 # - The string method .format is, like the name suggests, a method of the string type. This means that you typically have a format string and, when you get access to the missing pieces of information, you just call the .format method on that string.
-# 
+#
 # - Strings that use the method .format for formatting are typically characterised by the occurrence of a series of curly braces "{}" within the string. It is also common to find that the method .format is called where/when the string literal is defined.
-# 
+#
 # </font>
 # </div>
 
@@ -63,7 +64,6 @@ language_info_cstyle("Python", 10)
 
 
 def language_info_format(language, users_estimate):
-
     return "{} rocks! Did you know that {} has around {} users?!".format(
         language, language, users_estimate
     )
@@ -77,14 +77,14 @@ language_info_format("Python", 10)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# 
+#
+#
 # - This string formatting which uses the new f-strings was introduced in PEP 498 for Python 3.6+.
-# 
-# - Literal string interpolation is the process through which you interpolate values into strings. 
-# 
+#
+# - Literal string interpolation is the process through which you interpolate values into strings.
+#
 # - Interpolate here means insert.
-#     
+#
 # </font>
 # </div>
 
@@ -93,8 +93,8 @@ language_info_format("Python", 10)
 
 def language_info_fstring(language, users_estimate):
     return (
-        f"{language} rocks! Did you know that {language}" +
-        f" has around {users_estimate} users?!"
+        f"{language} rocks! Did you know that {language}"
+        + f" has around {users_estimate} users?!"
     )
 
 
@@ -104,13 +104,13 @@ language_info_fstring("Python", 10)
 # # Conclusions
 # <hr style = "border:2px solid black" ></hr>
 
-# 
+#
 # <div class="alert alert-danger">
 # <font color=black>
-# 
+#
 # - Don’t use old-style string formatting: use `f-strings` whenever possible, and then `.format` in the
 # other occasions.
-# 
+#
 # </font>
 # </div>
 
@@ -119,14 +119,10 @@ language_info_fstring("Python", 10)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - https://mathspp.com/blog/pydonts
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

@@ -28,7 +28,6 @@ class Calculator:
 
 
 if __name__ == "__main__":
-
     import os
 
     if os.path.exists("./log.log"):

@@ -59,7 +59,6 @@ class TitanicModelCreator:
         np.random.seed(42)
 
     def run(self):
-
         loader = SqlLoader(connection_string="sqlite:///../data/titanic.db")
 
         df = loader.get_passengers()

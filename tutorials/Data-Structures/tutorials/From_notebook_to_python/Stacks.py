@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Data structure: stacks
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
 # - A data structure is not only used for organizing the data. It is also used for processing, retrieving, and storing data.
-# 
+#
 # </font>
 # </div>
 
@@ -34,12 +34,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - A stack is an array or list structure of function calls and parameters used in modern computer programming and CPU architecture.
 # - The stack is also known as "Last In First Out (LIFO)". The one at the bottom was the first one put down but when you are picking up plates from the stack it is the last one you get to.
-# - When a function is called, the address of the next instruction is pushed onto the stack. 
-# - When the function exits, the address is popped off the stack and execution continues at that address. 
-# 
+# - When a function is called, the address of the next instruction is pushed onto the stack.
+# - When the function exits, the address is popped off the stack and execution continues at that address.
+#
 # </font>
 # </div>
 
@@ -48,17 +48,17 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Stack is a data structure where the last element added is the first element retrieved -> **last-in, first-out**. 
+#
+# - Stack is a data structure where the last element added is the first element retrieved -> **last-in, first-out**.
 # - List can be very easily used as stacked.
-# 
+#
 # </font>
 # </div>
 
 # In[2]:
 
 
-stack = [1,2,3]
+stack = [1, 2, 3]
 stack.append(4)
 stack.append(5)
 stack
@@ -82,13 +82,13 @@ stack
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - A stack is an array or list structure of function calls and parameters used in modern computer programming and CPU architecture.
 # - The stack is also known as **"Last In First Out (LIFO)"**. The one at the bottom was the first one put down but when you are picking up plates from the stack it is the last one you get to.
-# - When a function is called, the address of the next instruction is pushed onto the stack. 
-# - When the function exits, the address is popped off the stack and execution continues at that address. 
-# - **What are they used for?** This concept is used for evaluating expressions and syntax parsing, scheduling algortihms/routines, etc. 
-#   
+# - When a function is called, the address of the next instruction is pushed onto the stack.
+# - When the function exits, the address is popped off the stack and execution continues at that address.
+# - **What are they used for?** This concept is used for evaluating expressions and syntax parsing, scheduling algortihms/routines, etc.
+#
 # </font>
 # </div>
 
@@ -99,9 +99,9 @@ class Stack:
     """
     Last In First Out (LIFO)
     creates a new stack that is empty,
-    assumes that the end of the list will hold 
+    assumes that the end of the list will hold
     the top element of the stack
-    
+
     References
     ----------
     https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks
@@ -112,7 +112,7 @@ class Stack:
 
     def is_empty(self):
         """
-        For sequences, (strings, lists, tuples), 
+        For sequences, (strings, lists, tuples),
         use the fact that empty sequences are false
         http://stackoverflow.com/questions/53513/best-way-to-check-if-a-list-is-empty
         """
@@ -121,7 +121,7 @@ class Stack:
     def push(self, item):
         """adds a new item to the top of the stack"""
         self.items.append(item)
-    
+
     def pop(self):
         """
         removes the top item from the stack,
@@ -151,10 +151,10 @@ print(s.peek())
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Stacks can be implemented using lists in Python. 
+#
+# - Stacks can be implemented using lists in Python.
 # - When you add elements to a stack, it is known as a push operation, whereas when you remove or delete an element it is called a pop operation
-# 
+#
 # </font>
 # </div
 
@@ -162,12 +162,12 @@ print(s.peek())
 
 
 # Bottom -> 1 -> 2 -> 3 -> 4 -> 5 (Top)
-stack = [1,2,3,4,5] 
-stack.append(6) # Bottom -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 (Top)
+stack = [1, 2, 3, 4, 5]
+stack.append(6)  # Bottom -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 (Top)
 print(stack)
 
-stack.pop() # Bottom -> 1 -> 2 -> 3 -> 4 -> 5 (Top)
-stack.pop() # Bottom -> 1 -> 2 -> 3 -> 4 (Top)
+stack.pop()  # Bottom -> 1 -> 2 -> 3 -> 4 -> 5 (Top)
+stack.pop()  # Bottom -> 1 -> 2 -> 3 -> 4 (Top)
 print(stack)
 
 
@@ -181,13 +181,14 @@ def rev_string(string):
     for char in string:
         s.push(char)
 
-    rev_str = ''
+    rev_str = ""
     while not s.is_empty():
         rev_str += s.pop()
 
     return rev_str
 
-test = 'apple'    
+
+test = "apple"
 rev_string(test)
 
 
@@ -197,24 +198,25 @@ rev_string(test)
 
 
 def match(top, char):
-    if top == '[' and char == ']':
+    if top == "[" and char == "]":
         return True
-    
-    if top == '{' and char == '}':
+
+    if top == "{" and char == "}":
         return True
-    
-    if top == '(' and char == ')':
+
+    if top == "(" and char == ")":
         return True
-    
+
     return False
+
 
 def check_paren(text):
     """confirm balance parenthesis in operations"""
     # define the set of opening
     # and closing brackets
-    opens = '([{'
-    close = ')]}'
-    
+    opens = "([{"
+    close = ")]}"
+
     s = Stack()
     balanced = True
     for char in text:
@@ -244,15 +246,15 @@ def check_paren(text):
 # In[6]:
 
 
-test1 = '{{([][])}()}'
+test1 = "{{([][])}()}"
 balanced = check_paren(test1)
 print(balanced)
 
-test2 = '{test}'
+test2 = "{test}"
 balanced = check_paren(test2)
 print(balanced)
 
-test3 = ']'
+test3 = "]"
 balanced = check_paren(test3)
 print(balanced)
 
@@ -270,10 +272,10 @@ def convert_binary(num):
         s.push(remainder)
         num = num // 2
 
-    binary_str = ''
+    binary_str = ""
     while not s.is_empty():
         binary_str += str(s.pop())
-        
+
     return binary_str
 
 
@@ -292,21 +294,22 @@ binary_str
 
 import string
 
+
 def infix_to_postfix(formula):
     """assume input formula is space-delimited"""
     s = Stack()
-    output = [] 
-    prec = {'*': 3, '/': 3, '+': 2, '-': 2, '(': 1}
+    output = []
+    prec = {"*": 3, "/": 3, "+": 2, "-": 2, "(": 1}
     operand = string.digits + string.ascii_uppercase
-    
+
     for token in formula.split():
         if token in operand:
             output.append(token)
-        elif token == '(':
+        elif token == "(":
             s.push(token)
-        elif token == ')':
+        elif token == ")":
             top = s.pop()
-            while top != '(':
+            while top != "(":
                 output.append(top)
                 top = s.pop()
         else:
@@ -318,15 +321,15 @@ def infix_to_postfix(formula):
     while not s.is_empty():
         top = s.pop()
         output.append(top)
-    
-    postfix = ' '.join(output)
+
+    postfix = " ".join(output)
     return postfix
 
 
 # In[10]:
 
 
-formula = 'A + B * C'
+formula = "A + B * C"
 output = infix_to_postfix(formula)
 output
 
@@ -334,7 +337,7 @@ output
 # In[11]:
 
 
-formula = '( A + B ) * C'
+formula = "( A + B ) * C"
 output = infix_to_postfix(formula)
 output
 
@@ -344,19 +347,15 @@ output
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
-# - https://www.thoughtco.com/definition-of-stack-in-programming-958162 
+#
+# - https://www.thoughtco.com/definition-of-stack-in-programming-958162
 # - https://runestone.academy/runestone/books/published/pythonds/BasicDS/WhatisaStack.html
 # - https://github.com/ethen8181/machine-learning/blob/master/python/algorithms/basic_data_structure.ipynb
 # - https://www.datacamp.com/community/tutorials/data-structures-python
 # - [Data Structures](https://www.geeksforgeeks.org/data-structures/?ref=shm)
-# - https://www.thoughtco.com/definition-of-stack-in-programming-958162 
-# 
+# - https://www.thoughtco.com/definition-of-stack-in-programming-958162
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

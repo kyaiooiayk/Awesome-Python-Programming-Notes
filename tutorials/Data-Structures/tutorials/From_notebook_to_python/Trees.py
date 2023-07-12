@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Data structure: trees
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
 # - A data structure is not only used for organizing the data. It is also used for processing, retrieving, and storing data.
-# 
+#
 # </font>
 # </div>
 
@@ -34,12 +34,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - A tree is a popular data structure that is non-linear in nature. 
+#
+# - A tree is a popular data structure that is non-linear in nature.
 # - Unlike other data structures like an array, stack, queue, and linked list which are linear in nature, a tree represents a hierarchical structure.
 # - The ordering information of a tree is not important.
 # - A tree contains nodes and 2 pointers: these two pointers are the left child and the right child of the parent node.
-# 
+#
 # </font>
 # </div>
 
@@ -72,7 +72,7 @@ root.val
 root.left = Node(2)
 root.right = Node(3)
 print("left", root.left.val)
-print("right",root.right.val)
+print("right", root.right.val)
 
 
 # In[13]:
@@ -89,20 +89,20 @@ root.left.left.val
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Binary Search Tree is a node-based binary tree data structure which has the following properties:
 #     - The left subtree of a node contains only nodes with keys lesser than the node’s key.
 #     - The right subtree of a node contains only nodes with keys greater than the node’s key.
 #     - The left and right subtree each must also be a binary search tree.
-# 
+#
 # - This means that:
 #     - Everything to the left of the root is less than the value of the root
-#     - Everything to the right of the root is greater than the value of the root. 
-# 
-# - In practice: 
+#     - Everything to the right of the root is greater than the value of the root.
+#
+# - In practice:
 #     - Due to this performing, a binary search is very easy.
 #     - There must be no duplicate nodes.
-# 
+#
 # </font>
 # </div>
 
@@ -113,12 +113,12 @@ root.left.left.val
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - In a trie, each alphabet of all the strings in the prescribed string is parsed one by one and represented by a single node. 
+#
+# - In a trie, each alphabet of all the strings in the prescribed string is parsed one by one and represented by a single node.
 # - If two or more words start with the same sub-string, the identical sub-string is represented by the same chain of nodes. The chain breaks where the sub-string ends and the unique suffix begins.
 # - Subsequently, each alphabet of the remaining suffix is represented by a separate node.
 # - A simple illustration of the trie for this list `MACAW PANDA LEAOPARD RAT RHINO PARROT MACKERAL` of animal names would look like this:
-# 
+#
 # </font>
 # </div>
 
@@ -129,15 +129,15 @@ root.left.left.val
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
+#
 # - Suffix tree is a tree data structure typically used to store a list of strings. It is also referred to as the compressed version of a trie, as, unlike a trie, each unique suffix in the list is compressed together and represented by a single node or branch in a suffix tree.
 # - There are many ways to construct a suffix tree, but the semantics that is shared by most if not all types of suffix trees are as follows:
 #     - A special character is appended to each sub-string.
 #     - Each leaf node contains the starting position or index of the suffix it represents.
 #     - The alphabets of any suffix are compressed and represented by a single node.
-# - **How is this used?** Suppose we have preprocessed the text (building suffix tree of text), we can search any pattern in `O(m)` time where `m` is length of the pattern. 
+# - **How is this used?** Suppose we have preprocessed the text (building suffix tree of text), we can search any pattern in `O(m)` time where `m` is length of the pattern.
 # - A simple illustration of the suffix tree for this list `MACAW PANDA LEAOPARD RAT RHINO PARROT MACKERAL` of animal names would look like this:
-#     
+#
 # </font>
 # </div>
 
@@ -148,17 +148,13 @@ root.left.left.val
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [Data Structures](https://www.geeksforgeeks.org/data-structures/?ref=shm)
 # - [Introduction to Binary Tree – Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/introduction-to-binary-tree-data-structure-and-algorithm-tutorials/)
 # - [Introduction to Binary Search Tree](https://www.geeksforgeeks.org/introduction-to-binary-search-tree-data-structure-and-algorithm-tutorials/)
 # - https://www.educative.io/answers/what-is-a-suffix-tree
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Modules
-# 
+#
 # </font>
 # </div>
 
@@ -20,12 +20,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Every file, which has the file extension .py and consists of proper Python code, can be seen or is a module! 
-# - There is no special syntax required to make such a file a module. 
-# - A module can contain arbitrary objects, for example files, classes or attributes. 
+#
+# - Every file, which has the file extension .py and consists of proper Python code, can be seen or is a module!
+# - There is no special syntax required to make such a file a module.
+# - A module can contain arbitrary objects, for example files, classes or attributes.
 # - All those objects can be accessed after an import. There are different ways to import a modules.
-# 
+#
 # </font>
 # </div>
 
@@ -34,10 +34,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - A module in Python is just a file containing Python definitions and statements. The module name is moulded out of the file name by removing the suffix `.py`. 
+#
+# - A module in Python is just a file containing Python definitions and statements. The module name is moulded out of the file name by removing the suffix `.py`.
 # - For example, if the file name is `fibonacci.py`, the module name is `fibonacci`.
-# 
+#
 # </font>
 # </div>
 
@@ -45,6 +45,7 @@
 
 
 import fibonacci
+
 fibonacci.fib(7)
 
 
@@ -53,13 +54,13 @@ fibonacci.fib(7)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - `__name__` is a variable defined for each script that defines whether the script is being run as the main module or it is being run as an imported module.
-# 
+#
 # - So it's possible to program different behaviour into a module for the two cases:
 #     - As a module or
 #     - As a script.
-#  
+#
 # </font>
 # </div>
 
@@ -74,7 +75,7 @@ from fibonacci import fib
 
 
 # If it is run as a script, we get the following output:
-get_ipython().system('python fibonacci.py 3')
+get_ipython().system("python fibonacci.py 3")
 
 
 # # Kinds of Modules
@@ -82,7 +83,7 @@ get_ipython().system('python fibonacci.py 3')
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - There are different kind of modules:
 #     - Those written in Python
 #     - They have the suffix: .py
@@ -90,8 +91,8 @@ get_ipython().system('python fibonacci.py 3')
 #     - Suffixes are: .dll, .pyd, .so, .sl, ...
 #     - C-Modules linked with the Interpreter
 # - It's possible to get a complete list of these modules with `sys.builtin_module_names`
-# 
-# 
+#
+#
 # </font>
 # </div>
 
@@ -99,6 +100,7 @@ get_ipython().system('python fibonacci.py 3')
 
 
 import sys
+
 sys.builtin_module_names
 
 
@@ -107,17 +109,17 @@ sys.builtin_module_names
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - If you import a module, let's say "import xyz", the interpreter searches for this module in the following locations and in the order given:
-# 
+#
 #     - The directory of the top-level file, i.e. the file being executed.
 #     - The directories of PYTHONPATH, if this global environment variable of your operating system is set.
-#     - standard installation path Linux/Unix e.g. in /usr/lib/python3.5. 
-# 
+#     - standard installation path Linux/Unix e.g. in /usr/lib/python3.5.
+#
 # - It's possible to find out where a module is located after it has been imported append `.file` or using dunder method `__file__`.
 # - The `file` attribute doesn't always exist. This is the case with modules which are statically linked C libraries.
-#     
-#     
+#
+#
 # </font>
 # </div>
 
@@ -125,6 +127,7 @@ sys.builtin_module_names
 
 
 import fibonacci
+
 fibonacci.__file__
 
 
@@ -132,6 +135,7 @@ fibonacci.__file__
 
 
 import numpy
+
 numpy.__file__
 
 
@@ -139,6 +143,7 @@ numpy.__file__
 
 
 import math
+
 math.__file__
 
 
@@ -147,11 +152,11 @@ math.__file__
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - With the built-in function `dir()` and the name of the module as an argument, you can list all valid attributes and methods for that module.
 # - Calling `dir()` without an argument, a list with the names in the current **local scope** is returned.
 # - It's possible to get a list of the Built-in functions, exceptions, and other objects by importing the `builtins` module.
-# 
+#
 # </font>
 # </div>
 
@@ -159,6 +164,7 @@ math.__file__
 
 
 import math
+
 dir(math)
 
 
@@ -166,6 +172,7 @@ dir(math)
 
 
 import math
+
 cities = ["New York", "Toronto", "Berlin", "Washington", "Amsterdam", "Hamburg"]
 dir()
 
@@ -174,6 +181,7 @@ dir()
 
 
 import builtins
+
 dir(builtins)
 
 
@@ -182,9 +190,9 @@ dir(builtins)
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://python-course.eu/python-tutorial/modules-and-modular-programming.php
-# 
+#
 # </font>
 # </div>
 
@@ -194,12 +202,8 @@ dir(builtins)
 # In[22]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")
 
 
 # In[ ]:
-
-
-
-

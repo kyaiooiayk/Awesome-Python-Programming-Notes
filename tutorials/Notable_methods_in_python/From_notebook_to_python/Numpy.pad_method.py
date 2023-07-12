@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** `numpy.pad()` method
-# 
+#
 # </font>
 # </div>
 
@@ -20,12 +20,12 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - `np.pad` is used to artificially change the shappe of a matrix.
 # - An image can be represented via matrix or a tensor more precisely.
 # - Padding describes the addition of zeros to the *border of matrix*.
 # - Say you have an image of dimension `(28,28,1)` and you'd like to turn it into a `(32,32,1)`, you can do it by adding zeros all around it.
-# 
+#
 # </font>
 # </div>
 
@@ -42,24 +42,24 @@ import numpy as np
 
 
 # Create a tensor
-z = np.arange(12).reshape(3,2,2)
+z = np.arange(12).reshape(3, 2, 2)
 print(z.shape)
 print(z)
 
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - The pad_width argument to np.pad works like this: ((axis 1 pad before, axis 1 pad after), ...)
-# - So if you want to pad 1 pixel on each side you should do ((0,0), (1,1), (1,1)). 
-# 
+# - So if you want to pad 1 pixel on each side you should do ((0,0), (1,1), (1,1)).
+#
 # </font>
 # </div>
 
 # In[3]:
 
 
-z = np.pad(z, ((0,0),(1,1),(1,1)), 'constant')
+z = np.pad(z, ((0, 0), (1, 1), (1, 1)), "constant")
 print(z.shape)
 # (3, 4, 4)
 print(z)
@@ -77,14 +77,10 @@ print(z[1])
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - https://stackoverflow.com/questions/61309432/padding-mnist-images-from-28-28-1-to-32-32-1
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** From O(1) to O(n!) time complexity
-# 
+#
 # </font>
 # </div>
 
@@ -25,10 +25,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - The time complexity of a function (or set of statements) is considered as `O(1)` if it doesn’t contain a loop, recursion, and call to any other non-constant time function. 
-# - An algorithm is said to have a constant time when it is not dependent on the input data `n`. No matter the size of the input data, the running time will always be the same. 
-#     
+#
+# - The time complexity of a function (or set of statements) is considered as `O(1)` if it doesn’t contain a loop, recursion, and call to any other non-constant time function.
+# - An algorithm is said to have a constant time when it is not dependent on the input data `n`. No matter the size of the input data, the running time will always be the same.
+#
 # </font>
 # </div>
 
@@ -37,12 +37,13 @@
 
 def get_first(data):
     """
-    Independently of the input data size, it will 
-    always have the same running time since it only gets 
+    Independently of the input data size, it will
+    always have the same running time since it only gets
     the first value from the list.
     """
     return data[0]
-    
+
+
 data = [1, 2, 9, 8, 3, 4, 7, 6, 5]
 print(get_first(data))
 
@@ -52,10 +53,10 @@ print(get_first(data))
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - An algorithm is said to have a linear time complexity when the running time increases at most linearly with the size of the input data. 
+#
+# - An algorithm is said to have a linear time complexity when the running time increases at most linearly with the size of the input data.
 # - This is the best possible time complexity when the algorithm must examine all values in the input data.
-# 
+#
 # </font>
 # </div>
 
@@ -79,7 +80,7 @@ def linear_search(data, value):
     for index in range(len(data)):
         if value == data[index]:
             return index
-    raise ValueError('Value not found in the list')
+    raise ValueError("Value not found in the list")
 
 
 data = [1, 2, 9, 8, 3, 4, 7, 6, 5]
@@ -91,9 +92,9 @@ print(linear_search(data, 7))
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - An algorithm is said to have a quadratic time complexity when it needs to perform a linear time operation for each value in the input data.
-# 
+#
 # </font>
 # </div>
 
@@ -111,10 +112,10 @@ for x in data:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Keep in mind that: `O(log n) * O(n) = O(n log n)`
 # - An algorithm is said to have a quasilinear time complexity when each operation in the input data have a logarithm time complexity. It is commonly seen in sorting algorithms (e.g. mergesort, timsort, heapsort).
-# 
+#
 # </font>
 # </div>
 
@@ -124,9 +125,9 @@ for x in data:
 for value in data1:
     """
     Suppose we have an algorithm called binary search
-    For example: for each value in the data1 (O(n)) use the binary search (O(log n)) 
+    For example: for each value in the data1 (O(n)) use the binary search (O(log n))
     to search the same value in data2.
-    
+
     """
     result.append(binary_search(data2, value))
 
@@ -145,7 +146,8 @@ def foo(x):
     if n <= 1:
         print("return")
         return 17
-    return foo(x[:n//2]) + foo(x[n//2:])
+    return foo(x[: n // 2]) + foo(x[n // 2 :])
+
 
 foo([1, 2, 3, 4, 5, 6, 7, 8])
 
@@ -155,10 +157,10 @@ foo([1, 2, 3, 4, 5, 6, 7, 8])
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - An algorithm is said to have an exponential time complexity when the growth doubles with each addition to the input data set. 
+#
+# - An algorithm is said to have an exponential time complexity when the growth doubles with each addition to the input data set.
 # - This kind of time complexity is usually seen in brute-force algorithms.
-# 
+#
 # </font>
 # </div>
 
@@ -168,7 +170,9 @@ foo([1, 2, 3, 4, 5, 6, 7, 8])
 def fibonacci(n):
     if n <= 1:
         return n
-    return fibonacci(n-1) + fibonacci(n-2)
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
 fibonacci(4)
 
 
@@ -177,7 +181,7 @@ fibonacci(4)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - An algorithm is said to have a factorial time complexity when it grows in a factorial way based on the size of the input data.
 # ```
 # 2! = 2 x 1 = 2
@@ -188,7 +192,7 @@ fibonacci(4)
 # 7! = 7 x 6 x 5 x 4 x 3 x 2 x 1 = 5.040
 # 8! = 8 x 7 x 6 x 5 x 4 x 3 x 2 x 1 = 40.320
 # ```
-# 
+#
 # </font>
 # </div>
 
@@ -197,8 +201,8 @@ fibonacci(4)
 
 def heap_permutation(data, n):
     """
-    A great example of an algorithm which has a factorial 
-    time complexity is the Heap’s algorithm, which is used 
+    A great example of an algorithm which has a factorial
+    time complexity is the Heap’s algorithm, which is used
     for generating all possible permutations of n objects.
     """
     if n == 1:
@@ -208,9 +212,9 @@ def heap_permutation(data, n):
     for i in range(n):
         heap_permutation(data, n - 1)
         if n % 2 == 0:
-            data[i], data[n-1] = data[n-1], data[i]
+            data[i], data[n - 1] = data[n - 1], data[i]
         else:
-            data[0], data[n-1] = data[n-1], data[0]
+            data[0], data[n - 1] = data[n - 1], data[0]
 
 
 data = [1, 2, 3]
@@ -222,14 +226,10 @@ heap_permutation(data, len(data))
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [Understanding time complexity with Python examples](https://towardsdatascience.com/understanding-time-complexity-with-python-examples-2bda6e8158a7)
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

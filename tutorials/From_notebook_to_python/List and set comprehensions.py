@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** List and set comprehensions
-# 
+#
 # </font>
 # </div>
 
@@ -20,15 +20,15 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - A list comprehension is a Python expression that returns a list.
-# 
+#
 # - List comprehensions are great because they provide a very convenient syntax to generate simple lists. This often is a good alternative to using a full for loop with a series of calls to the .append method of the list you want to build.
-# 
+#
 # - However, list comprehensions have a structure that is very similar to the equivalent for loops, so list com- prehensions should be easy to use if you understand the relationship between a list comprehension and the corresponding loop.
-# 
+#
 # - Below is an example of usage: the result of this is a list of numbers which excludes multiples of 3.
-# 
+#
 # </font>
 # </div>
 
@@ -51,7 +51,7 @@
 
 L = []
 for n in range(12):
-    L.append(n ** 2)
+    L.append(n**2)
 L
 
 
@@ -60,11 +60,11 @@ L
 # In[3]:
 
 
-[n ** 2 for n in range(12)]
+[n**2 for n in range(12)]
 
 
 # As with many Python statements, you can almost read-off the meaning of this statement in plain English: "construct a list consisting of the square of ``n`` for each ``n`` up to 12".
-# 
+#
 # This basic syntax, then, is ``[``*``expr``* ``for`` *``var``* ``in`` *``iterable``*``]``, where *``expr``* is any valid expression, *``var``* is a variable name, and *``iterable``* is any iterable Python object.
 
 # ## Multiple Iteration
@@ -124,8 +124,7 @@ val if val >= 0 else -val
 # In[8]:
 
 
-[val if val % 2 else -val
- for val in range(20) if val % 3]
+[val if val % 2 else -val for val in range(20) if val % 3]
 
 
 # Note the line break within the list comprehension before the ``for`` expression: this is valid in Python, and is often a nice way to break-up long list comprehensions for greater readibility.
@@ -135,7 +134,7 @@ val if val >= 0 else -val
 # <hr style = "border:2px solid black" ></hr>
 
 # - It's straightforward to move on to other types of comprehensions. The syntax is largely the same; the only difference is the type of bracket you use.
-# 
+#
 # - For example, with curly braces you can create a ``set`` with a *set comprehension*:
 
 # In[11]:
@@ -158,7 +157,7 @@ val if val >= 0 else -val
 # In[13]:
 
 
-{n:n**2 for n in range(6)}
+{n: n**2 for n in range(6)}
 
 
 # Finally, if you use parentheses rather than square brackets, you get what's called a *generator expression*:
@@ -176,16 +175,12 @@ val if val >= 0 else -val
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - [Whirlwind Tour of Python](http://www.oreilly.com/programming/free/a-whirlwind-tour-of-python.csp)
 # - https://mathspp.com/blog/pydonts
 # - [Comparing List Comprehensions vs. Built-In Functions in Python: Which Is Better?](https://towardsdatascience.com/comparing-list-comprehensions-vs-built-in-functions-in-python-which-is-better-1e2c9646fafe)
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

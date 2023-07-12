@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Recursion
-# 
+#
 # </font>
 # </div>
 
@@ -20,16 +20,16 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Recursion is the process of defining something in terms of itself.
 # - Being more specific, recursion must have three elements:
 #     - It must have a **base case** which is the condition to stop the recursion.
 #     - It must have a **recursive case** which is the part where the function call itself recursively.
 #     - It must change it's state and move towards the base case
-#     
+#
 # </font>
 # </div>
-# 
+#
 
 # ![image.png](attachment:image.png)
 
@@ -41,7 +41,7 @@ def factorial(x):
         return 1
 
     else:  # This is the recursive case
-        return(x * factorial(x-1))
+        return x * factorial(x - 1)
 
 
 print(factorial(4))
@@ -52,11 +52,11 @@ print(factorial(4))
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Keep in mind that recursive solutions are **inherently depth-first** in nature, whereas your problem might warrant a breadth-first solution.
 # - Depth-First Search (DFS) means that when you are traversing some structure, you prioritise exploring in depth, and only then you look around, whereas in Breadth-First Search (BFS) you first explore the level you are at, and only then go a level deeper.
 # - [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
-# 
+#
 # </font>
 # </div>
 
@@ -65,15 +65,15 @@ print(factorial(4))
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - The recursion depth limit is something that makes your code raise a RecursionError if you make too many
-# recursive calls. 
+# recursive calls.
 # - In many cases, this limit helps, because it helps you find recursive functions for which you did not define the base case properly.
 # There are, however, cases in which the default recursive calls isn’t enough to finish your computations. A
-# - By default Python does not allow us to make sufficient recursive calls. 
+# - By default Python does not allow us to make sufficient recursive calls.
 # - You can always set your own recursion depth with `sys.setrecursionlimit()`.
 # - **Careful!** You are likely not to be interested in having Python run out of memory because you set a very large amount of recursive calls.
-# 
+#
 # </font>
 # </div>
 
@@ -81,7 +81,7 @@ print(factorial(4))
 
 
 def f(i):
-    i+=1
+    i += 1
     print(i)
     return f(i)
 
@@ -96,6 +96,7 @@ f(0)
 
 
 import sys
+
 sys.setrecursionlimit(4000)
 f(0)
 
@@ -105,9 +106,9 @@ f(0)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - First problem: convert an integer to a string in any Base. 
-# 
+#
+# - First problem: convert an integer to a string in any Base.
+#
 # </font>
 # </div>
 
@@ -115,10 +116,10 @@ f(0)
 
 
 def to_str(n, base):
-    convert_str = '0123456789ABCDEF'
+    convert_str = "0123456789ABCDEF"
     if n < base:
         """
-        look up the string representation if it's smaller 
+        look up the string representation if it's smaller
         than the base
         """
         return convert_str[n]
@@ -153,13 +154,13 @@ print(to_str(2, 2))
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - **Fibonacci sequence**.
 # - A Fibonacci sequence is the integer sequence of `0, 1, 1, 2, 3, 5, 8...`
-# - The first two terms are `0` and `1`. 
+# - The first two terms are `0` and `1`.
 # - All other terms are obtained by adding the preceding two terms.
 # - This means to say the nth term is the sum of `(n-1)th` and `(n-2)th` terms.
-# 
+#
 # </font>
 # </div>
 
@@ -174,8 +175,8 @@ def rec_fib(num):
         """
         3 = 2+1
         """
-        print(num-1, num-2)
-        return (rec_fib(num-1)+rec_fib(num-2))
+        print(num - 1, num - 2)
+        return rec_fib(num - 1) + rec_fib(num - 2)
 
 
 for i in range(5):
@@ -198,7 +199,7 @@ def factorial(x):
     if x == 1:
         return 1
     else:
-        return (x * factorial(x-1))
+        return x * factorial(x - 1)
 
 
 # In[2]:
@@ -213,17 +214,17 @@ print("The factorial of", num, "is", factorial(num))
 
 # <div class="alert alert-danger">
 # <font color=black>
-# 
+#
 # - **Advantages of Recursion**
 #     - Recursive functions make the code look clean and elegant.
 #     - A complex task can be broken down into simpler sub-problems using recursion.
 #     - Sequence generation is easier with recursion than using some nested iteration.
-# 
+#
 # - **Disadvantages of Recursion**
 #     - Sometimes the logic behind recursion is hard to follow through.
 #     - Recursive calls are expensive (inefficient) as they take up a lot of memory and time.
 #     - Recursive functions are hard to debug.
-# 
+#
 # </font>
 # </div>
 
@@ -232,12 +233,12 @@ print("The factorial of", num, "is", factorial(num))
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://github.com/ethen8181/machine-learning/blob/master/python/algorithms/recursion.ipynb
 # - http://interactivepython.org/runestone/static/pythonds/Recursion/toctree.html
 # - https://stackoverflow.com/questions/494594/how-to-write-the-fibonacci-sequence
-# - https://mathspp.com/blog/pydonts 
+# - https://mathspp.com/blog/pydonts
 # - https://www.programiz.com/python-programming/recursion
-#     
+#
 # </font>
 # </div>

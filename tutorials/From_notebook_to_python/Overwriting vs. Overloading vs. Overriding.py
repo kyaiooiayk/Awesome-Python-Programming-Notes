@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Overwriting vs. Overloading vs. Overriding
-# 
+#
 # </font>
 # </div>
 
@@ -29,11 +29,11 @@ import numpy
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
-# - If we overwrite a function, the original function will be gone. 
-# - The function will be redefined. 
+#
+# - If we overwrite a function, the original function will be gone.
+# - The function will be redefined.
 # - This process has nothing to do with object orientation or inheritance.
-# 
+#
 # </font>
 # </div>
 
@@ -42,6 +42,8 @@ import numpy
 
 def f(x):
     return x + 2
+
+
 f(3)
 
 
@@ -51,6 +53,8 @@ f(3)
 # By using the same funciton name the previous one will be gone
 def f(x):
     return x + 3
+
+
 f(3)
 
 
@@ -59,24 +63,26 @@ f(3)
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - It is possible to simulate the overloading behavious of C++ in Python.
 # - This is done with a default parameter.
 # - Essentially we are changing function behaviour.
 # - The `*` operator can be used as a more general apporach for a family of functions with 1,2,3 or more parameters.
-# 
+#
 # </font>
 # </div>
 
 # In[6]:
 
 
-def F(n, m = None):
+def F(n, m=None):
     if m:
         return n + m + 1
     else:
         return n + 1
-print(F(3), F(3, 2))    
+
+
+print(F(3), F(3, 2))
 
 
 # In[9]:
@@ -84,12 +90,14 @@ print(F(3), F(3, 2))
 
 def F(*x):
     if len(x) == 1:
-        return x[0]+-1
+        return x[0] + -1
     if len(x) == 2:
-        return x[0]+x[1]+1
+        return x[0] + x[1] + 1
     else:
-        return x[0]+x[1]+x[2]+1
-print(F(3), F(3, 2), F(1,2,3))  
+        return x[0] + x[1] + x[2] + 1
+
+
+print(F(3), F(3, 2), F(1, 2, 3))
 
 
 # # Operator overloading
@@ -97,11 +105,11 @@ print(F(3), F(3, 2), F(1,2,3))
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Operator overloading is a feature in Python that allows the same operator to have different meaning according to the context is called.
 # - **An example?** For example, the **+** operator will perform arithmetic addition on two numbers, merge two lists, or concatenate two strings.
 # - **In practice?** The designers of lists decided that adding them to numbers wasn't allowed. The designers of numpy arrays went a different way (adding the number to each element of the array).
-# 
+#
 # </font>
 # </div>
 
@@ -126,17 +134,17 @@ print(rolls + 10)
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
-# - The example above features something like 5 different overloaded operators.  
+#
+# - The example above features something like 5 different overloaded operators.
 # - Get the rows with population over 1m in South America
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
 
 
-df[(df['population'] > 10**6) & (df['continent'] == 'South America')]
+df[(df["population"] > 10**6) & (df["continent"] == "South America")]
 
 
 # # But how an operator overloading work?
@@ -144,11 +152,11 @@ df[(df['population'] > 10**6) & (df['continent'] == 'South America')]
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - When Python programmers want to define how operators behave on their types, they do so by implementing methods with special names beginning and ending with 2 underscores such as
-# - This is also valid for our **+** operator. 
+# - This is also valid for our **+** operator.
 # - The way it is implemented internally is via __add__.
-# 
+#
 # </font>
 # </div>
 
@@ -161,8 +169,8 @@ dir(list)
 # In[8]:
 
 
-a = [1,2]
-b = [2,3]
+a = [1, 2]
+b = [2, 3]
 
 
 # In[9]:
@@ -174,7 +182,7 @@ a + b
 # In[10]:
 
 
-a.__add__(b) 
+a.__add__(b)
 
 
 # # References
@@ -182,10 +190,10 @@ a.__add__(b)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
-# - https://www.programiz.com/python-programming/operator-overloading 
+#
+# - https://www.programiz.com/python-programming/operator-overloading
 # - https://www.kaggle.com/colinmorris/working-with-external-libraries
-#     
+#
 # </font>
 # </div>
 
@@ -195,12 +203,8 @@ a.__add__(b)
 # In[1]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv -m')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv -m")
 
 
 # In[ ]:
-
-
-
-

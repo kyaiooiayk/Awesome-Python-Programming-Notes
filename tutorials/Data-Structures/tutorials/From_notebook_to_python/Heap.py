@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Data structure: heap
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
 # - A data structure is not only used for organizing the data. It is also used for processing, retrieving, and storing data.
-# 
+#
 # </font>
 # </div>
 
@@ -34,12 +34,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Heap is a special Tree-based data structure in which the tree is a complete binary tree.
 # - Generally, Heaps can be of two types:
 #     - **Max-Heap**: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
 #     - **Min-Heap**: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
-# 
+#
 # </font>
 # </div>
 
@@ -50,11 +50,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - It is the process to rearrange the elements to maintain the property of heap data structure. 
-# - It is done when a certain node creates an imbalance in the heap due to some operations on that node. 
-# - It takes `O(log N)` to balance the tree.    
-#     
+#
+# - It is the process to rearrange the elements to maintain the property of heap data structure.
+# - It is done when a certain node creates an imbalance in the heap due to some operations on that node.
+# - It takes `O(log N)` to balance the tree.
+#
 # </font>
 # </div>
 
@@ -63,15 +63,11 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [Data structures](https://www.geeksforgeeks.org/data-structures/?ref=shm)
 # - [Heap data structure](https://www.geeksforgeeks.org/heap-data-structure/?ref=ghm)
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

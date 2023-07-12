@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** From 2.x to 3.x new class definition
-# 
+#
 # </font>
 # </div>
 
@@ -20,15 +20,15 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Old class style are generally referred to as classical class. A classical class is any class that does not inherit form `object`. However, old classic class have been removed in python 3.x.
-# 
-# 
+#
+#
 # - In short:
-#     - **New-style classes** inherit from object, or from another new-style class. 
+#     - **New-style classes** inherit from object, or from another new-style class.
 #     - **Old-style classes** don't.
-# 
-# 
+#
+#
 # </font>
 # </div>
 
@@ -81,11 +81,11 @@ print(type(OldStyleClass))
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - `class A: pass` and `class A(): pass` are strictly equivalent. 
-# - The first means **A doesn't inherit of any parent class** and the second means **A inherits of no parent class**. 
-# - That's quite similar to not is and is not 
-# 
+#
+# - `class A: pass` and `class A(): pass` are strictly equivalent.
+# - The first means **A doesn't inherit of any parent class** and the second means **A inherits of no parent class**.
+# - That's quite similar to not is and is not
+#
 # </font>
 # </div>
 
@@ -94,10 +94,10 @@ print(type(OldStyleClass))
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - In 3.X, the inheritance of `object` is **automatically** assumed (meaning that we've got no way to not inherit `object` in 3.X). 
+#
+# - In 3.X, the inheritance of `object` is **automatically** assumed (meaning that we've got no way to not inherit `object` in 3.X).
 # - For the **backward compatibility reason**, it is not bad to keep `class(object)` there though.
-# 
+#
 # </font>
 # </div>
 
@@ -106,15 +106,11 @@ print(type(OldStyleClass))
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python
 # - https://www.sololearn.com/Discuss/2181707/python-difference-between-defining-a-class-with-and-without-empty-parentheses
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

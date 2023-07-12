@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Control flow statements
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - `if`
 # - `else`
-# 
+#
 # </font>
 # </div>
 
@@ -47,10 +47,10 @@ else:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - `for` loops
-# - Notice the simplicity of the for loop: we specify the variable we want to use, the sequence we want to loop over, and use the `in` operator to link them together in an intuitive and readable way. More precisely, the object to the right of the `in` can be any Python **iterator**. 
-# 
+# - Notice the simplicity of the for loop: we specify the variable we want to use, the sequence we want to loop over, and use the `in` operator to link them together in an intuitive and readable way. More precisely, the object to the right of the `in` can be any Python **iterator**.
+#
 # </font>
 # </div>
 
@@ -58,7 +58,7 @@ else:
 
 
 for N in [2, 3, 5, 7]:
-    print(N, end=' ') # print all on same line
+    print(N, end=" ")  # print all on same line
 
 
 # # `while` loops
@@ -66,9 +66,9 @@ for N in [2, 3, 5, 7]:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - `while` loop iterates until some condition is met.
-# 
+#
 # </font>
 # </div>
 
@@ -77,7 +77,7 @@ for N in [2, 3, 5, 7]:
 
 i = 0
 while i < 10:
-    print(i, end=' ')
+    print(i, end=" ")
     i += 1
 
 
@@ -86,9 +86,9 @@ while i < 10:
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - The `continue` statement continues with the next iteration of the loop
-# 
+#
 # </font>
 # </div>
 
@@ -100,7 +100,7 @@ Find odd number given a range
 An odd number is a number divisable by 2
 """
 
-for num in range(2,10):
+for num in range(2, 10):
     if num % 2 == 0:
         print("Found an even number", num)
         continue
@@ -113,11 +113,11 @@ for num in range(2,10):
 """
 You can still use if and else but continue seems to be more convenient
 """
-for n in range(2,10):
+for n in range(2, 10):
     # if the remainder of n / 2 is 0, skip the rest of the loop
     if n % 2 == 0:
-        print("Found an even number", n)        
-    else:        
+        print("Found an even number", n)
+    else:
         print("Not even number", n)
 
 
@@ -127,10 +127,10 @@ for n in range(2,10):
 """
 This is what happens if you do not use continue
 """
-for num in range(2,10):
+for num in range(2, 10):
     if num % 2 == 0:
         print("Found an even number", num)
-        #continue
+        # continue
     print("Not even number", num)
 
 
@@ -139,12 +139,12 @@ for num in range(2,10):
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - There are used to **fine-tune** how they workflow is controlled:
-# 
+#
 #     - The `break` statement breaks-out of the loop entirely
 #     - The `continue` statement **skips the remainder of the current loop**, and goes to the next iteration
-# 
+#
 # </font>
 # </div>
 
@@ -173,12 +173,12 @@ print(L)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - One rarely used pattern available in Python is the ``else`` statement as part of a ``for`` or ``while`` loop.
-# 
+#
 # - We discussed the ``else`` block earlier: it executes if all the ``if`` and ``elif`` statements evaluate to ``False``.
 # - The loop-``else`` is perhaps one of the more confusingly-named statements in Python; I prefer to think of it as a ``nobreak`` statement: that is, the ``else`` block is executed only if the loop ends naturally, without encountering a ``break`` statement.
-# 
+#
 # </font>
 # </div>
 
@@ -194,10 +194,10 @@ nmax = 30
 for n in range(2, nmax):
     for factor in L:
         if n % factor == 0:
-            break            
-    else: 
+            break
+    else:
         """
-        The else statement only executes if none of the factors 
+        The else statement only executes if none of the factors
         divide the given number. The else statement works similarly
         with the while loop.
         """
@@ -212,7 +212,7 @@ print(L)
 for n in range(2, nmax):
     for x in range(2, n):
         if n % x == 0:
-            print(n, "equals", x, "*0", n/x)
+            print(n, "equals", x, "*0", n / x)
             break
     else:
         """
@@ -227,8 +227,8 @@ for n in range(2, nmax):
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - [Whirlwind Tour of Python](http://www.oreilly.com/programming/free/a-whirlwind-tour-of-python.csp)
-# 
+#
 # </font>
 # </div>

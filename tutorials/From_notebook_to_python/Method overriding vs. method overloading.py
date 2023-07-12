@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Method overriding vs. method overloading
-# 
+#
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Methods are functions that are bundled with objects.
 # - Formally, methods are attributes of objects that are callable (i.e., can be called as functions)
-# 
+#
 # </font>
 # </div>
 
@@ -32,13 +32,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Like in other programming languages, the child classes in Python also inherit methods and attributes from the parent class. We can redefine certain methods and attributes specifically to fit the child class, which is known as **Method Overriding**.
 # - Polymorphism allows us to access these overridden methods and attributes that have the same name as the parent class.
 # - Here, we can see that the methods such as `__str__()`, which have not been overridden in the child classes, are used from the parent class.
 # - Due to polymorphism, the Python interpreter automatically recognizes that the `fact()` method for object a(Square class) is overridden. So, it uses the one defined in the child class.
 # - On the other hand, since the fact() method for object b isn't overridden, it is used from the Parent Shape class.
-#     
+#
 # </font>
 # </div>
 
@@ -80,7 +80,7 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return pi*self.radius**2
+        return pi * self.radius**2
 
 
 a = Square(4)
@@ -96,10 +96,10 @@ print(b.area())
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Like in other programming languages, the child classes in Python also inherit methods and attributes from the parent class. We can redefine certain methods and attributes specifically to fit the child class, which is known as **Method Overriding**.
 # - **Method Overloading**, a way to create multiple methods with the same name but different arguments, is not possible in Python.
-#     
+#
 # </font>
 # </div>
 
@@ -108,10 +108,10 @@ print(b.area())
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [Polymorphism in Python](https://www.programiz.com/python-programming/polymorphism)
 # - [Polymorphism tutorial](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/GitHub_MD_rendering/Polymorphism.ipynb)
-#     
+#
 # </font>
 # </div>
 
@@ -121,12 +121,8 @@ print(b.area())
 # In[6]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv -m')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv -m")
 
 
 # In[ ]:
-
-
-
-

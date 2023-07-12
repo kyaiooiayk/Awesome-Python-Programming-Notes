@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Design Patterns - Abstarct Method
-# 
+#
 # </font>
 # </div>
 
@@ -20,14 +20,14 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
-# - **Creational Design Patterns** are about class instantiation or the object instantiation. 
+#
+# - **Creational Design Patterns** are about class instantiation or the object instantiation.
 #     - [ ] Factory Method
 #     - [x] Abstract Factory Method
 #     - [ ] Builder Method
 #     - [ ] Prototype Method
 #     - [ ] Singleton Method
-# 
+#
 # </font>
 # </div>
 
@@ -36,11 +36,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - **Abstract factory method is a creational design pattern that allows you to produce the families of related objects without specifying their concrete classes.**
-# - Using the abstract factory method, we have the easiest ways to produce a similar type of many objects. 
+# - Using the abstract factory method, we have the easiest ways to produce a similar type of many objects.
 # - It provides a way to encapsulate a group of individual factories. Basically, here we try to abstract the creation of the objects depending on the logic, business, platform choice, etc.
-#     
+#
 # </font>
 # </div>
 
@@ -49,11 +49,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Suppose you have to create a program that return all the Courses available, their Fee structure, their timings, and other important things. They will simply look at their system and will give you all the information you required. Looks simple? Think about the developers how they make the system so organized and how their website is so lubricative.
 # - Developers will make unique classes for each course which will contain its properties like Fee structure, timings, and other things. But how they will call them and how will they instantiate their objects?
-# - Here arises the problem, suppose initially there are only 3-4 courses available at GeeksforGeeks, but later they added 5 new courses. So, we have to manually instantiate their objects which is not a good thing according to the developer’s side. 
-#     
+# - Here arises the problem, suppose initially there are only 3-4 courses available at GeeksforGeeks, but later they added 5 new courses. So, we have to manually instantiate their objects which is not a good thing according to the developer’s side.
+#
 # </font>
 # </div>
 
@@ -67,7 +67,7 @@
 
 class DSA:
 
-    """ Class for Data Structure and Algorithms """
+    """Class for Data Structure and Algorithms"""
 
     def price(self):
         return 11000
@@ -95,7 +95,7 @@ class SDE:
         return 15000
 
     def __str__(self):
-        return 'SDE'
+        return "SDE"
 
 
 # In[3]:
@@ -105,9 +105,9 @@ sde = SDE()  # object for SDE class
 dsa = DSA()  # object for DSA class
 stl = STL()  # object for STL class
 
-print(f'Name of the course is {sde} and its price is {sde.price()}')
-print(f'Name of the course is {dsa} and its price is {dsa.price()}')
-print(f'Name of the course is {stl} and its price is {stl.price()}')
+print(f"Name of the course is {sde} and its price is {sde.price()}")
+print(f"Name of the course is {dsa} and its price is {dsa.price()}")
+print(f"Name of the course is {stl} and its price is {stl.price()}")
 
 
 # # With abstract method
@@ -115,11 +115,11 @@ print(f'Name of the course is {stl} and its price is {stl.price()}')
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#     
+#
 # - Its solution is to replace the straightforward object construction calls with calls to the special abstract factory method.
-# - Please note that, there will be **no difference** in the object creation but they are being called within the factory method. 
+# - Please note that, there will be **no difference** in the object creation but they are being called within the factory method.
 # - Now we will create a unique class whose name is Course_At_GFG which will handle all the object instantiation automatically. Now, we don’t have to worry about how many courses we are adding after some time.
-#     
+#
 # </font>
 # </div>
 
@@ -133,7 +133,7 @@ import random
 
 class Course_At_GFG:
 
-    """ GeeksforGeeks portal for courses """
+    """GeeksforGeeks portal for courses"""
 
     def __init__(self, courses_factory=None):
         """course factory is out abstract factory"""
@@ -145,8 +145,8 @@ class Course_At_GFG:
 
         course = self.course_factory()
 
-        print(f'We have a course named {course}')
-        print(f'its price is {course.price()}')
+        print(f"We have a course named {course}")
+        print(f"its price is {course.price()}")
 
 
 # In[9]:
@@ -172,11 +172,11 @@ for i in range(5):
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Abstract factory builds on the factory pattern. Abstract factory is useful when the user expects to receive a family of multiple related objects but doesn't have to know what fammily it is until runtime.
 # - A factory returns a single object whereas a abstract factory return two or multiple related objects, like dog and dog food in our example
 # - Abstract factory creates objects while concrete factories are often singletons.
-# 
+#
 # </font>
 # </div>
 
@@ -186,6 +186,7 @@ for i in range(5):
 # Abstract Factory : pet factory
 # Concrete Factory : dog factory and cat factory
 # Concrete Product : Dog and dog food, Cat and cat food
+
 
 class Dog:
     """One of the objects to be returned"""
@@ -271,15 +272,15 @@ shop.show_pet()
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-# 
+#
 # - **Advantages**:
-#     - This pattern is particularly useful when the client doesn’t know exactly what type to create. 
+#     - This pattern is particularly useful when the client doesn’t know exactly what type to create.
 #     - It is easy to introduce new variants of the products without breaking the existing client code.
 #     - Products which we are getting from the factory are surely compatible with each other.
 # - **Disadvantages**:
 #     - Our simple code may become complicated due to the existence of a lot of classes.
 #     - We end up with a huge number of small files i.e, cluttering of files.
-# 
+#
 # </font>
 # </div>
 
@@ -288,11 +289,11 @@ shop.show_pet()
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - [Abstact Factory Method](https://www.geeksforgeeks.org/abstract-factory-method-python-design-patterns/)
 # - [Abstract Factory in Python](https://refactoring.guru/design-patterns/abstract-factory/python/example#example-0)
 # - [Trying to make sense of abstract factory pattern in Python](https://stackoverflow.com/questions/41949514/trying-to-make-sense-of-abstract-factory-pattern-in-python)
-#     
+#
 # </font>
 # </div>
 
@@ -302,12 +303,8 @@ shop.show_pet()
 # In[1]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv -m')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv -m")
 
 
 # In[ ]:
-
-
-
-

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Factory, Strategy and Adapter Patterns in DS
-#     
+#
 # </font>
 # </div>
 
@@ -57,10 +57,10 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - [You only need 2 design patterns to improve the quality of your code in a data science project](https://laszlo.substack.com/p/you-only-need-2-design-patterns-to)
 # - [Machine learning is the continuation of software enginerring by other mens: PyData 2022](file:///Users/gm_main/Downloads/2942283f-12f6-4548-80c2-071d3edb08f4.pdf.pdf)
-#     
+#
 # </font>
 # </div>
 
@@ -70,12 +70,8 @@
 # In[6]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv -m')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv -m")
 
 
 # In[ ]:
-
-
-
-

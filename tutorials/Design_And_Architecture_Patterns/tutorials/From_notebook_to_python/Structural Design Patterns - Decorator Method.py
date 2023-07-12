@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Structural Design Patterns - Decorator Method
-# 
+#
 # </font>
 # </div>
 
@@ -20,7 +20,7 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - **Structural Design Patterns** are used to establish relation between software components in particular settings.
 #     - [ ] Adapter Method
 #     - [ ] Bridge Method
@@ -29,7 +29,7 @@
 #     - [ ] Facade Method
 #     - [ ] Proxy Method
 #     - [ ] FlyWeight Method
-# 
+#
 # </font>
 # </div>
 
@@ -38,12 +38,12 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - **Lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.**
 # - Decorator pattern allows adding new features to an object without changing their structures.
 # - Here the problem is to add new features to the object without subclassing.
 # - In python we can additional features to a function using the inbuilt decorator
-#     
+#
 # </font>
 # </div>
 
@@ -128,7 +128,7 @@ hello_world.__doc__
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-# 
+#
 # - **Advantages**:
 #     - You can extend an object’s behaviour without making a new subclass.
 #     - You can add or remove responsibilities from an object at runtime.
@@ -138,7 +138,7 @@ hello_world.__doc__
 #     - It’s hard to remove a specific wrapper from the wrappers stack.
 #     - It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the decorators stack.
 #     - The initial configuration code of layers might look pretty ugly.
-# 
+#
 # </font>
 # </div>
 
@@ -147,12 +147,12 @@ hello_world.__doc__
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-# 
+#
 # - [Decorator method](https://www.geeksforgeeks.org/decorator-method-python-design-patterns/)
 # - [Decorator in Python](https://refactoring.guru/design-patterns/decorator)
 # - https://github.com/pyGuru123/Python-design-Patterns/blob/main/Structural%20Pattern/decorator.py
 # - [Function decoration notes](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Decorations/Function%20decorators.ipynb)
-#     
+#
 # </font>
 # </div>
 
@@ -162,12 +162,8 @@ hello_world.__doc__
 # In[7]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv -m')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv -m")
 
 
 # In[ ]:
-
-
-
-

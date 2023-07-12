@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Public, Private, Protected attributes
-# 
+#
 # </font>
 # </div>
 
@@ -20,13 +20,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Encapsulation is seen as the bundling of data with the methods that operate on that data. 
-# - It is often accomplished by providing two kinds of methods for attributes. 
-# - The methods for retrieving or accessing the values of attributes are called **getter methods**. Getter methods do not change the values of attributes, they just return the values. 
-# - The methods used for changing the values of attributes are called **setter methods**. 
+#
+# - Encapsulation is seen as the bundling of data with the methods that operate on that data.
+# - It is often accomplished by providing two kinds of methods for attributes.
+# - The methods for retrieving or accessing the values of attributes are called **getter methods**. Getter methods do not change the values of attributes, they just return the values.
+# - The methods used for changing the values of attributes are called **setter methods**.
 # - There is a difference and here is the relationship: abstraction = encapsulation + hiding. Essentially abstraction is present, iff hiding and encapsulation is used.
-# 
+#
 # </font>
 # </div>
 
@@ -37,12 +37,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # There are two ways to restrict the access to class attributes:
-# 
+#
 # 1. **protected**. First, we can prefix an attribute name with a leading underscore "_". It tells users of the class not to use this attribute unless, somebody writes a subclass.
 # 2. **private**. Second, we can prefix an attribute name with two leading underscores "__". The attribute is now inaccessible and invisible from outside. It's neither possible to read nor write to those attributes except inside of the class definition itself.
-# 
+#
 # </font>
 # </div>
 
@@ -50,11 +50,11 @@
 
 
 class A:
-    
-    def __init__(self):               
+    def __init__(self):
         self.public = "I am public"
         self._protected = "I am protected"
-        self.__private = "I am private" 
+        self.__private = "I am private"
+
 
 instantiationOfA = A()
 
@@ -69,11 +69,11 @@ print(instantiationOfA._A__private)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Whenever we assign or retrieve any object attribute Python searches it in the object's `__dict__` dictionary
-# - When the Python compiler sees a private attribute, it actually transforms the actual name to `_[Class name]__[private attribute name]`. 
+# - When the Python compiler sees a private attribute, it actually transforms the actual name to `_[Class name]__[private attribute name]`.
 # - **In practice** it is more common to use public and protected attribute,
-# 
+#
 # </font>
 # </div>
 
@@ -88,11 +88,11 @@ print(instantiationOfA.__dict__)
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
+#
 # - `@property` The Pythonic way to introduce attributes is to make them public, and not introduce getters and setters to retrieve or change them.
 # - `@classmethod` To add additional constructor to the class.
 # - `@staticmethod` To attach functions to classes so people won't misuse them in wrong places.
-# 
+#
 # </font>
 # </div>
 
@@ -100,11 +100,11 @@ print(instantiationOfA.__dict__)
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
+#
 # - Let's assume one day we decide to make a class that could store the temperature in degree Celsius. The temperature will be a private method, so our end-users won't have direct access to it.
-# 
+#
 # - The class will also implement a method to convert the temperature into degree Fahrenheit. And we also want to implement a value constraint to the temperature, so that it cannot go below -273 degree Celsius. One way of doing this is to define a getter and setter interfaces to manipulate it.
-# 
+#
 # </font>
 # </div>
 
@@ -112,8 +112,7 @@ print(instantiationOfA.__dict__)
 
 
 class Celsius:
-    
-    def __init__(self, temperature = 0):
+    def __init__(self, temperature=0):
         self.set_temperature(temperature)
 
     def to_fahrenheit(self):
@@ -124,8 +123,8 @@ class Celsius:
 
     def set_temperature(self, value):
         if value < -273:
-            raise ValueError('Temperature below -273 is not possible')
-        
+            raise ValueError("Temperature below -273 is not possible")
+
         self._temperature = value
 
 
@@ -139,10 +138,10 @@ c.get_temperature()
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
+#
 # - Instead of that, now the **property** way.
 # - Where we define the `@property` and the `@[attribute name].setter`.
-# 
+#
 # </font>
 # </div>
 
@@ -150,25 +149,24 @@ c.get_temperature()
 
 
 class Celsius:
-    
-    def __init__(self, temperature = 0):
+    def __init__(self, temperature=0):
         self._temperature = temperature
 
     def to_fahrenheit(self):
         return (self.temperature * 1.8) + 32
-    
+
     # have access to the value like it is an attribute instead of a method
     @property
     def temperature(self):
         return self._temperature
-    
+
     # like accessing the attribute with an extra layer of error checking
     @temperature.setter
     def temperature(self, value):
         if value < -273:
-            raise ValueError('Temperature below -273 is not possible')
-        
-        print('Setting value')
+            raise ValueError("Temperature below -273 is not possible")
+
+        print("Setting value")
         self._temperature = value
 
 
@@ -181,7 +179,7 @@ c = Celsius(37)
 print(c.temperature)
 
 # note that you can still access the private attribute
-# and violate the temperature checking, 
+# and violate the temperature checking,
 # but then it's the users fault not yours
 c._temperature = -300
 print(c._temperature)
@@ -194,23 +192,24 @@ print(c._temperature)
 
 # <div class="alert alert-info">
 # <font color=black>
-#     
+#
 # - `@classmethods` create alternative constructors for the class.
 # - An example of this behavior is there are different ways to construct a dictionary.
-# 
+#
 # </font>
 # </div>
 
 # In[8]:
 
 
-print(dict.fromkeys(['raymond', 'rachel', 'mathew']))
+print(dict.fromkeys(["raymond", "rachel", "mathew"]))
 
 
 # In[9]:
 
 
 import time
+
 
 class Date:
     # Primary constructor
@@ -225,12 +224,13 @@ class Date:
         t = time.localtime()
         return cls(t.tm_year, t.tm_mon, t.tm_mday)
 
+
 # Primary
-a = Date(2012, 12, 21) 
+a = Date(2012, 12, 21)
 print(a.__dict__)
 
 # Alternate
-b = Date.today() 
+b = Date.today()
 print(b.__dict__)
 
 
@@ -242,12 +242,13 @@ print(b.__dict__)
 class NewDate(Date):
     pass
 
+
 # Creates an instance of Date (cls=Date)
-c = Date.today()      
+c = Date.today()
 print(c.__dict__)
 
 # Creates an instance of NewDate (cls=NewDate)
-d = NewDate.today()   
+d = NewDate.today()
 print(d.__dict__)
 
 
@@ -268,7 +269,7 @@ class Date:
     def today(cls):
         t = time.localtime()
         return cls(t.tm_year, t.tm_mon, t.tm_mday)
-    
+
     # the logic belongs with the date class
     @staticmethod
     def show_tomorrow_date():
@@ -287,14 +288,14 @@ Date.show_tomorrow_date()
 
 # <div class="alert alert-danger">
 # <font color=black>
-# 
-# | Naming | Type | Meaning | 
+#
+# | Naming | Type | Meaning |
 # | ---- | ---- | ------- |
 # | `name`| Public | Attribute can be freely used inside or outside a class definition |
 # |`_name`| Protected | Attribute should not be used outside the class definition, unless inside a subclass definition |
 # |`__name`| Private| Attribute is inaccessible and invisible. It's neither possible to read nor write to those attributes, except inside the class definition itself |
-# 
-# 
+#
+#
 # </font>
 # </div>
 
@@ -303,12 +304,12 @@ Date.show_tomorrow_date()
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/class.ipynb
-# - [Python Tutorials: Python @property](http://www.programiz.com/python-programming/property) 
+# - [Python Tutorials: Python @property](http://www.programiz.com/python-programming/property)
 # - [Onlines Python Course Notes: Properties vs. Getters and Setters](http://www.python-course.eu/python3_properties.php)
 # - https://python-course.eu/oop/object-oriented-programming.php
-#     
+#
 # </font>
 # </div>
 
@@ -318,6 +319,5 @@ Date.show_tomorrow_date()
 # In[13]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
-
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")

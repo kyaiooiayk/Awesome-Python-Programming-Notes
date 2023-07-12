@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Hashing
-# 
+#
 # </font>
 # </div>
 
@@ -20,11 +20,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Hashing is a technique or process of mapping keys, and values into the hash table by using a hash function.
 # - It is done for faster access to elements. The efficiency of mapping depends on the efficiency of the hash function used.
 # - Hashing refers to the process of generating a fixed-size output from an input of variable size using the mathematical formulas known as hash functions. This technique determines an index or location for the storage of an item in a data structure.
-#     
+#
 # </font>
 # </div>
 
@@ -35,10 +35,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-# 
+#
 # - Hash table are also known as python dictionary.
 # - **Hashing vs. dictionary** A dictionary is a general concept that maps unique keys to non-unique values. But the Hash is a data structure that maps unique keys to values by taking the hash value of the key and mapping it to a bucket where one or more values are stored.
-# 
+#
 # </font>
 # </div>
 
@@ -48,9 +48,9 @@
 class HashTable:
     """
     a.k.a python's dictionary
-    the initial size of the table has been chosen to be 11, 
+    the initial size of the table has been chosen to be 11,
     although this number is arbitrary, it's important
-    for it to be a prime number so that collision resolution 
+    for it to be a prime number so that collision resolution
     will be efficient; this implementation does not handle
     resizing the hashtable when it runs out of the original size
     """
@@ -108,7 +108,7 @@ class HashTable:
     def _rehash(self, oldhash):
         """
         a simple plus 1 rehash, where we add 1 to
-        the original value and hash it again to 
+        the original value and hash it again to
         see if the slot it empty (None)
         """
         return (oldhash + 1) % self.size
@@ -125,13 +125,13 @@ class HashTable:
 
 
 H = HashTable()
-H[54] = 'cat'
-H[26] = 'dog'
-H[93] = 'lion'
-H[17] = 'tiger'
-H[77] = 'bird'
-H[44] = 'goat'
-H[55] = 'pig'
+H[54] = "cat"
+H[26] = "dog"
+H[93] = "lion"
+H[17] = "tiger"
+H[77] = "bird"
+H[44] = "goat"
+H[55] = "pig"
 print(H.slot)
 print(H.data)
 
@@ -148,17 +148,13 @@ print(H[20])
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
-# - [Problem Solving with Algorithms and Data Structures](http://interactivepython.org/runestone/static/pythonds/index.html). 
+#
+# - [Problem Solving with Algorithms and Data Structures](http://interactivepython.org/runestone/static/pythonds/index.html).
 # - https://runestone.academy/runestone/books/published/pythonds/SortSearch/TheMergeSort.html
 # - [Hashing vs. dictionary](https://mixandgo.com/learn/ruby/hash-vs-dictionary)
 # - [Introduction to Hashing – Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/introduction-to-hashing-data-structure-and-algorithm-tutorials/)
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

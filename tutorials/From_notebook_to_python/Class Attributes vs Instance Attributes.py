@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Class Attributes vs Instance Attributes
-# 
+#
 # </font>
 # </div>
 
@@ -20,18 +20,18 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Class attributes are the variables defined directly in the class that are shared by all objects of the class.
-# - Instance attributes are attributes or properties attached to an instance of a class. Instance attributes are defined in the constructor. 
-# 
-# 
+# - Instance attributes are attributes or properties attached to an instance of a class. Instance attributes are defined in the constructor.
+#
+#
 # | Class Attribute | Instance Attribute |
 # |---|---|
 # | Defined directly inside a class | Defined inside a constructor using the self parameter |
 # | Shared across all objects | Specific to object |
 # | classname.class_attribute or object.class_attribute | only object.instance_attribute |
 # | Changing value by using classname.class_attribute = value will be reflected to all the objects. | Changing value of instance attribute will not be reflected to other objects |
-# 
+#
 # </font>
 # </div>
 
@@ -40,10 +40,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - The following example demonstrates the use of class attribute count. 
+#
+# - The following example demonstrates the use of class attribute count.
 # - `count` is an attribute in the Student class. Whenever a new object is created, the value of count is incremented by 1.
-# 
+#
 # </font>
 # </div>
 
@@ -68,11 +68,11 @@ Student.count
 
 std1 = Student()
 print(Student.count)
-#print(std1.count)
+# print(std1.count)
 
 std2 = Student()
 print(Student.count)
-#print(std2.count)
+# print(std2.count)
 
 
 # In[4]:
@@ -86,10 +86,10 @@ Student.count
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - The following demonstrates the instance attributes.
-# - Now, you can specify the values while creating an instance, as shown below.  
-# 
+# - Now, you can specify the values while creating an instance, as shown below.
+#
 # </font>
 # </div>
 
@@ -105,14 +105,14 @@ class Student:
 # In[6]:
 
 
-std = Student('Bill',25)
+std = Student("Bill", 25)
 std.age
 
 
 # In[7]:
 
 
-std.name = 'Steve'
+std.name = "Steve"
 std.age = 45
 print(std.name)
 print(std.age)
@@ -123,9 +123,9 @@ print(std.age)
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://www.tutorialsteacher.com/articles/class-attributes-vs-instance-attributes-in-python
-# 
+#
 # </font>
 # </div>
 
@@ -135,6 +135,5 @@ print(std.age)
 # In[8]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
-
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")
