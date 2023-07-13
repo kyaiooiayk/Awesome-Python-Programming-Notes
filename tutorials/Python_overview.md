@@ -57,42 +57,13 @@ a+b # requires to sum the integers
 - **Immutable types** provide no methods to allow inplace inplace modifications. Examples are tuple, integer and string. Because of this, mutable types cannot be used as dictionaty keys because if the value changes, it will not hash back to the same value!
 ***
 
-## Testing your code
-- **TDD** (Test Driven Development) is a way of code development where the developer first writes the test and after that the function.
-- **BDD** (Behaviour-Driven Development)
-***
-
-## Project documentation
-- A project should generally containt this 5 files.
-  - A `README` file = detailes the purpouse of the project
-    - An INSTALL section [inside the README file] = detailes how to install the package or everything which is needed to run the code
-    - A TODO section = [inside the README file] = detailes the planned development
-    - A CHANGELOG section [inside the README file] = details a short overview of the changes
-  - A license file = conditions under which the software is made available to the public
-***
-
-## How to release your own python package
-- There at least 4 ways you can do it. Please refere to this [reference](https://github.com/idrl-lab/idrlnet) to see how they did it.
-- For all the following 4 options the general rule is still valid: to avoid version conflicts, please use some tools to create a virtual environment first.
-  - **Option No#1**: simple installation from PyPI: `pip install -U your_package_name`
-  - **Option No#2**: Docker, pull latest docker image from Dockerhub: `docker pull our_package_name:latest` and then `docker run -it our_package_name:latest bash`
-  - **Option No#3**: using anaconda or miniconda: first `conda create -n your_ve_name python=3.8 -y` then `conda activate your_ve_name` and finally: `pip install your_package_name`
-  - **Option No#4**: from source
-***
-
-## pip install vs. conda install
-- `pip` is an open source project and is maintained by PyPa (Python Packaging Authority)
-- `conda` is the commericial equivalent of `pip` maintained by Continuum analytics.
-- Very briefly, consider conda an option suited for non coders. This is the easiest way to reach the wide academic, commerical, and Windoes-using audience.
-***
-
 ## Freezing your code
 - To *freeze* the code means to create a standalone executable bundle you can distribute without having the end users to have Python installed in their system. Effectively, the distribution contains both the application code and the Python interpreter. As they say, `.py` files are for software engineer and system administrator.
 ***
 
 ## Monkey patch
 A monkey patch is a way for a program to extend or modify supporting system software locally (affecting only the running instance of the program).
-```
+```python
 >>> import math
 >>> math.pi
 3.141592653589793
