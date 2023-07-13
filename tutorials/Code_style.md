@@ -30,7 +30,7 @@ def make_dict(*args):
   return dict(**locsls())
 ```
 - This is an example of good coding:
-```
+```python
 def make_dict(x, y):
   return {'x':x, 'y':y}
 ```
@@ -97,22 +97,21 @@ def my_function(positional, keyword=value, *arg, **kwargs)):
 ***
 
 ## How to import a module
-- There three ways to import a module.
-  - This is a very bad example because one may be asking whether `sqrt` is part of `modu` or a bulit-in or defined above?:
-  ```python
-  from modu import *
-  x = sqrt(4)
-  ```
-  - This is somehow better. but one may still be asking wheter `sqrt` has been modified or redefined or is it the originally pulled from `modu`?
-  ```python
-  from modue import sqrt
-  x = sqrt(4)
-  ```
-  - This is the best option where it is immediately obviusl that `sqrt` is an attribute of `modu`'s namespace.
-  ```python
-  import modu
-  x = modu.sqrt(4)
-  ```
+- **Option #1**: this is a very bad example because one may be asking whether `sqrt` is part of `modu` or a bulit-in or defined above?:
+```python
+from modu import *
+x = sqrt(4)
+```
+- **Option #2**: this is somehow better. but one may still be asking wheter `sqrt` has been modified or redefined or is it the originally pulled from `modu`?
+```python
+from modue import sqrt
+x = sqrt(4)
+```
+- **Option #3**: this is the best option where it is immediately obviusl that `sqrt` is an attribute of `modu`'s namespace.
+```python
+import modu
+x = modu.sqrt(4)
+```
 ***
 
 ## Spaghetti & Ravioli code
