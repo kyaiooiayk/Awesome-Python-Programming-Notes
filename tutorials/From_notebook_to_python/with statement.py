@@ -111,6 +111,22 @@ class MessageWriter(object):
         self.file.close()
 
 
+# <div class="alert alert-info">
+# <font color=black>
+#
+# - The with statement takes the object instance that implements the context manager interface as an argument.
+# - It will execute the code in the object for the beginning of the block, e.g. the `__enter__()` method and return an instance of an object that can be assigned.
+#
+# </font>
+# </div>
+
+# ```python
+# # execute the context manager, calls __enter__()
+# with object as o:
+#     # the main block...
+# # end of the context manager, calls __exit__()
+# ```
+
 # In[5]:
 
 
@@ -176,6 +192,7 @@ get_ipython().system("rm file_5.txt")
 # <font color=black>
 #
 # - [`with` statement in Python](https://www.geeksforgeeks.org/with-statement-in-python/)
+# - [What is a context manager?](https://superfastpython.com/thread-context-manager/)
 #
 # </font>
 # </div>
