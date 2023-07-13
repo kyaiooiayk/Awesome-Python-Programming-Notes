@@ -1,6 +1,11 @@
 # How to test your python code
 ***
 
+## Testing your code
+- **TDD** (Test Driven Development) is a way of code development where the developer first writes the test and after that the function.
+- **BDD** (Behaviour-Driven Development) combines the general techniques and principles of TDD with ideas from domain-driven design and object-oriented analysis and design to provide software development and management teams with shared tools and a shared process to collaborate on software development.
+***
+
 ## Type of testing
 - **Acceptance tests** are a quality assurance (QA) process that determines to what degree an application meets end users' approval.
 - **Functional tests** check the functionalities of the entire system and ensure different components work together as intended. Theirs purpose is to check an entire application, including its hardware, networking infrastructure, front-end UI, and the back-end database.
