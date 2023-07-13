@@ -24,7 +24,7 @@ This usually means that some line of the code do not follow the guidelines and f
 
 ## Explicit is better than implicit
 - This an example of bad coding:
-```
+```python
 def make_dict(*args):
   x, y = args
   return dict(**locsls())
@@ -41,14 +41,14 @@ def make_dict(x, y):
 - The general rule is to make one statement per line.
 - Some compound statement, such as list comprehensions are well appreciated.
 - An example of dense code is:
-```
+```python
 # First example
 print("hello");print("hi")
 # Second example
 if x == 1: print("one")
 ```
 - This can be rewritten as:
-```
+```python
 # First example
 print("hello")
 print("hi")
@@ -62,7 +62,7 @@ if x == 1:
 - The general rule in python to handle error is to yse `try` and `except`.
 - Errors should never be pass silently, unless explicitly silenced. What it means is that if we use the `except` clause without any specified will catch everythin, including `KeyboardInterrupt` and ingnore it! Further, this can also hide bugs, which can hit you back somewhere else in the code.
 - An example of error being passed silently:
-```
+```python
 while True:
     try:
         # you can assume somethig that may fail is beinf executed here!
@@ -72,7 +72,7 @@ while True:
       pass
 ```
 - How should be writing it:
-```
+```python
 while True:
     try:
         # you can assume somethig that may fail is beinf executed here!
@@ -90,7 +90,7 @@ while True:
   - Arbitraary arguments
   - Arbitrary keyword arguments
 - And the order is generally accepted to be like this:
-```
+```python
 def my_function(positional, keyword=value, *arg, **kwargs)):
   pass
 ```
@@ -99,17 +99,17 @@ def my_function(positional, keyword=value, *arg, **kwargs)):
 ## How to import a module
 - There three ways to import a module.
   - This is a very bad example because one may be asking whether `sqrt` is part of `modu` or a bulit-in or defined above?:
-  ```
+  ```python
   from modu import *
   x = sqrt(4)
   ```
   - This is somehow better. but one may still be asking wheter `sqrt` has been modified or redefined or is it the originally pulled from `modu`?
-  ```
+  ```python
   from modue import sqrt
   x = sqrt(4)
   ```
   - This is the best option where it is immediately obviusl that `sqrt` is an attribute of `modu`'s namespace.
-  ```
+  ```python
   import modu
   x = modu.sqrt(4)
   ```
@@ -122,12 +122,12 @@ def my_function(positional, keyword=value, *arg, **kwargs)):
 
 ## Dynamic typing and reassigning variable names
 - **Dynamically typed** language if the types are not known until the code is run, meaning that there will be some additional boilerplate to keep track of what variables are integers, strings, lists, and so on. Thus, use short functions or methods to reduce the risk of using the same name for two unrelated actions. This an example of bad practice:
-```
+```python
 a = 1
 a = "answer is {}".format(a)
 ```
 - This is an example of good coding practice:
-```
+```python
 def get_answer(a):
      return  "answer is {}".format(a)"
 a = get_asnwer(1)
@@ -139,7 +139,7 @@ a = get_asnwer(1)
   - It can be applied to both methods and classes:
   - The leading comment block on top of the function is a programmer's note
   - Teh doc string describes the operation of the function and it will be shown to the user when the `help(square_root)` is used.
-```
+```python
 # This function needs to be reviewed for speed.
 def square_root(x):
   """Return the square root of a x"""
@@ -154,7 +154,7 @@ def square_root(x):
 
 ## Naming conventions
 - **PascalCase** is used for classes. What this means is that your classes will look like:
-```
+```python
 class Shape:
     # ...
 class Circle(Shape):
@@ -162,7 +162,7 @@ class Circle(Shape):
 ```
 
 - **snake_case** is used for variables, functions, methods, arguments:
-```
+```python
 def cool_function(cool_argument, optional_info):
     # ...
 ```
@@ -174,7 +174,6 @@ LOG_FILE = "logs/app.log"
 ```
 
 <img width="612" alt="image" src="https://user-images.githubusercontent.com/89139139/204856905-d1f923f4-475a-4922-8fcd-77ac5b152c65.png">
-
 
 ***
 
