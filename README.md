@@ -99,6 +99,7 @@
 - [Production-like code](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/Production-grade%20code)
 - [Makefile](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/makefile)
 - [Testing](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/tree/main/tutorials/Testing)
+- [Freezing](https://github.com/kyaiooiayk/Python-Programming/blob/main/tutorials/freezing.md)
 ***
 
 ## 🎓Online resources to learn python🎓
