@@ -68,7 +68,7 @@ There are three most relevant design patterns (there are many more) are:
     - **Strategy Pattern** is used to decouple algorithms.
     - **Adapter Pattern** is used to decouple external services.
 - All the above methods tackled the main problem in data science projects:coupling. It means that you need to rewrite a large part of your code each time you want to try new options, hence your code is not generally and essentially hard-coded. This can happen both while managing data and  algorithms.
-- [Factory and Strategy Patters in DS](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Factory%20and%20Strategy%20Patterns%20in%20DS.ipynb)
+- [Factory and Strategy Patters in DS](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/Design_And_Architecture_Patterns/tutorials/Factory%2C%20Strategy%20and%20Adapter%20Patterns%20in%20DS.ipynb)
 ***
 
 ## Others
