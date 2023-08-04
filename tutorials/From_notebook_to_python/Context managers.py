@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Context managers
-#
+# 
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Context managers allow you to allocate and release resources precisely when you want to.
+# 
+# - Context managers allow you to allocate and release resources precisely when you want to. 
 # - Suppose you have two related operations which you’d like to execute as a pair, with a block of code in between. Context managers allow you to do specifically that.
-#
+#     
 # </font>
 # </div>
 
@@ -32,30 +32,30 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - The above code opens the file, writes some data to it and then closes it.
-# - **If an error occurs** while writing the data to the file, it tries to close it.
+# 
+# - The above code opens the file, writes some data to it and then closes it. 
+# - **If an error occurs** while writing the data to the file, it tries to close it. 
 # - What follows is an example that tries to explain how `with` simplifies the code and make it safer.
 # - While comparing it to the first example, we can see that a lot of boilerplate code is eliminated just by using `with`.
 # - The main advantage of using a `with` statement is that it makes sure our file is closed **without paying attention to how the nested block exits**. In fact, as you may recall, `finally` is executed regardless of how the `try` statement exits, with or without an error.
-#
+#     
 # </font>
 # </div>
 
 # In[2]:
 
 
-with open("some_file.txt", "w") as opened_file:
-    opened_file.write("Hello!")
+with open('some_file.txt', 'w') as opened_file:
+    opened_file.write('Hello!')
 
 
 # In[3]:
 
 
 # This equivalent to the following boiler plate code
-file = open("some_file.txt", "w")
+file = open('some_file.txt', 'w')
 try:
-    file.write("Hello!")
+    file.write('Hello!')
 finally:
     file.close()
 
@@ -65,10 +65,10 @@ finally:
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - At the very least a context manager has an `__enter__` and `__exit__` method defined.
-# - Just by defining these two dunder methods we can use our new class in a `with` statement.
-#
+# - Just by defining these two dunder methods we can use our new class in a `with` statement. 
+# 
 # </font>
 # </div>
 
@@ -89,8 +89,8 @@ class MyFile(object):
 # In[8]:
 
 
-with MyFile("demo.txt", "w") as opened_file:
-    opened_file.write("Hello kyaiooiayk!")
+with MyFile('demo.txt', 'w') as opened_file:
+    opened_file.write('Hello kyaiooiayk!')
 
 
 # # Implementing a Context Manager as a Generator
@@ -98,10 +98,10 @@ with MyFile("demo.txt", "w") as opened_file:
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+#     
 # - We can also implement Context Managers using decorators and generators.
-# - Python has a contextlib module for this very purpose. Instead of a class, we can implement a Context Manager using a generator function.
-#
+# - Python has a contextlib module for this very purpose. Instead of a class, we can implement a Context Manager using a generator function. 
+# 
 # </font>
 # </div>
 
@@ -113,7 +113,7 @@ from contextlib import contextmanager
 
 @contextmanager
 def open_file(name):
-    f = open(name, "w")
+    f = open(name, 'w')
     try:
         yield f
     finally:
@@ -123,8 +123,8 @@ def open_file(name):
 # In[14]:
 
 
-with open_file("some_file.txt") as f:
-    f.write("hello kyaiooiayk!")
+with open_file('some_file.txt') as f:
+    f.write('hello kyaiooiayk!')
 
 
 # # Folder clean-up
@@ -133,8 +133,8 @@ with open_file("some_file.txt") as f:
 # In[15]:
 
 
-get_ipython().system("rm some_file.txt")
-get_ipython().system("rm demo.txt")
+get_ipython().system('rm some_file.txt')
+get_ipython().system('rm demo.txt')
 
 
 # # References
@@ -142,10 +142,14 @@ get_ipython().system("rm demo.txt")
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://book.pythontips.com/en/latest/context_managers.html
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

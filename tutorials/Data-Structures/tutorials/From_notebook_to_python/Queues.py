@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Data structure: queues
-#
+# 
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
 # - A data structure is not only used for organizing the data. It is also used for processing, retrieving, and storing data.
-#
+# 
 # </font>
 # </div>
 
@@ -34,12 +34,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **Stack** was last-in first-out.
 # - **Queue** is the opposite of stack, meaning first-in first-out.
 # - List are not **efficiently** used as a queue, because all the other elements have to be shifted by one.
 # - To implement a queue use `collections.deque` which was designed to have fast append and pops from both ends.
-#
+# 
 # </font>
 # </div>
 
@@ -47,7 +47,6 @@
 
 
 from collections import deque
-
 a = ["Eric", "John", "Michael"]
 queue = deque(a)
 queue.append("Terry")
@@ -70,13 +69,13 @@ print(queue)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - We can think of priority queue as a modified queue: instead of retrieving the next element by insertion time, it retrieves the highest-priority element. The priority of individual elements is decided by the ordering applied to their keys.
-#
+# 
 # - Priority queues are commonly used for dealing with scheduling problems. High-priority tasks on the system should take precedence over lower-priority tasks. By organizing pending tasks in a priority queue that uses the task urgency as the key, the task scheduler can allow the highest-priority tasks to run first.
-#
+# 
 # - Let’s take a look at how we can implement priority queues in Python using built-in data structures or data structures that ship with Python’s standard library.
-#
+# 
 # </font>
 # </div>
 
@@ -86,9 +85,9 @@ print(queue)
 from queue import PriorityQueue
 
 q = PriorityQueue()
-q.put((2, "code"))
-q.put((1, "eat"))
-q.put((3, "sleep"))
+q.put((2, 'code'))
+q.put((1, 'eat'))
+q.put((3, 'sleep'))
 
 while not q.empty():
     # note that apart from returning
@@ -100,9 +99,9 @@ while not q.empty():
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # As we can infer from the output, prioriy queue stores the elements by its priority, in this case the first element in the tuple. After from sorting primitive types such as integers, we can also sort objects that we've defined. To perform sorting on custom objects we need to implement the dunder methods for all 6 comparisons.
-#
+# 
 # | Operator | Method     |
 # |----------|------------|
 # | ==       | ``__eq__`` |
@@ -111,7 +110,7 @@ while not q.empty():
 # | <=       | ``__le__`` |
 # | >        | ``__gt__`` |
 # | >=       | ``__ge__`` |
-#
+# 
 # </font>
 # </div>
 
@@ -122,7 +121,7 @@ class Skill:
     def __init__(self, priority, description):
         self.priority = priority
         self.description = description
-
+        
     def __eq__(self, other):
         return self.priority == other.priority
 
@@ -142,16 +141,16 @@ class Skill:
         return self.priority >= other.priority
 
     def __repr__(self):
-        return "{}: {}".format(self.description, self.priority)
+        return '{}: {}'.format(self.description, self.priority)
 
 
 # In[3]:
 
 
 q = PriorityQueue()
-q.put(Skill(5, "R"))
-q.put(Skill(10, "Python"))
-q.put(Skill(1, "Java"))
+q.put(Skill(5, 'R'))
+q.put(Skill(10, 'Python'))
+q.put(Skill(1, 'Java'))
 
 while not q.empty():
     next_item = q.get()
@@ -175,16 +174,16 @@ class Queue:
 
     def __init__(self):
         self.items = []
-
+    
     def is_empty(self):
         return not self.items
-
+    
     def enqueue(self, item):
         self.items.insert(0, item)
 
     def dequeue(self):
         return self.items.pop()
-
+        
     def size(self):
         return len(self.items)
 
@@ -206,16 +205,15 @@ print(q.size())
 # > From [Python Documentation: Using Lists as Queues](https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-queues)
 # >
 # > Although the queue functionality can be implemented using a list, it is not efficient for this  purpose. Because doing inserts or pops from the beginning of a list is slow (all of the other elements have to be shifted by one).
-#
+# 
 # We instead use `deque`. It is designed to have fast appends and pops from both ends.
-#
+# 
 # Implement the palindrome checker to check if a given word is a palindrom. A palindrome is a string that reads the same forward and backward, e.g. radar.
 
 # In[14]:
 
 
 from collections import deque
-
 
 def check_palindrome(word):
     equal = True
@@ -232,7 +230,7 @@ def check_palindrome(word):
 # In[15]:
 
 
-test = "radar"
+test = 'radar'
 check_palindrome(test)
 
 
@@ -241,14 +239,18 @@ check_palindrome(test)
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
-# - https://www.thoughtco.com/definition-of-stack-in-programming-958162
+# 
+# - https://www.thoughtco.com/definition-of-stack-in-programming-958162 
 # - https://runestone.academy/runestone/books/published/pythonds/BasicDS/WhatisaStack.html
 # - https://github.com/ethen8181/machine-learning/blob/master/python/algorithms/basic_data_structure.ipynb
 # - https://www.datacamp.com/community/tutorials/data-structures-python
 # - [Data Structures](https://www.geeksforgeeks.org/data-structures/?ref=shm)
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

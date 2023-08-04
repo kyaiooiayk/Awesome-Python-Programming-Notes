@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Linked list
-#
+# 
 # </font>
 # </div>
 
@@ -20,13 +20,13 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A linked list is a sequence of data elements, which are connected together via links. Each data element contains a connection to another data element in form of a pointer.
 # - Python **does not** have linked lists in its standard library, but this can be implemented using the concept of nodes.
-# - We are goign to concentrate on a type of linked lists known as **singly linked lists** where there is only one link between any two data elements.
+# - We are goign to concentrate on a type of linked lists known as **singly linked lists** where there is only one link between any two data elements. 
 # - Here we are going to create such a list along with some additional methods to insert, update and remove elements from the list.
 # - **Why?** Linked lists are often used because of their efficient insertion and deletion. They can be used to implement stacks, queues, and other abstract data types.
-#
+# 
 # </font>
 # </div>
 
@@ -35,10 +35,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Each node contains a value and a reference (also known as a pointer) to the next node.
-# - The last node, has a reference equal to `None`, it means the list is at its end.
-#
+#     
+# - Each node contains a value and a reference (also known as a pointer) to the next node. 
+# - The last node, has a reference equal to `None`, it means the list is at its end. 
+# 
 # </font>
 # </div>
 
@@ -49,7 +49,6 @@ class Node:
     def __init__(self, data_val=None):
         self.data_val = data_val
         self.next_val = None
-
 
 # Create 3 nodes
 e1 = Node("Mon")
@@ -74,10 +73,10 @@ e2.next_val == None
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Singly linked lists can be traversed in only forward direction starting form the first data element.
 # - We simply print the value of the next data element by assigning the pointer of the next node to the current data element.
-#
+# 
 # </font>
 # </div>
 
@@ -114,10 +113,14 @@ list_.listprint()
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.tutorialspoint.com/python_data_structure/python_linked_lists.htm?key=node
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

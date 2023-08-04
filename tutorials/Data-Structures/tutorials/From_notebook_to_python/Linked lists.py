@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Data structure: linked list
-#
+# 
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
 # - A data structure is not only used for organizing the data. It is also used for processing, retrieving, and storing data.
-#
+# 
 # </font>
 # </div>
 
@@ -31,14 +31,14 @@
 
 # # Unordered Linked List
 # <hr style="border:2px solid black"> </hr>
-#
+# 
 
 # In[16]:
 
 
 class Node:
     """
-    node must contain the list item itself (data)
+    node must contain the list item itself (data) 
     node must hold a reference that points to the next node
     """
 
@@ -64,10 +64,11 @@ class Node:
 
 
 class UnorderedList:
+
     def __init__(self):
         """
         we need identify the position for the first node,
-        the head, When the list is first initialized
+        the head, When the list is first initialized 
         it has no nodes
         """
         self.head = None
@@ -79,7 +80,7 @@ class UnorderedList:
         """
         takes data, initializes a new node with the given data
         and add it to the list, the easiest way is to
-        place it at the head of the list and
+        place it at the head of the list and 
         point the new node at the old head
         """
         node = Node(item)
@@ -89,7 +90,7 @@ class UnorderedList:
 
     def size(self):
         """
-        traverse the linked list and keep a count
+        traverse the linked list and keep a count 
         of the number of nodes that occurred
         """
         count = 0
@@ -119,9 +120,9 @@ class UnorderedList:
         """
         traverses the list in the same way that search does,
         but this time we keep track of the current node and the previous node.
-        When delete finally arrives at the node it wants to delete,
-        it looks at the previous node and resets that previous node’s pointer
-        so that, rather than pointing to the soon-to-be-deleted node,
+        When delete finally arrives at the node it wants to delete, 
+        it looks at the previous node and resets that previous node’s pointer 
+        so that, rather than pointing to the soon-to-be-deleted node, 
         it will point to the next node in line;
         this assumes item is in the list
         """
@@ -155,7 +156,7 @@ class UnorderedList:
             value.append(data)
             current = current.get_next()
 
-        return "[" + ", ".join(value) + "]"
+        return '[' + ', '.join(value) + ']'
 
 
 # In[18]:
@@ -175,10 +176,10 @@ mylist
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - As the name suggests, compared to unordered linkedlist, the elements will always be ordered for a ordered linked list.
+# 
+# - As the name suggests, compared to unordered linkedlist, the elements will always be ordered for a ordered linked list. 
 # - The `is_empty` and `size` method are exactly the same as the unordered linkedlist as they don't have anything to do with the actual item in the list.
-#
+# 
 # </font>
 # </div>
 
@@ -188,13 +189,13 @@ mylist
 class OrderedList:
     def __init__(self):
         self.head = None
-
+        
     def add(self, item):
         """
         takes data, initializes a new node with the given data
         and add it to the list while maintaining relative order
         """
-
+        
         # stop when the current node is larger than the item
         stop = False
         previous = None
@@ -205,7 +206,7 @@ class OrderedList:
             else:
                 previous = current
                 current = current.get_next()
-
+        
         # check whether it will be added to the head
         # or somewhether in the middle and handle
         # both cases
@@ -218,7 +219,7 @@ class OrderedList:
             node.set_next(current)
 
         return self
-
+    
     def search(self, item):
         """
         goes through the entire list to check
@@ -239,7 +240,7 @@ class OrderedList:
                     current = current.get_next()
 
         return found
-
+    
     def __repr__(self):
         value = []
         current = self.head
@@ -248,7 +249,7 @@ class OrderedList:
             value.append(data)
             current = current.get_next()
 
-        return "[" + ", ".join(value) + "]"
+        return '[' + ', '.join(value) + ']'
 
 
 # In[20]:
@@ -267,16 +268,20 @@ mylist
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
-# - https://www.thoughtco.com/definition-of-stack-in-programming-958162
+# 
+# - https://www.thoughtco.com/definition-of-stack-in-programming-958162 
 # - https://runestone.academy/runestone/books/published/pythonds/BasicDS/WhatisaStack.html
 # - https://github.com/ethen8181/machine-learning/blob/master/python/algorithms/basic_data_structure.ipynb
 # - https://www.datacamp.com/community/tutorials/data-structures-python
 # - [Implementing an Ordered List](http://interactivepython.org/runestone/static/pythonds/BasicDS/ImplementinganOrderedList.html)
 # - [Online book: Lists](http://interactivepython.org/runestone/static/pythonds/BasicDS/Lists.html)
 # - [Blog: Implementing a Singly Linked List in Python](https://www.codefellows.org/blog/implementing-a-singly-linked-list-in-python/#)
-#
+#                                                       
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

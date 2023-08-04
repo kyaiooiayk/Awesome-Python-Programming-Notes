@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** collections
-#
+# 
 # </font>
 # </div>
 
@@ -29,9 +29,9 @@ from collections import OrderedDict
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - This module implements specialized container datatypes providing alternatives to Python’s general purpose built-in containers, dict, list, set, and tuple.
-#
+#     
 # </font>
 # </div>
 
@@ -40,9 +40,9 @@ from collections import OrderedDict
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Get rid of duplicates in a list of integers.
-#
+# 
 # </font>
 # </div>
 
@@ -70,10 +70,14 @@ list(OrderedDict.fromkeys(items))
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - [How do I remove duplicates from a list, while preserving order?](https://stackoverflow.com/questions/480214/how-do-i-remove-duplicates-from-a-list-while-preserving-order)
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+
