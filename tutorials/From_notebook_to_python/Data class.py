@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Data class
-#
+# 
 # </font>
 # </div>
 
@@ -30,10 +30,10 @@ from dataclasses import dataclass
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - For simple data structures, you have can use a `tuple`, `dict` and `namedtuple`.
+# 
+# - For simple data structures, you have can use a `tuple`, `dict` and `namedtuple`. 
 # - If `namedtuple` offers a lot of flexibiliy why even bother with data classes? First of all, data classes come with many more features. At the end of day even if `namedtuple` comes very close to what data class has to offer, by design is a `namedtuple` is a regular `tuple`.
-#
+# 
 # </font>
 # </div>
 
@@ -42,7 +42,7 @@ from dataclasses import dataclass
 # In[2]:
 
 
-queen_of_hearts_tuple = ("Q", "Hearts")
+queen_of_hearts_tuple = ('Q', 'Hearts')
 
 
 # In[3]:
@@ -57,14 +57,14 @@ queen_of_hearts_tuple[0]
 # In[4]:
 
 
-queen_of_hearts_dict = {"rank": "Q", "suit": "Hearts"}
+queen_of_hearts_dict = {'rank': 'Q', 'suit': 'Hearts'}
 
 
 # In[5]:
 
 
 # Would be nicer with .suit
-queen_of_hearts_dict["suit"]
+queen_of_hearts_dict['suit']
 
 
 # ## `namedtuple`
@@ -72,13 +72,13 @@ queen_of_hearts_dict["suit"]
 # In[6]:
 
 
-NamedTupleCard = namedtuple("NamedTupleCard", ["rank", "suit"])
+NamedTupleCard = namedtuple('NamedTupleCard', ['rank', 'suit'])
 
 
 # In[7]:
 
 
-queen_of_hearts = NamedTupleCard("Q", "Hearts")
+queen_of_hearts = NamedTupleCard('Q', 'Hearts')
 queen_of_hearts.rank
 
 
@@ -93,11 +93,11 @@ queen_of_hearts.suit
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Let's we'd like to build a class to describe a deck of cards.
 # - At the same we'd like to specifically build a `print`and `=` methods inside the class.
 # - We'll then compare this against the data classes.
-#
+# 
 # </font>
 # </div>
 
@@ -110,7 +110,8 @@ class RegularCard:
         self.suit = suit
 
     def __repr__(self):
-        return f"{self.__class__.__name__}" f"(rank={self.rank!r}, suit={self.suit!r})"
+        return (f'{self.__class__.__name__}'
+                f'(rank={self.rank!r}, suit={self.suit!r})')
 
     def __eq__(self, other):
         if other.__class__ is not self.__class__:
@@ -122,7 +123,7 @@ class RegularCard:
 
 
 # Instantiate the class
-queen_of_hearts = RegularCard("Q", "Hearts")
+queen_of_hearts = RegularCard('Q', 'Hearts')
 
 
 # In[11]:
@@ -148,7 +149,7 @@ queen_of_hearts
 
 
 # Calling the method __eq__
-queen_of_hearts == RegularCard("Q", "Hearts")
+queen_of_hearts == RegularCard('Q', 'Hearts')
 
 
 # # Behind the scene
@@ -156,24 +157,24 @@ queen_of_hearts == RegularCard("Q", "Hearts")
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The following are all equivalent syntax
-#
+# 
 # ```
 # @dataclass
 # class C:
 #     ...
-#
+# 
 # @dataclass()
 # class C:
 #     ...
-#
+# 
 # @dataclass(init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False,
 #            match_args=True, kw_only=False, slots=False, weakref_slot=False)
 # class C:
 #     ...
 # ```
-#
+# 
 # </font>
 # </div>
 
@@ -182,11 +183,11 @@ queen_of_hearts == RegularCard("Q", "Hearts")
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Can we simplify what we have done above with a regular python class? Specifically can we reduce the amount of boiler plate code?
 # - To give an idea why this may be beneficial look at `rank` and how many times is repeated: 3!
 # - In short `dataclass` allows you to avoid having to write the class's constructor.
-#
+#     
 # </font>
 # </div>
 
@@ -203,7 +204,7 @@ class DataClassCard:
 
 
 # Instantiate the class
-queen_of_hearts = DataClassCard("Q", "Hearts")
+queen_of_hearts = DataClassCard('Q', 'Hearts')
 
 
 # In[17]:
@@ -236,7 +237,7 @@ print(queen_of_hearts)
 
 
 # Calling the method __eq__
-queen_of_hearts == DataClassCard("Q", "Hearts")
+queen_of_hearts == DataClassCard('Q', 'Hearts')
 
 
 # # Data class - used as a dictionary
@@ -244,10 +245,10 @@ queen_of_hearts == DataClassCard("Q", "Hearts")
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - If you would like to use the class as a key in a dictionary (instead of some hack I mentioned above like extracting IDs from classes and using them as keys), turn the class into “frozen”.
-# - This will auto-define the required `__hash__()` function.
-#
+# 
+# - If you would like to use the class as a key in a dictionary (instead of some hack I mentioned above like extracting IDs from classes and using them as keys), turn the class into “frozen”. 
+# - This will auto-define the required `__hash__()` function.    
+#     
 # </font>
 # </div>
 
@@ -264,7 +265,7 @@ class Foo:
 # In[36]:
 
 
-{Foo("foo", 1, 1 / 3)}
+{Foo('foo', 1, 1/3)}
 
 
 # In[46]:
@@ -280,7 +281,7 @@ class Foo:
 # In[45]:
 
 
-sorted([Foo("foo", 1, 1 / 3), Foo("foo", 2, 1 / 2)])
+sorted([Foo('foo', 1, 1/3), Foo("foo", 2, 1/2)])
 
 
 # # When not to use dataclass?
@@ -288,14 +289,14 @@ sorted([Foo("foo", 1, 1 / 3), Foo("foo", 2, 1 / 2)])
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Define a class as a dataclass if that class is small and only has a few attributes, having some 2 or 3 methods; otherwise, a regular class should be defined.
 # - Do not use dataclass when most of the attributes are not initialised through arguments.
 # - Do not use dataclass when you need to perform special actions in `__init__()`.
 # - Do not use dataclass for custum `__init__` and custom `__new__`
 # - Do not use daclass for various patterns that use inheritance.
 # - Data classes are great when every attribute of the class is public. In contrast, they're not meant for classes that have private attributes.
-#
+#     
 # </font>
 # </div>
 
@@ -304,12 +305,12 @@ sorted([Foo("foo", 1, 1 / 3), Foo("foo", 2, 1 / 2)])
 
 # <div class="alert alert-danger">
 # <font color=black>
-#
+# 
 # - Dataclasses are very useful to create classes that **just store attributes**.
 # - Dataclasses resemble a lot with NamedTuples however namedtuples are immutable whereas dataclasses aren't (unless the frozen parameter is set to `True`.)
 # - Dataclasses auto-generate automatically a lot of dunder methods for the user-defined classes
-#
-#
+# 
+#     
 # </font>
 # </div>
 
@@ -318,12 +319,12 @@ sorted([Foo("foo", 1, 1 / 3), Foo("foo", 2, 1 / 2)])
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - [Data Classes in Python 3.7+ (Guide)](https://realpython.com/python-data-classes/)
 # - [Python: To OOP or to FP?](https://towardsdatascience.com/python-to-oop-or-to-fp-13ac79a43b16)
 # - [dataclasses — Data Classes](https://docs.python.org/3/library/dataclasses.html)
 # - [Any reason not to use dataclasses everywhere?](https://www.reddit.com/r/Python/comments/ycn5ae/any_reason_not_to_use_dataclasses_everywhere/)
-#
+#     
 # </font>
 # </div>
 
@@ -333,8 +334,12 @@ sorted([Foo("foo", 1, 1 / 3), Foo("foo", 2, 1 / 2)])
 # In[ ]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv')
 
 
 # In[ ]:
+
+
+
+

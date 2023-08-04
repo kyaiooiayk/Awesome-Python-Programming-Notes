@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Class decorators
-#
+# 
 # </font>
 # </div>
 
@@ -20,12 +20,12 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Encapsulation is seen as the bundling of data with the methods that operate on that data.
-# - It is often accomplished by providing two kinds of methods for attributes
-# - The methods for retrieving or accessing the values of attributes are called **getter methods**. Getter methods do not change the values of attributes, they just return the values.
-# - The methods used for changing the values of attributes are called **setter methods**.
-#
+# 
+# - Encapsulation is seen as the bundling of data with the methods that operate on that data. 
+# - It is often accomplished by providing two kinds of methods for attributes 
+# - The methods for retrieving or accessing the values of attributes are called **getter methods**. Getter methods do not change the values of attributes, they just return the values. 
+# - The methods used for changing the values of attributes are called **setter methods**. 
+# 
 # </font>
 # </div>
 
@@ -34,12 +34,12 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - There are three types of class decorators:
 #     - `@property` The Pythonic way to introduce attributes is to make them public, and not introduce getters and setters to retrieve or change them.
 #     - `@classmethod` To add additional constructor to the class.
 #     - `@staticmethod` To attach functions to classes so people won't misuse them in wrong places.
-#
+# 
 # </font>
 # </div>
 
@@ -48,17 +48,17 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Let's create a class that stores the temperature in degree Celsius.
+# 
+# - Let's create a class that stores the temperature in degree Celsius. 
 # - The temperature will be a "private method", so our end-users won't have direct access to it.
-# - The class will also implement a method to convert the temperature into degree Fahrenheit.
-# - We also want to implement a value constraint to the temperature, so that it cannot go below -273 degree Celsius.
-#
-#
+# - The class will also implement a method to convert the temperature into degree Fahrenheit. 
+# - We also want to implement a value constraint to the temperature, so that it cannot go below -273 degree Celsius. 
+# 
+# 
 # - We have two way of doing this:
 #     - One way of doing this is to define a getter and setter interfaces to manipulate it.
 #     - The other way is to to use `@property`
-#
+# 
 # </font>
 # </div>
 
@@ -68,7 +68,8 @@
 
 
 class Celsius_v1:
-    def __init__(self, temperature=0):
+    
+    def __init__(self, temperature = 0):
         self.set_temperature(temperature)
 
     def to_fahrenheit(self):
@@ -79,8 +80,8 @@ class Celsius_v1:
 
     def set_temperature(self, value):
         if value < -273:
-            raise ValueError("Temperature below -273 is not possible")
-
+            raise ValueError('Temperature below -273 is not possible')
+        
         self._temperature = value
 
 
@@ -90,24 +91,25 @@ class Celsius_v1:
 
 
 class Celsius_v2:
-    def __init__(self, temperature=0):
+    
+    def __init__(self, temperature = 0):
         self._temperature = temperature
 
     def to_fahrenheit(self):
         return (self.temperature * 1.8) + 32
-
+    
     # Give access to the value like it is an attribute instead of a method
     @property
     def temperature(self):
         return self._temperature
-
+    
     # like accessing the attribute with an extra layer of error checking
     @temperature.setter
     def temperature(self, value):
         if value < -273:
-            raise ValueError("Temperature below -273 is not possible")
-
-        print("Setting value")
+            raise ValueError('Temperature below -273 is not possible')
+        
+        print('Setting value')
         self._temperature = value
 
 
@@ -134,17 +136,17 @@ print(c.get_temperature())
 # In[33]:
 
 
-# accessing the attribute will return the ValueError error.
+# accessing the attribute will return the ValueError error. 
 # But look at the error call. the code does much less calls
 cc.temperature = -300
 
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Note that you can still access the private attribute and violate the temperature checking,
+# 
+# - Note that you can still access the private attribute and violate the temperature checking, 
 # - However, it's the users fault not yours
-#
+# 
 # </font>
 # </div>
 
@@ -160,15 +162,15 @@ print(cc._temperature)
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - In conclusion why should we have to use ` @property`?
+# 
+# - In conclusion why should we have to use ` @property`? 
 #     - It simplifies the typing from `obj.get_temperature()` to `obj.temperature`
 #     - it simplified the typing from `obj.set_temperature(val)` to `obj.temperature = val`.
-#
-#
+# 
+# 
 # - Also, not using ` @property` can cause problems while dealing with hundreds of thousands of lines of codes.
 # - The update was not backwards compatible. This is where`  @property` comes to rescue.
-#
+# 
 # </font>
 # </div>
 
@@ -177,25 +179,24 @@ print(cc._temperature)
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - `@classmethod` create alternative constructors for the class.
+# 
+# - `@classmethod` create alternative constructors for the class. 
 # - An example of this behavior is the different ways to construct a dictionary.
 # - The `cls` is critical, as it is an object that holds the class itself. This makes them work with inheritance.
-#
+# 
 # </font>
 # </div>
 
 # In[7]:
 
 
-print(dict.fromkeys(["raymond", "rachel", "mathew"]))
+print(dict.fromkeys(['raymond', 'rachel', 'mathew']))
 
 
 # In[14]:
 
 
 import time
-
 
 class Date:
     # Primary constructor
@@ -217,7 +218,7 @@ class Date:
 
 
 # Primary
-a = Date(2012, 12, 21)
+a = Date(2012, 12, 21) 
 print(a.__dict__)
 
 
@@ -225,7 +226,7 @@ print(a.__dict__)
 
 
 # Alternate
-b = Date.today()
+b = Date.today() 
 print(b.__dict__)
 
 
@@ -235,13 +236,12 @@ print(b.__dict__)
 class NewDate(Date):
     pass
 
-
 # Creates an instance of Date (cls=Date)
-c = Date.today()
+c = Date.today()      
 print(c.__dict__)
 
 # Creates an instance of NewDate (cls=NewDate)
-d = NewDate.today()
+d = NewDate.today()   
 print(d.__dict__)
 
 
@@ -250,12 +250,12 @@ print(d.__dict__)
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - The purpose of **@staticmethod** is to attach functions to classes.
+# 
+# - The purpose of **@staticmethod** is to attach functions to classes. 
 # - We do this to improve the findability of the function and to make sure that people are using the function in the appropriate context.
 # - Behind the scenes Python simply enforces the access restrictions by not passing in the self or the cls argument when a static method gets called using the dot syntax. This confirms that static methods can neither access the object instance state nor the class state. They work like regular functions but belong to the class’s (and every instance’s) namespace.
-#
-#
+# 
+# 
 # </font>
 # </div>
 
@@ -276,7 +276,7 @@ class Date:
         print("alternative constructor")
         t = time.localtime()
         return cls(t.tm_year, t.tm_mon, t.tm_mday)
-
+    
     # The logic belongs with the date class
     @staticmethod
     def show_tomorrow_date():
@@ -288,7 +288,7 @@ class Date:
 # In[24]:
 
 
-data = Date(2000, 1, 1)
+data=Date(2000,1,1)
 print(data.__dict__)
 
 
@@ -302,7 +302,6 @@ Date.today()
 
 
 import time
-
 Date.show_tomorrow_date()
 
 
@@ -320,30 +319,32 @@ a.show_tomorrow_date()
 # In[11]:
 
 
-class MyClass:
+class MyClass():
+
     def method(self):
         """
         Instance methods need a class insance and
         can access the instance through self
         """
         return "Instance methods called", self
-
+    
     def classmethod(cls):
         """
         Class methods don't need a class instance.
-        They can't access the instance self but
+        They can't access the instance self but 
         they have access to the class itseld via cls.
         """
         return "Class method called", cls
-
+    
     @staticmethod
     def staticmethod():
         """
         Static method don't have access to cls or self.
         They work like regular functions but belong to
-        the class's namespace.
-        """
+        the class's namespace.    
+        """        
         return "Static method called"
+        
 
 
 # In[12]:
@@ -380,12 +381,16 @@ MyClass.staticmethod()
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - http://nbviewer.jupyter.org/github/ethen8181/machine-learning/blob/master/python/class.ipynb
-# - [Python Tutorials: Python @property](http://www.programiz.com/python-programming/property)
+# - [Python Tutorials: Python @property](http://www.programiz.com/python-programming/property) 
 # - [Onlines Python Course Notes: Properties vs. Getters and Setters](http://www.python-course.eu/python3_properties.php)
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

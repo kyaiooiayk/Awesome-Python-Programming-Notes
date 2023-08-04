@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** @property
-#
+# 
 # </font>
 # </div>
 
@@ -20,11 +20,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - `@property` The Pythonic way to introduce attributes is to make them public, and not introduce getters and setters to retrieve or change them.
 # - `@classmethod` To add additional constructor to the class.
 # - `@staticmethod` To attach functions to classes so people won't misuse them in wrong places.
-#
+# 
 # </font>
 # </div>
 
@@ -33,13 +33,13 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - The Pythonic way to introduce attributes is to make them public, and not introduce getters and setters to retrieve or change them.
 # - Give access to the value like it is an attribute **instead** of a method
 # - By using `@property`, you can "reuse" the name of a property to avoid creating new names for the getters, setters, and deleters.
 # - They are often used to validate the value of an attribute. Essentially they make the process much easier.
-# - This makes methods act as getters, setters, or deleters when we define properties in a class.
-#
+# - This makes methods act as getters, setters, or deleters when we define properties in a class. 
+# 
 # </font>
 # </div>
 
@@ -48,10 +48,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - Properties, a common kind of descriptor.
 # - In general, a **descriptor** is an attribute value that has one of the methods in the descriptor protocol. Those methods are `__get__()`, `__set__()`, and `__delete__()`. If any of those methods are defined for an attribute, it is said to be a descriptor.
-#
+# 
 # </font>
 # </div>
 
@@ -93,29 +93,29 @@ house1.price
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Let's say that you are asked to make this attribute protected (non-public) and validate the new value before assigning it.
+# 
+# - Let's say that you are asked to make this attribute protected (non-public) and validate the new value before assigning it. 
 # - Specifically, you need to check if the value is a positive float. How would you do that? Let's see.
-# - With `@property` you will be able to add getters and setters "behind the scenes" **without affecting** the syntax that you used to access or modify the attribute when it was public.
-#
+# - With `@property` you will be able to add getters and setters "behind the scenes" **without affecting** the syntax that you used to access or modify the attribute when it was public. 
+# 
 # </font>
 # </div>
 
 # In[6]:
 
 
-class House_v1:
+class House_v1:    
     """House
-
+    
     We'd like to create a class where it only
     attribute is its price. We'd like to enforce a check on
     this value: no negative value area allowed. So the user
     we'll never misuse them.
     """
 
-    def __init__(self, price):
+    def __init__(self, price):        
         """
-        Please note that there is un underscored in
+        Please note that there is un underscored in 
         front of price!
         """
         self._price = price
@@ -154,11 +154,11 @@ house2.price
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - Please note that the price attribute is now considered "protected" by the check.
 # - To help developer ditinguish the two attribute we now add `_` before `price` as in `self._price`.
 # - We are not changing the syntax at all, but we are actually using the getter as an intermediary to avoid accessing the data directly.
-#
+# 
 # </font>
 # </div>
 
@@ -170,15 +170,15 @@ house2.price = -10
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - You can define three methods for a property:
 #     - A `getter` - to access the value of the attribute.
 #     - A `setter` - to set the value of the attribute.
-#     - A `deleter` - to delete the instance attribute.
-#
-#
+#     - A `deleter` - to delete the instance attribute. 
+# 
+# 
 # - You don't necessarily have to define all three methods for every property.
-#
+# 
 # </font>
 # </div>
 
@@ -200,9 +200,9 @@ house2.price
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The decorator `@property` would not be called at instantiation!
-#
+# 
 # </font>
 # </div>
 
@@ -229,12 +229,12 @@ house2.price = -10
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - When a method is decorated with `@property`, it can be accessed like an attribute (i.e., without parentheses) instead of like a method (i.e., with parentheses). This can be useful for creating a more intuitive and user-friendly API for a class.
 # - Additionally, @property can be used with `@property_name.setter` method, which allows to set the value of the attribute. This allows for **read-only** properties, and it can be used to make sure that an attribute cannot be set to an invalid value.
 # - It is important to note that, the methods decorated with `@property` are read-only, if you want to change the value of the attribute you need to use a `@property_name.setter` method.
 # - It is a way to make sure that the attribute is always set to a valid value.
-#
+#     
 # </font>
 # </div>
 
@@ -244,14 +244,14 @@ house2.price = -10
 class Person:
     def __init__(self):
         self._name = ""
-
+        
     @property
     def name(self):
         return self._name
 
     @name.setter
     def name(self, value):
-        if len(value) > 3:
+        if len(value)>3:
             self._name = value
         else:
             raise ValueError("name should be at least 3 characters long")
@@ -278,16 +278,19 @@ name
 # In[ ]:
 
 
+
+
+
 # # Avoid running a specific part of the code
 # <hr style = "border:2px solid black" ></hr>
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Let's assume we have a routine made of many parts.
 # - One of the section of the code is very expensive and we'd like to run only once.
 # - We could use property to trigger this.
-#
+# 
 # </font>
 # </div>
 
@@ -336,7 +339,7 @@ a.value
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - In this example, the value method is decorated with the `@property` decorator, which makes it a read-only property.
 # - Attempting to set the value of value raises an AttributeError because there is no setter method for the property.
 # - **Why would you want to do it?** Useful in situations where you want to make sure that the property cannot be modified from outside the class.
@@ -346,7 +349,7 @@ a.value
 #     - You want to make sure that the property is read-only, and that any attempt to set it will raise an error.
 #     - Additionally, this approach can also be useful to provide a simple and consistent way of accessing data that is stored within a class, but should not be modified directly.
 #     - In general, this approach can be useful to create a more robust and maintainable codebase by enforcing encapsulation, and by providing a clear and consistent interface for interacting with the class.
-#
+#     
 # </font>
 # </div>
 
@@ -372,14 +375,14 @@ obj = MyClass(5)
 
 
 # prints 5
-print(obj.value)
+print(obj.value)  
 
 
 # In[30]:
 
 
 # raises AttributeError, because there is no setter method for 'value
-obj.value = 10
+obj.value = 10  
 
 
 # # `@property` vs. object attributes
@@ -387,11 +390,11 @@ obj.value = 10
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - With a property you have complete control of its `getter`, `setter` and `deleter` methods, which you don't have (if not using caveats) with an attribute.
 # - **If not using caveats** meant in a non-pythonic way.
 # - This ("complete control") can be done with "non-property" attributes as well though, just without such simple decorators.
-#
+# 
 # </font>
 # </div>
 
@@ -400,14 +403,18 @@ obj.value = 10
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.freecodecamp.org/news/python-property-decorator/
-# - https://stackoverflow.com/questions/7374748/whats-the-difference-between-a-python-property-and-attribute
+# - https://stackoverflow.com/questions/7374748/whats-the-difference-between-a-python-property-and-attribute 
 # - https://python-course.eu/oop/properties-vs-getters-and-setters.php
 # - [Having @property only run once](https://stackoverflow.com/questions/50934180/having-property-only-run-once)
 # - [What is a descriptor?](https://docs.python.org/3/howto/descriptor.html#descriptor-protocol)
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

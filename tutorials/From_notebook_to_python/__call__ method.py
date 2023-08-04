@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** `__call__` method
-#
+# 
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - `__call__` is a built-in method which enables to write classes where the instances behave like functions and can be called like a function.
 # - In practice: `object()` is shorthand for `object.__call__()`
-#
+# 
 # </font>
 # </div>
 
@@ -32,11 +32,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - `__init__()` is properly defined as Class Constructor which builds an instance of a class, whereas `__call__` makes such a instance callable as a function and therefore can be modifiable.
 # - Technically `__init__` is called once by `__new__` when object is created, so that it can be initialised
 # - But there are many scenarios where you might want to redefine your object, say you are done with your object, and may find a need for a new object. With `__call__` you can redefine the same object as if it were new.
-#
+# 
 # </font>
 # </div>
 
@@ -46,10 +46,10 @@
 # In[2]:
 
 
-class Example:
+class Example():
     def __init__(self):
         print("Instance created")
-
+    
     # Defining __call__ method
     def __call__(self):
         print("Instance is called via special method __call__")
@@ -79,14 +79,14 @@ e.__call__()
 # In[10]:
 
 
-class Product:
+class Product():
     def __init__(self):
         print("Instance created")
-
+    
     # Defining __call__ method
     def __call__(self, a, b):
         print("Instance is called via special method __call__")
-        print(a * b)
+        print(a*b)
 
 
 # In[11]:
@@ -105,14 +105,14 @@ p.__init__()
 
 
 # Is being call like if p was a function
-p(2, 3)
+p(2,3)
 
 
 # In[14]:
 
 
 # The cell above is equivalent to this call
-p.__call__(2, 3)
+p.__call__(2,3)
 
 
 # # Example #3
@@ -127,16 +127,17 @@ class Stuff(object):
         self.x = x
         self.y = y
         self.Range = Range
-
+    
     def __call__(self, x, y):
         self.x = x
         self.y = y
         print("__call__ with (%d, %d)" % (self.x, self.y))
-
+    
     def __del__(self, x, y):
         del self.x
         del self.y
-        del self.Range
+        del self.Range       
+        
 
 
 # In[34]:
@@ -154,7 +155,7 @@ s.x
 # In[36]:
 
 
-s(7, 8)
+s(7,8)
 
 
 # In[37]:
@@ -169,48 +170,48 @@ s.x
 # In[2]:
 
 
-class Sum:
-    def __init__(self, x, y):
+class Sum():
+    def __init__(self, x, y):        
         self.x = x
-        self.y = y
+        self.y = y        
         print("__init__ with (%d, %d)" % (self.x, self.y))
-
+    
     def __call__(self, x, y):
         self.x = x
-        self.y = y
+        self.y = y        
         print("__call__ with (%d, %d)" % (self.x, self.y))
-
+    
     def sum(self):
-        return self.x + self.y
+        return self.x + self.y        
 
 
 # In[5]:
 
 
-sum_1 = Sum(2, 2)
+sum_1 = Sum(2,2)
 sum_1.sum()
 
 
 # In[12]:
 
 
-sum_1 = Sum(2, 2)
-sum_1(3, 3)
+sum_1 = Sum(2,2)
+sum_1(3,3)
 
 
 # In[17]:
 
 
-sum_1 = Sum(2, 2)
+sum_1 = Sum(2,2)
 # This is equivalent to
-sum_1.__call__(3, 3)
+sum_1.__call__(3,3)
 
 
 # In[14]:
 
 
 # You can also do this
-sum_1 = Sum(2, 2)(3, 3)
+sum_1 = Sum(2,2)(3,3)
 
 
 # # References
@@ -218,10 +219,14 @@ sum_1 = Sum(2, 2)(3, 3)
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.geeksforgeeks.org/__call__-in-python/
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

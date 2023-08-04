@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Lists, sets, frozensets, dictionaries and tuples
-#
+# 
 # </font>
 # </div>
 
@@ -20,16 +20,16 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-#
+# 
+# 
 # | Type Name | Example                   |Description                            |
 # |-----------|---------------------------|---------------------------------------|
 # | ``list``  | ``[1, 2, 3]``             | Ordered collection                    |
 # | ``tuple`` | ``(1, 2, 3)``             | Immutable ordered collection          |
 # | ``dict``  | ``{'a':1, 'b':2, 'c':3}`` | Unordered (key,value) mapping         |
 # | ``set``   | ``{1, 2, 3}``             | Unordered collection of unique values |
-#
-#
+# 
+# 
 # </font>
 # </div>
 
@@ -80,20 +80,20 @@ L
 
 
 # In addition, there are many more built-in list methods; they are well-covered in Python's [online documentation](https://docs.python.org/3/tutorial/datastructures.html).
-#
+# 
 # While we've been demonstrating lists containing values of a single type, one of the powerful features of Python's compound objects is that they can contain objects of *any* type, or even a mix of types. For example:
 
 # In[6]:
 
 
-L = [1, "two", 3.14, [0, 3, 5]]
+L = [1, 'two', 3.14, [0, 3, 5]]
 
 
 # This flexibility is a consequence of Python's dynamic type system.
 # Creating such a mixed sequence in a statically-typed language like C can be much more of a headache!
 # We see that lists can even contain other lists as elements.
 # Such type flexibility is an essential piece of what makes Python code relatively quick and easy to write.
-#
+# 
 # So far we've been considering manipulations of lists as a whole; another essential piece is the accessing of individual elements.
 # This is done in Python via *indexing* and *slicing*, which we'll explore next.
 
@@ -276,25 +276,25 @@ print(numerator / denominator)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+#     
 # - Dictionaries are extremely flexible mappings of keys to values, and form the basis of much of Python's internal implementation.
 # - They can be created via a comma-separated list of ``key:value`` pairs within curly braces.
 # - Items are accessed and set via the indexing syntax used for lists and tuples, except here the index is not a zero-based order but valid key in the dictionary
-#
+#     
 # </font>
-# </div>
+# </div>   
 
 # In[27]:
 
 
-numbers = {"one": 1, "two": 2, "three": 3}
+numbers = {'one':1, 'two':2, 'three':3}
 
 
 # In[28]:
 
 
 # Access a value via the key
-numbers["two"]
+numbers['two']
 
 
 # New items can be added to the dictionary using indexing as well:
@@ -303,16 +303,16 @@ numbers["two"]
 
 
 # Set a new key:value pair
-numbers["ninety"] = 90
+numbers['ninety'] = 90
 print(numbers)
 
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+#     
 # - Keep in mind that dictionaries do not maintain any sense of order for the input parameters; this is by design.
 # - This lack of ordering allows dictionaries to be implemented very efficiently, so that random element access is very fast, **regardless of the size of the dictionary** (if you're curious how this works, read about the concept of a *hash table*).
-#
+# 
 # </font>
 # </div>
 
@@ -320,9 +320,9 @@ print(numbers)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Hash collisiton happen when two objects have the same jash key. A normal working condition would check for this and find another hask key for this. Hash collisions are unavoidable.Collisions will happen in general, because there are infinite possible hashable values and finite hash codes.
-#
+#     
+# - Hash collisiton happen when two objects have the same jash key. A normal working condition would check for this and find another hask key for this. Hash collisions are unavoidable.Collisions will happen in general, because there are infinite possible hashable values and finite hash codes. 
+# 
 # </font>
 # </div>
 
@@ -331,10 +331,10 @@ print(numbers)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+#     
 # - `set` contains unordered collections of unique items.
 # - They are defined much like lists and tuples, except they use the curly brackets of dictionaries
-#
+# 
 # </font>
 # </div>
 
@@ -349,32 +349,32 @@ odds = {1, 3, 5, 7, 9}
 
 
 # union: items appearing in either
-primes | odds  # with an operator
-primes.union(odds)  # equivalently with a method
+primes | odds      # with an operator
+primes.union(odds) # equivalently with a method
 
 
 # In[32]:
 
 
 # intersection: items appearing in both
-primes & odds  # with an operator
-primes.intersection(odds)  # equivalently with a method
+primes & odds             # with an operator
+primes.intersection(odds) # equivalently with a method
 
 
 # In[33]:
 
 
 # difference: items in primes but not in odds
-primes - odds  # with an operator
-primes.difference(odds)  # equivalently with a method
+primes - odds           # with an operator
+primes.difference(odds) # equivalently with a method
 
 
 # In[34]:
 
 
 # symmetric difference: items appearing in only one set
-primes ^ odds  # with an operator
-primes.symmetric_difference(odds)  # equivalently with a method
+primes ^ odds                     # with an operator
+primes.symmetric_difference(odds) # equivalently with a method
 
 
 # # Frozensets
@@ -382,22 +382,22 @@ primes.symmetric_difference(odds)  # equivalently with a method
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - While you can create a set with the built-in `set` or through the `{}` notation, frozensets can only be created through their respective built-in.
-#
+# 
 # - `frozensets` can be created out of other sets or out of any iterable, much like sets.
-#
+# 
 # - When printed, frozensets **display** the indication that they are frozen.
-#
+# 
 # - Sets are mutable but frozensets are not.
-#
+# 
 # </font>
 # </div>
 
 # In[3]:
 
 
-groceries = {"cheese", "milk", "chocolate"}
+groceries = {'cheese', 'milk', 'chocolate'}
 groceries
 
 
@@ -410,7 +410,7 @@ frozenset(groceries)
 # In[5]:
 
 
-frozenset(["cheese", "milk", "chocolate"])
+frozenset(['cheese', 'milk', 'chocolate'])
 
 
 # # References
@@ -418,14 +418,18 @@ frozenset(["cheese", "milk", "chocolate"])
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [Whirlwind Tour of Python](http://www.oreilly.com/programming/free/a-whirlwind-tour-of-python.csp)
 # - https://mathspp.com/blog/pydonts
 # - https://docs.python.org/3/library/stdtypes.html
 # - https://stackoverflow.com/questions/63910315/whats-the-difference-between-a-hashmap-and-a-hashtable-in-python
 # - https://stackoverflow.com/questions/114830/is-a-python-dictionary-an-example-of-a-hash-table
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

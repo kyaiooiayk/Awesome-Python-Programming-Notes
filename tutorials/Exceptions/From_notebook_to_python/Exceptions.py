@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Exceptions
-#
+# 
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Exception handling in Python is very similar to Java.
-# - The code, which harbours the risk of an exception, is embedded in a `try-except` block.
-#
+#     
+# - Exception handling in Python is very similar to Java. 
+# - The code, which harbours the risk of an exception, is embedded in a `try-except` block. 
+# 
 # </font>
 # </div>
 
@@ -59,12 +59,12 @@ int_input("five")
 import sys
 
 try:
-    f = open("integers.txt")
+    f = open('integers.txt')
     s = f.readline()
     i = int(s.strip())
 except IOError as e:
     errno, strerror = e.args
-    print("I/O error({0}): {1}".format(errno, strerror))
+    print("I/O error({0}): {1}".format(errno,strerror))
     # e can be printed directly without using .args:
     # print(e)
 except ValueError:
@@ -85,10 +85,10 @@ raise SyntaxError("Sorry, my fault!")
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - It's possible to create Exceptions yourself.
-# - The best or the Pythonic way to do this, consists in defining an exception class which inherits from the Exception class.
-#
+# - The best or the Pythonic way to do this, consists in defining an exception class which inherits from the Exception class. 
+# 
 # </font>
 # </div>
 
@@ -105,17 +105,17 @@ raise MyException("An exception doesn't always prove the rule!")
 # # `try` and `finally`
 # <hr style = "border:2px solid black" ></hr>
 
-#
+# 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - So far the try statement had always been paired with except clauses.
-# - But there is another way to use it as well. The try statement can be followed by a finally clause.
+# 
+# - So far the try statement had always been paired with except clauses. 
+# - But there is another way to use it as well. The try statement can be followed by a finally clause. 
 # - A `finally` clause  is called clean-up or termination clauses, because they must be executed under all circumstances, i.e. a "finally" clause is always executed regardless if an exception occurred in a try block or not.
-#
-#
+# 
+#     
 # </font>
-# </div>
+# </div>    
 
 # In[18]:
 
@@ -150,10 +150,10 @@ finally:
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - The `try`` and `except` statement has an optional else clause. An else block has to be positioned after all the except clauses.
+# 
+# - The `try`` and `except` statement has an optional else clause. An else block has to be positioned after all the except clauses. 
 # - An `else` clause will be executed if the try clause doesn't raise an exception.
-#
+# 
 # </font>
 # </div>
 
@@ -161,13 +161,12 @@ finally:
 
 
 import sys
-
 file_name = "./tests.txt"
 text = []
 try:
-    fh = open(file_name, "r")
+    fh = open(file_name, 'r')
 except IOError:
-    print("cannot open", file_name)
+    print('cannot open', file_name)
 else:
     text = fh.readlines()
     fh.close()
@@ -181,9 +180,9 @@ if text:
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - https://python-course.eu/python-tutorial/errors-and-exception-handling.php
-#
+# 
 # </font>
 # </div>
 
@@ -193,8 +192,12 @@ if text:
 # In[1]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv')
 
 
 # In[ ]:
+
+
+
+

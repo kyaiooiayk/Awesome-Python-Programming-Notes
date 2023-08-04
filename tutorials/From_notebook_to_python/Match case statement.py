@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Match - case statement
-#
+# 
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - This feature is available from `python 3.10` onward only.
 # - The `match - case` syntax is similar to **switch statements** in other Object-oriented languages, and it is meant to make matching a structure to a case easier
-#
+# 
 # </font>
 # </div>
 
@@ -35,9 +35,9 @@
 
 def greeting(message):
     match message.split():
-        case ["hello"]:
+        case["hello"]:
             print("this message says hello")
-        case ["hello", name]:
+        case["hello", name]:
             print("This message is a personal greeting to {name}")
         case _:
             print("The message didn’t match with anything")
@@ -66,10 +66,10 @@ greeting("hello George Johnson")
 
 # <div class="alert alert-danger">
 # <font color=black>
-#
+# 
 # - It does not mean the match statement will be the best alternative always and, in particular, the match statement is generally being misused if you use it as a **simple switch**.
 # - short and basic match statements could be vanilla if statements.
-#
+#     
 # </font>
 # </div>
 
@@ -78,10 +78,14 @@ greeting("hello George Johnson")
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://blog.teclado.com/python-match-case/
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

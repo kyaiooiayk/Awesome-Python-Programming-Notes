@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Design Patterns - Factory Method
-#
+# 
 # </font>
 # </div>
 
@@ -20,14 +20,14 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - **Creational Design Patterns** are about class instantiation or the object instantiation.
+# 
+# - **Creational Design Patterns** are about class instantiation or the object instantiation. 
 #     - [x] Factory Method
 #     - [ ] Abstract Factory Method
 #     - [ ] Builder Method
 #     - [ ] Prototype Method
 #     - [ ] Singleton Method
-#
+# 
 # </font>
 # </div>
 
@@ -36,11 +36,11 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - **Factory method is a creational design pattern which solves the problem of creating product objects without specifying their concrete classes.**
 # - Factory Method is a Creational Design Pattern that allows an interface or a class to create an object, but lets subclasses decide which class or object to instantiate.
-# - Using the Factory method, we have the best ways to create an object. Here, objects are created without exposing the logic to the client, and for creating the new type of object, the client uses the same common interface.
-#
+# - Using the Factory method, we have the best ways to create an object. Here, objects are created without exposing the logic to the client, and for creating the new type of object, the client uses the same common interface. 
+# 
 # </font>
 # </div>
 
@@ -49,10 +49,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Suppose we have created an app whose main purpose is to translate one language into another and currently our app works with 10 languages only. Now our app has become widely popular among people but the demand has grown suddenly to include 5 more languages.
-# -It’s a piece of great news! only for the owner not for the developers. They have to change the whole code because now most part of the code is coupled with the existing languages only and that’s why developers have to make changes to the entire codebase which is really a difficult task to do.
-#
+# 
+# - Suppose we have created an app whose main purpose is to translate one language into another and currently our app works with 10 languages only. Now our app has become widely popular among people but the demand has grown suddenly to include 5 more languages. 
+# - It’s a piece of great news! only for the owner not for the developers. They have to change the whole code because now most part of the code is coupled with the existing languages only and that’s why developers have to make changes to the entire codebase which is really a difficult task to do.
+#     
 # </font>
 # </div>
 
@@ -64,17 +64,13 @@
 
 # Python Code for Object Oriented Concepts without using Factory method
 
-
 class FrenchLocalizer:
 
-    """it simply returns the french version"""
+    """ it simply returns the french version """
 
     def __init__(self):
-        self.translations = {
-            "car": "voiture",
-            "bike": "bicyclette",
-            "cycle": "cyclette",
-        }
+        self.translations = {"car": "voiture", "bike": "bicyclette",
+                             "cycle": "cyclette"}
 
     def localize(self, msg):
         """change the message using translations"""
@@ -85,7 +81,8 @@ class SpanishLocalizer:
     """it simply returns the spanish version"""
 
     def __init__(self):
-        self.translations = {"car": "coche", "bike": "bicicleta", "cycle": "ciclo"}
+        self.translations = {"car": "coche", "bike": "bicicleta",
+                             "cycle": "ciclo"}
 
     def localize(self, msg):
         """change the message using translations"""
@@ -121,10 +118,10 @@ for msg in message:
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+#     
 # - Its solution is to replace the straightforward object construction calls with calls to the special factory method.
 # - Actually, there will be no difference in the object creation but they are being called within the factory method.
-#
+#     
 # </font>
 # </div>
 
@@ -136,14 +133,14 @@ for msg in message:
 # Python Code for factory method it comes under the creational Design Pattern
 def Factory(language="English"):
     """Factory Method"""
-
+    
     # Create a dictionary
     localizers = {
         "French": FrenchLocalizer,
         "English": EnglishLocalizer,
         "Spanish": SpanishLocalizer,
     }
-
+    
     # Use the key to retrieve info from dic and return
     return localizers[language]()
 
@@ -168,12 +165,12 @@ for msg in message:
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - Factory encapsulates object creation. **It is an object specialising in creating other objects**. Factory solves the following problem:
 #     - When its uncertain what type of objects we are going to use at runtime.
 #     - When the application needs to decide what classes to be used at runtime.
 # - Let's suppose our pet shop sells dogs currently. Now we need to add a new pet i.e, a cat, here is how we can solve this by using the factory  method.
-#
+#     
 # </font>
 # </div>
 
@@ -206,7 +203,7 @@ class Cat:
 def get_pet(pet="dog"):
     """The Factory Method"""
 
-    pets = dict(dog=Dog("Sheru"), cat=Cat("Kitty"))
+    pets = dict(dog=Dog('Sheru'), cat=Cat('Kitty'))
     return pets[pet]
 
 
@@ -222,14 +219,14 @@ print(get_pet("cat").speak())
 
 # <div class="alert alert-block alert-danger">
 # <font color=black>
-#
+# 
 # - **Advantages**:
 #     - You avoid tight coupling between the creator and the concrete products.
 #     - Single Responsibility Principle. You can move the product creation code into one place in the program, making the code easier to support.
 #     - Open/Closed Principle. You can introduce new types of products into the program without breaking existing client code.
 # - **Disadvantages**:
-#     - The code may become more complicated since you need to introduce a lot of new subclasses to implement the pattern.
-#
+#     - The code may become more complicated since you need to introduce a lot of new subclasses to implement the pattern. 
+#     
 # </font>
 # </div>
 
@@ -238,12 +235,13 @@ print(get_pet("cat").speak())
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - [Factory Method](https://www.geeksforgeeks.org/factory-method-python-design-patterns/)
 # - [Factory Method in Python](https://refactoring.guru/design-patterns/factory-method/python/example#example-0)
 # - [The Factory Method Pattern and Its Implementation in Python](https://realpython.com/factory-method-python/)
 # - https://github.com/pyGuru123/Python-design-Patterns/tree/main/Creational%20Pattern
-#
+# - [Factory Method vs. Factory vs. Abstract Factory](https://www.baeldung.com/cs/factory-method-vs-factory-vs-abstract-factory)
+#     
 # </font>
 # </div>
 
@@ -253,8 +251,12 @@ print(get_pet("cat").speak())
 # In[6]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv -m")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv -m')
 
 
 # In[ ]:
+
+
+
+

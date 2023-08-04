@@ -8,9 +8,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** How to implement wildcards in python
-#
+# 
 # </font>
 # </div>
 
@@ -18,12 +18,12 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - A wildcard is a symbol used to replace or represent one or more characters.
-# - They are used to **simplify** search criteria.
-# - The most common wildcards are the asterisk `*` and the question mark `?`.
+# 
+# - A wildcard is a symbol used to replace or represent one or more characters. 
+# - They are used to **simplify** search criteria. 
+# - The most common wildcards are the asterisk `*` and the question mark `?`. 
 # - In Python, we can implement wildcards using the `regex` (regular expressions) library.
-#
+# 
 # </font>
 # </div>
 
@@ -31,10 +31,10 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - The dot `.` character is used in place of the question mark `?` symbol.
+# 
+# - The dot `.` character is used in place of the question mark `?` symbol. 
 # - Hence,to search for all words matching the `col?r` pattern, the code would look something like as follows.
-#
+# 
 # </font>
 # </div>
 
@@ -45,24 +45,25 @@
 import re
 
 # Add or remove the words in this list to vary the results
-wordlist = ["color", "colour", "work", "working", "fox", "worker", "working"]
+wordlist = ["color", "colour", "work", "working",
+            "fox", "worker", "working"]
 
 for word in wordlist:
-    # The . symbol is used in place of ? symbol
-    if re.search("col.r", word):
-        print("Using one dot", word)
-    elif re.search("col..r", word):
-        print("Using two dot", word)
+        # The . symbol is used in place of ? symbol
+        if re.search('col.r', word) : 
+                print ("Using one dot", word)
+        elif re.search('col..r', word) : 
+                print ("Using two dot", word)
 
 
 # # Example #2
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
-# - Similarly, the `.+` characters are used to match one or more characters (like the asterisk `*` symbol).
-# Hence, in Python, to search for all words starting with the root `work`, our regex code would look like this:
-#
+# 
+# - Similarly, the `.+` characters are used to match one or more characters (like the asterisk `*` symbol). 
+# Hence, in Python, to search for all words starting with the root `work`, our regex code would look like this: 
+# 
 # </font>
 # </div>
 
@@ -73,22 +74,27 @@ for word in wordlist:
 import re
 
 # Add or remove the words in this list to vary the results
-wordlist = ["color", "colour", "work", "working", "fox", "worker"]
+wordlist = ["color", "colour", "work", "working",
+            "fox", "worker"]
 
 for word in wordlist:
-    # The .+ symbol is used in place of * symbol
-    if re.search("work.+", word):
-        print(word)
+        # The .+ symbol is used in place of * symbol
+        if re.search('work.+', word) : 
+                print (word)
 
 
 # # References
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.educative.io/edpresso/how-to-implement-wildcards-in-python
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Docstrings
-#
+# 
 # </font>
 # </div>
 
@@ -20,10 +20,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Python documentation string or commonly known as docstring, is a string literal, and it is used in the class, module, function, or method definition.
+# 
+# - Python documentation string or commonly known as docstring, is a string literal, and it is used in the class, module, function, or method definition. 
 # - Docstrings are accessible from the doc attribute `__doc__` for any of the Python objects and also with the built-in `help()` function.
-#
+# 
 # </font>
 # </div>
 
@@ -32,10 +32,10 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - For example, let's say you installed the scikit-learn library and you would like to know all about the `sklearn` package like description, package modules, etc., you could simply use the help function to get all the information.
 # - You would notice that the output of the `help` function is more verbose than the `__doc__` attribute.
-#
+# 
 # </font>
 # </div>
 
@@ -62,11 +62,11 @@ print(sklearn.__doc__)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **Docstrings** act as documentation for the class, module, and packages. They are similar to comments, but they are enhanced, more logical, and useful version of commenting. They generally start with a triple quotes and can be access by `doc` or `help` python method.
-#
+# 
 # - **Comments** are mainly used to explain non-obvious portions of the code and can be useful for comments on Fixing bugs and tasks that are needed to be done. They generally start with `#` and cannot be access neither by `doc` not `help` python method.
-#
+# 
 # </font>
 # </div>
 
@@ -115,14 +115,14 @@ help(square)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The most common formats used are listed below:
-#     - [NumPy/SciPy docstrings](https://numpydoc.readthedocs.io/en/latest/format.html) Combination of reStructured and GoogleDocstrings and supported by Sphinx
+#     - [NumPy/SciPy docstrings](https://numpydoc.readthedocs.io/en/latest/format.html) Combination of reStructured and GoogleDocstrings and supported by Sphinx    
 #     - [EpyDoc](http://epydoc.sourceforge.net/) Render Epytext as series of HTML documents and a tool for generating API documentation for Python modules based on their Docstrings
 #     - [Google Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) Google's Style
-# - [PyDoc](https://docs.python.org/3.10/library/pydoc.html) Standard documentation module for Python and supported by Sphinx
+# - [PyDoc](https://docs.python.org/3.10/library/pydoc.html) Standard documentation module for Python and supported by Sphinx    
 # - The formats of all the Documentation strings are nearly similar. The patterns are similar, but there are only nitty-gritty changes in each format.
-#
+# 
 # </font>
 # </div>
 
@@ -130,10 +130,10 @@ help(square)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Sphinx is the easy and traditional style, verbose, and was initially created specifically for the Python Documentation. Sphinx uses a reStructured Text, which is similar in usage to Markdown.
 # - Sphinx uses the keyword(reserved word); most of the programming language does. But it is explicitly called role in Sphinx. In the above code, Sphinx has the param as a role, and type is a role, which is the Sphinx data type for param. type role is optional, but param is mandatory. The return roles document the returned object. It is different from the param role. The return role is not dependent on the rtype and vice-versa. The rtype is the type of object returned from the given function
-#
+# 
 # </font>
 # </div>
 
@@ -141,7 +141,7 @@ help(square)
 
 
 class Vehicle(object):
-    """
+    '''
     The Vehicle object contains lots of vehicles
     :param arg: The arg is used for ...
     :type arg: str
@@ -149,13 +149,13 @@ class Vehicle(object):
     :param `**kwargs`: The keyword arguments are used for ...
     :ivar arg: This is where we store arg
     :vartype arg: str
-    """
+    '''
 
     def __init__(self, arg, *args, **kwargs):
         self.arg = arg
 
     def cars(self, distance, destination):
-        """We can't travel a certain distance in vehicles without fuels, so here's the fuels
+        '''We can't travel a certain distance in vehicles without fuels, so here's the fuels
 
         :param distance: The amount of distance traveled
         :type amount: int
@@ -164,7 +164,7 @@ class Vehicle(object):
 
         :returns: A Car mileage
         :rtype: Cars
-        """
+        '''
         pass
 
 
@@ -172,10 +172,10 @@ class Vehicle(object):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Google Style is easier and more intuitive to use. It can be used for the shorter form of documentation. A configuration of python file needs to be done to get started, so you need to add either sphinx.ext.napoleon or sphinxcontrib.napoleon to the extensions list in conf.py.
 # - The Google Style is better than the Sphinx style. It also has an inconvenient feature, i.e., in the above code, the multi-line description of the distance would look **messy**.
-#
+# 
 # </font>
 # </div>
 
@@ -183,7 +183,7 @@ class Vehicle(object):
 
 
 class Vehicles(object):
-    """
+    '''
     The Vehicle object contains a lot of vehicles
 
     Args:
@@ -193,13 +193,13 @@ class Vehicles(object):
 
     Attributes:
         arg (str): This is where we store arg,
-    """
+    '''
 
     def __init__(self, arg, *args, **kwargs):
         self.arg = arg
 
     def cars(self, distance, destination):
-        """We can't travel distance in vehicles without fuels, so here is the fuels
+        '''We can't travel distance in vehicles without fuels, so here is the fuels
 
         Args:
             distance (int): The amount of distance traveled
@@ -210,7 +210,7 @@ class Vehicles(object):
 
         Returns:
             cars: A car mileage
-        """
+        '''
         pass
 
 
@@ -218,10 +218,10 @@ class Vehicles(object):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Numpy style has a lot of details in the documentation. It is more verbose than other documentation, but it is an excellent choice if you want to do detailed documentation, i.e., extensive documentation of all the functions and parameters.
 # - The above example is more verbose than any other documentation. It is more lengthy and could only be used for the long and detailed documentation.
-#
+# 
 # </font>
 # </div>
 
@@ -229,7 +229,7 @@ class Vehicles(object):
 
 
 class Vehicles(object):
-    """
+    '''
     The Vehicles object contains lots of vehicles
 
     Parameters
@@ -245,13 +245,13 @@ class Vehicles(object):
     ----------
     arg : str
         This is where we store arg,
-    """
+    '''
 
     def __init__(self, arg, *args, **kwargs):
         self.arg = arg
 
     def cars(self, distance, destination):
-        """We can't travel distance in vehicles without fuels, so here is the fuels
+        '''We can't travel distance in vehicles without fuels, so here is the fuels
 
         Parameters
         ----------
@@ -269,7 +269,7 @@ class Vehicles(object):
         -------
         cars
             A car mileage
-        """
+        '''
         pass
 
 
@@ -278,10 +278,10 @@ class Vehicles(object):
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - As you learned that docstrings are accessible through the built-in Python __doc__ attribute and the help() function. You could also make use of the built-in module known as Pydoc, which is very different in terms of the features & functionalities it possesses when compared to the doc attribute and the help function.
 # - Pydoc is a tool that would come handy when you want to share the code with your colleagues or make it open-source, in which case you would be targeting a much wider audience. It could generate web pages from your Python documentation and can also launch a web server.
-#
+# 
 # </font>
 # </div>
 
@@ -290,11 +290,15 @@ class Vehicles(object):
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.datacamp.com/community/tutorials/docstrings-python
 # - [Nice and coincise example for different docstring standards](https://github.com/NilsJPWerner/autoDocstring/tree/f7bc9f427d5ebcd87e6f5839077a87ecd1cbb404/docs)
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

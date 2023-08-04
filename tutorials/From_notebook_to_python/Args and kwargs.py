@@ -9,9 +9,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** args and kwargs
-#
+# 
 # </font>
 # </div>
 
@@ -20,12 +20,12 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Python has a very convenient "keyword argument unpacking syntax" (often referred to as **"splat"-operators**). This is particularly useful, if we want to define a function that can take a arbitrary number of input arguments.
-# - There are two of them:
+# - There are two of them:    
 #     - `*args`   is used for specifying an unknown number of *positional* arguments.
 #     - `**kwargs` is used for specifying an unknown number of *keyword*    arguments. Double star allows us to pass through keyword arguments (and any number of them)
-#
+# 
 # </font>
 # </div>
 
@@ -45,13 +45,13 @@ def example_args(*dummy):
 # In[3]:
 
 
-example_args([1, 2, 3, 4])
+example_args([1,2,3,4])
 
 
 # In[4]:
 
 
-example_args([1, 2, 3, 4, 5], [1, 2])
+example_args([1,2,3,4,5], [1,2])
 
 
 # ## Example #2
@@ -60,12 +60,11 @@ example_args([1, 2, 3, 4, 5], [1, 2])
 
 
 def a_func(*args):
-    print("type of args:", type(args))
-    print("args contents:", args)
-    print("1st argument:", args[0])
+    print('type of args:', type(args))
+    print('args contents:', args)
+    print('1st argument:', args[0])
 
-
-a_func(0, 1, "a", "b", "c")
+a_func(0, 1, 'a', 'b', 'c')
 
 
 # # Keyword arguments
@@ -77,20 +76,20 @@ a_func(0, 1, "a", "b", "c")
 
 
 def example_kargs(**dummy):
-    for key, values in dummy.items():
-        print(key, values)
+       for key, values in dummy.items():
+            print(key, values)
 
 
 # In[26]:
 
 
-example_kargs(a=3, b=1)
+example_kargs(a = 3, b = 1 )
 
 
 # In[27]:
 
 
-example_kargs(a=3, b=1, c=3)
+example_kargs(a = 3, b = 1, c = 3)
 
 
 # ## Example #2
@@ -99,9 +98,9 @@ example_kargs(a=3, b=1, c=3)
 
 
 def b_func(**kwargs):
-    print("type of kwargs:", type(kwargs))
-    print("kwargs contents: ", kwargs)
-    print("value of argument a:", kwargs["a"])
+    print('type of kwargs:', type(kwargs))
+    print('kwargs contents: ', kwargs)
+    print('value of argument a:', kwargs['a'])
 
 
 b_func(a=1, b=2, c=3, d=4)
@@ -114,8 +113,8 @@ b_func(a=1, b=2, c=3, d=4)
 
 
 val1, *vals = [1, 2, 3, 4, 5]
-print("val1:", val1)
-print("vals:", vals)
+print('val1:', val1)
+print('vals:', vals)
 
 
 # # References
@@ -123,9 +122,9 @@ print("vals:", vals)
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.kdnuggets.com/2021/08/data-scientist-guide-efficient-coding-python.html
 # - https://nbviewer.org/github/rasbt/python_reference/blob/master/tutorials/not_so_obvious_python_stuff.ipynb?create=1
-#
+# 
 # </font>
 # </div>

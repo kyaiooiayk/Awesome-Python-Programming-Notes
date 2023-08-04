@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Function composition
-#
+# 
 # </font>
 # </div>
 
@@ -20,8 +20,8 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Function composition is the way of combining two or more functions in such a way that the output of one function becomes the input of the second function and so on.
+# 
+# - Function composition is the way of combining two or more functions in such a way that the output of one function becomes the input of the second function and so on. 
 # - For example, let there be two functions `F` and `G` and their composition can be represented as `F(G(x))` where `x` is the argument and output of `G(x)` function will become the input of `F`.
 # </font>
 # </div>
@@ -40,7 +40,8 @@ def multiply_by_two(x):
     return x * 2
 
 
-print("Adding 2 to 5 and multiplying the result with 2: ", multiply_by_two(add_two(5)))
+print("Adding 2 to 5 and multiplying the result with 2: ",
+      multiply_by_two(add_two(5)))
 
 
 # # Example #2 - `with lambda` function
@@ -48,13 +49,13 @@ print("Adding 2 to 5 and multiplying the result with 2: ", multiply_by_two(add_t
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - There is a more python (and hence elegant) solution to this which makes use of `lambda` function.
 # - `lambda` returns a function object which can be assigned to any variable.
-# - `lambda` functions are passed as parameters to functions that expect function object as parameters such as `map`, `reduce`, and `filter` functions.
-# - Lambda functions are single-expression  functions that **are not necessarily** bound to a name (they can be anonymous).
+# - `lambda` functions are passed as parameters to functions that expect function object as parameters such as `map`, `reduce`, and `filter` functions. 
+# - Lambda functions are single-expression  functions that **are not necessarily** bound to a name (they can be anonymous). 
 # - Lambda functions can't use regular Python statements and always include an implicit `return` statement.
-#
+# 
 # </font>
 # </div>
 
@@ -84,14 +85,11 @@ def subtract_one(x):
 
 
 add_subtract_multiply = composite_function(
-    composite_function(multiply_by_two, subtract_one), add_two
-)
+    composite_function(multiply_by_two, subtract_one), add_two)
 
 
-print(
-    "Adding 2 to 5, then subtracting 1 and multiplying the result with 2: ",
-    add_subtract_multiply(5),
-)
+print("Adding 2 to 5, then subtracting 1 and multiplying the result with 2: ",
+      add_subtract_multiply(5))
 
 
 # # Example #4 - with `reduce` function
@@ -99,15 +97,15 @@ print(
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - `reduce` is a tool that is typically associated with functional programming, which is a programming paradigm.
-#
+# 
+# - `reduce` is a tool that is typically associated with functional programming, which is a programming paradigm. 
+# 
 # - In a short sentence, reduce takes an iterable and a binary function (a function that takes two arguments), and then uses that binary function to boil the iterable down to a single value.
-#
-# - A concrete example is the function `sum` which is a reduction.
-#
-# - Keep in mind that part of what a reduction does is taking an iterable and reducing it to a single value.
-#
+# 
+# - A concrete example is the function `sum` which is a reduction. 
+# 
+# - Keep in mind that part of what a reduction does is taking an iterable and reducing it to a single value. 
+#     
 # </font>
 # </div>
 
@@ -119,21 +117,25 @@ from functools import reduce
 
 
 def composite_function(*func):
+
     def compose(f, g):
         return lambda x: f(g(x))
 
     return reduce(compose, func, lambda x: x)
 
 
-add_subtract_multiply = composite_function(multiply_by_two, subtract_one, add_two)
+add_subtract_multiply = composite_function(multiply_by_two,
+                                           subtract_one,
+                                           add_two)
 
-print(
-    "Adding 2 to 5, then subtracting 1 and multiplying the result with 2: ",
-    add_subtract_multiply(5),
-)
+print("Adding 2 to 5, then subtracting 1 and multiplying the result with 2: ",
+      add_subtract_multiply(5))
 
 
 # In[ ]:
+
+
+
 
 
 # # References
@@ -141,10 +143,14 @@ print(
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.geeksforgeeks.org/function-composition-in-python/
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

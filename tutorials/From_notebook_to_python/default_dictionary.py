@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Default dictionary
-#
+# 
 # </font>
 # </div>
 
@@ -29,17 +29,17 @@ from collections import defaultdict
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Usually, a Python dictionary throws a `KeyError` if you try to get an item with a key that is not currently in the dictionary.
-#
+# 
 # - The defaultdict in contrast will simply create any items that you try to access (provided of course they do not exist yet).
-#
+# 
 # - To create such a "default" item, it calls the function object that you pass to the constructor (more precisely, it's an arbitrary "callable" object, which includes function and type objects).
-#
+# 
 # - For instance:
 #     - `a = defaultdict(int)` default items are created using `int()` which will return the integer object 0.
 #     - `b = defaultdict(list)` default items are created using `list()` which returns a new empty list object.
-#
+# 
 # </font>
 # </div>
 
@@ -48,11 +48,11 @@ from collections import defaultdict
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - Implement a group_by_owners function that: Accepts a dictionary containing the file owner name for each file name.
-# - Returns a dictionary containing a list of file names for each owner name, in any order.
+# 
+# - Implement a group_by_owners function that: Accepts a dictionary containing the file owner name for each file name. 
+# - Returns a dictionary containing a list of file names for each owner name, in any order. 
 # - For example, for dictionary {'Input.txt': 'Randy', 'Code.py': 'Stan', 'Output.txt': 'Randy'} the group_by_owners function should return {'Randy': ['Input.txt', 'Output.txt'], 'Stan': ['Code.py']}.
-#
+# 
 # </font>
 # </div>
 
@@ -62,6 +62,7 @@ from collections import defaultdict
 
 
 def group_by_owners(files):
+    
     # Using a simple dictionary
     owners = {}
 
@@ -74,7 +75,11 @@ def group_by_owners(files):
     # return owners
 
 
-files = {"Input.txt": "Randy", "Code.py": "Stan", "Output.txt": "Randy"}
+files = {
+    'Input.txt': 'Randy',
+    'Code.py': 'Stan',
+    'Output.txt': 'Randy'
+}
 print(group_by_owners(files))
 
 
@@ -84,6 +89,7 @@ print(group_by_owners(files))
 
 
 def group_by_owners(files):
+
     owners = defaultdict(list)
 
     for owned, owner in files.items():
@@ -94,7 +100,11 @@ def group_by_owners(files):
     # return owners
 
 
-files = {"Input.txt": "Randy", "Code.py": "Stan", "Output.txt": "Randy"}
+files = {
+    'Input.txt': 'Randy',
+    'Code.py': 'Stan',
+    'Output.txt': 'Randy'
+}
 print(group_by_owners(files))
 
 
@@ -103,10 +113,10 @@ print(group_by_owners(files))
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - [TestDome home page](https://www.testdome.com/tests/python-online-test/45)
 # - [elegant solution](https://github.com/jozo/testdome-python-solutions/blob/master/01_file_owners.py)
 # - [python `defaultdict`](https://stackoverflow.com/questions/5900578/how-does-collections-defaultdict-work)
-#
+# 
 # </font>
 # </div>

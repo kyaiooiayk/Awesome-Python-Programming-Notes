@@ -6,9 +6,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Dijkstra’s algorithm for finding minimum distance path
-#
+# 
 # </font>
 # </div>
 
@@ -42,6 +42,7 @@ from matplotlib import colors
 
 
 graph = [
+
     [0, 71, 24, 86, 95, 99, 88, 36, 26, 4],
     [56, 0, 22, 66, 35, 54, 47, 67, 4, 47],
     [74, 27, 0, 59, 74, 15, 52, 92, 95, 48],
@@ -51,7 +52,7 @@ graph = [
     [46, 68, 60, 38, 92, 55, 0, 43, 67, 7],
     [88, 62, 92, 10, 12, 87, 44, 0, 79, 25],
     [19, 95, 75, 63, 58, 51, 85, 67, 0, 26],
-    [1, 54, 64, 28, 10, 13, 91, 93, 97, 0],
+    [1, 54, 64, 28, 10, 13, 91, 93, 97, 0]
 ]
 
 
@@ -70,13 +71,13 @@ G = nx.from_numpy_array(matrix)
 # In[5]:
 
 
-nx.draw(G, with_labels=True, font_weight="bold")
+nx.draw(G, with_labels=True, font_weight='bold')
 
 
 # In[6]:
 
 
-nx.draw(G, with_labels=True, font_weight="bold")
+nx.draw(G, with_labels=True, font_weight='bold')
 
 
 # In[7]:
@@ -124,7 +125,7 @@ ax.matshow(matrix, cmap=plt.cm.Reds, vmin=0, vmax=20)
 for i in range(10):
     for j in range(10):
         c = matrix[j, i]
-        ax.text(i, j, str(c), va="center", ha="center")
+        ax.text(i, j, str(c), va='center', ha='center')
 
 
 # # Distance cost and constraints
@@ -139,6 +140,7 @@ for i in range(10):
 
 
 def distance_cost(graph, path):
+
     # First tuple is (0,0)
     assert path[0] == starting
 
@@ -147,7 +149,7 @@ def distance_cost(graph, path):
     Get the diffence for adjacent values: out[i] = a[i+1] - a[i] 
     Check the resulting np.array has all element = 1
     """
-    assert np.all(np.diff([(x[0] + x[1]) for x in path]) == 1)
+    assert np.all(np.diff([(x[0]+x[1]) for x in path]) == 1)
 
     """
     The set of the integers in the path must be equal to {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
@@ -169,20 +171,8 @@ def distance_cost(graph, path):
 
 
 # Example
-example = [
-    (0, 0),
-    (0, 1),
-    (0, 2),
-    (0, 3),
-    (1, 3),
-    (1, 4),
-    (1, 5),
-    (1, 6),
-    (1, 7),
-    (2, 7),
-    (2, 8),
-    (2, 9),
-]
+example = [(0, 0), (0, 1), (0, 2), (0, 3), (1, 3), (1, 4),
+           (1, 5), (1, 6), (1, 7), (2, 7), (2, 8), (2, 9)]
 distance_cost(graph, example)
 
 
@@ -190,18 +180,8 @@ distance_cost(graph, example)
 
 
 # Example
-example = [
-    (0, 0),
-    (0, 1),
-    (0, 2),
-    (0, 3),
-    (0, 4),
-    (0, 5),
-    (0, 6),
-    (0, 7),
-    (0, 8),
-    (0, 9),
-]
+example = [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5),
+           (0, 6), (0, 7), (0, 8), (0, 9)]
 distance_cost(graph, example)
 
 
@@ -209,18 +189,8 @@ distance_cost(graph, example)
 
 
 # Example
-example = [
-    (0, 0),
-    (0, 1),
-    (0, 2),
-    (0, 3),
-    (0, 4),
-    (0, 5),
-    (0, 6),
-    (0, 7),
-    (0, 8),
-    (0, 9),
-]
+example = [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5),
+           (0, 6), (0, 7), (0, 8), (0, 9)]
 distance_cost(graph, example)
 
 
@@ -228,20 +198,8 @@ distance_cost(graph, example)
 
 
 # Example
-example = [
-    (0, 0),
-    (0, 1),
-    (0, 2),
-    (0, 3),
-    (0, 4),
-    (0, 5),
-    (1, 5),
-    (1, 6),
-    (1, 7),
-    (2, 7),
-    (2, 8),
-    (2, 9),
-]
+example = [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5),
+           (1, 5), (1, 6), (1, 7), (2, 7), (2, 8), (2, 9)]
 distance_cost(graph, example)
 
 
@@ -249,20 +207,8 @@ distance_cost(graph, example)
 
 
 # Example
-example = [
-    (0, 0),
-    (0, 1),
-    (0, 2),
-    (1, 2),
-    (1, 3),
-    (1, 4),
-    (1, 5),
-    (1, 6),
-    (1, 7),
-    (2, 7),
-    (2, 8),
-    (2, 9),
-]
+example = [(0, 0), (0, 1), (0, 2), (1, 2), (1, 3), (1, 4),
+           (1, 5), (1, 6), (1, 7), (2, 7), (2, 8), (2, 9)]
 distance_cost(graph, example)
 
 
@@ -270,20 +216,8 @@ distance_cost(graph, example)
 
 
 # Example
-example = [
-    (0, 0),
-    (0, 1),
-    (1, 1),
-    (1, 2),
-    (1, 3),
-    (1, 4),
-    (1, 5),
-    (1, 6),
-    (1, 7),
-    (2, 7),
-    (2, 8),
-    (2, 9),
-]
+example = [(0, 0), (0, 1), (1, 1), (1, 2), (1, 3), (1, 4),
+           (1, 5), (1, 6), (1, 7), (2, 7), (2, 8), (2, 9)]
 distance_cost(graph, example)
 
 
@@ -298,8 +232,8 @@ distance_cost(graph, example)
 
 starting = (0, 0)
 
-
-def minimum_distance_approximation(graph, starting):  # -> list[Tuple]:
+def minimum_distance_approximation(graph, starting): # -> list[Tuple]:
+    
     minimum_path_positions = [(0, 0)]
 
     # Your Code To Generate Minimum Cost Here
@@ -319,13 +253,13 @@ minimum_distance_approximation(graph, starting)
 
 def plot_interactive(M, M1, M2, M3, M4, minpost):
     """Plot interactive.
-
+    
     Just a way to visualise what the algoithm is doing.
-
+    
     Parameters
     ----------
     M : matrix
-         Matrix representing the original graph encoding
+         Matrix representing the original graph encoding 
          distances btw nodes
     M1 : matrix
         Matrix of booleans values. True and False for
@@ -333,19 +267,19 @@ def plot_interactive(M, M1, M2, M3, M4, minpost):
     M2 : matrix
         Position of total length of minimum path's head
     M3 : matrix
-        Current stencil of nodes wrt which the distance is
+        Current stencil of nodes wrt which the distance is 
         calculated
     M4 : matrix
         Update the position (x,y) vs. stencil
-
+        
     minpost : list of list
         Coordinates of the minimum path's head
-
+        
     Returns
     -------
     None
     """
-
+    
     # Initialise figure
     fig, ax = plt.subplots(2, 2, figsize=(12, 12))
     min_val, max_val = 0, 10
@@ -355,36 +289,36 @@ def plot_interactive(M, M1, M2, M3, M4, minpost):
     ax[0, 0].matshow(M, cmap=plt.cm.Blues, vmin=0, vmax=20)
     for i in range(max_val):
         for j in range(max_val):
-            ax[0, 0].text(i, j, str(M[j, i]), c="r", va="center", ha="center")
+            ax[0, 0].text(i, j, str(M[j, i]), c="r", va='center', ha='center')
 
     # Plot visited cells
     ax[0, 1].set_title("Visited + plus yellow stencil cells")
-    cmap = colors.ListedColormap(["white", "black"])
+    cmap = colors.ListedColormap(['white', 'black'])
     ax[0, 1].matshow(M1, cmap=cmap)
-    ax[0, 1].matshow(M3, cmap=colors.ListedColormap(["yellow"]))
+    ax[0, 1].matshow(M3, cmap=colors.ListedColormap(['yellow']))
     for i in range(10):
         for j in range(10):
-            ax[0, 1].text(i, j, str(M1[j, i]), c="r", va="center", ha="center")
+            ax[0, 1].text(i, j, str(M1[j, i]), c="r", va='center', ha='center')
 
     # Position of total length of minimum path's head
     ax[1, 0].set_title("Position and total length of minimum path's head")
-    # ax[0, 1].matshow(M2, cmap=colors.ListedColormap(['white']))
+    #ax[0, 1].matshow(M2, cmap=colors.ListedColormap(['white']))
 
     # Highlightin the minimum path head
-    M2_ = np.ones((max_val, max_val), dtype=int) * -np.Infinity
+    M2_ = np.ones((max_val, max_val), dtype=int)*-np.Infinity
     M2_[minpost[0], minpost[1]] = 100
 
-    ax[1, 0].matshow(M2_, cmap=colors.ListedColormap(["black"]))
+    ax[1, 0].matshow(M2_, cmap=colors.ListedColormap(['black']))
 
     for i in range(10):
         for j in range(10):
-            ax[1, 0].text(i, j, str(M2[j, i]), c="r", va="center", ha="center")
+            ax[1, 0].text(i, j, str(M2[j, i]), c="r", va='center', ha='center')
 
     ax[1, 1].set_title("Update the position (x,y) vs. stencil")
-    ax[1, 1].matshow(M4, cmap=colors.ListedColormap(["green"]))
+    ax[1, 1].matshow(M4, cmap=colors.ListedColormap(['green']))
     for i in range(10):
         for j in range(10):
-            ax[1, 1].text(i, j, str(M4[j, i]), c="r", va="center", ha="center")
+            ax[1, 1].text(i, j, str(M4[j, i]), c="r", va='center', ha='center')
 
     fig.tight_layout()
 
@@ -394,31 +328,33 @@ def plot_interactive(M, M1, M2, M3, M4, minpost):
 
 def get_path(M):
     """
-    - In order to visualise the path, we are going to place a "1"
-    in the path followed. This is to help us visualise the path
+    - In order to visualise the path, we are going to place a "1" 
+    in the path followed. This is to help us visualise the path 
     followed. Essentially if you use a grey scale, this will be
     coloured in grey and the other will be coloured in white.
     """
-
+    
     # Start backtracking to plot the path
     mattemp = M.astype(float)
     max_val = 10
-    x, y = max_val - 1, max_val - 1
+    x, y = max_val-1, max_val-1
     path = []
+    
 
     mattemp = np.zeros((max_val, max_val))
     mattemp[int(x), int(y)] = 1
-
+    
     while x > 0.0 or y > 0.0:
         path.append([int(x), int(y)])
-        xxyy = np.unravel_index(int(M[int(x), int(y)]), (max_val, max_val))
+        xxyy = np.unravel_index(
+            int(M[int(x), int(y)]), (max_val, max_val))
         x, y = xxyy[0], xxyy[1]
-        mattemp[int(x), int(y)] = 1  # -np.inf
+        mattemp[int(x), int(y)] = 1 #-np.inf
 
     # Add the last one as soon as you come out from the loop
     path.append([int(x), int(y)])
 
-    return [(i[0], i[1]) for i in path[::-1]], mattemp
+    return [(i[0],i[1]) for i in path[::-1]], mattemp
 
 
 # In[47]:
@@ -426,12 +362,12 @@ def get_path(M):
 
 def visualise_path(mattemp, M):
     fig, ax = plt.subplots(figsize=(8, 8))
-    max_val = 10
-    ax.matshow(mattemp, cmap="binary", vmin=0, vmax=20)
+    max_val =10
+    ax.matshow(mattemp, cmap='binary', vmin=0, vmax=20)
     for i in range(max_val):
         for j in range(max_val):
             c = M[j, i]
-            ax.text(i, j, str(c), c="r", va="center", ha="center")
+            ax.text(i, j, str(c), c="r", va='center', ha='center')
 
 
 # # Dijkstra’s algorithm
@@ -443,9 +379,8 @@ def visualise_path(mattemp, M):
 starting = (0, 0)
 
 
-def minimum_distance_approximation(
-    graph, starting, plot=False, interactive=False, verbose=False
-):
+def minimum_distance_approximation(graph, starting, plot=False, interactive=False, verbose=False):
+
     minimum_path_positions = [(0, 0)]
 
     # Your Code To Generate Minimum Cost Here
@@ -458,9 +393,9 @@ def minimum_distance_approximation(
     min_val, max_val = 0, 10
 
     # Initialise auxiliary arrays
-    distmap = np.ones((max_val, max_val), dtype=int) * np.Infinity
+    distmap = np.ones((max_val, max_val), dtype=int)*np.Infinity
     distmap[0, 0] = 0
-    originmap = np.ones((max_val, max_val), dtype=int) * np.nan
+    originmap = np.ones((max_val, max_val), dtype=int)*np.nan
 
     # Initialise cell we have visited
     visited = np.zeros((max_val, max_val), dtype=bool)
@@ -473,73 +408,66 @@ def minimum_distance_approximation(
 
     # Loop until all nodes have been visited
     while not finished:
+
         # Instantiate it at each iteration
-        stencil = np.ones((max_val, max_val), dtype=int) * np.nan
+        stencil = np.ones((max_val, max_val), dtype=int)*np.nan
 
         if verbose:
             print("\n| Iteration:", count, "| current position (x,y): ", x, y)
 
         # Move to x+1,y
-        if x < max_val - 1:
+        if x < max_val-1:
             # Move along on side of the stencil
-            stencil[x + 1, y] = 1
+            stencil[x+1, y] = 1
             # Perform checks
-            if (
-                distmap[x + 1, y] > M[x + 1, y] + distmap[x, y]
-                and not visited[x + 1, y]
-            ):
-                distmap[x + 1, y] = M[x + 1, y] + distmap[x, y]
+            if distmap[x+1, y] > M[x+1, y] + distmap[x, y] and not visited[x+1, y]:
+                distmap[x+1, y] = M[x+1, y] + distmap[x, y]
                 # Print only if the pass is actually done
                 if verbose:
-                    print("|-- Moving along x+1: ", x + 1, y)
+                    print("|-- Moving along x+1: ", x+1, y)
 
                 # How far into the array it is, if the index were flattened!
-                originmap[x + 1, y] = np.ravel_multi_index([x, y], (max_val, max_val))
-                # print(x,y, np.ravel_multi_index([x, y], (max_val, max_val)))
+                originmap[x+1,
+                          y] = np.ravel_multi_index([x, y], (max_val, max_val))
+                #print(x,y, np.ravel_multi_index([x, y], (max_val, max_val)))
 
         # Move to x-1,y
         if x > 0:
             # Move along on side of the stencil
-            stencil[x - 1, y] = 1
+            stencil[x-1, y] = 1
             # Perform checks
-            if (
-                distmap[x - 1, y] > M[x - 1, y] + distmap[x, y]
-                and not visited[x - 1, y]
-            ):
-                distmap[x - 1, y] = M[x - 1, y] + distmap[x, y]
+            if distmap[x-1, y] > M[x-1, y]+distmap[x, y] and not visited[x-1, y]:
+                distmap[x-1, y] = M[x-1, y]+distmap[x, y]
                 # Print only if the pass is actually done
                 if verbose:
-                    print("|-- Moving along x-1: ", x - 1, y)
-                originmap[x - 1, y] = np.ravel_multi_index([x, y], (max_val, max_val))
+                    print("|-- Moving along x-1: ", x-1, y)
+                originmap[x-1,
+                          y] = np.ravel_multi_index([x, y], (max_val, max_val))
         # Move to x,y+1
-        if y < max_val - 1:
+        if y < max_val-1:
             # Move along on side of the stencil
-            stencil[x, y + 1] = 1
+            stencil[x, y+1] = 1
             # Perform checks
-            if (
-                distmap[x, y + 1] > M[x, y + 1] + distmap[x, y]
-                and not visited[x, y + 1]
-            ):
-                distmap[x, y + 1] = M[x, y + 1] + distmap[x, y]
+            if distmap[x, y+1] > M[x, y+1]+distmap[x, y] and not visited[x, y+1]:
+                distmap[x, y+1] = M[x, y+1]+distmap[x, y]
                 # Print only if the pass is actually done
                 if verbose:
-                    print("|-- Moving along y+1: ", x, y + 1)
-                originmap[x, y + 1] = np.ravel_multi_index([x, y], (max_val, max_val))
+                    print("|-- Moving along y+1: ", x, y+1)
+                originmap[x, y +
+                          1] = np.ravel_multi_index([x, y], (max_val, max_val))
 
         # Move to x,y-1
         if y > 0:
             # Move along on side of the stencil
-            stencil[x, y - 1] = 1
+            stencil[x, y-1] = 1
             # Perform checks
-            if (
-                distmap[x, y - 1] > M[x, y - 1] + distmap[x, y]
-                and not visited[x, y - 1]
-            ):
-                distmap[x, y - 1] = M[x, y - 1] + distmap[x, y]
+            if distmap[x, y-1] > M[x, y-1]+distmap[x, y] and not visited[x, y-1]:
+                distmap[x, y-1] = M[x, y-1]+distmap[x, y]
                 # Print only if the pass is actually done
                 if verbose:
-                    print("|-- Moving along x-1: ", x, y - 1)
-                originmap[x, y - 1] = np.ravel_multi_index([x, y], (max_val, max_val))
+                    print("|-- Moving along x-1: ", x, y-1)
+                originmap[x, y -
+                          1] = np.ravel_multi_index([x, y], (max_val, max_val))
 
         # Marked the visited cell as True
         visited[x, y] = True
@@ -553,22 +481,17 @@ def minimum_distance_approximation(
         x, y = minpost[0], minpost[1]
 
         if verbose:
-            print(
-                "|-- Position of head of min path: (row, col)=",
-                minpost,
-                "| current sum=",
-                str(np.min(dismaptemp)),
-                " looking down!",
-            )
+            print("|-- Position of head of min path: (row, col)=", minpost,
+                  "| current sum=", str(np.min(dismaptemp)), " looking down!")
 
         # End algorithm once you visited all nodes;
-        if x == max_val - 1 and y == max_val - 1:
+        if x == max_val-1 and y == max_val-1:
             finished = True
             if verbose:
                 print("\n|- FINISHED!")
 
         # Update counter
-        count = count + 1
+        count = count+1
 
         if plot:
             plot_interactive(M, visited, distmap, stencil, originmap, minpost)
@@ -591,8 +514,7 @@ def minimum_distance_approximation(
 
 
 minimum_path_positions, mattemp = minimum_distance_approximation(
-    graph, starting, plot=False, interactive=False, verbose=False
-)
+    graph, starting, plot=False, interactive=False, verbose=False)
 
 
 # In[43]:
@@ -607,8 +529,7 @@ minimum_path_positions
 
 
 minimum_path_positions, mattemp = minimum_distance_approximation(
-    graph, starting, plot=False, interactive=False, verbose=True
-)
+    graph, starting, plot=False, interactive=False, verbose=True)
 
 
 # ## Interactive plot
@@ -619,8 +540,7 @@ minimum_path_positions, mattemp = minimum_distance_approximation(
 
 
 minimum_path_positions, mattemp = minimum_distance_approximation(
-    graph, starting, plot=True, interactive=True, verbose=True
-)
+    graph, starting, plot=True, interactive=True, verbose=True)
 
 
 # # Verify that all constraints were satisfied
@@ -650,3 +570,7 @@ visualise_path(mattemp, M)
 # - https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 
 # In[ ]:
+
+
+
+

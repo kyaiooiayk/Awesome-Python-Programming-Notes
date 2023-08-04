@@ -8,9 +8,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** `eval` method
-#
+# 
 # </font>
 # </div>
 
@@ -18,9 +18,9 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The `eval()` method parses the expression passed to this method and runs python expression (code) within the program.
-#
+# 
 # </font>
 # </div>
 
@@ -31,7 +31,7 @@
 
 number = 9
 # eval performs the multiplication passed as argument
-square_number = eval("number * number")
+square_number = eval('number * number')
 print(square_number)
 
 # but you can also pass the a string as well
@@ -48,25 +48,23 @@ print(square_number)
 
 # Perimeter of Square
 def calculatePerimeter(l):
-    return 4 * l
-
+    return 4*l
 
 # Area of Square
 def calculateArea(l):
-    return l * l
-
+    return l*l
 
 expression = input("Type a function: ")
 
 for l in range(1, 5):
-    if expression == "calculatePerimeter(l)":
+    if (expression == 'calculatePerimeter(l)'):
         print("If length is ", l, ", Perimeter = ", eval(expression))
 
-    elif expression == "calculateArea(l)":
+    elif (expression == 'calculateArea(l)'):
         print("If length is ", l, ", Area = ", eval(expression))
 
     else:
-        print("Wrong Function")
+        print('Wrong Function')
         break
 
 
@@ -74,10 +72,14 @@ for l in range(1, 5):
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.programiz.com/python-programming/methods/built-in/eval
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

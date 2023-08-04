@@ -6,9 +6,9 @@
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Declaring private variables
-#
+# 
 # </font>
 # </div>
 
@@ -17,13 +17,13 @@
 
 # <div class="alert alert-block alert-info">
 # <font color=black>
-#
+# 
 # - A private class or variable is indcated with a preceding underscore `_`.
 # - However, of course, Python does not supports truly private.
-# - So we can not force something in python to be stricly private. In fact,  one can call it directly from other modules.
-# - The underscore is then used as an indication to programmer to consider it as private.
+# - So we can not force something in python to be stricly private. In fact,  one can call it directly from other modules. 
+# - The underscore is then used as an indication to programmer to consider it as private. 
 # - So sometimes we say it **weak internal use indicator**.
-#
+# 
 # </font>
 # </div>
 
@@ -31,8 +31,8 @@
 
 
 class _Base:
-    """private class"""
-
+    """private class    
+    """
     _hidden_factor = 2  # private variable
 
     def __init__(self, price):
@@ -76,10 +76,14 @@ obj.get_double_price()
 
 # <div class="alert alert-block alert-warning">
 # <font color=black>
-#
+# 
 # - https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+
