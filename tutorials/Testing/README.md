@@ -1,4 +1,4 @@
-# How to test your python code
+# How to test your Python code
 ***
 
 ## Testing your code
@@ -7,12 +7,50 @@
 ***
 
 ## Type of testing
-- **Acceptance tests** are a quality assurance (QA) process that determines to what degree an application meets end users' approval.
-- **Functional tests** check the functionalities of the entire system and ensure different components work together as intended. Theirs purpose is to check an entire application, including its hardware, networking infrastructure, front-end UI, and the back-end database.
-- **Integration tests** check if different modules are working fine when combined together as a group.
-- **Unit tests** isolate and test individual code units to verify they function as intended. You use unit testing to verify that specific system behaviors produce the intended results. Unit tests point to a specific issue that requires fixing. Since functional testing checks the entire application, it mainly indicates a general issue without pointing out a specific problem.
 
-![image](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/assets/89139139/48620a78-ad8f-4da5-b6e4-6982e36110ba)
+**Unit Tests**
+- **Purpose**: Verify the functionality of individual components or functions in isolation.
+- **Example**: Test if an item can be added to a list.
+
+**Integration Tests**
+- **Purpose**: Ensure that different components of the system work together correctly.
+- **Example**: Test the interaction between the item creation and retrieval endpoints.
+
+**End-to-End (E2E) Tests**
+- **Purpose**: Validate the complete flow of the application from the user's perspective.
+- **Example**: Test adding an item, retrieving it, and then deleting it via HTTP requests.
+
+**Acceptance Tests**
+- **Purpose**: Confirm the application meets business requirements and user expectations.
+- **Example**: Test the lifecycle of an item (creation, retrieval, deletion) as expected by stakeholders.
+
+**Functional Tests**
+- **Purpose**: Check specific functionalities of the application in a realistic environment.
+- **Example**: Test item creation and deletion functionalities together.
+
+**Smoke Tests**
+- **Purpose**: Perform a quick check to ensure the basic functionalities of the application work.
+- **Example**: Test if the main endpoints are up and responding correctly.
+
+**Performance Tests**
+- **Purpose**: Measure the responsiveness and stability of the application under load.
+- **Example**: Ensure the items retrieval endpoint responds within a specified time.
+
+**Security Tests**
+- **Purpose**: Identify vulnerabilities and ensure the application is secure.
+- **Example**: Test for SQL injection vulnerabilities in the item creation endpoint.
+
+**Usability Tests**
+- **Purpose**: Assess the application's user-friendliness and overall user experience.
+- **Example**: Collect feedback from users interacting with the application.
+
+**Compatibility Tests**
+- **Purpose**: Ensure the application works across different environments, devices, and browsers.
+- **Example**: Verify the homepage loads correctly on different web browsers.
+
+**Documentation Tests**
+- **Purpose**: Ensure that the documentation is accurate, complete, and useful.
+- **Example**: Check the existence and content of the README file for installation and usage instructions.
 ***
 
 ## Python testing framework
@@ -31,6 +69,25 @@ doctest
     - **Arrange**: Set up the conditions for your test. This might involve creating objects, setting up variables or anything else that’s required for your test.
     - **Act**: This is where you actually execute the code that you are testing.
     - **Assert**: Verify that the code you’re testing behaves as expected. This might involve checking the value of a variable, or verifying that a certain method was called.
+```python
+# test_calculator.py
+
+import pytest
+from calculator import add
+
+def test_add():
+    # Given: two numbers, a and b
+    a = 2
+    b = 3
+
+    # When: we add the two numbers
+    result = add(a, b)
+
+    # Then: the result should be the sum of a and b
+    expected_result = 5
+    assert result == expected_result
+
+```
 ***
 
 ## Available tutorials
