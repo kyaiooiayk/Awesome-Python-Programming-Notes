@@ -101,40 +101,140 @@ def test_delete_item(client):
 def test_create_item_without_item(client):
     response = client.post('/items', json={})
     assert response.status_code == 400
-
 ```
 
 **Integration Tests**
 - **Purpose**: Ensure that different components of the system work together correctly.
 - **Example**: Test the interaction between the item creation and retrieval endpoints.
+```python
+# tests/test_integration.py
+def test_create_and_get_items(client):
+    response = client.post('/items', json={'item': 'item1'})
+    assert response.status_code == 201
+    response = client.get('/items')
+    assert response.status_code == 200
+    assert 'item1' in response.json['items']
+
+def test_create_and_delete_item(client):
+    response = client.post('/items', json={'item': 'item1'})
+    assert response.status_code == 201
+    response = client.delete('/items/item1')
+    assert response.status_code == 200
+    response = client.get('/items')
+    assert 'item1' not in response.json['items']
+```
 
 **End-to-End (E2E) Tests**
-- **Purpose**: Validate the complete flow of the application from the user's perspective.
+- **Purpose**: Validate the *complete* flow of the application from the user's perspective.
 - **Example**: Test adding an item, retrieving it, and then deleting it via HTTP requests.
+```python
+# tests/test_e2e.py
+import requests
+
+BASE_URL = 'http://127.0.0.1:5000'
+
+def test_create_get_delete_item():
+    response = requests.post(f'{BASE_URL}/items', json={'item': 'item1'})
+    assert response.status_code == 201
+
+    response = requests.get(f'{BASE_URL}/items')
+    assert response.status_code == 200
+    assert 'item1' in response.json()['items']
+
+    response = requests.delete(f'{BASE_URL}/items/item1')
+    assert response.status_code == 200
+
+    response = requests.get(f'{BASE_URL}/items')
+    assert 'item1' not in response.json()['items']
+```
 
 **Acceptance Tests**
 - **Purpose**: Confirm the application meets business requirements and user expectations.
 - **Example**: Test the lifecycle of an item (creation, retrieval, deletion) as expected by stakeholders.
+```python
+# tests/test_acceptance.py
+import requests
+
+BASE_URL = 'http://127.0.0.1:5000'
+
+def test_item_lifecycle():
+    response = requests.post(f'{BASE_URL}/items', json={'item': 'item1'})
+    assert response.status_code == 201
+
+    response = requests.get(f'{BASE_URL}/items')
+    assert response.status_code == 200
+    assert 'item1' in response.json()['items']
+
+    response = requests.delete(f'{BASE_URL}/items/item1')
+    assert response.status_code == 200
+
+    response = requests.get(f'{BASE_URL}/items')
+    assert 'item1' not in response.json()['items']
+```
 
 **Functional Tests**
 - **Purpose**: Check specific functionalities of the application in a realistic environment.
 - **Example**: Test item creation and deletion functionalities together.
+```python
+#tests/test_functional.py
+def test_item_creation_and_deletion(client):
+    response = client.post('/items', json={'item': 'item1'})
+    assert response.status_code == 201
+    assert 'item1' in response.json['items']
+
+    response = client.delete('/items/item1')
+    assert response.status_code == 200
+    assert 'item1' not in response.json['items']
+```
 
 **Smoke Tests**
 - **Purpose**: Perform a quick check to ensure the basic functionalities of the application work.
 - **Example**: Test if the main endpoints are up and responding correctly.
+```python
+tests/test_smoke.py
+def test_basic_endpoints(client):
+    response = client.get('/items')
+    assert response.status_code == 200
+
+    response = client.post('/items', json={'item': 'smoke_test_item'})
+    assert response.status_code in [200, 201]
+
+    response = client.delete('/items/smoke_test_item')
+    assert response.status_code in [200, 404]
+```
 
 **Performance Tests**
 - **Purpose**: Measure the responsiveness and stability of the application under load.
 - **Example**: Ensure the items retrieval endpoint responds within a specified time.
+```python
+#tests/test_performance.py
+import time
+
+def test_get_items_performance(client):
+    start_time = time.time()
+    response = client.get('/items')
+    end_time = time.time()
+    assert response.status_code == 200
+    assert (end_time - start_time) < 0.5  # Ensure it takes less than 500ms
+```
 
 **Security Tests**
 - **Purpose**: Identify vulnerabilities and ensure the application is secure.
 - **Example**: Test for SQL injection vulnerabilities in the item creation endpoint.
+```python
+#tests/test_security.py
+def test_sql_injection(client):
+    response = client.post('/items', json={'item': "'; DROP TABLE items;--"})
+    assert response.status_code != 201
+```
 
 **Usability Tests**
 - **Purpose**: Assess the application's user-friendliness and overall user experience.
 - **Example**: Collect feedback from users interacting with the application.
+```python
+#tests/test_usability.py
+
+```
 
 **Compatibility Tests**
 - **Purpose**: Ensure the application works across different environments, devices, and browsers.
@@ -143,6 +243,19 @@ def test_create_item_without_item(client):
 **Documentation Tests**
 - **Purpose**: Ensure that the documentation is accurate, complete, and useful.
 - **Example**: Check the existence and content of the README file for installation and usage instructions.
+```python
+#tests/test_documentation.py
+import os
+
+def test_readme_exists():
+    assert os.path.isfile('README.md')
+
+def test_readme_content():
+    with open('README.md', 'r') as file:
+        content = file.read()
+        assert '## Installation' in content
+        assert '## Usage' in content
+```
 ***
 
 ## Python testing framework
