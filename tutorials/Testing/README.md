@@ -239,6 +239,34 @@ def test_sql_injection(client):
 **Compatibility Tests**
 - **Purpose**: Ensure the application works across different environments, devices, and browsers.
 - **Example**: Verify the homepage loads correctly on different web browsers.
+```python
+tests/test_compatibility.py
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import pytest
+
+@pytest.fixture(scope="module")
+def setup_browser():
+    # Setup for Chrome
+    chrome_driver = webdriver.Chrome()  # Adjust path to ChromeDriver if necessary
+    yield chrome_driver
+    chrome_driver.quit()
+
+    # Setup for Firefox
+    firefox_driver = webdriver.Firefox()  # Adjust path to GeckoDriver if necessary
+    yield firefox_driver
+    firefox_driver.quit()
+
+def test_home_page_on_chrome(setup_browser):
+    driver = setup_browser
+    driver.get('http://127.0.0.1:5000')
+    assert "Items" in driver.title
+
+def test_home_page_on_firefox(setup_browser):
+    driver = setup_browser
+    driver.get('http://127.0.0.1:5000')
+    assert "Items" in driver.title
+```
 
 **Documentation Tests**
 - **Purpose**: Ensure that the documentation is accurate, complete, and useful.
