@@ -8,9 +8,101 @@
 
 ## Type of testing
 
+For simplicity, let's assume we're working on a simple web application with Flask. The application will have a basic functionality: creating, retrieving, and deleting items from a list.
+```MD
+myapp/
+├── app.py
+├── requirements.txt
+├── tests/
+│   ├── __init__.py
+│   ├── test_unit.py
+│   ├── test_integration.py
+│   ├── test_e2e.py
+│   ├── test_acceptance.py
+│   ├── test_functional.py
+│   ├── test_smoke.py
+│   ├── test_performance.py
+│   ├── test_security.py
+│   ├── test_documentation.py
+└── conftest.py
+
+```
+Consider the following app.py. This where the main code/logic goes.
+
+```python
+from flask import Flask, request, jsonify, Response
+from typing import List
+
+app = Flask(__name__)
+
+items: List[str] = []
+
+@app.route('/items', methods=['POST'])
+def create_item() -> Response:
+    item: str = request.json.get('item', '')
+    if item:
+        items.append(item)
+        return jsonify({'message': 'Item added', 'items': items}), 201
+    return jsonify({'message': 'Item is required'}), 400
+
+@app.route('/items', methods=['GET'])
+def get_items() -> Response:
+    return jsonify({'items': items}), 200
+
+@app.route('/items/<string:item>', methods=['DELETE'])
+def delete_item(item: str) -> Response:
+    if item in items:
+        items.remove(item)
+        return jsonify({'message': 'Item deleted', 'items': items}), 200
+    return jsonify({'message': 'Item not found'}), 404
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+`conftest.py` is a special configuration file used by pytest to define fixtures and hooks that can be shared across multiple test modules. It's automatically discovered by pytest and allows you to create reusable setup and teardown code, which can be used across different test files without the need for importing them explicitly.
+```python
+import pytest
+from app import app
+
+@pytest.fixture
+def client():
+    with app.test_client() as client:
+        yield client
+
+@pytest.fixture(autouse=True)
+def clear_items():
+    from app import items
+    items.clear()
+
+```
+
 **Unit Tests**
 - **Purpose**: Verify the functionality of individual components or functions in isolation.
 - **Example**: Test if an item can be added to a list.
+```python
+# tests/test_unit.py
+def test_create_item(client):
+    response = client.post('/items', json={'item': 'item1'})
+    assert response.status_code == 201
+    assert 'item1' in response.json['items']
+
+def test_get_items(client):
+    response = client.post('/items', json={'item': 'item1'})
+    response = client.get('/items')
+    assert response.status_code == 200
+    assert 'item1' in response.json['items']
+
+def test_delete_item(client):
+    response = client.post('/items', json={'item': 'item1'})
+    response = client.delete('/items/item1')
+    assert response.status_code == 200
+    assert 'item1' not in response.json['items']
+
+def test_create_item_without_item(client):
+    response = client.post('/items', json={})
+    assert response.status_code == 400
+
+```
 
 **Integration Tests**
 - **Purpose**: Ensure that different components of the system work together correctly.
