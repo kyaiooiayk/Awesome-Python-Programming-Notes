@@ -229,11 +229,66 @@ def test_sql_injection(client):
 ```
 
 **Usability Tests**
-- **Purpose**: Assess the application's user-friendliness and overall user experience.
-- **Example**: Collect feedback from users interacting with the application.
+- **Purpose**: Assess the application's user-friendliness and overall user experience. Usability tests typically involve real users interacting with the application to provide feedback on its user-friendliness and overall experience. Automated usability testing is more challenging, but you can still use tools to simulate user interactions and check for basic usability issues.
+- **Example**: Collect feedback from users interacting with the application. You can use Selenium to automate some usability tests, such as checking if the UI elements are accessible and interactable.
 ```python
 #tests/test_usability.py
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service as FirefoxService
+import pytest
 
+@pytest.fixture(scope="module")
+def chrome_browser():
+    service = Service(executable_path='/path/to/chromedriver')  # Update path to ChromeDriver
+    options = webdriver.ChromeOptions()
+    driver = webdriver.Chrome(service=service, options=options)
+    yield driver
+    driver.quit()
+
+@pytest.fixture(scope="module")
+def firefox_browser():
+    service = FirefoxService(executable_path='/path/to/geckodriver')  # Update path to GeckoDriver
+    options = webdriver.FirefoxOptions()
+    driver = webdriver.Firefox(service=service, options=options)
+    yield driver
+    driver.quit()
+
+@pytest.mark.parametrize("browser", ["chrome_browser", "firefox_browser"])
+def test_add_item_usability(request, browser):
+    driver = request.getfixturevalue(browser)
+    driver.get('http://127.0.0.1:5000')
+
+    # Check if the title is correct
+    assert "Items" in driver.title
+
+    # Check if the input field is present
+    input_field = driver.find_element(By.NAME, "item")
+    assert input_field is not None
+
+    # Check if the submit button is present
+    submit_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+    assert submit_button is not None
+
+    # Add an item
+    input_field.send_keys("usability test item")
+    submit_button.click()
+
+    # Verify the item was added
+    item_list = driver.find_element(By.ID, "item-list")
+    assert "usability test item" in item_list.text
+
+    # Check if the delete button is present for the new item
+    delete_button = driver.find_element(By.XPATH, "//button[@data-item='usability test item']")
+    assert delete_button is not None
+
+    # Delete the item
+    delete_button.click()
+
+    # Verify the item was deleted
+    assert "usability test item" not in item_list.text
 ```
 
 **Compatibility Tests**
