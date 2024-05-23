@@ -11,6 +11,7 @@
 - Simply type `pytest` in the directory where the tests are located.
 - You can run all test in paralle with `pytest-xdist`. Instal it with `pip install pytest-xdist` and run it as `pytest -n 4`.
 - If you are using mocking make sure you have it installed: `pip install pytest-mock`.
+- To have a nice report, install `pip install pytest-html` and then run `pytest --html=report.html`
 ***
 
 ## `@pytest.fixture`
