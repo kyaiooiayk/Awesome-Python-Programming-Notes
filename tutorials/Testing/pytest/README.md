@@ -137,6 +137,115 @@ def test_slow_function():
 - class: The fixture is setup/teardown once per test class.
 - module: The fixture is setup/teardown once per module.
 - session: The fixture is setup/teardown once per session (typically the entire test run).
+- Here's an example that demonstrates the number of setups and teardowns executed using different fixture scopes (function, class, module, and session). We'll use a counter to track the number of times the setup and teardown functions are called.
+```python
+# test_scopes.py
+import pytest
+
+setup_counter = {
+    'function': 0,
+    'class': 0,
+    'module': 0,
+    'session': 0
+}
+
+teardown_counter = {
+    'function': 0,
+    'class': 0,
+    'module': 0,
+    'session': 0
+}
+
+class Database:
+    def __init__(self):
+        self.connected = False
+
+    def connect(self):
+        self.connected = True
+
+    def disconnect(self):
+        self.connected = False
+
+# Fixture with function scope
+@pytest.fixture(scope="function")
+def db_function():
+    setup_counter['function'] += 1
+    db = Database()
+    db.connect()
+    yield db
+    db.disconnect()
+    teardown_counter['function'] += 1
+
+# Fixture with class scope
+@pytest.fixture(scope="class")
+def db_class():
+    setup_counter['class'] += 1
+    db = Database()
+    db.connect()
+    yield db
+    db.disconnect()
+    teardown_counter['class'] += 1
+
+# Fixture with module scope
+@pytest.fixture(scope="module")
+def db_module():
+    setup_counter['module'] += 1
+    db = Database()
+    db.connect()
+    yield db
+    db.disconnect()
+    teardown_counter['module'] += 1
+
+# Fixture with session scope
+@pytest.fixture(scope="session")
+def db_session():
+    setup_counter['session'] += 1
+    db = Database()
+    db.connect()
+    yield db
+    db.disconnect()
+    teardown_counter['session'] += 1
+
+# Tests using function scope
+def test_function_scope_1(db_function):
+    assert db_function.connected
+
+def test_function_scope_2(db_function):
+    assert db_function.connected
+
+# Tests using class scope
+class TestClassScope:
+    def test_class_scope_1(self, db_class):
+        assert db_class.connected
+
+    def test_class_scope_2(self, db_class):
+        assert db_class.connected
+
+# Tests using module scope
+def test_module_scope_1(db_module):
+    assert db_module.connected
+
+def test_module_scope_2(db_module):
+    assert db_module.connected
+
+# Tests using session scope
+def test_session_scope_1(db_session):
+    assert db_session.connected
+
+def test_session_scope_2(db_session):
+    assert db_session.connected
+
+# Print setup and teardown counters
+def test_print_counters():
+    print("\nSetup Counters:", setup_counter)
+    print("Teardown Counters:", teardown_counter)
+```
+- Which should give you this output:
+```shell
+Setup Counters: {'function': 2, 'class': 1, 'module': 1, 'session': 1}
+Teardown Counters: {'function': 2, 'class': 1, 'module': 1, 'session': 1}
+
+```
 ***
 
 ## References
