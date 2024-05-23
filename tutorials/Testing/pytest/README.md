@@ -14,6 +14,10 @@
 - To have a nice report, install `pip install pytest-html` and then run `pytest --html=report.html`
 ***
 
+## `conftest.py`
+-This file helps maintain cleaner and more maintainable test code by centralizing common setup, configuration, and customization logic.
+***
+
 ## `@pytest.fixture`
 - Fixtures can be used for both setting up and tearing down resources, as well as for grouping shared pieces of code. They provide a way to encapsulate common setup and teardown logic, making tests cleaner and more maintainable. Additionally, fixtures can help in reducing code duplication by allowing shared code to be defined once and reused across multiple tests.
 ```python
@@ -274,7 +278,7 @@ def test_mocking(mocker):
 ```
 ***
 
-## `pytest.mark.skip` 
+## `@pytest.mark.skip` 
 ```python
 @pytest.mark.skip(reason="Skipping this test for now")
 def test_to_skip():
@@ -288,6 +292,10 @@ def test_to_skip():
 def test_expected_to_fail():
     assert False
 ```
+***
+
+## `conftest.py`
+
 ***
 
 ## References
