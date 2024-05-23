@@ -9,6 +9,8 @@
 ## Usage
 - Pytest will execute all the python files that have the name test_ prepended or _test appended to the name of the script.
 - Simply type `pytest` in the directory where the tests are located.
+- You can run all test in paralle with `pytest-xdist`. Instal it with `pip install pytest-xdist` and run it as `pytest -n 4`.
+***
 
 ## `@pytest.fixture`
 - Fixtures can be used for both setting up and tearing down resources, as well as for grouping shared pieces of code. They provide a way to encapsulate common setup and teardown logic, making tests cleaner and more maintainable. Additionally, fixtures can help in reducing code duplication by allowing shared code to be defined once and reused across multiple tests.
@@ -241,7 +243,7 @@ def test_print_counters():
     print("Teardown Counters:", teardown_counter)
 ```
 - Which should give you this output:
-```shell
+```bash
 Setup Counters: {'function': 2, 'class': 1, 'module': 1, 'session': 1}
 Teardown Counters: {'function': 2, 'class': 1, 'module': 1, 'session': 1}
 
