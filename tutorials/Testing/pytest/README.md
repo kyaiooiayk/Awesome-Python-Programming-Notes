@@ -10,6 +10,7 @@
 - Pytest will execute all the python files that have the name test_ prepended or _test appended to the name of the script.
 - Simply type `pytest` in the directory where the tests are located.
 - You can run all test in paralle with `pytest-xdist`. Instal it with `pip install pytest-xdist` and run it as `pytest -n 4`.
+- If you are using mocking make sure you have it installed: `pip install pytest-mock`.
 ***
 
 ## `@pytest.fixture`
@@ -246,6 +247,28 @@ def test_print_counters():
 ```bash
 Setup Counters: {'function': 2, 'class': 1, 'module': 1, 'session': 1}
 Teardown Counters: {'function': 2, 'class': 1, 'module': 1, 'session': 1}
+
+```
+***
+
+## Mocking
+- `MagicMock` is not directly used in this specific example, but pytest-mock uses the mock library under the hood.
+```python
+# test_mocking.py
+from unittest.mock import MagicMock
+import pytest
+
+class Database:
+    def connect(self):
+        # Simulate a real database connection
+        return "Connected"
+
+def test_mocking(mocker):
+    db = Database()
+    mocker.patch.object(db, 'connect', return_value=True)
+    
+    # The connect method is now mocked and will return True
+    assert db.connect() == True
 
 ```
 ***
