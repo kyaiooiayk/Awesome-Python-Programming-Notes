@@ -10,7 +10,7 @@
 - Pytest will execute all the python files that have the name test_ prepended or _test appended to the name of the script.
 - Simply type `pytest` in the directory where the tests are located.
 
-## Pytest fixiture
+## `@pytest.fixture`
 - Fixtures can be used for both setting up and tearing down resources, as well as for grouping shared pieces of code. They provide a way to encapsulate common setup and teardown logic, making tests cleaner and more maintainable. Additionally, fixtures can help in reducing code duplication by allowing shared code to be defined once and reused across multiple tests.
 ```python
 # test_no_fixiture.py
@@ -96,7 +96,7 @@ def test_database_disconnection(database):
 ```
 ***
 
-## Pytest parametrize
+## `@pytest.parametrize`
 - Consider the scenario where we have 4 different but very similar tests. There is quite a lot of boiler plate going on.
 ```python
 def test_eval_addition():
@@ -119,6 +119,24 @@ import pytest
 def test_eval(test_input, expected_output):
     assert eval(test_input) == expected_output
 ```
+***
+
+## `@pytest.mark`
+- Markers allow you to group tests and selectively run them as `pytest -m slow`.
+```python
+@pytest.mark.slow
+def test_slow_function():
+    import time
+    time.sleep(5)
+    assert True
+```
+***
+
+## `@pytest.fixture(scope="")`
+- function: The default scope. The fixture is setup/teardown for each test function.
+- class: The fixture is setup/teardown once per test class.
+- module: The fixture is setup/teardown once per module.
+- session: The fixture is setup/teardown once per session (typically the entire test run).
 ***
 
 ## References
