@@ -10,48 +10,94 @@
 - Pytest will execute all the python files that have the name test_ prepended or _test appended to the name of the script.
 - Simply type `pytest` in the directory where the tests are located.
 
-### Pytest fixiture
+## Pytest fixiture
+- Fixtures can be used for both setting up and tearing down resources, as well as for grouping shared pieces of code. They provide a way to encapsulate common setup and teardown logic, making tests cleaner and more maintainable. Additionally, fixtures can help in reducing code duplication by allowing shared code to be defined once and reused across multiple tests.
 ```python
+# test_no_fixiture.py
+
 import pytest
 
+class Database:
+    def __init__(self):
+        self.connected = False
 
-class Fruit:
-    def __init__(self, name):
-        self.name = name
-        self.cubed = False
+    def connect(self):
+        # Simulate connecting to a database
+        self.connected = True
 
-    def cube(self):
-        self.cubed = True
+    def disconnect(self):
+        # Simulate disconnecting from a database
+        self.connected = False
 
+def test_database_connection():
+    # Set up the database connection
+    db = Database()
+    db.connect()
 
-class FruitSalad:
-    def __init__(self, *fruit_bowl):
-        self.fruit = fruit_bowl
-        self._cube_fruit()
+    # Ensure that the database is connected
+    assert db.connected == True
 
-    def _cube_fruit(self):
-        for fruit in self.fruit:
-            fruit.cube()
+    # Tear down the database connection
+    db.disconnect()
 
+def test_database_disconnection():
+    # Set up the database connection
+    db = Database()
+    db.connect()
 
-# Arrange
-@pytest.fixture
-def fruit_bowl():
-    return [Fruit("apple"), Fruit("banana")]
+    # Ensure that the database is connected
+    assert db.connected == True
 
+    # Disconnect from the database
+    db.disconnect()
 
-def test_fruit_salad(fruit_bowl):
-    # Act
-    fruit_salad = FruitSalad(*fruit_bowl)
+    # Ensure that the database is disconnected
+    assert db.connected == False
 
-    # Assert
-    assert all(fruit.cubed for fruit in fruit_salad.fruit)
 ```
-- In this example, test_fruit_salad “requests” fruit_bowl (i.e. def test_fruit_salad(fruit_bowl):), and when pytest sees this, it will execute the fruit_bowl fixture function and pass the object it returns into test_fruit_salad as the fruit_bowl argument.
+
+```python
+# test_with_fixiture.py
+
+import pytest
+
+class Database:
+    def __init__(self):
+        self.connected = False
+
+    def connect(self):
+        # Simulate connecting to a database
+        self.connected = True
+
+    def disconnect(self):
+        # Simulate disconnecting from a database
+        self.connected = False
+
+@pytest.fixture
+def database():
+    # Set up the database connection
+    db = Database()
+    db.connect()
+    return db  # Provide the fixture object to the test
+    # Tear down the database connection
+    #db.disconnect()
+
+def test_database_connection(database):
+    # Ensure that the database is connected
+    assert database.connected == True
+
+def test_database_disconnection(database):
+    # Disconnect from the database
+    database.disconnect()
+
+    # Ensure that the database is disconnected
+    assert database.connected == False
+
+```
 ***
 
-### Pytest parametrize
-- Consider the scenario where we have 4 different but very similar test. There is quite a lot of boiler plate going on.
+## Pytest parametrize
+- Consider the scenario where we have 4 different but very similar tests. There is quite a lot of boiler plate going on.
 ```python
 def test_eval_addition():
     assert eval("2 + 2") == 4
