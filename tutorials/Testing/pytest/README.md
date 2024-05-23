@@ -274,6 +274,22 @@ def test_mocking(mocker):
 ```
 ***
 
+## `pytest.mark.skip` 
+```python
+@pytest.mark.skip(reason="Skipping this test for now")
+def test_to_skip():
+    assert False
+```
+***
+
+## `@pytest.mark`
+```python
+@pytest.mark.xfail(reason="This test is expected to fail")
+def test_expected_to_fail():
+    assert False
+```
+***
+
 ## References
 - [How to Use Pytest for Unit Testing](https://www.datacamp.com/tutorial/pytest-tutorial-a-hands-on-guide-to-unit-testing)
 - [How to use fixtures](https://docs.pytest.org/en/7.1.x/how-to/fixtures.html)
