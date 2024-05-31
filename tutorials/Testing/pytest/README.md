@@ -2,8 +2,9 @@
 ***
 
 ## Installation
-- `pip install pytest`
-- `pytest --version`
+- Installl main module: `pip install pytest`
+- Install coverage functionality: `pip install pytest pytest-cov --dev`
+- Check correct installation: `pytest --version`
 ***
 
 ## Usage
