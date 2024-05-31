@@ -15,7 +15,35 @@
 ***
 
 ## `conftest.py`
-- This file helps maintain cleaner and more maintainable test code by centralizing common setup, configuration, and customization logic.
+- This file helps maintain cleaner and more maintainable test code by centralizing common setup, configuration, and customization logic. It is used to define fixtures, hooks, or configurations that are shared across multiple test files.
+```shell
+project/
+│
+├── conftest.py
+├── test_1.py
+└── test_2.py
+```
+- A confest.py may look like this
+```python
+import pytest
+
+@pytest.fixture
+def sample_fixture():
+    return "Hello, Pytest!"
+```
+- Its content will be used in two different python files:
+```python
+# test_1.py
+def test_example1(sample_fixture):
+    assert sample_fixture == "Hello, Pytest!"
+```
+```python
+# test_2.py
+def test_example2(sample_fixture):
+    assert sample_fixture == "Hello, Pytest!"
+```
+
+
 ***
 
 ## `@pytest.fixture`
