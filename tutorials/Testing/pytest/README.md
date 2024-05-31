@@ -15,7 +15,7 @@
 ***
 
 ## `conftest.py`
--This file helps maintain cleaner and more maintainable test code by centralizing common setup, configuration, and customization logic.
+- This file helps maintain cleaner and more maintainable test code by centralizing common setup, configuration, and customization logic.
 ***
 
 ## `@pytest.fixture`
